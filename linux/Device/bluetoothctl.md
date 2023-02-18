@@ -33,4 +33,5 @@ sudo systemctl start bluetooth
 | bluetoothctl untrust XX:XX:XX:XX:XX:XX    | 不信任设备                 |
 | bluetoothctl remove XX:XX:XX:XX:XX:XX     | 取消配对                   |
 | bluetoothctl disconnect XX:XX:XX:XX:XX:XX | 取消连接设备               |
-| bluetoothctl block XX:XX:XX:XX:XX:XX      | 阻止指定设备连接到系统                           |
+| bluetoothctl block XX:XX:XX:XX:XX:XX      | 阻止指定设备连接到系统     |
+|                                          |                            |
