@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "230175f19ee3e216",
+        "id": "769b805b811719f8",
         "type": "tabs",
         "children": [
           {
-            "id": "d062d723edebcbdb",
+            "id": "0b9880130225438c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "linux/Device/fwupdmgr.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "fabb1df341b96655",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "linux/Device/fwupdmgr.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "linux/Device/fwupdmgr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,11 +125,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "linux/Device/fwupdmgr.md"
               }
             }
+          },
+          {
+            "id": "84e31cc9ee0e259b",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -143,9 +152,21 @@
       "canvas:Create new canvas": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d062d723edebcbdb",
-  "lastOpenFiles": []
+  "active": "0b9880130225438c",
+  "lastOpenFiles": [
+    "linux/Device/rfkill.md",
+    "linux/Device/dd.md",
+    "linux/Device/umount.md",
+    "linux/Device/mount.md",
+    "devpath|file.md",
+    "linux/Device/udevadm.md",
+    "linux/Device/bluetoothctl.md",
+    "linux/Device/free.md",
+    "linux/Device/df.md",
+    "linux/Device/parted.md"
+  ]
 }

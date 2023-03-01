@@ -37,10 +37,30 @@ child                    off              同时调试两个进程，gdb跟子�
 - until X行号：跳至X行
 - p 变量：打印变量值
 - n 或 next：单条执行
+- inferiors: 切换进程id(info inferiors 为 NUM)
 
 ### 例子
 - 设置多进程调试
 ```shell
 set follow-fork-mode child
 set detach-on-fork off
+```
+- 传递参数
+```shell
+gdb --args ./test/unit/core configurationDecode/badAddress
+# 或
+(gdb)r arg1 arg2
+# 或
+(gdb)set args arg1 arg2
+```
+- 使用 .gdbinit
+```
+# gdb
+set disassemble-next-line on
+b _start
+target remote : 1234
+c
+
+# shell
+gdb -x .gdbinit ./test/unit/core
 ```
