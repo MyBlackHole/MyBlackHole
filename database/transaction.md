@@ -47,8 +47,8 @@ SELECT @@transaction_isolation;
 ```
 
 #### 事务隔离
-![[imgs/GetImage.jpeg]]
-
+![[imgs/GetImage 1.jpeg]]
+![[imgs/GetImage 2.jpeg]]
 innoDB默认是可重复读
 
 未提交读(read uncommitted)
@@ -453,5 +453,19 @@ t Session A                  Session B
 | |  1 | a     |
 | +----+-------+
 ```
+### 总结
+- 理解事务的4个特性：原子性、一致性、隔离性、持久性 
+- 掌握事务操作常见命令的介绍 
+- set autocommit可以设置是否开启自动提交事务 
+- start transaction：开启事务 
+- start transaction read only：开启只读事物 
+- commit：提交事务 
+- rollback：回滚事务 
+- savepoint：设置保存点 
+- rollback to 保存点：可以回滚到某个保存点 
+- 掌握4种隔离级别及了解其特点 
+- 脏读、不可重复读、幻读 
+
+
 
 > [MySQL 四种事务隔离级的说明](https://www.cnblogs.com/zhoujinyi/p/3437475.HTML)
