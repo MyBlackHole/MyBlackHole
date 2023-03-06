@@ -1,18 +1,24 @@
-- 👋 Hi, I’m @MyBlackHole
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+### 开发环境
+ubuntu、i3wm、tmux、lvim（neovim）
 
-<!---
-MyBlackHole/MyBlackHole is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
-|语言|使用情况|
-|---|---|
-|C|常用|
-|Golang|职业|
-|python|职业|
-|Flutter|iot附带|
-|ESP32|iot需要|
-|STM32|iot需要|
+### 开发语言
+C、golang、python 、flutter
+
+### 开发技术
+- go
+    gin、go-zero、fyne、gocolly
+
+- python
+    scrapy、flask、faskapi
+
+- 数据库工具
+    mysql、postgresql、redis、mongodb、tidb
+
+docke、kubernetes、kubesphere、nginx、ELK
+    
+进程、线程、ips、中断 riscv 汇编
+数据结构与算法、机器学习、神经网络
+AES、RSA、BASE64、BASE62…
+
+### 开发板
+ESP32、STM32
