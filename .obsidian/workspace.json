@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "769b805b811719f8",
+        "id": "8fd3f004fae992aa",
         "type": "tabs",
         "children": [
           {
-            "id": "0b9880130225438c",
+            "id": "e3f79e8207ccc8e4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/Device/fwupdmgr.md",
+                "file": "algorithm/对称加密算法.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d574ee69edd9b276",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "algorithm/分组密码.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "aae181f93279252e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "algorithm/椭圆曲线密码学.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/Device/fwupdmgr.md",
+                "file": "algorithm/椭圆曲线密码学.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/Device/fwupdmgr.md",
+                "file": "algorithm/椭圆曲线密码学.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/Device/fwupdmgr.md"
+                "file": "algorithm/椭圆曲线密码学.md"
               }
             }
           },
@@ -147,26 +172,64 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "canvas:Create new canvas": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "random-note:开始漫游笔记": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "0b9880130225438c",
+  "active": "aae181f93279252e",
   "lastOpenFiles": [
-    "linux/Device/rfkill.md",
-    "linux/Device/dd.md",
-    "linux/Device/umount.md",
-    "linux/Device/mount.md",
-    "devpath|file.md",
-    "linux/Device/udevadm.md",
-    "linux/Device/bluetoothctl.md",
-    "linux/Device/free.md",
-    "linux/Device/df.md",
-    "linux/Device/parted.md"
+    "algorithm/imgs/img-10.png",
+    "algorithm/椭圆曲线密码学.md",
+    "algorithm/imgs/img-9.png",
+    "algorithm/imgs/image.png",
+    "algorithm/imgs/img-8.png",
+    "algorithm/imgs/img-7 1.png",
+    "algorithm/imgs/img-6 1.png",
+    "algorithm/imgs/img-5 1.png",
+    "algorithm/imgs/img-4 1.png",
+    "algorithm/imgs/img-3 1.png",
+    "algorithm/imgs/img-2 1.png",
+    "imgs",
+    "algorithm/序列密码.md",
+    "algorithm/DSA.md",
+    "algorithm/RSA.md",
+    "algorithm/DES.md",
+    "algorithm/dynamic_programming.md",
+    "algorithm/3DES.md",
+    "algorithm/media 1",
+    "algorithm/分组密码.md",
+    "algorithm/对称加密算法.md",
+    "algorithm/加密算法树.md",
+    "algorithm/media",
+    "Chrome Clippings.md",
+    "algorithm/des.md",
+    "system_framework/TCC.md",
+    "1.txt",
+    "language/c/c.md",
+    "linux/nmcli.md",
+    "linux/error.md",
+    "system_framework/dispersed.md",
+    "system_framework/imgs",
+    "go/MWB.md",
+    "system_framework",
+    "go/STW.md",
+    "go/gc.md",
+    "go/imgs",
+    "flutter/error.md",
+    "go",
+    "brew/brew.md",
+    "brew",
+    "macOS/error.md",
+    "macOS",
+    "rust/error.md",
+    "rust/rust.md"
   ]
 }

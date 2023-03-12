@@ -1,5 +1,5 @@
 ### 描述
-DES(Data Encryption Standard)是流行的对称加密算法
+DES(Data Encryption Standard)是流行的[[对称加密算法]]
 
 ### 原理介绍
 1. 长度

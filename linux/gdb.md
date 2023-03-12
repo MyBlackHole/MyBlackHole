@@ -38,6 +38,7 @@ child                    off              同时调试两个进程，gdb跟子�
 - p 变量：打印变量值
 - n 或 next：单条执行
 - inferiors: 切换进程id(info inferiors 为 NUM)
+- directory(dir): 设置源码目录
 
 ### 例子
 - 设置多进程调试
@@ -45,6 +46,7 @@ child                    off              同时调试两个进程，gdb跟子�
 set follow-fork-mode child
 set detach-on-fork off
 ```
+
 - 传递参数
 ```shell
 gdb --args ./test/unit/core configurationDecode/badAddress
@@ -53,6 +55,7 @@ gdb --args ./test/unit/core configurationDecode/badAddress
 # 或
 (gdb)set args arg1 arg2
 ```
+
 - 使用 .gdbinit
 ```
 # gdb
@@ -63,4 +66,10 @@ c
 
 # shell
 gdb -x .gdbinit ./test/unit/core
+```
+
+- 设置源码目录
+```
+(gdb) directory /media/black/Data/Documents/github/C/tbox
+Source directories searched: /media/black/Data/Documents/github/C/tbox:/media/black/Data/Documents/C/C_learn/out/obj/tbox_learn/heap_test1:$cdir:$cwd
 ```
