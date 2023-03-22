@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/椭圆曲线密码学.md",
+                "file": "language/python/error.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/椭圆曲线密码学.md",
+                "file": "language/python/error.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/椭圆曲线密码学.md",
+                "file": "language/python/error.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/椭圆曲线密码学.md"
+                "file": "language/python/error.md"
               }
             }
           },
@@ -186,8 +186,14 @@
   },
   "active": "aae181f93279252e",
   "lastOpenFiles": [
-    "algorithm/imgs/img-10.png",
+    "language/python/pdb.md",
+    "language/python/imgs/GetImage.png",
+    "language/python/imgs",
+    "language/python/python.md",
     "algorithm/椭圆曲线密码学.md",
+    "language/python/error.md",
+    "language/python",
+    "algorithm/imgs/img-10.png",
     "algorithm/imgs/img-9.png",
     "algorithm/imgs/image.png",
     "algorithm/imgs/img-8.png",
@@ -196,7 +202,6 @@
     "algorithm/imgs/img-5 1.png",
     "algorithm/imgs/img-4 1.png",
     "algorithm/imgs/img-3 1.png",
-    "algorithm/imgs/img-2 1.png",
     "imgs",
     "algorithm/序列密码.md",
     "algorithm/DSA.md",
@@ -226,10 +231,6 @@
     "flutter/error.md",
     "go",
     "brew/brew.md",
-    "brew",
-    "macOS/error.md",
-    "macOS",
-    "rust/error.md",
-    "rust/rust.md"
+    "macOS/error.md"
   ]
 }
