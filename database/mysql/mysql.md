@@ -1,32 +1,67 @@
-### 安装、权限、用户
+# mysql
+
+## 文件详解
+
+- myisam
+1. *.frm--表定义，是描述表结构的文件。
+2. *.MYD--"D"数据信息文件，是表的数据文件。
+3. *.MYI--"I"索引信息文件，是表数据文件中任何索引的数据树。
+
+- innodb
+1. *.frm--表定义，是描述表结构的文件。
+2. *.ibd--表数据和索引的文件。该表的索引(B+树)的每个非叶子节点存储索引，叶子节点存储索引和索引对应的数据
+
+
+## 安装、权限、用户
 - docker 版
 ```shell
 # 拉去镜像
 docker pull mysql
+
 # 启动
-duso docker run -p 3306:3306 --name mysql \  
-    -v /data/docker/mysql/conf:/etc/mysql \  
-    -v /data/docker/mysql/logs:/var/log/mysql \  
-    -v /data/docker/mysql/data:/var/lib/mysql \  
-    -e MYSQL_ROOT_PASSWORD=123456 \ -d mysql:5.7 
+```shell
+# 异常
+#sudo chowm 999:999 data conf logs
+docker run -p 3306:3306 --name mysql \
+    --privileged=true \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /data/docker/mysql/conf:/etc/mysql \
+    -v /data/docker/mysql/logs:/var/log/mysql \
+    -v /data/docker/mysql/data:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=123456 \
+    -d mysql:5.7
+
+# 修改data、logs、conf 用户与用户组为 999:999
+#sudo chowm 999:999 data conf logs
+docker run -p 3306:3306 --name mysql \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v $(pwd)/test_mysql/conf:/etc/mysql \
+    -v $(pwd)/test_mysql/logs:/var/log/mysql \
+    -v $(pwd)/test_mysql/data:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=123456 \
+    -d mysql
 
 # 或
 docker run -it --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag 
 
-# 连接 mysql
-mysql -h 127.0.0.1 -P 3306 -uroot –p 
 ```
 
 - 物理机版
 ```shell
 # centos
+## 5.7
+wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
+
+## 8.0
 wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm 
-sudo yum instal   mysql80-community-release-el7-1.noarch.rpm 
+
+sudo yum instal ./mysql80-community-release-el7-1.noarch.rpm 
+
 yum install mysql-community-server.x86_64 
 sudo service mysqld start      //启动mysql 
 sudo service mysqld status   //查看mysql状态 
 sudo systemctl enable mysqld //配置开机启动 
-grep 'temporary password'/var/log/mysqld.log  //找到默认密码 
+grep 'temporary password' /var/log/mysqld.log  //找到默认密码 
 mysql -uroot -p  
 setpassword for'root'@'localhost'=password('NEWPASSWORD'); 
 或者ALTERUSER 'root'@'localhost'IDENTIFIEDBY 'NEWPASSWORD';// 修改密码,注意密码要复杂一些，否则会不能通过。 
@@ -98,3 +133,8 @@ Delete FROM user Where User='Black' and Host='localhost'  # 删除用户
 update mysql.user set password=password('新密码') where User="BlackHole" and Host="localhost"; # 更新密码
 ```
 
+
+## 连接 mysql
+```shell
+mysql -h 127.0.0.1 -P 3306 -uroot –p 
+```

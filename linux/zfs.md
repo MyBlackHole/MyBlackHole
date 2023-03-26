@@ -135,8 +135,8 @@ $ zfs create tank/root/data/stuff
 $ mount | grep data
 tank/root/data on /data (zfs, local, nfsv4acls)
 tank/root/data/stuff on /data/stuff (zfs, local, nfsv4acls)
-# 创建卷
-$ zfs create -V zroot/win_vm
+# 1G大小 创建卷
+$ zfs create -V 1G zroot/win_vm
 $ zfs list zroot/win_vm
 NAME                 USED  AVAIL  REFER  MOUNTPOINT
 tank/win_vm         4.13G  17.9G    64K  -

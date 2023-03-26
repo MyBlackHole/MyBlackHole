@@ -1,5 +1,17 @@
 ### 异常解决
 
+- Can't read dir of '/etc/mysql/conf.d/
+```shell
+# 启动一个没有挂载的mysql容器
+docker run --rm -it --name strange_almeida mysql:5.7 /bin/bash
+bash-4.2# cd /etc/mysql/
+bash-4.2# ls
+conf.d	mysql.conf.d
+# 将文件夹下的目录 拷贝出来，最好是挂载的目录，后面根据自己挂载路径进行调试
+docker cp strange_almeida:/etc/mysql/ /data/docker/mysql/conf/
+# 接着再次运行，可以正常启动了
+```
+
 - mysql5.7导入DATETIME字段数据时遇到错误incorrect datetime value '0000-0-0 00:00:00' for column 
 
 ```sql
