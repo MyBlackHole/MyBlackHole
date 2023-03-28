@@ -3,6 +3,8 @@
 ## 安装
 ```shell
 sudo apt install i3
+# 选择 i3 环境
+sudo update-alternatives --config x-session-manager
 ```
 
 ## 操作

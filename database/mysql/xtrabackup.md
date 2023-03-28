@@ -122,3 +122,8 @@ chowm -R mysql:mysql /media/black/Data/Documents/github/CPP/percona-xtrabackup/D
 
 # 启动数据库
 ```
+
+- 流
+```shell
+由于xbstream+压缩备份后，无备份目录，xtrabackup可指定--extra-lsndir目录，此目录只存放此次备份的xtrabackup_checkpoints文件；后面的增量备份时，--incremental-basedir就指向前一日的extra-lsndir目录便可。
+```
