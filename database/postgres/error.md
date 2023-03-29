@@ -13,3 +13,15 @@ psql -U black
 psql -U black -d template1
 pgcli -h 127.0.0.1 -u black -d template1
 ```
+
+- psql: FATAL:  Peer authentication failed for user "my_user"
+```shell
+sudo nvim /etc/postgresql/14/main/pg_hba.conf
+
+local   all             postgres                                peer
+# 修改为
+local   all             postgres                                md5
+
+sudo systemctl restart postgresql
+
+```

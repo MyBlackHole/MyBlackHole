@@ -1,5 +1,8 @@
 # 窗口管理
 
+## 工具
+xrandr[[xrandr]]
+
 ## 安装
 ```shell
 sudo apt install i3
