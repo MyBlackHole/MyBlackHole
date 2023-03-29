@@ -27,4 +27,7 @@ alter user black with superuser;
 
 ## black 可以 pgcli 登陆
 pgcli -U black -d template1 -W
+
+# 开启预处理事务
+max_prepared_transactions = 100
 ```
