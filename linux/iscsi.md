@@ -102,7 +102,7 @@ InitiatorName=iqn.2021-03.bee.com:lun1.init1
 # 定义Initiator对应iscsi target的CHAP认证信息（可选）
 sudo nvim /etc/iscsi/iscsid.conf
 
-# 修改以下信息
+## 通过配置 修改以下信息
 node.session.auth.authmethod = CHAP
 node.session.auth.username = test01 # incominguser
 node.session.auth.password = 123456 # incominguser
@@ -110,7 +110,7 @@ node.session.auth.username_in = test02 # outgoinguser
 node.session.auth.password_in = 654321 # outgoinguser
 node.startup = automatic # 开机自动登陆iscsi target（必选）
 
-# 通过命令修改
+## 通过命令 修改
 iscsiadm -m node -T iqn.2023-03.bee.com:lun1 -p 192.168.106.66:3260 --op update -n node.session.auth.authmethod -v CHAP
 iscsiadm -m node -T iqn.2023-03.bee.com:lun1 -p 192.168.106.66:3260 --op update -n node.startup -v automatic
 ```
@@ -137,6 +137,9 @@ Login to [iface: default, target: iqn.2023-03.bee.com:lun1, portal: 192.168.106.
 
 # 登出iscsi target
 iscsiadm -m node -T iqn.2023-03.bee.com:lun1 -p 192.168.106.66 -u
+out:
+Logging out of session [sid: 1, target: iqn.2023-03.bee.com:lun1, portal: 192.168.106.66,3260]
+Logout of [sid: 1, target: iqn.2023-03.bee.com:lun1, portal: 192.168.106.66,3260] successful.
 
 # 查看LUN设备
 fdisk -l
