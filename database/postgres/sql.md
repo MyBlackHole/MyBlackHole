@@ -3,34 +3,29 @@
 
 ## 例子
 
-- 二阶段提交 XA
+- 根据 lsn 获取日志文件名
+```sql
+template1> select pg_walfile_name('1/4288E228')
++--------------------------+
+| pg_walfile_name          |
+|--------------------------|
+| 000000010000000100000042 |
++--------------------------+
+```
+
+- 查看事物 id
 ```shell
-black@127:black> begin;
-BEGIN
-Time: 0.001s
-black@127:black> create table demo(a TEXT, b INTEGER);
-CREATE TABLE
-Time: 0.013s
-black@127:black> PREPARE TRANSACTION 'the first prepared transaction';
-PREPARE TRANSACTION
-Time: 0.008s
-black@127:black> select * FROM pg_prepared_xacts;
-+-------------+--------------------------------+------------------------------+-------+----------+
-| transaction | gid                            | prepared                     | owner | database |
-|-------------+--------------------------------+------------------------------+-------+----------|
-| 738         | the first prepared transaction | 2023-03-29 22:18:01.90887+08 | black | black    |
-+-------------+--------------------------------+------------------------------+-------+----------+
-SELECT 1
-Time: 0.006s
-black@127:black> ROLLBACK PREPARED 'the first prepared transaction';
-ROLLBACK PREPARED
-Time: 0.009s
-black@127:black> select * FROM pg_prepared_xacts;
-+-------------+-----+----------+-------+----------+
-| transaction | gid | prepared | owner | database |
-|-------------+-----+----------+-------+----------|
-+-------------+-----+----------+-------+----------+
-SELECT 0
-Time: 0.009s
-black@127:black>
+select txid_current()
+```
+
+- mvcc 实现自动为表 加 xmin,xmax,cmin,cmax 字段
+```shell
+create table test(t TEXT, i INT);
+
+postgres@127:postgres> select xmin,xmax,cmin,cmax,* from test;
++------+------+------+------+-------+---+
+| xmin | xmax | cmin | cmax | t     | i |
+|------+------+------+------+-------+---|
+| 740  | 0    | 0    | 0    | 测试2 | 2 |
++------+------+------+------+-------+---+
 ```
