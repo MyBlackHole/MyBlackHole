@@ -15,6 +15,11 @@ IN_DELETE|    在所监控的目录中删除目录或文件
 IN_CLOSE*|    文件被关闭,等同于IN_CLOSE_WRITE*
 IN_MOVE|    文件被移动,等同于IN_CLOSE_NOWRITE
 
+# 安装
+```shell
+sudo pip install pyinotify
+```
+
 
 ## 例子
 

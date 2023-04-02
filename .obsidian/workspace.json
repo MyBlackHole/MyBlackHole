@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "database/mysql/xtrabackup.md",
+                "file": "database/GoldenDB/GoldenDB.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "database/mysql/xtrabackup.md",
+                "file": "database/GoldenDB/GoldenDB.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "database/mysql/xtrabackup.md",
+                "file": "database/GoldenDB/GoldenDB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "database/mysql/xtrabackup.md"
+                "file": "database/GoldenDB/GoldenDB.md"
               }
             }
           },
@@ -186,26 +186,37 @@
   },
   "active": "aae181f93279252e",
   "lastOpenFiles": [
-    "database/mysql/imgs/Pasted image 20230325184640.png",
+    "database/GoldenDB/imgs/Pasted image 20230402184606.png",
+    "database/GoldenDB/imgs/Pasted image 20230402184501.png",
+    "database/GoldenDB/imgs/Pasted image 20230402184438.png",
+    "database/GoldenDB/imgs/Pasted image 20230402183813.png",
+    "database/GoldenDB/imgs",
+    "database/cluster/PGXC.md",
+    "database/postgres/snapshot.md",
+    "database/cluster/imgs/Pasted image 20230402152511.png",
+    "database/cluster/imgs/Pasted image 20230402143344.png",
+    "database/cluster/GTM.md",
+    "database/cluster/imgs/Pasted image 20230402143045.png",
+    "database/cluster/PXC.md",
+    "database/cluster/imgs/Pasted image 20230402132406.png",
+    "database/cluster/MGR.md",
+    "database/cluster/imgs/Pasted image 20230402125011.png",
+    "database/cluster/GTID.md",
+    "database/cluster/imgs/Pasted image 20230402123635.png",
+    "database/cluster/imgs/Pasted image 20230402123445.png",
+    "database/cluster/MHA.md",
+    "database/cluster/mmm.md",
+    "database/cluster/imgs",
+    "database/mysql/xtrabackup.md",
     "database/mysql/主从.md",
     "module/airflow.md",
     "module",
-    "database/mysql/imgs/Pasted image 20230323170347.png",
     "language/python/error.md",
     "language/python/pdb.md",
-    "language/python/imgs/GetImage.png",
     "language/python/imgs",
     "language/python/python.md",
     "algorithm/椭圆曲线密码学.md",
     "language/python",
-    "algorithm/imgs/img-10.png",
-    "algorithm/imgs/img-9.png",
-    "algorithm/imgs/image.png",
-    "algorithm/imgs/img-8.png",
-    "algorithm/imgs/img-7 1.png",
-    "algorithm/imgs/img-6 1.png",
-    "algorithm/imgs/img-5 1.png",
-    "algorithm/imgs/img-4 1.png",
     "imgs",
     "algorithm/序列密码.md",
     "algorithm/DSA.md",
@@ -219,18 +230,7 @@
     "algorithm/加密算法树.md",
     "algorithm/media",
     "Chrome Clippings.md",
-    "algorithm/des.md",
-    "system_framework/TCC.md",
     "1.txt",
-    "language/c/c.md",
-    "linux/nmcli.md",
-    "linux/error.md",
-    "system_framework/dispersed.md",
-    "system_framework/imgs",
-    "go/MWB.md",
-    "system_framework",
-    "go/STW.md",
-    "go/gc.md",
-    "go/imgs"
+    "system_framework/imgs"
   ]
 }
