@@ -78,6 +78,15 @@ service mysql stop
 https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-8.0.26-winx64.msi 
 ```
 
+- 源码编译
+```shell
+mkdir bulid
+cd bulid
+cmake -DDOWNLOAD_BOOST=1 -DWITH_BOOST=dwith_boost -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=Debug ..
+make
+sudo make install
+```
+
 - 用户配置
 创建用户，授予远程登录权限、操作所有数据权限
 create USER BlackHole@'%' identified by '1358244533';   

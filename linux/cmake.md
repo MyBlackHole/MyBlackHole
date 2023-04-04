@@ -4,7 +4,7 @@
 ## 例子
 - 生成 compile_commands.json
 ```shell
-cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
 ```
 
 - debug 设置

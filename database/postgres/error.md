@@ -25,3 +25,9 @@ local   all             postgres                                md5
 sudo systemctl restart postgresql
 
 ```
+
+
+- How to fix 'postgres.h' file not found problem
+```shell
+sudo apt install postgresql-server-dev-15
+```
