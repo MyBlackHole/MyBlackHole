@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "8fd3f004fae992aa",
+        "id": "b7e9349c6588d1a6",
         "type": "tabs",
         "children": [
           {
-            "id": "e3f79e8207ccc8e4",
+            "id": "b2c8d7f00f101461",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/对称加密算法.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d574ee69edd9b276",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "algorithm/分组密码.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "aae181f93279252e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/top.md",
+                "file": "database/GoldenDB/backup.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/top.md",
+                "file": "database/GoldenDB/backup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/top.md",
+                "file": "database/GoldenDB/backup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/top.md"
+                "file": "database/GoldenDB/backup.md"
               }
             }
           },
@@ -184,8 +159,18 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "aae181f93279252e",
+  "active": "b2c8d7f00f101461",
   "lastOpenFiles": [
+    "linux/make.md",
+    "algorithm/DES.md",
+    "database/cluster/GTID.md",
+    "database/GoldenDB/backup.md",
+    "algorithm/分组密码.md",
+    "algorithm/对称加密算法.md",
+    "database/cluster/2PC.md",
+    "database/cluster/imgs/Pasted image 20230405113709.png",
+    "database/cluster/imgs/Pasted image 20230405113649.png",
+    "linux/top.md",
     "linux/imgs/Pasted image 20230405110419.png",
     "linux/imgs",
     "database/GoldenDB/GoldenDB.md",
@@ -201,11 +186,7 @@
     "database/cluster/GTM.md",
     "database/cluster/imgs/Pasted image 20230402143045.png",
     "database/cluster/PXC.md",
-    "database/cluster/imgs/Pasted image 20230402132406.png",
     "database/cluster/MGR.md",
-    "database/cluster/imgs/Pasted image 20230402125011.png",
-    "database/cluster/GTID.md",
-    "database/cluster/imgs/Pasted image 20230402123635.png",
     "database/cluster/MHA.md",
     "database/cluster/mmm.md",
     "database/cluster/imgs",
@@ -223,13 +204,7 @@
     "algorithm/序列密码.md",
     "algorithm/DSA.md",
     "algorithm/RSA.md",
-    "algorithm/DES.md",
-    "algorithm/dynamic_programming.md",
-    "algorithm/3DES.md",
     "algorithm/media 1",
-    "algorithm/分组密码.md",
-    "algorithm/对称加密算法.md",
-    "algorithm/加密算法树.md",
     "algorithm/media",
     "1.txt"
   ]
