@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "database/GoldenDB/GoldenDB.md",
+                "file": "linux/top.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "database/GoldenDB/GoldenDB.md",
+                "file": "linux/top.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "database/GoldenDB/GoldenDB.md",
+                "file": "linux/top.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "database/GoldenDB/GoldenDB.md"
+                "file": "linux/top.md"
               }
             }
           },
@@ -186,6 +186,9 @@
   },
   "active": "aae181f93279252e",
   "lastOpenFiles": [
+    "linux/imgs/Pasted image 20230405110419.png",
+    "linux/imgs",
+    "database/GoldenDB/GoldenDB.md",
     "database/GoldenDB/imgs/Pasted image 20230402184606.png",
     "database/GoldenDB/imgs/Pasted image 20230402184501.png",
     "database/GoldenDB/imgs/Pasted image 20230402184438.png",
@@ -203,7 +206,6 @@
     "database/cluster/imgs/Pasted image 20230402125011.png",
     "database/cluster/GTID.md",
     "database/cluster/imgs/Pasted image 20230402123635.png",
-    "database/cluster/imgs/Pasted image 20230402123445.png",
     "database/cluster/MHA.md",
     "database/cluster/mmm.md",
     "database/cluster/imgs",
@@ -229,8 +231,6 @@
     "algorithm/对称加密算法.md",
     "algorithm/加密算法树.md",
     "algorithm/media",
-    "Chrome Clippings.md",
-    "1.txt",
-    "system_framework/imgs"
+    "1.txt"
   ]
 }
