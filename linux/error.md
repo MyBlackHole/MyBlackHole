@@ -12,3 +12,9 @@ sudo nvim /opt/netease/netease-cloud-music/netease-cloud-music.bash
 ## 添加以下在 exec 前
 cd /lib/x86_64-linux-gnu/
 ```
+
+- fatal error: linux/smp_lock.h: No such file or directory
+```shell
+# 替换成
+#include <linux/hardirq.h>
+```
