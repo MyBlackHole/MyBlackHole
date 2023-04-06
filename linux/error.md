@@ -12,3 +12,14 @@ sudo nvim /opt/netease/netease-cloud-music/netease-cloud-music.bash
 ## 添加以下在 exec 前
 cd /lib/x86_64-linux-gnu/
 ```
+
+- undefined reference to `major‘
+```c
+#include <sys/types.h>
+#include <sys/sysmacros.h>
+```
+
+- Fatal error: rpc/rpc.h: No such file or directory
+```shell
+-I/usr/include/tirpc
+```

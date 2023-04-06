@@ -161,6 +161,8 @@
   },
   "active": "b2c8d7f00f101461",
   "lastOpenFiles": [
+    "linux/traceroute.md",
+    "linux/mtr.md",
     "linux/make.md",
     "algorithm/DES.md",
     "database/cluster/GTID.md",
@@ -202,8 +204,6 @@
     "language/python",
     "imgs",
     "algorithm/序列密码.md",
-    "algorithm/DSA.md",
-    "algorithm/RSA.md",
     "algorithm/media 1",
     "algorithm/media",
     "1.txt"
