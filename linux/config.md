@@ -34,3 +34,31 @@ timedatectl set-timezone Asia/Shanghai
 # 开启时间自动同步
 timedatectl set-ntp yes ?
 ```
+
+- ubuntu 开机自动登陆用户
+```shell
+sudo nvim /etc/gdm3/custom.conf
+# 修改
+AutomaticLoginEnable = true
+AutomaticLogin = <user name>
+```
+
+- 给文件或文件夹加锁、解锁
+```shell
+# 加锁
+chattr +i 1.txt
+
+# 解锁
+chattr -i 1.txt
+```
+
+- 安装自签证 SSL 证书
+```shell
+# 上传根证书(Root CA)到 /usr/local/share/ca-certificates/ (需要使用.crt扩展名)
+sudo nvim /usr/local/share/ca-certificates/feitsui.crt
+# 更新 CA certificates
+sudo update-ca-certificates
+# Root CA应该出现在 /etc/ssl/certs/ca-certificates.crt 底部。
+tail /etc/ssl/certs/ca-certificates.crt -n 50
+
+```
