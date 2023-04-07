@@ -8,6 +8,8 @@ yum install rpcbind
 
 ## 配置
 /etc/exports
+
+/aiopool 192.168.78.0/24
 格式： 共享目录的路径 允许访问的NFS客户端（共享权限参数）
 
 参数	作用
@@ -36,7 +38,8 @@ systemctl restart nfs-server
 ```shell
 # 服务端
 nvim /etc/exports
-添加 /aiopool 192.168.78.0/24(rw)
+## 添加 
+/aiopool 192.168.78.0/24(rw)
 systemctl reload nfs
 
 # 客户端

@@ -13,12 +13,12 @@ sudo nvim /opt/netease/netease-cloud-music/netease-cloud-music.bash
 cd /lib/x86_64-linux-gnu/
 ```
 
-<<<<<<< HEAD
 - fatal error: linux/smp_lock.h: No such file or directory
 ```shell
 # 替换成
 #include <linux/hardirq.h>
-=======
+```
+
 - undefined reference to `major‘
 ```c
 #include <sys/types.h>
@@ -28,5 +28,9 @@ cd /lib/x86_64-linux-gnu/
 - Fatal error: rpc/rpc.h: No such file or directory
 ```shell
 -I/usr/include/tirpc
->>>>>>> 667cddfe50b488f7b3ec7e69e8c6e602917a6114
+```
+
+- mount.nfs: failed to apply fstab options
+```shell
+sudo mount -t nfs 192.168.2.77:/tmp/db1_bin /tmp/db2_bin
 ```
