@@ -89,9 +89,9 @@ sudo make install
 
 - 用户配置
 创建用户，授予远程登录权限、操作所有数据权限
-create USER BlackHole@'%' identified by '1358244533';   
-grant all on *.* to BlackHole@'%' with grant option; 
-flush privileges; 
+create USER BlackHole@'%' identified by '1358244533';
+grant all on *.* to BlackHole@'%' with grant option;
+flush privileges;
 
 - 授权
     格式

@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "database/GoldenDB/backup.md",
+                "file": "linux/kernel/vfs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95ce87dfaa36cc7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/kernel/dome/ramdisk.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "database/GoldenDB/backup.md",
+                "file": "linux/kernel/dome/ramdisk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "database/GoldenDB/backup.md",
+                "file": "linux/kernel/dome/ramdisk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "database/GoldenDB/backup.md"
+                "file": "linux/kernel/dome/ramdisk.md"
               }
             }
           },
@@ -159,14 +172,20 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "b2c8d7f00f101461",
+  "active": "95ce87dfaa36cc7b",
   "lastOpenFiles": [
+    "linux/kernel/vfs.md",
+    "linux/kernel/dome/ramdisk.md",
+    "linux/kernel/dome",
+    "未命名",
+    "第八章虚拟文件系统.pdf",
+    "database/GoldenDB/backup.md",
+    "linux/kernel",
     "linux/traceroute.md",
     "linux/mtr.md",
     "linux/make.md",
     "algorithm/DES.md",
     "database/cluster/GTID.md",
-    "database/GoldenDB/backup.md",
     "algorithm/分组密码.md",
     "algorithm/对称加密算法.md",
     "database/cluster/2PC.md",
@@ -200,12 +219,6 @@
     "language/python/pdb.md",
     "language/python/imgs",
     "language/python/python.md",
-    "algorithm/椭圆曲线密码学.md",
-    "language/python",
-    "imgs",
-    "algorithm/序列密码.md",
-    "algorithm/media 1",
-    "algorithm/media",
-    "1.txt"
+    "language/python"
   ]
 }
