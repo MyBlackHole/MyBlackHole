@@ -34,3 +34,8 @@ cd /lib/x86_64-linux-gnu/
 ```shell
 sudo mount -t nfs 192.168.2.77:/tmp/db1_bin /tmp/db2_bin
 ```
+
+- fatal error: sys/capability.h: No such file or directory
+```shell
+sudo apt install libcap-dev
+```

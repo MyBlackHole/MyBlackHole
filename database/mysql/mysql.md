@@ -1,5 +1,10 @@
 # mysql
 
+## 配置
+```sql
+show variables like '%data%';
+```
+
 ## 文件详解
 
 - myisam
@@ -142,6 +147,13 @@ Delete FROM user Where User='Black' and Host='localhost'  # 删除用户
 update mysql.user set password=password('新密码') where User="BlackHole" and Host="localhost"; # 更新密码
 ```
 
+- 查看表结构
+```shell
+# 基本结构
+describe test2;
+# 详细结构
+show create table test\G
+```
 
 ## 连接 mysql
 ```shell
