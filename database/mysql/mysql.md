@@ -155,7 +155,56 @@ describe test2;
 show create table test\G
 ```
 
+## 命令
+
+- 查询检测点 
+```shell
+show engine INNODB STATUS\G
+```
+
+- 客户端查看 binlog
+```shell
+show binlog events in 'binlog.000008';
+```
+
+- 查询当前在使用的 bin log
+```shell
+show master status\G
+
++---------------+----------+--------------+------------------+-------------------+
+| File          | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++---------------+----------+--------------+------------------+-------------------+
+| binlog.000009 | 157      |              |                  |                   |
++---------------+----------+--------------+------------------+-------------------+
+1 row in set
+Time: 0.006s
+```
+
+- 查询所有 bin log
+```shell
+show binary logs;
++---------------+-----------+-----------+
+| Log_name      | File_size | Encrypted |
++---------------+-----------+-----------+
+| binlog.000001 | 180       | No        |
+| binlog.000002 | 404       | No        |
+| binlog.000003 | 180       | No        |
+| binlog.000004 | 180       | No        |
+| binlog.000005 | 180       | No        |
+| binlog.000006 | 918       | No        |
+| binlog.000007 | 157       | No        |
+| binlog.000008 | 2268      | No        |
+| binlog.000009 | 157       | No        |
++---------------+-----------+-----------+
+9 rows in set
+Time: 0.016s
+```
+
+
 ## 连接 mysql
 ```shell
 mysql -h 127.0.0.1 -P 3306 -uroot –p 
 ```
+
+## 例子
+
