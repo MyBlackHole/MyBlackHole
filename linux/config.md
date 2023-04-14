@@ -62,3 +62,35 @@ sudo update-ca-certificates
 tail /etc/ssl/certs/ca-certificates.crt -n 50
 
 ```
+
+- 设置触摸盘
+```shell
+<!-- /etc/X11/xorg.conf.d $ cat 70-synaptics.conf  -->
+<!-- Section "InputClass" -->
+<!--         Identifier "touchpad" -->
+<!--         Driver "synaptics" -->
+<!--         MatchIsTouchpad "on" -->
+<!--                 Option "TapButton1" "1" -->
+<!--                 Option "TapButton2" "3" -->
+<!--                 Option "TapButton3" "0" -->
+<!--                 Option "VertEdgeScroll" "on" -->
+<!--                 Option "VertTwoFingerScroll" "on" -->
+<!--                 Option "HorizEdgeScroll" "on" -->
+<!--                 Option "HorizTwoFingerScroll" "on" -->
+<!--                 Option "VertScrollDelta" "-112" -->
+<!--                 Option "HorizScrollDelta" "-114" -->
+<!--                 Option "MaxTapTime" "125" -->
+<!-- EndSection -->
+
+
+sudo apt install xserver-xorg-input-libinput
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        Driver "libinput"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Option "Tapping" "on"
+        Option "NaturralScrolling" "true"
+        Option "ClickMethod" "clickfinger"
+EndSection
+```
