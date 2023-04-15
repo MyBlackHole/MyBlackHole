@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/dome/ramdisk.md",
+                "file": "language/graphviz.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/dome/ramdisk.md",
+                "file": "language/graphviz.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/dome/ramdisk.md",
+                "file": "language/graphviz.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/dome/ramdisk.md"
+                "file": "language/graphviz.md"
               }
             }
           },
@@ -174,8 +174,20 @@
   },
   "active": "95ce87dfaa36cc7b",
   "lastOpenFiles": [
-    "linux/kernel/vfs.md",
+    "language/imgs/Pasted image 20230415145229.png",
+    "language/imgs/Pasted image 20230415145203.png",
+    "language/imgs/Pasted image 20230415145137.png",
+    "language/imgs/Pasted image 20230415145102.png",
+    "language/imgs/Pasted image 20230415145020.png",
+    "language/imgs/Pasted image 20230415144959.png",
+    "language/imgs/Pasted image 20230415144927.png",
+    "language/imgs/Pasted image 20230415120924.png",
+    "language/imgs/Pasted image 20230415115819.png",
+    "language/imgs/Pasted image 20230415115810.png",
+    "language/imgs/Pasted image 20230415115725.png",
+    "language/imgs",
     "linux/kernel/dome/ramdisk.md",
+    "linux/kernel/vfs.md",
     "linux/kernel/dome",
     "未命名",
     "第八章虚拟文件系统.pdf",
@@ -189,23 +201,13 @@
     "algorithm/分组密码.md",
     "algorithm/对称加密算法.md",
     "database/cluster/2PC.md",
-    "database/cluster/imgs/Pasted image 20230405113709.png",
-    "database/cluster/imgs/Pasted image 20230405113649.png",
     "linux/top.md",
-    "linux/imgs/Pasted image 20230405110419.png",
     "linux/imgs",
     "database/GoldenDB/GoldenDB.md",
-    "database/GoldenDB/imgs/Pasted image 20230402184606.png",
-    "database/GoldenDB/imgs/Pasted image 20230402184501.png",
-    "database/GoldenDB/imgs/Pasted image 20230402184438.png",
-    "database/GoldenDB/imgs/Pasted image 20230402183813.png",
     "database/GoldenDB/imgs",
     "database/cluster/PGXC.md",
     "database/postgres/snapshot.md",
-    "database/cluster/imgs/Pasted image 20230402152511.png",
-    "database/cluster/imgs/Pasted image 20230402143344.png",
     "database/cluster/GTM.md",
-    "database/cluster/imgs/Pasted image 20230402143045.png",
     "database/cluster/PXC.md",
     "database/cluster/MGR.md",
     "database/cluster/MHA.md",
@@ -217,8 +219,6 @@
     "module",
     "language/python/error.md",
     "language/python/pdb.md",
-    "language/python/imgs",
-    "language/python/python.md",
-    "language/python"
+    "language/python/imgs"
   ]
 }
