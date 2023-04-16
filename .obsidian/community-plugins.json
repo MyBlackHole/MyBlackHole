@@ -3,5 +3,6 @@
   "table-editor-obsidian",
   "obsidian-vimrc-support",
   "obsidian-local-images",
-  "obsidian-graphviz"
+  "obsidian-graphviz",
+  "obsidian-plantuml"
 ]

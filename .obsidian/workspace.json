@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/graphviz.md",
+                "file": "database/Teledb/framework.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/graphviz.md",
+                "file": "database/Teledb/framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/graphviz.md",
+                "file": "database/Teledb/framework.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/graphviz.md"
+                "file": "database/Teledb/framework.md"
               }
             }
           },
@@ -174,6 +174,16 @@
   },
   "active": "95ce87dfaa36cc7b",
   "lastOpenFiles": [
+    "database/mysql/replication.md",
+    "database/cluster/CAP.md",
+    "database/Teledb/framework.md",
+    "database/Teledb/teledb.md",
+    "database/Teledb/imgs/Pasted image 20230415190437.png",
+    "database/Teledb/imgs",
+    "language/gdb_error.md",
+    "language/graphviz.md",
+    "linux/fsck.md",
+    "database/mysql/mvcc.md",
     "language/imgs/Pasted image 20230415145229.png",
     "language/imgs/Pasted image 20230415145203.png",
     "language/imgs/Pasted image 20230415145137.png",
@@ -183,8 +193,6 @@
     "language/imgs/Pasted image 20230415144927.png",
     "language/imgs/Pasted image 20230415120924.png",
     "language/imgs/Pasted image 20230415115819.png",
-    "language/imgs/Pasted image 20230415115810.png",
-    "language/imgs/Pasted image 20230415115725.png",
     "language/imgs",
     "linux/kernel/dome/ramdisk.md",
     "linux/kernel/vfs.md",
@@ -210,15 +218,7 @@
     "database/cluster/GTM.md",
     "database/cluster/PXC.md",
     "database/cluster/MGR.md",
-    "database/cluster/MHA.md",
-    "database/cluster/mmm.md",
     "database/cluster/imgs",
-    "database/mysql/xtrabackup.md",
-    "database/mysql/主从.md",
-    "module/airflow.md",
-    "module",
-    "language/python/error.md",
-    "language/python/pdb.md",
-    "language/python/imgs"
+    "module"
   ]
 }
