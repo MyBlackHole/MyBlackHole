@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "9afdf4584d71febb",
+    "type": "split",
+    "children": [
+      {
+        "id": "34ba2596a363baa8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d7b6f4235928355",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "database/Teledb/framework.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "89e1e456963038cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "fef406d3d769068f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a3d53955d5730b4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "194c347f9200d951",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2d64ed041b64048a",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c773a4afba665585",
+    "type": "split",
+    "children": [
+      {
+        "id": "ddf341ee55acd862",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3a446340f74dd2a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "database/Teledb/framework.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "acd31b54a089fbc9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "database/Teledb/framework.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a0f318044c133669",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0516576a17c47650",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "database/Teledb/framework.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "random-note:开始漫游笔记": false
+    }
+  },
+  "active": "5d7b6f4235928355",
+  "lastOpenFiles": [
+    "linux/tc.md",
+    "database/mysql/transaction.md"
+  ]
+}

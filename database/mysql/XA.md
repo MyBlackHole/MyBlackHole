@@ -8,6 +8,133 @@
 set innodb_support_xa=ON
 ```
 
+## uml
+```plantuml
+@startuml
+rnote over master
+innodb prepare
+endrnote
+
+rnote over master
+binlog write
+endrnote
+
+master -> slave : replication
+
+rnote over slave
+wirte relay-log
+endrnote
+
+rnote over slave
+innodb prepare
+endrnote
+
+rnote over slave
+binlog write
+endrnote
+
+rnote over slave
+commit log write
+endrnote
+
+rnote over master
+commit log write
+endrnote
+master <-- slave : ack
+@enduml
+
+```
+
+## xa 各阶段 binlog 变化
+- 初始状态
+```sql
+XA START X'31',X'',1
+/*!*/;
+# at 329
+#230417  9:29:50 server id 1  end_log_pos 389 CRC32 0xf80eb554  Table_map: `test_xa`.`user` mapped to number 93
+# has_generated_invisible_primary_key=0
+# at 389
+#230417  9:29:50 server id 1  end_log_pos 439 CRC32 0x72477277  Write_rows: table id 93 flags: STMT_END_F
+### INSERT INTO `test_xa`.`user`
+### SET
+###   @1=10591
+###   @2=63
+###   @3='test1'
+# at 439
+#230417  9:34:15 server id 1  end_log_pos 530 CRC32 0xb6d362ff  Query   thread_id=8     exec_time=0     error_code=0
+SET TIMESTAMP=1681695255/*!*/;
+XA END X'31',X'',1
+/*!*/;
+# at 530
+#230417  9:34:15 server id 1  end_log_pos 567 CRC32 0xc226b8c4  XA PREPARE X'31',X'',1
+XA PREPARE X'31',X'',1
+/*!*/;
+# at 567
+#230417  9:44:13 server id 1  end_log_pos 644 CRC32 0x9d4c6091  Anonymous_GTID  last_committed=1        sequence_number=2       rbr_only=no     original_committed_timestamp=1681695853362833   immediate_commit_timestamp=1681695853362833
+ transaction_length=171
+# original_commit_timestamp=1681695853362833 (2023-04-17 09:44:13.362833 CST)
+# immediate_commit_timestamp=1681695853362833 (2023-04-17 09:44:13.362833 CST)
+/*!80001 SET @@session.original_commit_timestamp=1681695853362833*//*!*/;
+/*!80014 SET @@session.original_server_version=80032*//*!*/;
+/*!80014 SET @@session.immediate_server_version=80032*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 644
+#230417  9:44:13 server id 1  end_log_pos 738 CRC32 0xbfdc35c8  Query   thread_id=11    exec_time=0     error_code=0
+SET TIMESTAMP=1681695853/*!*/;
+XA COMMIT X'31',X'',1
+/*!*/;
+ROLLBACK /* added by mysqlbinlog */ /*!*/;
+```
+
+- 执行 xa commit '1'时 没有变化
+- 执行 insert into user (score, name) values( RAND() * 100, 'test1'); 没有变化
+- 执行 xa end '1'时 没有变化
+- 执行 xa prepare '1'时 
+```sql
+SET TIMESTAMP=1681697119/*!*/;
+XA START X'31',X'',1
+/*!*/;
+# at 910
+#230417 10:05:19 server id 1  end_log_pos 970 CRC32 0x23a5798a  Table_map: `test_xa`.`user` mapped to number 93
+# has_generated_invisible_primary_key=0
+# at 970
+#230417 10:05:19 server id 1  end_log_pos 1020 CRC32 0xb85042bc         Write_rows: table id 93 flags: STMT_END_F
+### INSERT INTO `test_xa`.`user`
+### SET
+###   @1=10592
+###   @2=88
+###   @3='test1'
+# at 1020
+#230417 10:06:54 server id 1  end_log_pos 1111 CRC32 0xe275ced1         Query   thread_id=14    exec_time=0     error_code=0
+SET TIMESTAMP=1681697214/*!*/;
+XA END X'31',X'',1
+/*!*/;
+# at 1111
+#230417 10:06:54 server id 1  end_log_pos 1148 CRC32 0x3866a688         XA PREPARE X'31',X'',1
+XA PREPARE X'31',X'',1
+```
+- 执行 xa commit '1' 时
+```sql
+/*!*/;
+# at 1148
+#230417 10:08:04 server id 1  end_log_pos 1225 CRC32 0xa4e686e1         Anonymous_GTID  last_committed=3        sequen
+ce_number=4       rbr_only=no     original_committed_timestamp=1681697284769971   immediate_commit_timestamp=168169728
+4769971     transaction_length=171
+# original_commit_timestamp=1681697284769971 (2023-04-17 10:08:04.769971 CST)
+# immediate_commit_timestamp=1681697284769971 (2023-04-17 10:08:04.769971 CST)
+/*!80001 SET @@session.original_commit_timestamp=1681697284769971*//*!*/;
+/*!80014 SET @@session.original_server_version=80032*//*!*/;
+/*!80014 SET @@session.immediate_server_version=80032*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 1225
+#230417 10:08:04 server id 1  end_log_pos 1319 CRC32 0xc8fdd7d9         Query   thread_id=14    exec_time=0     error_
+code=0
+SET TIMESTAMP=1681697284/*!*/;
+XA COMMIT X'31',X'',1
+```
+
+## xa 各阶段崩溃 binlog 变化
+
 
 ## 几种 panic 状态
 为了实验充分理解分布式事务

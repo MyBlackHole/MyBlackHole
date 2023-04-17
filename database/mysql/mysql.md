@@ -156,6 +156,10 @@ show create table test\G
 ```
 
 ## 命令
+- 查看正在连接会话
+```sql
+show processlist;
+```
 
 - 查询检测点 
 ```shell
@@ -202,13 +206,13 @@ Time: 0.016s
 
 - 获取活动的事务
 ```sql
-SELECT * from information_schema.INNODB_TRX
+SELECT * from information_schema.INNODB_TRX;
 select concat('KILL ',id,';') from information_schema.processlist p inner join information_schema.INNODB_TRX x on p.id=x.trx_mysql_thread_id where db='user';
 ```
 
 - 获取活动的锁
 ```sql
-mysql> SELECT * FROM information_schema.INNODB_LOCKs;
+SELECT * FROM information_schema.INNODB_LOCKs;
 ```
 
 - 锁等待的对应关系
@@ -216,6 +220,10 @@ mysql> SELECT * FROM information_schema.INNODB_LOCKs;
 mysql> SELECT * FROM information_schema.INNODB_LOCK_waits;
 ```
 
+- 表加读锁
+```sql
+lock tables user read;
+```
 
 ## 连接 mysql
 ```shell
