@@ -1,6 +1,14 @@
 # XA
 二阶段提交
 
+## 启用
+```sql
+# 8.0 默认启用
+# version < 8.0
+set innodb_support_xa=ON
+```
+
+
 ## 几种 panic 状态
 为了实验充分理解分布式事务
 
@@ -182,4 +190,23 @@ Time: 0.013s
 MySQL black@127.0.0.1:test_xa> xa recover\G
 0 rows in set
 Time: 0.001s
+```
+
+- 一阶段 xa
+```sql
+MySQL black@127.0.0.1:test_xa> xa start '10';
+Query OK, 0 rows affected
+Time: 0.001s
+MySQL black@127.0.0.1:test_xa> insert into user (id, score, `name`) values(580, 10000, "hole5");
+Query OK, 1 row affected
+Time: 0.001s
+MySQL black@127.0.0.1:test_xa> xa end '10';
+Query OK, 0 rows affected
+Time: 0.001s
+MySQL black@127.0.0.1:test_xa> xa recover\G
+0 rows in set
+Time: 0.001s
+MySQL black@127.0.0.1:test_xa> xa commit '10' one phase;
+Query OK, 0 rows affected
+Time: 0.014s
 ```

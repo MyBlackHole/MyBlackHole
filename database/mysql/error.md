@@ -41,3 +41,17 @@ set global sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_B
 ```shell
 mysql -h10.233.117.225 -P3306 -uroot -p --ssl-mode=DISABLED
 ```
+
+- (1399, 'XAER_RMFAIL: The command cannot be executed when global transaction is in the  NON-EXISTING state')
+```shell
+xa 开启与解散事务不在一个 session
+# 就是
+xa start xid
+xa end xid
+```
+
+- tx_mysql_thread_id 为 0
+```shell
+是 xa 事务
+需要 xa 回滚或提交
+```

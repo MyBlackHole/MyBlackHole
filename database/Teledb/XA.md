@@ -1,10 +1,14 @@
 # XA
+- 方式有
+1. memory
+2. file (rocksdb)
+3. mysql
+4. zookeeper
 
-## 启用
+## 命令
 ```sql
-# 8.0 默认启用
-# version < 8.0
-set innodb_support_xa=ON
+# 提交指定 XID
+commit 'dbproxy-0746814c-16';
 ```
 
 ## 是否支持 XA
@@ -20,7 +24,8 @@ Time: 0.014s
 ```
 
 ## 例子
-- 单表XA
+
+- 单库 XA
 ```sql
 # 数据库\表 需要在 "分布式数据控制台" 创建
 CREATE TABLE `article` (
@@ -112,39 +117,6 @@ Time: 0.191s
 MySQL test@192.168.90.207:UDALTEST> commit;
 Query OK, 0 rows affected
 Time: 0.074s
-```
-
-- 分布式 非 XA 二
-```sql
-MySQL test@192.168.90.207:UDALTEST> dt start user;
-+-----------------------------+
-| TransactionId               |
-+-----------------------------+
-| teledb04-1681178925301-user |
-+-----------------------------+
-1 row in set
-Time: 0.069s
-MySQL test@192.168.90.207:UDALTEST> show warnings
-+-------+------+---------+
-| Level | Code | Message |
-+-------+------+---------+
-+-------+------+---------+
-0 rows in set
-Time: 0.100s
-MySQL test@192.168.90.207:UDALTEST> insert into user (id, score, `name`) values(8, 10000, "hole5");
-Query OK, 1 row affected
-Time: 0.036s
-MySQL test@192.168.90.207:UDALTEST> insert into user (id, score, `name`) values(9, 10000, "hole5");
-Query OK, 1 row affected
-Time: 0.097s
-MySQL test@192.168.90.207:UDALTEST> show warnings
-+-------+------+---------+
-| Level | Code | Message |
-+-------+------+---------+
-+-------+------+---------+
-0 rows in set
-Time: 0.085s
-MySQL test@192.168.90.207:UDALTEST> commit;
 ```
 
 - 分布式 XA

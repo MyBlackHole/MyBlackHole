@@ -1,0 +1,2 @@
+# monitor_cluster_db_states
+check_cluster.py脚本监控获取的数据，主要从zookeeper上读取到agent监控的数据

@@ -200,6 +200,22 @@ show binary logs;
 Time: 0.016s
 ```
 
+- 获取活动的事务
+```sql
+SELECT * from information_schema.INNODB_TRX
+select concat('KILL ',id,';') from information_schema.processlist p inner join information_schema.INNODB_TRX x on p.id=x.trx_mysql_thread_id where db='user';
+```
+
+- 获取活动的锁
+```sql
+mysql> SELECT * FROM information_schema.INNODB_LOCKs;
+```
+
+- 锁等待的对应关系
+```sql
+mysql> SELECT * FROM information_schema.INNODB_LOCK_waits;
+```
+
 
 ## 连接 mysql
 ```shell

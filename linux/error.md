@@ -39,3 +39,14 @@ sudo mount -t nfs 192.168.2.77:/tmp/db1_bin /tmp/db2_bin
 ```shell
 sudo apt install libcap-dev
 ```
+
+- error: ImageMagick not installed? Executable 'convert' not found
+```shell
+sudo apt install imagemagick
+```
+
+- error: gifsicle not installed? Executable 'gifsicle' not found
+```shell
+sudo apt install gifsicle
+# npm install image-webpack-loader -D
+```

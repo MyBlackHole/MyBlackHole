@@ -1,5 +1,16 @@
 # 
 
+## 配置
+
+表配置:
+/udal_cluster/tenant_1/dbproxy_cluster/dbproxy_cluster_0000000014/schemas/schema_0000000104/table/table_0000000142
+
+事务配置：
+/udal_cluster/tenant_1/dbproxy_cluster/dbproxy_cluster_0000000014/groups/group_0000000069/properties/transaction ^transaction
+
+mysql 账户信息:
+关系数据库 -- 安装部署 -- Set 部署 -- 密码更新
+
 ## 命令
 
 - 查询全局序列
@@ -15,4 +26,9 @@ udal show help
 - 查看服务器运行状态
 ```shell
 udal show server
+```
+
+- 连接
+```shell
+mysql --socket=/tmp/mysql_5555.sock -u RDS_agent -pReport25Gky8@#*
 ```
