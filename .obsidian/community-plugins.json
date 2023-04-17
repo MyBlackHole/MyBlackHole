@@ -2,5 +2,7 @@
   "obsidian-git",
   "table-editor-obsidian",
   "obsidian-vimrc-support",
-  "obsidian-local-images"
+  "obsidian-local-images",
+  "obsidian-graphviz",
+  "obsidian-plantuml"
 ]
