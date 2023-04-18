@@ -55,3 +55,16 @@ xa end xid
 是 xa 事务
 需要 xa 回滚或提交
 ```
+
+- 忘记密码
+```shell
+# 关闭 mysqld
+
+# 重新启动 mysqld 加上 --skip-grant-tables (不启用权限表验证)
+
+use mysql;
+UPDATE user SET authentication_string=PASSWORD("root") WHERE User="root"; # 修改密码
+flush privileges; # 刷新权限
+
+# 恢复原先 mysqld 启动参数
+```

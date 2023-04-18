@@ -11,12 +11,8 @@
             "id": "5d7b6f4235928355",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "database/Teledb/framework.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "database/Teledb/framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "database/Teledb/framework.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "database/Teledb/framework.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -152,6 +144,12 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "language/python/airflow/error.md",
+    "language/python/airflow.md",
+    "language/python/airflow/airflow.md",
+    "language/python/airflow",
+    "language/python/imgs/Pasted image 20230418095554.png",
+    "database/Teledb/framework.md",
     "linux/tc.md",
     "database/mysql/transaction.md"
   ]
