@@ -17,59 +17,6 @@ sudo ln –s /usr/local/python3.6/bin/python3.6 /usr/bin/python3.6
 export PATH=/usr/local/python3.6/bin:$PATH 
 ```
 
-## 安装多版本
-- pyenv (版本控制)
-```shell
-# 安装 pyenv
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \ 
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \ 
-xz-utils tk-dev libffi-dev liblzma-dev 
-sudo apt install git curl
-curl https://pyenv.run | bash
-
-# 添加环境配置 
-# Python
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-eval "$(pyenv virtualenv-init -)"
-
-# 查看当前版本
-pyenv version
-
-# 查看所有版本
-pyenv versions
-
-# 删除指定版本
-pyenv uninstall 3.5.2
-
-# 查看所有可安装的版本
-pyenv install --list 
-
-# 指定全局版本 
-pyenv global 3.6.5 
-
-# 指定多个全局版本, 3版本优先
-pyenv global 3.6.5 2.7.14 
-
-```
-
-- pyenv-virtualenv
-```shell
-# 创建进入项目环境 
-pyenv virtualenv 3.8.1 first_project 
-
-# 切换项目环境
-pyenv activate first_project 
-
-# 退出当前环境 
-pyenv deactivate 
-
-# 删除项目环境 
-pyenv virtualenv-delete first_project 
-```
-
 - 源码编译
 ```shell
 # ubuntu

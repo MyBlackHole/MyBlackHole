@@ -32,10 +32,10 @@ Airflow 是通过 DAG（Directed acyclic graph 有向无环图）来管理任务
 
 ## 配置
 ```shell
-export AIRFLOW_DB_HOSTNAME=192.168.78.212
-export AIRFLOW_DB_PORT=3306
-export AIRFLOW_DB_USERNAME=root
-export AIRFLOW_DB_PASSWORD=p@3Sw0rd
+# export AIRFLOW_DB_HOSTNAME=192.168.78.212
+# export AIRFLOW_DB_PORT=3306
+# export AIRFLOW_DB_USERNAME=root
+# export AIRFLOW_DB_PASSWORD=p@3Sw0rd
 ```
 
 ## 常用命令
@@ -91,6 +91,11 @@ airflow unpause dag_id
 airflow list_tasks dag_id  查看task列表
 ```
 
+- 初始化 airflow 元数据库
+```shell
+airflow initdb
+```
+
 - 清空任务状态
 ```shell
 airflow clear dag_id       
@@ -114,4 +119,6 @@ rm -rf airflow-*pid
 # 启动
 airflow webserver -D --debug
 airflow scheduler -D --debug
+# 启动 worker
+airflow celery worker -D
 ```
