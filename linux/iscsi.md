@@ -148,3 +148,11 @@ lsblk
 # 查看UUID
 blkid
 ```
+
+- 退出所有登陆的目标器
+```shell
+iscsiadm -m node -U all
+
+# 连接死掉或者断网
+iscsiadm -m node -o delete –T  iqn.2015.06.cn.hrbyg.www.ygcs.c0a802b8:wzgchap -p 192.168.14.112
+```

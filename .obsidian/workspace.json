@@ -144,6 +144,12 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "linux/fuser.md",
+    "linux/zfs/storage_pool.md",
+    "linux/zfs/snapshots.md",
+    "linux/zfs/dataset.md",
+    "linux/zfs/zfs.md",
+    "linux/zfs",
     "language/python/pyenv.md",
     "language/python/airflow/error.md",
     "language/python/airflow.md",
