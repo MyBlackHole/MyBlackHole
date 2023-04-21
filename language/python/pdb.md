@@ -34,3 +34,10 @@ b  10:当前文件第10行
 b func:当前func方法 
 b test/1:10:test目录1.py 文件第10行 
 ```
+
+- 无法直接下端点的可以
+```python
+# 方到需要断点的行
+import pdb
+pdb.set_trace()
+```
