@@ -117,8 +117,8 @@ rm -rf airflow-*
 rm -rf airflow-*pid
 
 # 启动
-airflow webserver -D --debug
 airflow scheduler -D --debug
+airflow webserver -D --debug
 # 启动 worker
 airflow celery worker -D
 ```

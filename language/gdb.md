@@ -48,4 +48,10 @@ gdb attach [pid]
 sudo gdb attach 766047
 ```
 
+- 调试 python 进程
+```shell
+gdb -p pid
+source Tools/gdb/libpython.py # cpython 里有
+```
+
 - 制定 gdbinit
