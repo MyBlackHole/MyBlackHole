@@ -21,3 +21,8 @@ git blame <filename> - L n,m
     <filename> 为要查找的文件路径+文件名
     -L 后面的n,m代表要查找的起始行和结束行
 ```
+
+- 清理未跟踪文件
+```shell
+git clean -df
+```

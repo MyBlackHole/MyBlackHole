@@ -94,3 +94,12 @@ Section "InputClass"
         Option "ClickMethod" "clickfinger"
 EndSection
 ```
+
+- 修改亮度
+```shell
+# 不同显卡 amdgpu_bl0 不同
+echo 255 > /sys/class/backlight/amdgpu_bl0/brightness
+
+# 获取最大亮度
+cat /sys/class/backlight/amdgpu_bl0/max_brightness
+```
