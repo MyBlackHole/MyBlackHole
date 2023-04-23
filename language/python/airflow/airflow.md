@@ -38,6 +38,9 @@ Airflow 是通过 DAG（Directed acyclic graph 有向无环图）来管理任务
 # export AIRFLOW_DB_PASSWORD=p@3Sw0rd
 ```
 
+## status
+[[status]]
+
 ## 常用命令
 
 - 测试 db 连接

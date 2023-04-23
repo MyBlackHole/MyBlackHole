@@ -30,10 +30,10 @@ docker pull mysql
 docker run -p 3306:3306 --name mysql \
     --privileged=true \
     -v /etc/localtime:/etc/localtime:ro \
-    -v /data/docker/mysql/conf:/etc/mysql \
-    -v /data/docker/mysql/logs:/var/log/mysql \
-    -v /data/docker/mysql/data:/var/lib/mysql \
-    -e MYSQL_ROOT_PASSWORD=123456 \
+    -v /opt/docker/mysql/conf:/etc/mysql \
+    -v /opt/docker/mysql/logs:/var/log/mysql \
+    -v /opt/docker/mysql/data:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=p@3Sw0rd \
     -d mysql:5.7
 
 # 修改data、logs、conf 用户与用户组为 999:999
@@ -49,6 +49,16 @@ docker run -p 3306:3306 --name mysql \
 # 或
 docker run -it --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag 
 
+# 或
+
+mkdir -p /opt/docker/mysql/conf/conf.d
+docker run -p 3306:3306 --name mysql \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /opt/docker/mysql/conf:/etc/mysql \
+    -v /opt/docker/mysql/logs:/var/log/mysql \
+    -v /opt/docker/mysql/data:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=p@3Sw0rd \
+    -d mysql:8
 ```
 
 - 物理机版

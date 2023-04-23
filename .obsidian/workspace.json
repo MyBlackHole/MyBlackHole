@@ -11,8 +11,12 @@
             "id": "5d7b6f4235928355",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "language/python/airflow/status.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "language/python/airflow/status.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "language/python/airflow/status.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "language/python/airflow/status.md"
+              }
             }
           }
         ]
@@ -144,6 +152,10 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "linux/netstat.md",
+    "aio/cdm.md",
+    "aio/worker.md",
+    "language/python/airflow/airflow.md",
     "linux/fuser.md",
     "linux/zfs/storage_pool.md",
     "linux/zfs/snapshots.md",
@@ -153,7 +165,6 @@
     "language/python/pyenv.md",
     "language/python/airflow/error.md",
     "language/python/airflow.md",
-    "language/python/airflow/airflow.md",
     "language/python/airflow",
     "language/python/imgs/Pasted image 20230418095554.png",
     "database/Teledb/framework.md",

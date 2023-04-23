@@ -166,3 +166,8 @@ pip install cryptography
 ```shell
 pip3 install pyyaml 
 ```
+
+- The WebSocket transport is not available
+```shell
+pip install simple-websocket
+```

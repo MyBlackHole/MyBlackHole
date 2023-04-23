@@ -49,3 +49,8 @@ RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' 
 ```shell
 # 重启 docker 服务
 ```
+
+- iptables: No chain/target/match by that name.
+```shell
+systemctl restart docker
+```
