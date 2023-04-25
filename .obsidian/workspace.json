@@ -152,6 +152,8 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "database/mysql/xtarbackup.md",
+    "aio/teledb.md",
     "linux/netstat.md",
     "aio/cdm.md",
     "aio/worker.md",

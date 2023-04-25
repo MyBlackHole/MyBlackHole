@@ -1,0 +1,6 @@
+# 
+
+- 编译
+```shell
+cmake -DDOWNLOAD_BOOST=1 -DWITH_BOOST=dwith_boost -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=Debug ..
+```

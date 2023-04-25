@@ -235,6 +235,14 @@ mysql> SELECT * FROM information_schema.INNODB_LOCK_waits;
 lock tables user read;
 ```
 
+- 权限查询
+```shell
+show grants
+
+# 指定账户
+show grants for 'root'@'%'
+```
+
 ## 连接 mysql
 ```shell
 mysql -h 127.0.0.1 -P 3306 -uroot –p 

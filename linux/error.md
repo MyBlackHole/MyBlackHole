@@ -50,3 +50,8 @@ sudo apt install imagemagick
 sudo apt install gifsicle
 # npm install image-webpack-loader -D
 ```
+
+- Could NOT find Gettext
+```shell
+sudo apt install gettext
+```
