@@ -42,6 +42,10 @@ Airflow 是通过 DAG（Directed acyclic graph 有向无环图）来管理任务
 [[status]]
 
 ## 常用命令
+- 打印当前 airflow 配置
+```shell
+airflow info
+```
 
 - 测试 db 连接
 ```shell
@@ -124,4 +128,14 @@ airflow scheduler -D --debug
 airflow webserver -D --debug
 # 启动 worker
 airflow celery worker -D
+```
+
+- 暂停任务
+```shell
+airflow dags pause test_task
+```
+
+- 清空任务实例
+```shell
+airflow clear dag_id
 ```

@@ -165,6 +165,11 @@ describe test2;
 show create table test\G
 ```
 
+- 查看表索引
+```shell
+show index from task_instance;
+```
+
 ## 命令
 - 查看正在连接会话
 ```sql

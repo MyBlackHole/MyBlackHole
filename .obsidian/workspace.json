@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/python/airflow/status.md",
+                "file": "language/c/atexit.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/python/airflow/status.md",
+                "file": "language/c/atexit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/python/airflow/status.md",
+                "file": "language/c/atexit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/python/airflow/status.md"
+                "file": "language/c/atexit.md"
               }
             }
           }
@@ -152,6 +152,33 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "database/oracle/rman.md",
+    "database/oracle/error.md",
+    "database/oracle/oracle.md",
+    "database/oracle",
+    "database/oracle.md",
+    "language/build_system/bear.md",
+    "linux/cat.md",
+    "linux/tail.md",
+    "language/python/pytest.md",
+    "linux/kernel/kernel.md",
+    "language/c/packget/libsodium.md",
+    "language/c/packget",
+    "language/c/prctl.md",
+    "language/c/clone.md",
+    "language/build_system/clang_format.md",
+    "language/c/imgs/Pasted image 20230425091513.png",
+    "language/c/imgs",
+    "language/build_system/autotools/autotools.md",
+    "language/c/atexit.md",
+    "language/build_system/autotools/imgs/Pasted image 20230425090717.png",
+    "language/build_system/autotools/imgs/Pasted image 20230425090655.png",
+    "language/build_system/autotools/imgs/Pasted image 20230425090632.png",
+    "language/build_system/autotools/imgs/Pasted image 20230425090604.png",
+    "language/build_system/autotools/dome.md",
+    "language/build_system/autotools/imgs/Pasted image 20230425090154.png",
+    "language/build_system/autotools/imgs",
+    "language/python/airflow/status.md",
     "database/mysql/xtarbackup.md",
     "aio/teledb.md",
     "linux/netstat.md",
@@ -161,16 +188,8 @@
     "linux/fuser.md",
     "linux/zfs/storage_pool.md",
     "linux/zfs/snapshots.md",
-    "linux/zfs/dataset.md",
-    "linux/zfs/zfs.md",
     "linux/zfs",
-    "language/python/pyenv.md",
-    "language/python/airflow/error.md",
-    "language/python/airflow.md",
     "language/python/airflow",
-    "language/python/imgs/Pasted image 20230418095554.png",
-    "database/Teledb/framework.md",
-    "linux/tc.md",
-    "database/mysql/transaction.md"
+    "language/python/imgs/Pasted image 20230418095554.png"
   ]
 }

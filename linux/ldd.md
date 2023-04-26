@@ -18,5 +18,12 @@ ldd(选项)(参数)
 
 ## 例子
 ```shell
+ldd ./out/obj/stdio_learn/print_time
+        linux-vdso.so.1 (0x00007ffcbc348000)
+        libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f0fbe53b000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007f0fbe75e000)
+
 /lib/ld-linux.so.2 --list program
+
+/sbin/ldconfig -p | grep stdc++
 ```
