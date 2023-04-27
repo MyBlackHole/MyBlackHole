@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "34ba2596a363baa8",
+        "id": "483ab8ceeff51ea6",
         "type": "tabs",
         "children": [
           {
-            "id": "5d7b6f4235928355",
+            "id": "2034770880be029b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/sar.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d70bb6742f8e5b7c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "database/FlashDB/FlashDB.md",
+                "file": "linux/wc.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/sar.md",
+                "file": "linux/wc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/sar.md",
+                "file": "linux/wc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/sar.md"
+                "file": "linux/wc.md"
               }
             }
           }
@@ -162,48 +150,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2a3d53955d5730b4",
+  "active": "2034770880be029b",
   "lastOpenFiles": [
-    "language/c/atexit.md",
-    "database/FlashDB/FlashDB.md",
-    "linux/cmake.md",
-    "linux/chattr.md",
-    "linux/cfdisk.md",
+    "linux/hdparm.md",
+    "linux/wc.md",
+    "linux/lvim.md",
+    "linux/chronyc.md",
+    "linux/bluetoothctl.md",
+    "linux/e2label.md",
+    "linux/ldconfig.md",
+    "linux/cryptsetup.md",
+    "linux/killall.md",
+    "linux/mkfs.ext4.md",
+    "linux/ldd.md",
+    "linux/ntfsfix.md",
+    "linux/fsck.md",
+    "linux/Untitled 2.md",
+    "linux/Untitled 1.md",
     "linux/sar.md",
-    "database/FlashDB",
+    "linux/mknod.md",
+    "linux/imgs/Pasted image 20230428013421.png",
+    "linux/lsmod.md",
+    "linux/lsusb.md",
+    "linux/lsof.md",
+    "linux/lspci.md",
+    "linux/make.md",
+    "linux/hcitool.md",
+    "linux/netstat.md",
+    "linux/hciconfig.md",
+    "linux/rfcomm.md",
+    "linux/VirtualBox",
+    "linux/ubuntu/imgs/Pasted image 20230428011850.png",
+    "linux/ubuntu/imgs/Pasted image 20230428011829.png",
+    "linux/ubuntu/imgs/Pasted image 20230428011803.png",
+    "linux/ubuntu/imgs",
+    "linux/ubuntu",
     "Untitled",
-    "aio/web.md",
-    "database/oracle/概念.md",
-    "database/oracle/rman.md",
-    "database/oracle/error.md",
-    "database/oracle/oracle.md",
+    "linux/imgs/Pasted image 20230428011615.png",
+    "linux/imgs/Pasted image 20230428011556.png",
+    "linux/imgs/Pasted image 20230428011440.png",
+    "linux/imgs/Pasted image 20230428011120.png",
+    "linux/imgs/Pasted image 20230428011047.png",
+    "linux/imgs/Pasted image 20230428010948.png",
+    "database/FlashDB",
     "database/oracle",
-    "database/oracle.md",
-    "language/build_system/bear.md",
-    "linux/cat.md",
-    "linux/tail.md",
-    "language/python/pytest.md",
-    "linux/kernel/kernel.md",
-    "language/c/packget/libsodium.md",
     "language/c/packget",
-    "language/c/prctl.md",
-    "language/c/clone.md",
-    "language/build_system/clang_format.md",
-    "language/c/imgs/Pasted image 20230425091513.png",
     "language/c/imgs",
-    "language/build_system/autotools/autotools.md",
-    "language/build_system/autotools/imgs/Pasted image 20230425090717.png",
-    "language/build_system/autotools/imgs/Pasted image 20230425090655.png",
-    "language/build_system/autotools/imgs/Pasted image 20230425090632.png",
-    "language/build_system/autotools/imgs/Pasted image 20230425090604.png",
-    "language/build_system/autotools/dome.md",
-    "language/build_system/autotools/imgs/Pasted image 20230425090154.png",
     "language/build_system/autotools/imgs",
-    "language/python/airflow/status.md",
-    "database/mysql/xtarbackup.md",
-    "aio/teledb.md",
-    "linux/zfs",
-    "language/python/airflow",
-    "language/python/imgs/Pasted image 20230418095554.png"
+    "linux/zfs"
   ]
 }

@@ -1,0 +1,1 @@
+hdparm -I /dev/sda 查看设备信息

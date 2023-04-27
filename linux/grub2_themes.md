@@ -1,0 +1,1 @@
+[[Ubuntu笔记]我的Linux之路--Grub2主题修改_WuWenL_的博客-CSDN博客](https://blog.csdn.net/w84963568/article/details/78884003)
