@@ -25,14 +25,134 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "linux/top.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "561f7cafacb68c34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/traceroute.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9891f5959638c252",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/top.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e864f564fd90b468",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/config.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "298b9818c46a4bf5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/df.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c539e8e96b48cd0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/dpkg.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1d2c00fe80dc406a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/error.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e66cf73c4f446617",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "linux/dmesg.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a4755ff6275968c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/date.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e322d1642eb49d09",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/df.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "eb06fbccc4df9aed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/timedatectl.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -98,7 +218,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/dmesg.md",
+                "file": "linux/timedatectl.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +235,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/dmesg.md",
+                "file": "linux/timedatectl.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +258,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/dmesg.md"
+                "file": "linux/timedatectl.md"
               }
             }
           }
@@ -163,10 +283,32 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "06372c1d2a997bc6",
+  "active": "eb06fbccc4df9aed",
   "lastOpenFiles": [
-    "linux/udisksctl.md",
+    "linux/imgs/Pasted image 20230428023131.png",
+    "linux/df.md",
+    "linux/timedatectl.md",
+    "linux/do-release-upgrade.md",
+    "linux/date.md",
+    "linux/shutdown.md",
+    "linux/imgs/Pasted image 20230428023006.png",
     "linux/dmesg.md",
+    "linux/reboot.md",
+    "linux/error.md",
+    "linux/halt.md",
+    "linux/imgs/Pasted image 20230428022904.png",
+    "linux/dpkg.md",
+    "linux/apt-cache.md",
+    "linux/imgs/Pasted image 20230428022840.png",
+    "linux/update-manager.md",
+    "linux/config.md",
+    "linux/imgs/Pasted image 20230428022751.png",
+    "linux/ssh.md",
+    "linux/gsetting.md",
+    "linux/top.md",
+    "linux/cal.md",
+    "linux/traceroute.md",
+    "linux/udisksctl.md",
     "linux/update-alternatives.md",
     "linux/imgs/Pasted image 20230428022352.png",
     "linux/unzip.md",
@@ -174,34 +316,12 @@
     "linux/udevadm.md",
     "linux/ulimite.md",
     "linux/umount.md",
-    "linux/who.md",
-    "linux/watch.md",
-    "linux/unit_systemd.md",
-    "linux/lsmod.md",
-    "linux/mackup.md",
-    "linux/mkfs.ext4.md",
-    "linux/linux_dir_struct.md",
-    "linux/linux.md",
-    "linux/lsblk.md",
-    "linux/lspci.md",
-    "linux/cfdisk.md",
-    "linux/chsh.md",
-    "linux/alias.md",
-    "linux/init.md",
     "linux/imgs/Pasted image 20230428022224.png",
-    "linux/slabtop.md",
-    "linux/last.md",
-    "linux/lastb.md",
-    "linux/lastlog.md",
     "Untitled",
     "linux/imgs/Pasted image 20230428021947.png",
     "linux/imgs/Pasted image 20230428021649.png",
     "linux/imgs/Pasted image 20230428021127.png",
     "linux/imgs/Pasted image 20230428021034.png",
-    "linux/imgs/Pasted image 20230428020432.png",
-    "linux/imgs/Pasted image 20230428020254.png",
-    "linux/imgs/Pasted image 20230428020118.png",
-    "linux/imgs/Pasted image 20230428020046.png",
     "linux/VirtualBox",
     "linux/ubuntu/imgs",
     "linux/ubuntu",
