@@ -7,7 +7,11 @@ sudo pip install ipdb
 
 python -m pdb hello.py (python 内置) 
 
+w (where): 打印当前调用堆栈
 
+d (down): 执行跳转到当前的深一层
+
+u (up): 执行跳转到当前的上一层
 
 n:单步执行，next的首字母 
 
