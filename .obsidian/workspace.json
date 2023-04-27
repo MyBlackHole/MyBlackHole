@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "483ab8ceeff51ea6",
+        "id": "b7699c4eb1b57f8d",
         "type": "tabs",
         "children": [
           {
-            "id": "2034770880be029b",
+            "id": "a924df9aa8b865b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/wc.md",
+                "file": "linux/udisksctl.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "06372c1d2a997bc6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/dmesg.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "fuser",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/wc.md",
+                "file": "linux/dmesg.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/wc.md",
+                "file": "linux/dmesg.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/wc.md"
+                "file": "linux/dmesg.md"
               }
             }
           }
@@ -150,48 +163,48 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2034770880be029b",
+  "active": "06372c1d2a997bc6",
   "lastOpenFiles": [
-    "linux/hdparm.md",
-    "linux/wc.md",
-    "linux/lvim.md",
-    "linux/chronyc.md",
-    "linux/bluetoothctl.md",
-    "linux/e2label.md",
-    "linux/ldconfig.md",
-    "linux/cryptsetup.md",
-    "linux/killall.md",
-    "linux/mkfs.ext4.md",
-    "linux/ldd.md",
-    "linux/ntfsfix.md",
-    "linux/fsck.md",
-    "linux/Untitled 2.md",
-    "linux/Untitled 1.md",
-    "linux/sar.md",
-    "linux/mknod.md",
-    "linux/imgs/Pasted image 20230428013421.png",
+    "linux/udisksctl.md",
+    "linux/dmesg.md",
+    "linux/update-alternatives.md",
+    "linux/imgs/Pasted image 20230428022352.png",
+    "linux/unzip.md",
+    "linux/update-rc.d.md",
+    "linux/udevadm.md",
+    "linux/ulimite.md",
+    "linux/umount.md",
+    "linux/who.md",
+    "linux/watch.md",
+    "linux/unit_systemd.md",
     "linux/lsmod.md",
-    "linux/lsusb.md",
-    "linux/lsof.md",
+    "linux/mackup.md",
+    "linux/mkfs.ext4.md",
+    "linux/linux_dir_struct.md",
+    "linux/linux.md",
+    "linux/lsblk.md",
     "linux/lspci.md",
-    "linux/make.md",
-    "linux/hcitool.md",
-    "linux/netstat.md",
-    "linux/hciconfig.md",
-    "linux/rfcomm.md",
+    "linux/cfdisk.md",
+    "linux/chsh.md",
+    "linux/alias.md",
+    "linux/init.md",
+    "linux/imgs/Pasted image 20230428022224.png",
+    "linux/slabtop.md",
+    "linux/last.md",
+    "linux/lastb.md",
+    "linux/lastlog.md",
+    "Untitled",
+    "linux/imgs/Pasted image 20230428021947.png",
+    "linux/imgs/Pasted image 20230428021649.png",
+    "linux/imgs/Pasted image 20230428021127.png",
+    "linux/imgs/Pasted image 20230428021034.png",
+    "linux/imgs/Pasted image 20230428020432.png",
+    "linux/imgs/Pasted image 20230428020254.png",
+    "linux/imgs/Pasted image 20230428020118.png",
+    "linux/imgs/Pasted image 20230428020046.png",
     "linux/VirtualBox",
-    "linux/ubuntu/imgs/Pasted image 20230428011850.png",
-    "linux/ubuntu/imgs/Pasted image 20230428011829.png",
-    "linux/ubuntu/imgs/Pasted image 20230428011803.png",
     "linux/ubuntu/imgs",
     "linux/ubuntu",
-    "Untitled",
-    "linux/imgs/Pasted image 20230428011615.png",
-    "linux/imgs/Pasted image 20230428011556.png",
-    "linux/imgs/Pasted image 20230428011440.png",
-    "linux/imgs/Pasted image 20230428011120.png",
-    "linux/imgs/Pasted image 20230428011047.png",
-    "linux/imgs/Pasted image 20230428010948.png",
     "database/FlashDB",
     "database/oracle",
     "language/c/packget",

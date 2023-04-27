@@ -1,0 +1,1 @@
+查询Capabilities权限
