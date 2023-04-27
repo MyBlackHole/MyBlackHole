@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/c/atexit.md",
+                "file": "linux/sar.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d70bb6742f8e5b7c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "database/FlashDB/FlashDB.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/c/atexit.md",
+                "file": "linux/sar.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/c/atexit.md",
+                "file": "linux/sar.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/c/atexit.md"
+                "file": "linux/sar.md"
               }
             }
           }
@@ -138,20 +150,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "zk-prefixer:创建时间戳笔记": false,
-      "random-note:开始漫游笔记": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "zk-prefixer:Create new unique note": false,
+      "random-note:Open random note": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5d7b6f4235928355",
+  "active": "2a3d53955d5730b4",
   "lastOpenFiles": [
+    "language/c/atexit.md",
+    "database/FlashDB/FlashDB.md",
+    "linux/cmake.md",
+    "linux/chattr.md",
+    "linux/cfdisk.md",
+    "linux/sar.md",
+    "database/FlashDB",
+    "Untitled",
     "aio/web.md",
     "database/oracle/概念.md",
     "database/oracle/rman.md",
@@ -172,7 +192,6 @@
     "language/c/imgs/Pasted image 20230425091513.png",
     "language/c/imgs",
     "language/build_system/autotools/autotools.md",
-    "language/c/atexit.md",
     "language/build_system/autotools/imgs/Pasted image 20230425090717.png",
     "language/build_system/autotools/imgs/Pasted image 20230425090655.png",
     "language/build_system/autotools/imgs/Pasted image 20230425090632.png",
@@ -183,11 +202,6 @@
     "language/python/airflow/status.md",
     "database/mysql/xtarbackup.md",
     "aio/teledb.md",
-    "linux/netstat.md",
-    "aio/cdm.md",
-    "aio/worker.md",
-    "language/python/airflow/airflow.md",
-    "linux/fuser.md",
     "linux/zfs",
     "language/python/airflow",
     "language/python/imgs/Pasted image 20230418095554.png"
