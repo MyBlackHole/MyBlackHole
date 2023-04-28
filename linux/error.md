@@ -55,3 +55,8 @@ sudo apt install gifsicle
 ```shell
 sudo apt install gettext
 ```
+
+- gssapi/gssapi.h: No such file or directory
+```shell
+sudo apt install libkrb5-dev
+```
