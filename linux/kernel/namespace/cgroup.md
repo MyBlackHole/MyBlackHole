@@ -29,7 +29,7 @@ cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,de
 
 mount命令中显示的这些cgroup的目录，就是v1的样子。下面我们切换一下v2，看看有什么区别。切换方法其实也很简单，就是在重新启动的时候加上一个内核引导参数：
 
-systemd.unified\_cgroup\_hierarchy=1
+systemd.unified_cgroup_hierarchy=1
 
 这个参数的意思是，打开cgroup的unified属性。是的，unified的cgroup就是v2了。我们加上参数重新引导之后看一下状态：
 
@@ -240,7 +240,7 @@ MiB Swap:   2088.0 total,   2088.0 free,      0.0 used.   1500.7 avail Mem
 
 ### 权重（cpuweight）
 
-可以通过cpu.weight文件来设置本cgroup的权重值。默认为100。取值范围为\[1， 10000\]。
+可以通过cpu.weight文件来设置本cgroup的权重值。默认为100。取值范围为[1， 10000]。
 
 cpu.weight.nice：当前可以支持使用nice值的方式设置权重。取值范围根nice值范围一样\[-20, 19\]。
 
