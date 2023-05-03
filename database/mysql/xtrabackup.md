@@ -3,6 +3,17 @@ mysql innodb备份工具
 
 xtrabackup8 不再有 innodbackupex
 
+## build 
+```shell
+# 需要 openssl 1.x.x
+cmake -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+      -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
+      -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
+      -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl \
+      -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost ..
+```
+
 ## 优点
 1. 备份速度快
 支持全量、增量备份
