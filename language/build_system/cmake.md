@@ -8,3 +8,15 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
       -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" ..
 ```
+
+- 输出编译命令
+```shell
+# 1 cmake 追加
+-DCMAKE_VERBOSE_MAKEFILE=ON
+
+# 2 CMakeLists.txt 添加
+set(CMAKE_VERBOSE_MAKEFILEON ON)
+
+# 3 make 追加
+VERBOSE=1
+```

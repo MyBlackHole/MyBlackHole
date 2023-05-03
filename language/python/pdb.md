@@ -45,3 +45,8 @@ b test/1:10:test目录1.py 文件第10行
 import pdb
 pdb.set_trace()
 ```
+
+- 下断点
+```shell
+break /home/black/.local/lib/python3.10/site-packages/kombu/connection.py:191
+```

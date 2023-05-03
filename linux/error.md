@@ -60,3 +60,14 @@ sudo apt install gettext
 ```shell
 sudo apt install libkrb5-dev
 ```
+
+- DECLARE_ASN1_DUP_FUNCTION does not have a number assigned 
+```shell
+安装 openssl 1.1.1
+openssl 3.0 版本遗漏
+git clean -df 
+make clean
+./config --prefix=/media/black/Data/lib --openssldir=/media/black/Data/lib/openssldir
+perl configdata.pm --dump
+make -j8
+```

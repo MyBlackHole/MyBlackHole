@@ -1,5 +1,32 @@
 # mysql
 
+## build
+```shell
+sudo apt-get install libldap2-dev ldap-utils
+sudo apt-get install libsasl2-dev
+
+# 需要 openssl 1.x.x
+cmake -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+      -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
+      -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
+      -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl \
+      -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost ..
+
+# cmake -DCMAKE_BUILD_TYPE=Debug \
+#       -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+#       -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
+#       -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
+#       -DWITH_SSL=/media/black/Data/lib/openssl \
+#       -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost ..
+
+# cmake -DCMAKE_BUILD_TYPE=Debug \
+#       -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+#       -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
+#       -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
+#       -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost ..
+```
+
 ## 配置
 ```sql
 show variables like '%data%';
