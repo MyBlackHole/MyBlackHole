@@ -26,3 +26,9 @@ git blame <filename> - L n,m
 ```shell
 git clean -df
 ```
+
+- git 设置 ssh 代理
+```shell
+Host *.savannah.gnu.org *.github.com github.com
+  ProxyCommand=nc -X 5 -x localhost:1080 %h %p
+```
