@@ -3,4 +3,114 @@
 cd /teledb/telemonitor-stg/telemonitor/python/include
 ./decryptnew -t decode -e "Ti84oTg1" | grep 'Decrypted_string' | awk '{print $2}'
 mycli -h 192.168.90.204 -P 9095 -uteledb -pteledb
+
+```
+
+- 管理平台 mongo 连接
+```shell
+./bin/mongo --port 8302
+> use udal
+switched to db udal
+> show tables;
+dtts_metric_jobtracker_push_job_num
+dtts_metric_jobtracker_receive_job_num
+dtts_metric_tasktracker_exception_job_num
+dtts_metric_tasktracker_failed_job_num
+dtts_metric_tasktracker_later_job_num
+dtts_metric_tasktracker_success_job_num
+dtts_monitor_jobtracker_alive
+dtts_monitor_jobtracker_fullgc_num
+dtts_monitor_tasktracker_alive
+dtts_monitor_tasktracker_fullgc_num
+dtts_monitor_tasktracker_thread_num
+udal_monitor_admin_config
+udal_monitor_backend_conn_stats
+udal_monitor_binlog_state
+udal_monitor_conn_pool_stats
+udal_monitor_dbproxy_gc
+udal_monitor_dbproxy_heartbeat
+udal_monitor_dbproxy_log
+udal_monitor_dbproxy_new_conn
+udal_monitor_dn_stats
+udal_monitor_dn_stats_real_time
+udal_monitor_front_conn_stats
+udal_monitor_gateway_heartbeat
+udal_monitor_gateway_log
+udal_monitor_giserver_gc
+udal_monitor_giserver_heartbeat
+udal_monitor_giserver_log
+udal_monitor_index_stats
+udal_monitor_index_stats_real_time
+udal_monitor_seq_stats
+udal_monitor_slow_sql
+udal_monitor_stmt_stats
+udal_monitor_stmt_stats_ip
+udal_monitor_stmt_stats_real_time
+udal_monitor_table_stats
+udal_monitor_thread_pool_stats
+udal_monitor_transaction_stats
+```
+
+- 管理平台数据库连接 (207)
+```shell
+./bin/mysql --socket=/tmp/mysql.sock -u root -pP@ssw0rd
+mysql> use udal_admin;
+mysql> mhow tables;
++-----------------------------+
+| Tables_in_udal_admin        |
++-----------------------------+
+| api_application             |
+| oper_ddl_job                |
+| oper_ddl_job_detail         |
+| oper_ddl_sub_job            |
+| oper_dump_config            |
+| oper_index_rebuild_his      |
+| oper_migration_his          |
+| oper_order                  |
+| oper_order_reply_fail       |
+| pub_history                 |
+| pub_program_version         |
+| sla_issue_code              |
+| sla_metric                  |
+| sla_metric_code             |
+| sla_metric_code_param       |
+| sys_backend_service         |
+| sys_config                  |
+| sys_config_group            |
+| sys_dict                    |
+| sys_dict_item               |
+| sys_dict_item_rela          |
+| sys_external_app            |
+| sys_external_app_permission |
+| sys_login_log               |
+| sys_open_api                |
+| sys_operation_log           |
+| sys_org_member              |
+| sys_organization            |
+| sys_resource                |
+| sys_role                    |
+| sys_role_permission         |
+| sys_tenant                  |
+| sys_tenant_member           |
+| sys_user                    |
+| sys_user_current_tenant     |
+| sys_user_data_permission    |
+| sys_user_role               |
+| tenant_info                 |
+| udal_algorithm_param        |
+| udal_app_category           |
+| udal_cat_property           |
+| udal_cat_property_group     |
+| udal_cat_property_value     |
+| udal_monitor_info           |
+| udal_rule_algorithm         |
+| udal_sys_dict               |
+| udal_sys_dict_type          |
+| udal_sys_doc                |
+| udal_sys_oper_log           |
+| udal_sysuser_res_rel        |
+| udal_table                  |
+| udal_version_info           |
+| zookeeper_info              |
++-----------------------------+
 ```

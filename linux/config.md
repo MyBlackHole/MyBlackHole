@@ -117,7 +117,7 @@ AutomaticLogin=sunriseydy
 
 - 设置默认文本编辑器
 ```shell
-sudo update-alternatives —config editor
+sudo update-alternatives --config editor
 ```
 
 - git
