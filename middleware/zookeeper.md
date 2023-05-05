@@ -15,6 +15,8 @@ docker run -it --rm --link some-zookeeper:zookeeper zookeeper zkCli.sh -server z
 go install github.com/let-us-go/zkcli
 zkcli -s "192.168.90.204:10001"
 
+# client
+docker run -it --rm --name zkclient zookeeper zkCli.sh -server 192.168.90.207:2181
 
 ## 可视化工具
 wget https://github.com/vran-dev/PrettyZoo/releases/download/v2.1.1/prettyzoo_2.1.1_amd64.deb

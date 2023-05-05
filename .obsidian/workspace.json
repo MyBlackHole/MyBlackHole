@@ -173,6 +173,11 @@
   },
   "active": "f78d17d10a915b34",
   "lastOpenFiles": [
+    "linux/tcpdump.md",
+    "database/Teledb/dn.md",
+    "database/Teledb/分布式数据库.md",
+    "database/Teledb/关系数据库.md",
+    "database/Teledb/issue.md",
     "protocol/imgs/Pasted image 20230429091653.png",
     "protocol/imgs",
     "protocol/AMQP.md",
@@ -208,16 +213,11 @@
     "database/redis/command.md",
     "database/MariaDB/MariaDB.md",
     "database/MariaDB",
-    "container/docker/docker-compose.md",
-    "language/python/celery/error.md",
-    "language/python/celery/celery.md",
-    "linux/xkill.md",
     "linux/ubuntu/imgs/Pasted image 20230428011850.png",
     "linux/ubuntu/imgs/Pasted image 20230428011829.png",
     "linux/ubuntu/imgs/Pasted image 20230428011803.png",
     "linux/imgs/Pasted image 20230428023131.png",
     "linux/imgs/Pasted image 20230428023006.png",
-    "linux/imgs/Pasted image 20230428022904.png",
-    "linux/imgs/Pasted image 20230428022840.png"
+    "linux/imgs/Pasted image 20230428022904.png"
   ]
 }
