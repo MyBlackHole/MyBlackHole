@@ -6,10 +6,10 @@
 docker pull iatebes/oracle_11g
 
 # 启动为容器
-sudo docker run -d -p 1521:1521 --name oracle11g iatebes/oracle_11g
+docker run -d -p 1521:1521 --name oracle11g iatebes/oracle_11g
 
 # 进入容器
-sudo docker exec -it oracle11g /bin/bash
+docker exec -it oracle11g /bin/bash
 
 # 连接可执行文件
 ln -s /opt/oracle/app/product/11.2.0/dbhome_1/bin/sqlplus /usr/bin
