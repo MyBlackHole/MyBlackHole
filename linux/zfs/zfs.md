@@ -20,6 +20,12 @@ VDEV的类型
 
 数据会以条带方式存储于存储池中的所有VDEV上。因此一个存储池中的VDEV越多，IOPS就越高。
 
+## build
+```shell
+./autogen.sh
+./configure CFLAGS='-g -O0'
+make all
+```
 
 ## 安装
 ```shell
