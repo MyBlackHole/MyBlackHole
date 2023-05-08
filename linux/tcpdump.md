@@ -104,7 +104,7 @@ tcpdump -i eth0 -vnn port 22
 
 - 抓取指定协议格式的数据包，协议格式可以是 [udp,icmp,arp,ip] 中的任何一种,例如以下命令：
 ```shell
-tcpdump udp  -i eth0 -vnn
+tcpdump udp -i eth0 -vnn
 ```
 
 - 抓取经过 eth0 网卡的源 ip 是 192.168.1.100 数据包，src参数表示源。
