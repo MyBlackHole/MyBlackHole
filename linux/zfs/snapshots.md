@@ -101,3 +101,8 @@ zfs list -t snapshot
 NAME            USED  AVAIL     REFER  MOUNTPOINT
 aiopool@test1    13K      -       24K  -
 ```
+
+- 回滚快照
+```shell
+zfs rollback
+```

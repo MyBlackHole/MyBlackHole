@@ -275,10 +275,17 @@ show grants
 show grants for 'root'@'%'
 ```
 
+- 获取 redo 大小
+```shell
+show variables like 'innodb_log_buffer_size';
+```
+
 ## 连接 mysql
 ```shell
 mysql -h 127.0.0.1 -P 3306 -uroot –p 
 ```
+
+
 
 ## 例子
 
