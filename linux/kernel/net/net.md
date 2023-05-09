@@ -35,7 +35,8 @@ ip netns exec ns2 ip link set ipvlan2 up
 # ip netns exec ns3 ip link set ipvlan3 up
 # ip netns exec ns4 ip link set ipvlan4 up
 
-ip netns exec ns1 ip route add default via 192.168.100.1
+## (192.168.100.1 为宿主机默认网关)
+ip netns exec ns1 ip route add default via 192.168.100.1 
 ip netns exec ns2 ip route add default via 192.168.100.1
 # ip netns exec ns3 ip route add default via 192.168.100.1
 # ip netns exec ns4 ip route add default via 192.168.100.1

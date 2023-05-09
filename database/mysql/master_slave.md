@@ -170,6 +170,12 @@ Info    | <null>
 
 ```
 
+- 查询主备节点连接
+```sql
+# 需要在主节点且具备 root 权限
+select HOST from information_schema.processlist as p where p.command like 'Binlog Dump%';
+```
+
 # GTID 方式 (代补充)
 
 ## 异常

@@ -55,6 +55,9 @@ python3.8
 # 切换项目环境
 pyenv activate first_project 
 
+# pip upgrade
+pip3 install --upgrade pip
+
 # 退出当前环境 
 pyenv deactivate 
 

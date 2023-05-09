@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "f78d17d10a915b34",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "aio/teledb/config.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aio/teledb/config.md",
+                "file": "language/c/atexit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aio/teledb/config.md",
+                "file": "language/c/atexit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aio/teledb/config.md"
+                "file": "language/c/atexit.md"
               }
             }
           }
@@ -171,8 +158,24 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "f78d17d10a915b34",
+  "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "linux/ping.md",
+    "linux/netplan.md",
+    "linux/ss.md",
+    "linux/curl.md",
+    "linux/networkctl.md",
+    "linux/iptables.md",
+    "linux/ip.md",
+    "linux/kernel/net/net.md",
+    "linux/kernel/net",
+    "database/mysql/plugin.md",
+    "database/mysql/plugins.md",
+    "database/mysql/权限.md",
+    "database/mysql/privilege.md",
+    "database/mysql/master_slave.md",
+    "database/mysql/imgs/Pasted image 20230508152607.png",
+    "aio/teledb/config.md",
     "linux/tcpdump.md",
     "database/Teledb/dn.md",
     "database/Teledb/分布式数据库.md",
@@ -190,34 +193,18 @@
     "linux/doxygen.md",
     "lib/openssl.md",
     "lib",
-    "language/rust/rust.md",
-    "language/python/pudb.md",
-    "language/python/kombu/kombu.md",
-    "language/python/kombu/data_struct.md",
     "language/python/kombu",
     "language/go/imgs/Pasted image 20230304113225.png",
     "language/go/imgs/Pasted image 20230303222000.png",
     "language/go/imgs",
-    "language/go/go.md",
-    "language/go/gc.md",
-    "language/go/MWB.md",
     "language/go",
     "language/flutter/imgs/GetImage.png",
     "language/flutter/imgs",
-    "language/flutter/error.md",
-    "language/flutter/dome.md",
     "language/flutter",
-    "language/build_system/make.md",
-    "language/build_system/error.md",
-    "language/build_system/cmake.md",
-    "database/redis/command.md",
-    "database/MariaDB/MariaDB.md",
-    "database/MariaDB",
     "linux/ubuntu/imgs/Pasted image 20230428011850.png",
     "linux/ubuntu/imgs/Pasted image 20230428011829.png",
     "linux/ubuntu/imgs/Pasted image 20230428011803.png",
     "linux/imgs/Pasted image 20230428023131.png",
-    "linux/imgs/Pasted image 20230428023006.png",
-    "linux/imgs/Pasted image 20230428022904.png"
+    "linux/imgs/Pasted image 20230428023006.png"
   ]
 }
