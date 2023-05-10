@@ -1,9 +1,13 @@
 # mysql
 
-## build
+## install
+- 源码编译
 ```shell
 sudo apt-get install libldap2-dev ldap-utils
 sudo apt-get install libsasl2-dev
+
+mkdir bulid
+cd bulid
 
 # 需要 openssl 1.x.x
 cmake -DCMAKE_BUILD_TYPE=Debug \
@@ -27,24 +31,6 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
 #       -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost ..
 ```
 
-## 配置
-```sql
-show variables like '%data%';
-```
-
-## 文件详解
-
-- myisam
-1. *.frm--表定义，是描述表结构的文件。
-2. *.MYD--"D"数据信息文件，是表的数据文件。
-3. *.MYI--"I"索引信息文件，是表数据文件中任何索引的数据树。
-
-- innodb
-1. *.frm--表定义，是描述表结构的文件。
-2. *.ibd--表数据和索引的文件。该表的索引(B+树)的每个非叶子节点存储索引，叶子节点存储索引和索引对应的数据
-
-
-## 安装、权限、用户
 - docker 版
 ```shell
 # 拉去镜像
@@ -120,41 +106,43 @@ service mysql stop
 https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-8.0.26-winx64.msi 
 ```
 
-- 源码编译
-```shell
-mkdir bulid
-cd bulid
-cmake -DDOWNLOAD_BOOST=1 -DWITH_BOOST=dwith_boost -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=Debug ..
-make
-sudo make install
+
+## 配置、权限、用户
+```sql
+show variables like '%data%';
 ```
 
 - 用户配置
-创建用户，授予远程登录权限、操作所有数据权限
+```shell
+# 创建用户，授予远程登录权限、操作所有数据权限
 create USER BlackHole@'%' identified by '1358244533';
 grant all on *.* to BlackHole@'%' with grant option;
 flush privileges;
+```
 
 - 授权
-    格式
-    grant privilegesCode on dbName.tableName to username@host by "password"; 
-    (8.0版本，8.0前加上privileges 在on前 ) 
+```shell
+格式
+grant privilegesCode on dbName.tableName to username@host by "password"; 
+(8.0版本，8.0前加上privileges 在on前 ) 
 
-    privilegesCode 
-        all ：所有权限。 
-        select：读取权限。 
-        delete：删除权限。 
-        update：更新权限。 
-        create：创建权限。 
-        drop：删除数据库、数据表权限。 
-    dbName.tableName 
-        *.*：授予该数据库服务器所有数据库的权限。 
-        dbName.*：授予dbName数据库所有表的权限。 
-        dbName.dbTable：授予数据库dbName中dbTable表的权限。 
-    Host 
-        localhost：只允许该用户在本地登录，不能远程登录。 
-        %：允许在除本机之外的任何一台机器远程登录。 
-        192.168.52.32：具体的IP表示只允许该用户从特定IP登录。 
+privilegesCode 
+    all ：所有权限。 
+    select：读取权限。 
+    delete：删除权限。 
+    update：更新权限。 
+    create：创建权限。 
+    drop：删除数据库、数据表权限。 
+dbName.tableName 
+    *.*：授予该数据库服务器所有数据库的权限。 
+    dbName.*：授予dbName数据库所有表的权限。 
+    dbName.dbTable：授予数据库dbName中dbTable表的权限。 
+Host 
+    localhost：只允许该用户在本地登录，不能远程登录。 
+    %：允许在除本机之外的任何一台机器远程登录。 
+    192.168.52.32：具体的IP表示只允许该用户从特定IP登录。 
+
+```
 
 ```sql
 # 例如
@@ -179,6 +167,18 @@ drop database minidome; # 删除数据库
 Delete FROM user Where User='Black' and Host='localhost'  # 删除用户
 ```
 
+## 文件详解
+
+- myisam
+1. *.frm--表定义，是描述表结构的文件。
+2. *.MYD--"D"数据信息文件，是表的数据文件。
+3. *.MYI--"I"索引信息文件，是表数据文件中任何索引的数据树。
+
+- innodb
+1. *.frm--表定义，是描述表结构的文件。
+2. *.ibd--表数据和索引的文件。该表的索引(B+树)的每个非叶子节点存储索引，叶子节点存储索引和索引对应的数据
+
+## 例子
 - 更新
 ```sql
 update mysql.user set password=password('新密码') where User="BlackHole" and Host="localhost"; # 更新密码
@@ -280,12 +280,26 @@ show grants for 'root'@'%'
 show variables like 'innodb_log_buffer_size';
 ```
 
+- 获取数据目录路径
+```shell
+show variables like 'datadir';
+```
+
+- 查看用户权限
+```shell
+show grants for 'root'
+
+select * from mysql.user\G
+```
+
 ## 连接 mysql
 ```shell
 mysql -h 127.0.0.1 -P 3306 -uroot –p 
 ```
 
+- 查看表结构
+```shell
+show columns from mvcctest;
+```
 
-
-## 例子
 

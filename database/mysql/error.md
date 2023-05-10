@@ -68,3 +68,20 @@ flush privileges; # 刷新权限
 
 # 恢复原先 mysqld 启动参数
 ```
+
+- root 没有 super 权限
+```shell
+# 重新启动 mysqld 加上 --skip-grant-tables (不启用权限表验证)
+
+# 手动修改用户权限
+UPDATE mysql.user SET Grant_priv='Y', Super_priv='Y' WHERE User='root';
+
+# 刷新权限
+FLUSH PRIVILEGES;
+
+# 授权表
+GRANT ALL ON *.* TO 'root'@'localhost';
+
+# 查看用户权限
+select * from mysql.user\G
+```

@@ -10,3 +10,8 @@ this db instance is not suitable for manual backup (数据库实例不适合手�
 # 查看
 create_manual_backup_job_in_national.py
 ```
+
+- set 安装后 mysql 主从没有配置
+```shell
+/teledb/telemonitor-stg/telemonitor/python/manualdeploy/tianyiallmain.sh
+```

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/c/atexit.md",
+                "file": "linux/iptables.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/c/atexit.md",
+                "file": "linux/iptables.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/c/atexit.md",
+                "file": "linux/iptables.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/c/atexit.md"
+                "file": "linux/iptables.md"
               }
             }
           }
@@ -160,6 +160,12 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "linux/imgs/Pasted image 20230509153444.png",
+    "linux/imgs/Pasted image 20230509150712.png",
+    "linux/imgs/Pasted image 20230509150700.png",
+    "linux/imgs/Pasted image 20230509150633.png",
+    "language/c/atexit.md",
+    "database/mysql/mysqld_safe.md",
     "linux/ping.md",
     "linux/netplan.md",
     "linux/ss.md",
@@ -189,9 +195,6 @@
     "macOS/brew/brew.md",
     "macOS/brew",
     "linux/nsenter.md",
-    "linux/lsns.md",
-    "linux/doxygen.md",
-    "lib/openssl.md",
     "lib",
     "language/python/kombu",
     "language/go/imgs/Pasted image 20230304113225.png",
@@ -202,9 +205,6 @@
     "language/flutter/imgs",
     "language/flutter",
     "linux/ubuntu/imgs/Pasted image 20230428011850.png",
-    "linux/ubuntu/imgs/Pasted image 20230428011829.png",
-    "linux/ubuntu/imgs/Pasted image 20230428011803.png",
-    "linux/imgs/Pasted image 20230428023131.png",
-    "linux/imgs/Pasted image 20230428023006.png"
+    "linux/ubuntu/imgs/Pasted image 20230428011829.png"
   ]
 }
