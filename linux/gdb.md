@@ -73,3 +73,14 @@ gdb -x .gdbinit ./test/unit/core
 (gdb) directory /media/black/Data/Documents/github/C/tbox
 Source directories searched: /media/black/Data/Documents/github/C/tbox:/media/black/Data/Documents/C/C_learn/out/obj/tbox_learn/heap_test1:$cdir:$cwd
 ```
+
+- 指定文件下断点
+```shell
+# 相对路径
+break sys_socket_learn/shutdown_test.c:66
+```
+
+- 函数调用
+```shell
+call close(3)
+```

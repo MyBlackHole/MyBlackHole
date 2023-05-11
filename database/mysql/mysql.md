@@ -188,7 +188,7 @@ update mysql.user set password=password('新密码') where User="BlackHole" and 
 ```shell
 # 基本结构
 describe test2;
-# 详细结构
+# 详细结构 sql
 show create table test\G
 ```
 

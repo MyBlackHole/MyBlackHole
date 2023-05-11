@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/iptables.md",
+                "file": "aio/datatable.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/iptables.md",
+                "file": "aio/datatable.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/iptables.md",
+                "file": "aio/datatable.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/iptables.md"
+                "file": "aio/datatable.md"
               }
             }
           }
@@ -160,6 +160,18 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "language/error.md",
+    "linux/nm.md",
+    "language/musl.md",
+    "language/gnu.md",
+    "linux/fd.md",
+    "database/Teledb/RDS.md",
+    "linux/git/error.md",
+    "linux/git/git.md",
+    "linux/git",
+    "database/Teledb/set.md",
+    "linux/iptables.md",
+    "database/mysql/table_struct.md",
     "linux/imgs/Pasted image 20230509153444.png",
     "linux/imgs/Pasted image 20230509150712.png",
     "linux/imgs/Pasted image 20230509150700.png",
@@ -171,7 +183,6 @@
     "linux/ss.md",
     "linux/curl.md",
     "linux/networkctl.md",
-    "linux/iptables.md",
     "linux/ip.md",
     "linux/kernel/net/net.md",
     "linux/kernel/net",
@@ -182,19 +193,10 @@
     "database/mysql/master_slave.md",
     "database/mysql/imgs/Pasted image 20230508152607.png",
     "aio/teledb/config.md",
-    "linux/tcpdump.md",
-    "database/Teledb/dn.md",
-    "database/Teledb/分布式数据库.md",
-    "database/Teledb/关系数据库.md",
-    "database/Teledb/issue.md",
     "protocol/imgs/Pasted image 20230429091653.png",
     "protocol/imgs",
-    "protocol/AMQP.md",
     "protocol",
-    "middleware/rabbitmq.md",
-    "macOS/brew/brew.md",
     "macOS/brew",
-    "linux/nsenter.md",
     "lib",
     "language/python/kombu",
     "language/go/imgs/Pasted image 20230304113225.png",
@@ -203,8 +205,6 @@
     "language/go",
     "language/flutter/imgs/GetImage.png",
     "language/flutter/imgs",
-    "language/flutter",
-    "linux/ubuntu/imgs/Pasted image 20230428011850.png",
-    "linux/ubuntu/imgs/Pasted image 20230428011829.png"
+    "linux/ubuntu/imgs/Pasted image 20230428011850.png"
   ]
 }
