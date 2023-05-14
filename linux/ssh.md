@@ -1,5 +1,10 @@
 # ssh
 
+## 配置
+```shell
+# 都个路径
+AuthorizedKeysFile sshd_conf sshd_conf1 sshd_conf2
+```
 
 ## 例子
 

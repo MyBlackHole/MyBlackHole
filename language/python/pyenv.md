@@ -5,9 +5,9 @@
 ```shell
 sudo add-apt-repository ppa:deadsnakes/ppa
 # 安装 pyenv
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \ 
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \ 
-xz-utils tk-dev libffi-dev liblzma-dev 
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+    xz-utils tk-dev libffi-dev liblzma-dev
 sudo apt install git curl
 curl https://pyenv.run | bash
 
