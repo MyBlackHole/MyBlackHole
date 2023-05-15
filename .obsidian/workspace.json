@@ -160,6 +160,7 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "aio/datatable.md",
     "language/error.md",
     "linux/nm.md",
     "language/musl.md",
@@ -192,7 +193,6 @@
     "database/mysql/privilege.md",
     "database/mysql/master_slave.md",
     "database/mysql/imgs/Pasted image 20230508152607.png",
-    "aio/teledb/config.md",
     "protocol/imgs/Pasted image 20230429091653.png",
     "protocol/imgs",
     "protocol",
