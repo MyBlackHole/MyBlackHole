@@ -1,5 +1,17 @@
 # 
 
+- rm: cannot remove 'libtoolT': No such file or directory
+```shell
+lvim configure
+RM='$RM'修改为RM='$RM -f'
+```
+
+- fatal error: json/json.h: 没有那个文件或目录
+```shell
+git clone https://github.com/open-source-parsers/jsoncpp
+# 构建、编译
+```
+
 - socket 销毁后进行 读 写 关闭
 ```shell
 # client 与 server 建立连接后, 关闭 client 的 socket, client 进行 读 写 关闭
