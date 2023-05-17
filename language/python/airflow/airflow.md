@@ -110,7 +110,7 @@ airflow clear dag_id
 
 - 运行task
 ```shell
-airflow run dag_id task_id execution_date
+airflow tasks run dag_id task_id execution_date
 ```
 
 - 重启 airflow
