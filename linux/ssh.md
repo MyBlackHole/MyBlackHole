@@ -2,8 +2,17 @@
 
 ## 配置
 ```shell
+<<<<<<< HEAD
+sudo nvim /etc/ssh/sshd_config
+
+ClientAliveInterval 60 # 表示每分钟发送一次, 然后客户端响应, 这样就保持长连接了
+ClientAliveCountMax 3 # 使用默认值3即可.ClientAliveCountMax表示服务器发出请求后客户端没有响应的次数达到一定值, 就自动断开
+
+systemctl restart ssh.service
+=======
 # 都个路径
 AuthorizedKeysFile sshd_conf sshd_conf1 sshd_conf2
+>>>>>>> 1befccfe8113336b6c2920f8592ff2c3c9ff2f80
 ```
 
 ## 例子

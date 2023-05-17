@@ -1,5 +1,10 @@
 # 系统配置
 
+- 获取系统发行版信息
+```shell
+cat /etc/os-release
+```
+
 - 修改最大文件打开数
 ```shell
 # centos

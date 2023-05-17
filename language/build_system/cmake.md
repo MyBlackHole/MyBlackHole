@@ -1,5 +1,13 @@
 # cmake
 
+## build
+```shell
+./configure --prefix=/media/black/Data/lib/cmake/cmake_3_16_0   ##prefix为编译结果路径
+make –j8
+make install
+```
+
+## 例子
 ```shell
 # 开启 debug, 取消编译优化
 # CMAKE_EXPORT_COMPILE_COMMANDS 开启 compile_commands.json 生成
