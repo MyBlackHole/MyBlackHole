@@ -1,5 +1,11 @@
 ### 异常处理
 
+- libcharset.so.1 is not a symbolic link
+```shell
+因为 libcharset.so.1 正常情况下应该是一个符号链接,而不是实体文集件,修改其为符号链接即可
+ln -sf libcharset.so libcharset.so.1
+```
+
 - 终端回车变 ^m使用 reset 命令 
 
 - netease-cloud-music 

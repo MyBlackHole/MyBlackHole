@@ -1,3 +1,8 @@
+- 静态库配置
+```shell
+./config no-asm no-shared ....
+```
+
 - unrecognized command-line option ‘-Wdeprecated-non-prototype’
 ```shell
 
