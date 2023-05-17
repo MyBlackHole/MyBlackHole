@@ -139,3 +139,8 @@ airflow dags pause test_task
 ```shell
 airflow clear dag_id
 ```
+
+- 查询 airflow 配置
+```shell
+airflow config list
+```
