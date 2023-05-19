@@ -1,3 +1,55 @@
+- 僵尸进程检测 sql
+```sql
+SELECT job.latest_heartbeat
+     , job.state
+     , task_instance.try_number
+     , task_instance.task_id
+     , task_instance.dag_id
+     , task_instance.run_id
+     , task_instance.start_date
+     , task_instance.end_date
+     , task_instance.duration
+     , task_instance.state
+     , task_instance.max_tries, task_instance.hostname
+     , task_instance.unixname
+     , task_instance.job_id
+     , task_instance.pool
+     , task_instance.pool_slots
+     , task_instance.queue
+     , task_instance.priority_weight
+     , task_instance.operator
+     , task_instance.queued_dttm
+     , task_instance.queued_by_job_id, task_instance.pid
+     , task_instance.executor_config
+     , task_instance.external_executor_id
+     , task_instance.trigger_id
+     , task_instance.trigger_timeout
+     , task_instance.next_method
+     , task_instance.next_kwargs
+     , dag.fileloc
+     , dag_run_1.state, dag_run_1.id
+     , dag_run_1.dag_id
+     , dag_run_1.queued_at
+     , dag_run_1.execution_date
+     , dag_run_1.start_date
+     , dag_run_1.end_date
+     , dag_run_1.run_id
+     , dag_run_1.creating_job_id
+     , dag_run_1.external_trigger
+     , dag_run_1.run_type
+     , dag_run_1.conf
+     , dag_run_1.data_interval_start
+     , dag_run_1.data_interval_end
+     , dag_run_1.last_scheduling_decision
+     , dag_run_1.dag_hash
+FROM task_instance
+         JOIN job ON task_instance.job_id = job.id AND job.job_type IN ('LocalTaskJob')
+         JOIN dag ON task_instance.dag_id = dag.dag_id
+         JOIN dag_run AS dag_run_1
+              ON dag_run_1.dag_id = task_instance.dag_id AND dag_run_1.run_id = task_instance.run_id
+WHERE task_instance.state = 'running' AND (job.state != 'running' OR job.latest_heartbeat < '2023-05-19 04:37:33.075284')
+```
+
 
 Process ForkProcess-1:
 Traceback (most recent call last):
