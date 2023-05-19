@@ -100,7 +100,7 @@ airflow list_tasks dag_id  查看task列表
 
 - 初始化 airflow 元数据库
 ```shell
-airflow initdb
+airflow db upgrade
 ```
 
 - 清空任务状态
