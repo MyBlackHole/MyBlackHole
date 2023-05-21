@@ -40,12 +40,13 @@ docker pull mysql
 ```shell
 # 异常
 #sudo chowm 999:999 data conf logs
+    <!-- --privileged=true \ -->
+
 docker run -p 3306:3306 --name mysql \
-    --privileged=true \
     -v /etc/localtime:/etc/localtime:ro \
-    -v /opt/docker/mysql/conf:/etc/mysql \
-    -v /opt/docker/mysql/logs:/var/log/mysql \
-    -v /opt/docker/mysql/data:/var/lib/mysql \
+    -v /opt/docker/mysql5/conf:/etc/mysql \
+    -v /opt/docker/mysql5/logs:/var/log/mysql \
+    -v /opt/docker/mysql5/data:/var/lib/mysql \
     -e MYSQL_ROOT_PASSWORD=p@3Sw0rd \
     -d mysql:5.7
 

@@ -3,11 +3,20 @@
 redis:
     QOS:
 处理过期(超时)的任务
-maybe_restore_messages(self)
-    client.zrevrangebyscore()
-        restore_by_tag(tag, client)
-            client.transaction
-                _do_restore_message(M, EX, RK, pipe, leftmost)
+
+
+kombu/transport/redis.py:Transport.register_with_event_loop
+    kombu/transport/redis.py:MultiChannelPoller.maybe_restore_messages
+        kombu/transport/redis.py:QoS.restore_visible
+            kombu/transport/redis.py:Channel.conn_or_acquire as clien
+                redis.StrictRedis.zrevrangebyscore(unacked_index)
+                kombu/transport/redis.py:QoS.restore_by_tag
+                    kombu/transport/redis.py:QoS.restore_by_tag.restore_transaction
+                        kombu/transport/redis.py:QoS.restore_by_tag._remove_from_indices
+                        kombu/transport/redis.py:Channel._do_restore_message
+                            kombu/transport/virtual/base.py:Channel._lookup
+                                kombu/transport/virtual/exchange.py:DirectExchange(根据不同 exchange).lookup
+                            redis.StrictRedis.lpush
 
 
 启动两个 worder.py
