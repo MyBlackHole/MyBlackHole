@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aio/datatable.md",
+                "file": "linux/iscsi/targetcli.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aio/datatable.md",
+                "file": "linux/iscsi/targetcli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aio/datatable.md",
+                "file": "linux/iscsi/targetcli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aio/datatable.md"
+                "file": "linux/iscsi/targetcli.md"
               }
             }
           }
@@ -160,6 +160,9 @@
   },
   "active": "5d7b6f4235928355",
   "lastOpenFiles": [
+    "linux/iscsi/error.md",
+    "linux/iscsi/imgs/Pasted image 20230525215751.png",
+    "linux/iscsi/imgs",
     "language/python/airflow/celery.md",
     "language/python/airflow/celery",
     "linux/nethogs.md",
@@ -199,12 +202,9 @@
     "linux/imgs/Pasted image 20230509153444.png",
     "linux/imgs/Pasted image 20230509150712.png",
     "linux/imgs/Pasted image 20230509150700.png",
-    "linux/imgs/Pasted image 20230509150633.png",
     "language/c/atexit.md",
-    "database/mysql/mysqld_safe.md",
     "linux/kernel/net",
     "protocol/imgs",
-    "protocol",
-    "macOS/brew"
+    "protocol"
   ]
 }

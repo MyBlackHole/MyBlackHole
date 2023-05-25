@@ -20,3 +20,7 @@
 dd if=.iso of=/dev/sda2 # 写入镜像 
 dd if=boot.img of=/dev/fd0 bs=1440k  # Linux 下制作启动盘 
 ```
+- img
+```shell
+dd if=/dev/zero of=/opt/disk.img bs=1024k count=512
+```
