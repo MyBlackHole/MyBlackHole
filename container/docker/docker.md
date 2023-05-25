@@ -299,3 +299,8 @@ docker system prune
 ```shell
 docker system prune -a
 ```
+
+- 使用默认网络 host
+```shell
+docker run -it --rm --net host redis redis-cli -h 192.168.78.212
+```

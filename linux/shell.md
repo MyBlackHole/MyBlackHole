@@ -107,3 +107,10 @@ Fourth 1
 -s filename 如果文件长度不为0，则为真 
 -h filename 如果文件是软链接，则为真
 ```
+
+- shell 导入 xx.env
+```shell
+while read line; do export $line; done < xx.env
+# 或
+export $(xargs <.env)
+```
