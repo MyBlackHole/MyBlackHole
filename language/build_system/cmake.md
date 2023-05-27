@@ -28,3 +28,10 @@ set(CMAKE_VERBOSE_MAKEFILEON ON)
 # 3 make 追加
 VERBOSE=1
 ```
+
+- 自定义头文件与连接库路径
+```shell
+include_directories(path/to/include/dir)
+
+link_directories(path/to/library/dir)
+```
