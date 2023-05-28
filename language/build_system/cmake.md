@@ -8,6 +8,22 @@ make install
 ```
 
 ## 例子
+- 指定安装路径
+```shell
+-DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/xtrabackup
+或
+##  PROJECT(<project_name>) 后加
+SET(CMAKE_INSTALL_PREFIX "/media/black/Data/lib/xtrabackup" )
+```
+
+- 制定编译器
+```shell
+cmake .. -DCMAKE_CXX_COMPILER=/media/black/Data/lib/gcc/gcc_7_3_0/bin/g++ -DCMAKE_C_COMPILER=/media/black/Data/lib/gcc/gcc_7_3_0/bin/gcc
+# 或
+set (CMAKE_C_COMPILER "/usr/local/gcc/bin/gcc")
+set (CMAKE_CXX_COMPILER "/usr/local/gcc/bin/g++")
+```
+
 ```shell
 # 开启 debug, 取消编译优化
 # CMAKE_EXPORT_COMPILE_COMMANDS 开启 compile_commands.json 生成
