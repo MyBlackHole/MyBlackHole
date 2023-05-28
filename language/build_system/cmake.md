@@ -1,5 +1,9 @@
 # cmake
 
+## 配置
+- 静态、动态
+![[imgs/Pasted image 20230528115058.png]]
+
 ## build
 ```shell
 ./configure --prefix=/media/black/Data/lib/cmake/cmake_3_16_0   ##prefix为编译结果路径
@@ -8,6 +12,13 @@ make install
 ```
 
 ## 例子
+- 静态编译
+```shell
+-DCMAKE_EXE_LINKER_FLAGS=-static
+或
+set(CMAKE_EXE_LINKER_FLAGS "-static")
+```
+
 - 指定安装路径
 ```shell
 -DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/xtrabackup
