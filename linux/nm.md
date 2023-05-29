@@ -2,7 +2,31 @@
 列举 [文件] 中的符号 (默认为 a.out)。
 注意: -g 编译
 
+## 格式
+nm [option(s)] [file(s)]
+
+### options
+A 在每个符号信息的前面打印所在对象文件名称；
+C 输出demangle过了的符号名称；
+D 打印动态符号；
+l 使用对象文件中的调试信息打印出所在源文件及行号；
+n 按照地址/符号值来排序；
+u 打印出那些未定义的符号；
+
+
+
 ## 例子
+- 打印动态符号
+```shell
+nm -D liba.so
+                 w __cxa_finalize
+00000000000010f9 T func_versioning@@VER_2.0
+                 w __gmon_start__
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+0000000000000000 A VER_2.0
+```
+
 ```shell
 nm ./out/obj/pthread_learn/pthread_getname_np_test
 000000000000038c r __abi_tag

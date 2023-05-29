@@ -10,10 +10,19 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
       -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
       -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
-      -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl \
-      -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost ..
+      -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl/openssl_1_1_1/ \
+      -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost/boost_1_77_0/ ..
 
-cmake -DDOWNLOAD_BOOST=1 -DWITH_BOOST=./boost ..
+# 指定 gcc 7 (>=7.4) 与安装路径
+cmake -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/xtrabackup/xtrabackup_8_0/ \
+      -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+      -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
+      -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
+      -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl/openssl_1_1_1/ \
+      -DCMAKE_CXX_COMPILER=/media/black/Data/lib/gcc/gcc_7_4_0/bin/g++ \
+      -DCMAKE_C_COMPILER=/media/black/Data/lib/gcc/gcc_7_4_0/bin/gcc \
+      -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost/boost_1_77_0/ ..
 ```
 
 ## 优点

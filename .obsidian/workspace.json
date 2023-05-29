@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5d7b6f4235928355",
+            "id": "890d2318e92b95ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/iscsi/targetcli.md",
+                "file": "language/build_system/cmake.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/iscsi/targetcli.md",
+                "file": "language/build_system/cmake.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/iscsi/targetcli.md",
+                "file": "language/build_system/cmake.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/iscsi/targetcli.md"
+                "file": "language/build_system/cmake.md"
               }
             }
           }
@@ -158,8 +158,10 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "5d7b6f4235928355",
+  "active": "890d2318e92b95ef",
   "lastOpenFiles": [
+    "language/build_system/imgs/Pasted image 20230528115058.png",
+    "language/build_system/imgs",
     "linux/iscsi/error.md",
     "linux/iscsi/imgs/Pasted image 20230525215751.png",
     "linux/iscsi/imgs",
@@ -202,9 +204,7 @@
     "linux/imgs/Pasted image 20230509153444.png",
     "linux/imgs/Pasted image 20230509150712.png",
     "linux/imgs/Pasted image 20230509150700.png",
-    "language/c/atexit.md",
     "linux/kernel/net",
-    "protocol/imgs",
-    "protocol"
+    "protocol/imgs"
   ]
 }

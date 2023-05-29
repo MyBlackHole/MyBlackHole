@@ -10,3 +10,8 @@ alias mycli_78.213="mycli -h 192.168.78.213 -u root -pxxxxxxxx"
 ```shell
 alias mycli_78.213
 ```
+
+- delelte alias
+```shell
+unalias xxx
+```
