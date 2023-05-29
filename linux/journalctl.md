@@ -118,3 +118,9 @@ $ sudo journalctl --vacuum-size=1G 
 
 $ sudo journalctl --vacuum-time=1years
 ```
+
+## 例子
+- 查看服务全部日志
+```shell
+journalctl -u service-name.service
+```

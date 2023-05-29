@@ -12,6 +12,8 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
       -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl \
       -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost ..
+
+cmake -DDOWNLOAD_BOOST=1 -DWITH_BOOST=./boost ..
 ```
 
 ## 优点

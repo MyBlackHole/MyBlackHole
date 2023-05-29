@@ -55,3 +55,5 @@
 - ss –lnt 
 显示本地监听的端口 
 
+
+- sudo ss -tlnp

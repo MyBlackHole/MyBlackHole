@@ -1,6 +1,7 @@
-### 描述
+# gcc
+编译工具
 
-### 参数
+## 参数
 
 - follow-fork-mode detach-on-fork 
 ```
@@ -11,11 +12,15 @@ child                    off              同时调试两个进程，gdb跟子�
 ```
 
 ### 常用命令
-- list／l 行号：显示binFile源代码，接着上次的位置往下列，每次列10行。
-- list／l 函数名：列出某个函数的源代码。
+- list(l) -：查看当前
+- list(l) <linenum>：显示 binFile linenum 附近源代码，接着上次的位置往下列，每次列10行。
+- list(l) <function>：列出某个函数的源代码。
 - r或run：运行程序。
 - s或step：进入函数调用
-- breaktrace（bt)：查看各级函数调用及参数
+- backtrace(bt) <n>：查看栈各级函数调用及参数
+- frame(f) <n>：切换栈
+- up(n) <n>：表示向栈的上面移动n层，可以不打n，表示向上移动一层
+- down <n>：表示向栈的下面移动n层，可以不打n，表示向下移动一层
 - info（i) locals：查看当前栈帧局部变量的值
 - info break ：查看断点信息。
 - finish：执行到当前函数返回，然后挺下来等待命令
@@ -25,16 +30,19 @@ child                    off              同时调试两个进程，gdb跟子�
 - break(b) 行号：在某一行设置断点
 - jump(j) 行号: 让程序执行流程**跳转**到指定位置
 - break 函数名：在某个函数开头设置断点
-- continue(或c)：从当前位置开始连续而非单步执行程序
-- run(或r)：从开始连续而非单步执行程序
+- continue(c)：从当前位置开始连续而非单步执行程序
+- run(r)：从开始连续而非单步执行程序
 - delete breakpoints：删除所有断点
 - delete breakpoints n：删除序号为n的断点
 - disable breakpoints：禁用断点
 - enable breakpoints：启用断点
-- info(或i) breakpoints：参看当前设置了哪些断点
-- display 变量名：跟踪查看一个变量，每次停下来都显示它的值
+- info(i) args：打印出当前函数的参数名及其值
+- info(i) locals：打印出当前函数中所有局部变量及其值
+- info(i) catch:打印出当前的函数中的异常处理信息
+- info(i) breakpoints:参看当前设置了哪些断点
+- display 变量名:跟踪查看一个变量，每次停下来都显示它的值
 - undisplay：取消对先前设置的那些变量的跟踪
-- until X行号：跳至X行
+- until <linenum>:脱离，跳至 linenum 行
 - p 变量：打印变量值
 - n 或 next：单条执行
 - inferiors: 切换进程id(info inferiors 为 NUM)
@@ -84,3 +92,28 @@ break sys_socket_learn/shutdown_test.c:66
 ```shell
 call close(3)
 ```
+
+- 预编译
+```shell
+gcc -E macro.c
+```
+
+- 调试 pid 进程
+```shell
+gdb attach [pid] 
+sudo gdb attach 766047
+```
+
+- 调试 python 进程
+```shell
+gdb -p pid
+source Tools/gdb/libpython.py # cpython 里有
+```
+
+- 查看字符串
+```shell
+x /s &ch
+p (char*)&ch
+```
+
+- 制定 gdbinit
