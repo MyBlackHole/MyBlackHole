@@ -54,3 +54,8 @@ GO111MODULE=auto
 随意项目内 
 go mod init hello 
 ```
+
+- 静态编译
+```shell
+CGO_ENABLED=0 go build
+```

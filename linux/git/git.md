@@ -44,3 +44,13 @@ git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区�
 git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从那个地方恢复。
 git stash clear: 清空Git栈，原来存储的所以stash的节点都消失了。
 ```
+
+- 设置全局忽略
+```shell
+git config --global core.excludesfile ~/.gitignore
+# 本质还是修改配置文件
+
+.gitconfig
+[core]
+	excludesfile = /home/black/.gitignore
+```

@@ -7,3 +7,8 @@
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100
 sudo update-alternatives --config gcc
 ```
+
+- 修改默认浏览器
+```shell
+sudo update-alternatives --config x-www-browser
+```

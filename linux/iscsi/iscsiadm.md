@@ -47,6 +47,7 @@ sudo iscsiadm -m session –R
 
 - 
 ```shell
+sudo iscsiadm -m session –P 2
 Target: iqn.2023-05.black.com:server (non-flash)
         Current Portal: 192.168.100.179:3260,1
         Persistent Portal: 192.168.100.179:3260,1

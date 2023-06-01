@@ -1,5 +1,10 @@
 # python
 
+## linux 系统包路径
+```shell
+/usr/lib/pythonx.x/site-packages
+```
+
 ## 安装单版本
 ```shell
 # 下载源码

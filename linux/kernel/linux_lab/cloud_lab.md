@@ -2,6 +2,8 @@
 
 [细节](https://gitee.com/tinylab/linux-lab)
 ```shell
+sudo apt install sshpass
+ 
 # 使用非 root 用户
 git clone https://gitee.com/tinylab/cloud-lab.git
 cd cloud-lab/
@@ -23,6 +25,14 @@ tools/docker/webssh
 # 选择登陆方式
 tools/docker/login list  # 列出并选择，并且记住
 tools/docker/login vnc    # 直接选择一种并记住
+
+# 选择虚拟
+make B=vexpress-a9
+
+# 内置 qemu 在新内核支持
+# 重新编译一个
+make qemu
+make qemu-save
 ```
 
 登录方法	描述	缺省用户	登录所在地
