@@ -1,4 +1,4 @@
-# 
+# nfs 
 
 ## 安装
 ```
@@ -35,6 +35,7 @@ systemctl restart nfs-server
 ```
 
 - 设置共享目录
+
 ```shell
 # 服务端
 nvim /etc/exports
@@ -42,7 +43,6 @@ nvim /etc/exports
 /aiopool 192.168.78.0/24(rw)
 systemctl reload nfs
 
-# 客户端
 showmount -e 192.168.78.214
 Export list for 192.168.78.214:
 /aiopool 192.168.78.0/24

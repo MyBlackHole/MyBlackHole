@@ -171,3 +171,10 @@ pip3 install pyyaml
 ```shell
 pip install simple-websocket
 ```
+
+- UnicodeEncodeError: 'ascii' codec can't encode characters in position 241-248: ordinal not in range(128)
+- Failed to set locale, defaulting to C.UTF-8
+```shell
+dnf install langpacks-en glibc-all-langpacks -y
+export LC_ALL=en_US.UTF-8
+```
