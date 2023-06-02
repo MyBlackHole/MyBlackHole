@@ -19,10 +19,16 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
       -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
       -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
+      -DCMAKE_EXE_LINKER_FLAGS=-static \
       -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl/openssl_1_1_1/ \
       -DCMAKE_CXX_COMPILER=/media/black/Data/lib/gcc/gcc_7_4_0/bin/g++ \
       -DCMAKE_C_COMPILER=/media/black/Data/lib/gcc/gcc_7_4_0/bin/gcc \
       -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost/boost_1_77_0/ ..
+
+cmake -DCMAKE_EXE_LINKER_FLAGS=-static \
+      -DCMAKE_CXX_COMPILER=/usr/local/bin/g++ \
+      -DCMAKE_C_COMPILER=/usr/local/bin/gcc \
+      -DDOWNLOAD_BOOST=0 -DWITH_BOOST=./boost ..
 ```
 
 ## 优点

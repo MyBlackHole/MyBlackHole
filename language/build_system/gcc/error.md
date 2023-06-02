@@ -12,3 +12,9 @@ configure 加入
 ```shell
 升级 gcc >= 7.4
 ```
+
+- configure: error: C++ preprocessor "/lib/cpp" fails sanity check
+```shell
+yum install gcc-c++
+yum install glibc-headers (不一定要)
+```
