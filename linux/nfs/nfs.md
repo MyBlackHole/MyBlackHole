@@ -21,6 +21,13 @@ all_squash	无论NFS客户端使用什么账户访问，均映射为NFS服务器
 sync	同时将数据写入到内存与硬盘中，保证不丢失数据
 async	优先将数据保存到内存，然后再写入硬盘；这样效率更高，但可能会丢失数据
 
+- NFS 端口号
+nfsd：端口 2049 
+rpcbind：端口 111
+mountd：端口 20048
+statd：端口 662
+lockd：端口 32903
+
 ## 使用
 showmount[[showmount]] 查看 nfs 服务器信息
 - 查看 nfs 状态
