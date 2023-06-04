@@ -66,7 +66,13 @@ exportfs -v
 
 - 使 /etc/exports 配置生效
 ```shell
-exportfs -r
+sudo exportfs -r
+
+sudo exportfs -rv
+exporting */0:/home/black/Documents
+
+# client
+mount 192.168.100.109:/home/black/Documents /mnt/mounted/
 ```
 
 - 添加共享目录，且有只读权限

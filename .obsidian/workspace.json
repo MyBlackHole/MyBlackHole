@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/build_system/cmake.md",
+                "file": "language/python/paramiko/login.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/build_system/cmake.md",
+                "file": "language/python/paramiko/login.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/build_system/cmake.md",
+                "file": "language/python/paramiko/login.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/build_system/cmake.md"
+                "file": "language/python/paramiko/login.md"
               }
             }
           }
@@ -160,6 +160,12 @@
   },
   "active": "890d2318e92b95ef",
   "lastOpenFiles": [
+    "linux/ssh/pubkey.md",
+    "language/python/paramiko/login.md",
+    "language/python/pdb.md",
+    "language/python/paramiko",
+    "未命名",
+    "linux/ssh/ssh.md",
     "language/build_system/imgs/Pasted image 20230528115058.png",
     "language/build_system/imgs",
     "linux/iscsi/error.md",
@@ -198,13 +204,7 @@
     "linux/git/error.md",
     "linux/git/git.md",
     "linux/git",
-    "database/Teledb/set.md",
-    "linux/iptables.md",
-    "database/mysql/table_struct.md",
     "linux/imgs/Pasted image 20230509153444.png",
-    "linux/imgs/Pasted image 20230509150712.png",
-    "linux/imgs/Pasted image 20230509150700.png",
-    "linux/kernel/net",
-    "protocol/imgs"
+    "linux/imgs/Pasted image 20230509150712.png"
   ]
 }

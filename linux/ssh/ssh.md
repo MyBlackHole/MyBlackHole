@@ -1,6 +1,13 @@
 # ssh
 
 ## 配置
+
+- 配置 root 登陆
+```shell
+sudo nvim /etc/ssh/sshd_config
+PermitRootLogin yes
+```
+
 ```shell
 sudo nvim /etc/ssh/sshd_config
 
@@ -11,6 +18,15 @@ systemctl restart ssh.service
 
 # 多个路径
 AuthorizedKeysFile sshd_conf sshd_conf1 sshd_conf2
+```
+
+## build
+```shell
+#  支持 UsePAM
+sudo apt-get install libpam0g-dev
+
+# --with-pam 启用 UsePAM
+./configure --with-pam CFLAGS='-g -O0' --prefix=/media/black/Data/lib/openssh/openssh-9.3p1
 ```
 
 ## gdb debug
@@ -33,3 +49,8 @@ ssh-keygen -t rsa -C "1358244533@qq.com"
 
 - 挂载 ssh 协议文件系统
 [[sshfs]]
+
+- 指定密钥文件登陆
+```shell
+ssh -i ~/.ssh/id_rsa black@127.0.0.1 -p 1234
+```
