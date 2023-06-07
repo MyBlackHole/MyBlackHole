@@ -1,0 +1,1 @@
+- cannot set property for 'aiopool/test_write_full': 'sharenfs' does not apply to datasets of this type
