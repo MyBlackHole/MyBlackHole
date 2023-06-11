@@ -5,3 +5,8 @@
 # make 追加
 make VERBOSE=1
 ```
+
+- 清空所有
+```shell
+make distclean
+```

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/python/paramiko/login.md",
+                "file": "linux/rpcbind/rpcbind.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/python/paramiko/login.md",
+                "file": "linux/rpcbind/rpcbind.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/python/paramiko/login.md",
+                "file": "linux/rpcbind/rpcbind.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/python/paramiko/login.md"
+                "file": "linux/rpcbind/rpcbind.md"
               }
             }
           }
@@ -160,8 +160,10 @@
   },
   "active": "890d2318e92b95ef",
   "lastOpenFiles": [
-    "linux/ssh/pubkey.md",
+    "linux/rpcbind/imgs/Pasted image 20230610174944.png",
+    "linux/rpcbind/imgs",
     "language/python/paramiko/login.md",
+    "linux/ssh/pubkey.md",
     "language/python/pdb.md",
     "language/python/paramiko",
     "未命名",
@@ -202,8 +204,6 @@
     "linux/fd.md",
     "database/Teledb/RDS.md",
     "linux/git/error.md",
-    "linux/git/git.md",
-    "linux/git",
     "linux/imgs/Pasted image 20230509153444.png",
     "linux/imgs/Pasted image 20230509150712.png"
   ]
