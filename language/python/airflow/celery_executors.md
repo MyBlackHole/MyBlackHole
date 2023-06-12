@@ -17,6 +17,8 @@ celery_executor.py
                         :                   airflow/cli/commands/task_command.py:_run_raw_task
                         :                       TaskInstance._run_raw_task
                         :                           TaskInstance._execute_task_with_callbacks
+                        :                               TaskInstance._execute_task
+                        :                                   TaskInstance.task.execute(context)
                         :
                         LocalTaskJob [while not self.terminating]
                             LocalTaskJob.(BaseJob).heartbeat

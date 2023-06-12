@@ -81,7 +81,7 @@ zfs destroy tank/root/home
 
 ```bash
 # 获取数据集全部属性
-$ zfs get all  zroot/usr/home                                                                                              │157 # Create Volume
+$ zfs get all zroot/usr/home                                                                                              │157 # Create Volume
 NAME            PROPERTY              VALUE                  SOURCE                                                                          │158 $ zfs create -V zroot/win_vm
 zroot/home      type                  filesystem             -                                                                               │159 $ zfs list zroot/win_vm
 zroot/home      creation              Mon Oct 20 14:44 2014  -                                                                               │160 NAME                 USED  AVAIL  REFER  MOUNTPOINT
