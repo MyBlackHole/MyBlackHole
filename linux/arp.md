@@ -7,15 +7,10 @@ ARP以各种方式操纵内核的ARP缓存
 ## 语法
 ```shell
 arp [-evn]  [-H type]  [-i if]  -a  [hostname]
-
 arp [-v]  [-i if]  -d  hostname [pub]
-
 arp [-v]  [-H type]  [-i if]  -s  hostname  hw_ addr [temp]
-
 arp [-v]  [-H type]  [-i if]  -s  hostname hw_ addr  [netmask nm]  pub
-
 arp [-v]  [-H type]  [-i if]  -Ds  hostname ifa  [netmask nm]  pub
-
 arp [-vnD]  [-H type]  [-i if]  -f  [filename]
 ```
 

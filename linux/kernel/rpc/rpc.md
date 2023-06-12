@@ -3,6 +3,9 @@
 ## install
 ```shell
 sudo apt-get install rpcbind
+
+# 前台运行
+sudo rpcbind -f
 ```
 
 ```shell

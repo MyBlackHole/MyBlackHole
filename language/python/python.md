@@ -39,7 +39,7 @@ make install
 
 # 配置
 ## 更改源
-临时使用 -i  https://pypi.douban.com/simple/ 
+临时使用 -i https://pypi.douban.com/simple/ 
 ```
 cd 
 mkdir .pip 
