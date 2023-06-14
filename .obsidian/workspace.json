@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "06e38f32ce5059b3",
+    "id": "276220badac343c4",
     "type": "split",
     "children": [
       {
-        "id": "72cef664cd2a49d8",
+        "id": "a5b25c397a71dd59",
         "type": "tabs",
         "children": [
           {
-            "id": "2e93d7887e119940",
+            "id": "6e1e3d7ea04c2c61",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "linux/kernel/socket.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "4b293053698d1560",
+    "id": "3a3c584ecaa5465d",
     "type": "split",
     "children": [
       {
-        "id": "8e78670907dcc1c7",
+        "id": "201284eb77c44d1c",
         "type": "tabs",
         "children": [
           {
-            "id": "f03095ffa7827464",
+            "id": "798e2c33a86105bc",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "0b96278cc8d32ea6",
+            "id": "dd6d17f2f757d7b5",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,7 @@
             }
           },
           {
-            "id": "2310aa14be1cd2e9",
+            "id": "81bcf46745c44bdb",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -68,19 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "9e4a45f85e0d7ee9",
+    "id": "7126b760e3459d2d",
     "type": "split",
     "children": [
       {
-        "id": "3678492cad489041",
+        "id": "e443e01dbf868bc3",
         "type": "tabs",
         "children": [
           {
-            "id": "2c1b6c055ba6a490",
+            "id": "4d0a26a4f8c6e9b6",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "linux/kernel/socket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,18 +97,19 @@
             }
           },
           {
-            "id": "c310c5adeb80a397",
+            "id": "5ca739c80396acab",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "linux/kernel/socket.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "8a85d5c395ffa159",
+            "id": "e0fcb7c175b32b7b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,11 +120,13 @@
             }
           },
           {
-            "id": "8f518b67700bf7d0",
+            "id": "33dc2f2f0f27758a",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "linux/kernel/socket.md"
+              }
             }
           }
         ]
@@ -142,6 +150,12 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "2e93d7887e119940",
-  "lastOpenFiles": []
+  "active": "6e1e3d7ea04c2c61",
+  "lastOpenFiles": [
+    "linux/kernel/imgs/Pasted image 20230614000049.png",
+    "linux/kernel/imgs/Pasted image 20230613233851.png",
+    "linux/kernel/imgs/Pasted image 20230613233258.png",
+    "linux/kernel/fcntl.md",
+    "linux/kernel/imgs/Pasted image 20230613222458.png"
+  ]
 }
