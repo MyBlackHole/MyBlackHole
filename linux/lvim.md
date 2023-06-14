@@ -34,6 +34,9 @@ ctrl+t    # 回到跳转之前的标签处
 ctrl+i 
 ctrl+o
 
+ctrl + w + ] # 分割窗口并跳转到光标下的标签
+ctrl + w + L # 移动窗口到右边
+
 :changes # 修改的位置
 ```
 
