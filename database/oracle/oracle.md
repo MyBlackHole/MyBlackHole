@@ -39,3 +39,9 @@ show parameter name; # 查看参数：service_names为orcl
 # 修改service_names为自己想要的名称
 alter system set service_names=mydb scope=both; # 修改service_names
 ```
+
+- 装载数据库
+```shell
+sqlplus / as sysdba
+startup
+```

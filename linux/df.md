@@ -35,3 +35,9 @@ Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
 “域列表”是由逗号分隔的列表，指示需要包含在内的列。有效的域名称包括：
 'source', 'fstype', 'itotal', 'iused', 'iavail', 'ipcent', 'size',
 'used', 'avail', 'pcent', 'file' 和 'target'（请参考 info 信息页）。
+
+## 例子
+- 
+```shell
+df -k
+```

@@ -303,4 +303,19 @@ mysql -h 127.0.0.1 -P 3306 -uroot –p
 show columns from mvcctest;
 ```
 
+- 刷新 binlog, 生成新 binlog 文件
+```shell
+flush logs;
+```
 
+- xtrabackup 备份用户创建，权限
+```sql
+CREATE USER 'xtrabackup'@'localhost' IDENTIFIED BY 'xtrabackup';
+GRANT BACKUP_ADMIN, PROCESS, RELOAD, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'xtrabackup'@'localhost';
+GRANT SELECT ON performance_schema.log_status TO 'xtrabackup'@'localhost';
+FLUSH PRIVILEGES;
+
+# aio
+GRANT BACKUP_ADMIN, RELOAD, LOCK TABLES, PROCESS, REPLICATION CLIENT, REPLICATION SLAVE, SUPER,BACKUP_ADMIN ON *.* TO 'xtrabackup'@'%';
+FLUSH  PRIVILEGES ;
+```

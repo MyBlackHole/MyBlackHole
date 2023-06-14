@@ -85,3 +85,10 @@ GRANT ALL ON *.* TO 'root'@'localhost';
 # 查看用户权限
 select * from mysql.user\G
 ```
+
+- Got fatal error 1236 from master when reading data from binary log: 'binlog truncated in the middle of event; consider out of disk space on master; the first event 'mysql-bin.000004' at 154, the last event read from './mysql-bin.000004' at 126, the last byte read from './mysql-bin.000004' at 157.
+```shell
+stop slave
+reset slave
+start slave
+```
