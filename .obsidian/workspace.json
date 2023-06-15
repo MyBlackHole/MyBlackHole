@@ -152,6 +152,12 @@
   },
   "active": "6e1e3d7ea04c2c61",
   "lastOpenFiles": [
+    "linux/kernel/tcp/somaxconn.md",
+    "linux/kernel/tcp/listen.md",
+    "linux/kernel/tcp",
+    "language/python/uwsgi/uwsgi.md",
+    "language/python/uwsgi/error.md",
+    "language/python/uwsgi",
     "linux/kernel/imgs/Pasted image 20230614000049.png",
     "linux/kernel/imgs/Pasted image 20230613233851.png",
     "linux/kernel/imgs/Pasted image 20230613233258.png",
