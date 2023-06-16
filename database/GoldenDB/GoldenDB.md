@@ -55,3 +55,13 @@ GoldenDB整体架构如下图所示包括：
 2. Filebeat是日志采集代理，用于收集每台服务器的日志数据
 3. 运维性能数据经过kafka消息队列后通过logstash采集到elasticsearch中存储
 4. Insightserver会查询ES中的性能数据、RDB中的集群信息以及Redis中的缓存信息进行展示和汇总分析
+
+
+- 启动
+```shell
+su - omm -c "ommtool -status" 
+su - omm -c "ommtool -moni -start"
+
+su - manager -c "dbstate"
+su - manager -c "dbmoni -start"
+```
