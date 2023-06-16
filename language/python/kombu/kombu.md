@@ -1,5 +1,17 @@
 # kombu
 
+## 概念
+- Producers: 发送消息给exchange
+- Exchanges: 用于路由消息（消息发给exchange，exchange发给对应的queue）。路由就是比较routing-key（这个message提供）和binding-key（这个queue注册到exchange的时候提供）。使用时，需要指定exchange的名称和类型（direct，topic和fanout）。可以发现，和RabbitMQ中的exchange概念是一样的。
+- Consumers: consumer需要声明一个queue，并将queue与指定的exchange绑定，然后从queue里面接收消息。
+- Queues: 接收exchange发过来的消息
+- Routing keys: 每个消息在发送时都会声明一个routing_key。routing_key的含义依赖于exchange的类型。一般说来，在AMQP标准里定义了四种默认的exchange类型，此外，vendor还可以自定义exchange的类型。但是，我们下面只关注AMQP 0.8版本中定义的三种默认exchange类型，也是最常用的三类exchange。
+    - Direct exchange: 如果message的routing_key和某个consumer中的routing_key相同，就会把消息发送给这个consumer监听的queue中。
+    - Fan-out exchange: 广播模式。exchange将收到的message发送到所有与之绑定的queue中。
+    - Topic exchange: 该类型exchange会将message发送到与之routing_key类型相匹配的queue中。routing_key由一系列“.”隔开的word组成，“*”代表匹配任何word，“#”代表匹配0个或多个word，类似于正则表达式。
+
+
+## 处理过期
 redis:
     QOS:
 处理过期(超时)的任务
