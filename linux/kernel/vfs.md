@@ -25,51 +25,51 @@ superblock是文件系统的metadata，保存了文件系统的各种信息以�
 
 | 类型 | 域名 | 描述 |
 | --- | --- | --- |
-| int | s\_type | 文件系统类型 |
-| unsigned long | s\_blocksize | 块大小（block size） |
-| struct dentry \* | s\_root | 指向文件系统根目录对应的dentry |
-| struct list\_head | s\_inodes | 文件系统中所有文件的inode（使用list\_head双向链表存储） |
-| void \* | s\_fs\_info | 指向具体文件系统实现（如ext2）的特有的数据结构 |
-| struct superblock\* | s\_op | superblock的操作函数（结构体里都是函数指针） |
+| int | s_type | 文件系统类型 |
+| unsigned long | s_blocksize | 块大小（block size） |
+| struct dentry * | s_root | 指向文件系统根目录对应的dentry |
+| struct list_head | s_inodes | 文件系统中所有文件的inode（使用list_head双向链表存储） |
+| void * | s_fs_info | 指向具体文件系统实现（如ext2）的特有的数据结构 |
+| struct superblock* | s_op | superblock的操作函数（结构体里都是函数指针） |
 
-#### superblock operations（存储在s\_op中，仅列举部分）：
+#### superblock operations（存储在s_op中，仅列举部分）：
 
 | 函数 | 功能 |
 | --- | --- |
-| alloc\_inode(sb) | 为一个inode对象分配空间 |
-| destroy\_inode(inode) | 销毁一个inode对象 |
-| read\_inode(inode) | 从磁盘中读取inode数据，填充作为传入参数的inode对象 |
-| write\_inode(inode, flag) | 使用内存中的inode信息更新磁盘中的inode信息 |
-| delete\_inode(inode) | 删除内存中的inode对象同时删除磁盘上的inode |
+| alloc_inode(sb) | 为一个inode对象分配空间 |
+| destroy_inode(inode) | 销毁一个inode对象 |
+| read_inode(inode) | 从磁盘中读取inode数据，填充作为传入参数的inode对象 |
+| write_inode(inode, flag) | 使用内存中的inode信息更新磁盘中的inode信息 |
+| delete_inode(inode) | 删除内存中的inode对象同时删除磁盘上的inode |
 
 ### inode数据结构
 
 inode数据结构中保存了文件系统处理文件所需要的全部信息以及可以对其执行的操作。一个inode对应磁盘上一个实际的文件（目录是一种特殊的文件）
 
-inode中没有直接存储文件的每个块的位置，根据ext2的的Data Blocks Addressing，下表中的i\_blocks和i\_bytes应该是共同规定了文件的file block number（从0开始计数）和文件结束位置。下层的文件系统（如ext2）负责将file block number转换为logical block numbe（在磁盘上的block地址）
+inode中没有直接存储文件的每个块的位置，根据ext2的的Data Blocks Addressing，下表中的i_blocks和i_bytes应该是共同规定了文件的file block number（从0开始计数）和文件结束位置。下层的文件系统（如ext2）负责将file block number转换为logical block numbe（在磁盘上的block地址）
 
 #### 包含的域（仅列举部分）：
 
 | 类型 | 域名 | 描述 |
 | --- | --- | --- |
-| struct super\_block \* | i\_sb | 指向inode所在的superblock对象 |
-| struct list\_head | i\_dentry | 这是一个双向链表的头节点，链表中保存的是指向该inode的dentry对象 |
-| unsigned long | i\_ino | inode编号 |
-| umode\_t | i\_mode | 文件类型和访问权限域 |
-| unsigned int | i\_nlink | 指向该inode的硬链接数量，为0时意味着该inode要销毁了 |
-| uid\_t | i\_uid | inode所有者的id |
-| struct timespec | i\_atime | 上次访问的时间戳 |
-| unsigned long | i\_blocks | 文件的块数目 |
-| unsigned short | i\_bytes | 文件最后一个块的字节大小 |
-| struct inode\_operations \* | i\_op | inode operations,inode的操作函数 |
+| struct super_block * | i_sb | 指向inode所在的superblock对象 |
+| struct list_head | i_dentry | 这是一个双向链表的头节点，链表中保存的是指向该inode的dentry对象 |
+| unsigned long | i_ino | inode编号 |
+| umode_t | i_mode | 文件类型和访问权限域 |
+| unsigned int | i_nlink | 指向该inode的硬链接数量，为0时意味着该inode要销毁了 |
+| uid_t | i_uid | inode所有者的id |
+| struct timespec | i_atime | 上次访问的时间戳 |
+| unsigned long | i_blocks | 文件的块数目 |
+| unsigned short | i_bytes | 文件最后一个块的字节大小 |
+| struct inode_operations * | i_op | inode operations,inode的操作函数 |
 
-#### inode operations(存储在i\_op中，仅列举部分)
+#### inode operations(存储在i_op中，仅列举部分)
 
 | 函数 | 功能 |
 | --- | --- |
 | create(dir, dentry, mode, nameidata) | 创建一个inode |
 | lookup(dir, dentry, nameidata) | 在一个目录文件中查找和dentry包含的文件名匹配的inode |
-| link(old\_dentry, dir, new\_dentry) | 创建一个指向new\_dentry的硬链接，保存在old\_dentry中，该old\_dentry和new\_dentry指向同一个inode，即同一个文件。 |
+| link(old_dentry, dir, new_dentry) | 创建一个指向new_dentry的硬链接，保存在old_dentry中，该old_dentry和new_dentry指向同一个inode，即同一个文件。 |
 | symlink(dir, dentry, symname) | 创建一个新的inode，该inode是一个软连接文件，指向参数dentry |
 | mkdir(dir, dentry, mode) | 为dentry创建一个目录文件的inode |
 
@@ -85,21 +85,21 @@ dentry cache将已经查找过的路径缓存在内存中，这样下次查找�
 
 | 类型 | 域名 | 描述 |
 | --- | --- | --- |
-| atomic\_t | d\_count | dentry对象的使用计数器 |
-| struct inode \* | d\_inode | dentry指向的inode |
-| struct dentry \* | d\_parent | 指向上级目录的dentry |
-| struct qstr | d\_name | 文件名 |
-| struct list\_head | d\_subdirs | 如果当前dentry是目录的dentry，那么双向链表保存的是所有子目录的dentry |
-| struct super\_block \* | d\_sb | dentry对应的super block |
-| struct dentry\_operations\* | d\_op | Dentry methods，dentry的操作函数 |
+| atomic_t | d_count | dentry对象的使用计数器 |
+| struct inode * | d_inode | dentry指向的inode |
+| struct dentry * | d_parent | 指向上级目录的dentry |
+| struct qstr | d_name | 文件名 |
+| struct list_head | d_subdirs | 如果当前dentry是目录的dentry，那么双向链表保存的是所有子目录的dentry |
+| struct super_block * | d_sb | dentry对应的super block |
+| struct dentry_operations* | d_op | Dentry methods，dentry的操作函数 |
 
-#### dentry operations(存储在d\_op中，仅列举部分)
+#### dentry operations(存储在d_op中，仅列举部分)
 
 | 函数 | 功能 |
 | --- | --- |
-| d\_revalidate(dentry, nameidata) | 判断当前dentry对象是仍然有效，应该是dentry cache中使用的 |
-| d\_hash(dentry, name) | 计算哈希值，应该也是dentry cache中使用的 |
-| d\_delete(dentry) | 在d\_count为0时，删除dentry，默认的VFS函数什么都不做 |
+| d_revalidate(dentry, nameidata) | 判断当前dentry对象是仍然有效，应该是dentry cache中使用的 |
+| d_hash(dentry, name) | 计算哈希值，应该也是dentry cache中使用的 |
+| d_delete(dentry) | 在d_count为0时，删除dentry，默认的VFS函数什么都不做 |
 
 ## file数据结构
 
@@ -109,13 +109,13 @@ file数据结构用于存储进程和打开的文件之间交互的信息，这�
 
 | 类型 | 域名 | 描述 |
 | --- | --- | --- |
-| struct dentry \* | f\_dentry | 和该file对应的dentry |
-| struct vfsmount \* | f\_vfsmnt | file所在的文件系统（文件系统挂载的数据结构） |
-| unsigned int | f\_flags | 打开文件时使用的flag |
-| mode\_t | f\_mode | 进程access mode |
-| struct file\_operations \* | f\_op | file operations，文件操作函数 |
+| struct dentry * | f_dentry | 和该file对应的dentry |
+| struct vfsmount * | f_vfsmnt | file所在的文件系统（文件系统挂载的数据结构） |
+| unsigned int | f_flags | 打开文件时使用的flag |
+| mode_t | f_mode | 进程access mode |
+| struct file_operations * | f_op | file operations，文件操作函数 |
 
-#### dentry operations(存储在d\_op中，仅列举部分)
+#### dentry operations(存储在d_op中，仅列举部分)
 
 | 函数 | 功能 |
 | --- | --- |

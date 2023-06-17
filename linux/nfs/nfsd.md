@@ -1,6 +1,28 @@
 # nfsd
 rpc.nfsd 程序实现的是用户空间层的 NFS 服务，主要功能由 nfsd 内核模块来处理
 用户空间程序主要指定内核空间层服务监听在哪个套接字上，使用多少个内核线程。
+```c
+# 依赖于 内核 nfsd 文件系统挂载出来的 路径
+#define NFSD_FS_DIR	  "/proc/fs/nfsd"
+#define NFSD_PORTS_FILE   NFSD_FS_DIR "/portlist"
+#define NFSD_VERS_FILE    NFSD_FS_DIR "/versions"
+#define NFSD_THREAD_FILE  NFSD_FS_DIR "/threads"
+```
+
+```shell
+pwd
+/proc/fs/nfsd
+
+sudo cat portlist
+tcp 2049
+tcp 2049
+
+sudo cat versions
++3 +4 +4.1 +4.2
+
+sudo cat threads
+8
+```
 
 rpc.mountd 服务提供辅助服务，用于处理 NFS 客户端的 mount 请求。
 
