@@ -1,4 +1,5 @@
 # zfs (动态文件系统)
+![[imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp]]
 
 ## 概念
 - ZFS [[storage_pool]] 存储池
@@ -38,4 +39,12 @@ yum install kernel-devel zfs
 
 # ubuntu
 sudo apt install zfsutils-linux
+```
+
+
+## 例子
+
+- 查询
+```shell
+zfs list -t snapshot -o name,volsize,used,refer,avail
 ```

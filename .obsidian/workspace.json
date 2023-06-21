@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/socket.md",
+                "file": "aio/zfs 监控自动扩容.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/socket.md",
+                "file": "aio/zfs 监控自动扩容.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/socket.md",
+                "file": "aio/zfs 监控自动扩容.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/socket.md"
+                "file": "aio/zfs 监控自动扩容.md"
               }
             }
           }
@@ -152,6 +152,15 @@
   },
   "active": "6e1e3d7ea04c2c61",
   "lastOpenFiles": [
+    "linux/awk.md",
+    "aio/database/oceanbase.md",
+    "aio/zfs 监控自动扩容.md",
+    "aio/airflow.md",
+    "aio/database/oracle.md",
+    "linux/zfs/zfs.md",
+    "linux/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
+    "linux/zfs/imgs",
+    "linux/kernel/socket.md",
     "linux/kernel/tcp/somaxconn.md",
     "linux/kernel/tcp/listen.md",
     "linux/kernel/tcp",
