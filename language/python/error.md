@@ -1,5 +1,7 @@
 # 异常处理
 
+
+
 - windows server12 r2 安装 python 失败
 ```
 https://www.microsoft.com/en-us/download/details.aspx?familyid=373b1bb0-6d55-462e-98b7-6cb7d9ef1448 
