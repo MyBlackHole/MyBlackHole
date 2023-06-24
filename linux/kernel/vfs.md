@@ -6,6 +6,8 @@ VFS是一个介于用户程序和文件系统实现之间的一个抽象层，VF
 
 VFS背后的核心idea是引入了通用文件模型（common file model），该模型其实就是Unix原生文件系统的一个镜像（这样可以在Unix原生文件系统了具有最小的开销，最高的性能）。其他非原生文件系统（比如FAT、MS-DOS filesystem）则需要做一些转换，从而支持该通用文件模型
 
+![[imgs/Pasted image 20230624183020.png]]
+
 ## 通用文件模型（common file model）
 
 通用文件模型由superblock、inode、dentry、file四种数据结构构成，这四种数据结构都是保存在内核空间中的。
