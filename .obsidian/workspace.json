@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2587871c90895927",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "aio/告警与停止.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "7126b760e3459d2d",
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aio/zfs 监控自动扩容.md",
+                "file": "aio/告警与停止.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aio/zfs 监控自动扩容.md",
+                "file": "aio/告警与停止.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aio/zfs 监控自动扩容.md"
+                "file": "aio/告警与停止.md"
               }
             }
           }
@@ -150,13 +163,18 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "6e1e3d7ea04c2c61",
+  "active": "2587871c90895927",
   "lastOpenFiles": [
-    "linux/awk.md",
-    "aio/database/oceanbase.md",
+    "language/python/airflow/web.md",
+    "aio/dev_sshfs.md",
+    "aio/aio_datatable.md",
+    "aio/config.md",
     "aio/zfs 监控自动扩容.md",
-    "aio/airflow.md",
+    "aio/告警与停止.md",
     "aio/database/oracle.md",
+    "aio/database/oceanbase.md",
+    "aio/airflow.md",
+    "linux/awk.md",
     "linux/zfs/zfs.md",
     "linux/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
     "linux/zfs/imgs",
