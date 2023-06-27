@@ -165,6 +165,9 @@
   },
   "active": "2587871c90895927",
   "lastOpenFiles": [
+    "aio/database/oceanbase/oceanbase.md",
+    "aio/database/oceanbase/config.md",
+    "aio/database/oceanbase",
     "language/python/airflow/web.md",
     "aio/dev_sshfs.md",
     "aio/aio_datatable.md",
