@@ -1,6 +1,8 @@
 # celery executors
 
 celery_executor.py
+airflow/executors/celery_executor.py:execute_command
+    airflow/executors/celery_executor.py:_execute_in_fork
 ['airflow', 'tasks', 'run', 'storage_size_update', '更新存储节点容量', 'manual__2023-03-21T05:31:00.573310+00:00', '--local', '--subdir', 'DAGS_FOLDER/storage_size_update.py']
     airflow/cli/commands/task_command.py:task_run
         airflow/cli/commands/task_command.py:_run_task_by_selected_method
