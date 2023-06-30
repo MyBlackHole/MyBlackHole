@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aio/告警与停止.md",
+                "file": "aio/database/oceanbase/full.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "45d2e854d5d647a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "aio/zfs 监控自动扩容.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aio/告警与停止.md",
+                "file": "aio/zfs 监控自动扩容.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aio/告警与停止.md",
+                "file": "aio/zfs 监控自动扩容.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aio/告警与停止.md"
+                "file": "aio/zfs 监控自动扩容.md"
               }
             }
           }
@@ -163,8 +175,27 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "2587871c90895927",
+  "active": "45d2e854d5d647a3",
   "lastOpenFiles": [
+    "aio/告警与停止.md",
+    "aio/database/oceanbase/log.md",
+    "aio/告警与停止_002.png",
+    "aio/告警与停止_001.png",
+    "aio/告警与停止.png",
+    "aio/zfs 监控自动扩容.png",
+    "aio/database/oceanbase/full.png",
+    "aio/database/oceanbase/restore.png",
+    "aio/database/oceanbase/log.png",
+    "language/plantuml/plantuml.md",
+    "language/plantuml",
+    "aio/database/oceanbase/restore.md",
+    "aio/database/oceanbase/日志优化.md",
+    "aio/日志优化.md",
+    "aio/database/oceanbase/full.md",
+    "language/python/logging/logging.md",
+    "language/python/sqlalchemy/error.md",
+    "language/python/sqlalchemy",
+    "language/python/logging",
     "language/python/airflow/scheduler.md",
     "aio/database/oceanbase/oceanbase.md",
     "aio/database/oceanbase/config.md",
@@ -174,7 +205,6 @@
     "aio/aio_datatable.md",
     "aio/config.md",
     "aio/zfs 监控自动扩容.md",
-    "aio/告警与停止.md",
     "aio/database/oracle.md",
     "aio/database/oceanbase.md",
     "aio/airflow.md",
@@ -186,13 +216,8 @@
     "linux/kernel/tcp/somaxconn.md",
     "linux/kernel/tcp/listen.md",
     "linux/kernel/tcp",
-    "language/python/uwsgi/uwsgi.md",
-    "language/python/uwsgi/error.md",
     "language/python/uwsgi",
     "linux/kernel/imgs/Pasted image 20230614000049.png",
-    "linux/kernel/imgs/Pasted image 20230613233851.png",
-    "linux/kernel/imgs/Pasted image 20230613233258.png",
-    "linux/kernel/fcntl.md",
-    "linux/kernel/imgs/Pasted image 20230613222458.png"
+    "linux/kernel/imgs/Pasted image 20230613233851.png"
   ]
 }
