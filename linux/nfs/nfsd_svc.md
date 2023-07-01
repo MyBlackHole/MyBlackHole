@@ -35,7 +35,7 @@ fs/nfsd/nfsctl.c:nfsctl_transaction_write
 
 - 连接 socket send data to 20490 port
 ```c
-# 网络层支持
+// 网络层支持
 static const struct svc_xprt_ops svc_tcp_ops = {
 	.xpo_create = svc_tcp_create,
 	.xpo_recvfrom = svc_tcp_recvfrom,

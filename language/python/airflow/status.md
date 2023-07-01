@@ -27,18 +27,12 @@ Task状态是对Dagrun的细化状态。因为在Dag中不同task之间可能会
 ## 2. airflow状态的详细介绍
 
 ### 2.1 SUCCESS（dagrun | task | finished）
-
-
-
 +   success状态说明当前任务在执行过程中没有遇到任何错误并且正常完成。
 +   airflow scheduler上报状态之后释放针对当前任务的监控
 +   executor执行完成对应任务
 +   颜色：墨绿色
 
 ### 2.2 RUNNING（dagrun | task | unfinished）
-
-
-
 +   running状态代表当前任务正在执行中
 +   airflow scheduler将该任务提交到了executor上，并对当前任务通过heartbeat进行监控
 +   executor正在对对应的实际任务进行执行
@@ -46,70 +40,46 @@ Task状态是对Dagrun的细化状态。因为在Dag中不同task之间可能会
 +   后续状态：SUCCESS、RETRY、FAILED
 
 ### 2.3 FAILED（dagrun | task | finished）
-
-
-
 +   failed状态说明当前任务执行过程中出现问题，返回了错误代码。
 +   airflow scheduler会上报当前任务failed状态，和下游任务的UPSTREAM_FAILED状态
 +   executor执行完对应任务
 +   颜色：红色
 
 ### 2.4 UPSTREAM_FAILED（task | finished）
-
-
-
 +   upstream_failed 状态说明当前任务的上游任务发生错误，处于FAILED状态，当前任务并没有开始执行
 +   airflow scheduler 直接上报当前任务的状态，并不会将当前任务进行调度
 +   executor 没有执行对应任务
 +   颜色：棕黄色
 
 ### 2.5 SKIPPED（task | finished）
-
-
-
 +   skipped 状态代表当前任务被跳过，没有执行，经常发生在branchOperator未触发的分支上
 +   airflow scheduler 绕过了当前任务，没有进行调度
 +   executor 没有执行对应任务
 +   颜色：浅红色
 
 ### 2.6 UP_FOR_RETRY（task | unfinished）
-
-
-
 +   up_for_retry 代表当前任务执行失败并准备重试
 +   airflow scheduler 会在retry interval 之后，下一次heartbeat到达时重新调度该任务
 +   executor 上次执行对应任务失败，当前没有执行对应任务
 +   颜色：黄色
 
 ### 2.7 UP_FOR_RESCHEDULE（task | unfinished）
-
-
-
 +   up_for_reschedule 实在airflow1.10.2中引入的新状态，常用在Sensor中，可以避免消费slots
 +   airflow scheduler 会对当前任务进行定时重试，防止长时间占据woker slots，从而导致worker锁死，无法执行其他任务
 +   executor 定时执行对应任务
 +   颜色：浅绿色
 
 ### 2.8 QUEUED（task | unfinished）
-
-
-
 +   queued 状态代表当前任务已经被调度，但是正在等待一个可用的executor slots.,
 +   airflow scheduler 已经将该任务调度，正在排队等待可用slots
 +   executor 没有空闲slots执行该任务
 +   颜色：灰色
 
 ### 2.9 NO_STATUS（task | unfinished）
-
-
-
 +   NO_STATUS代表当前任务还没有被调度到，前面任务正在执行
 +   颜色：无色
 
 ### 2.10 SCHEDULED（task | unfinished）
-
-
-
 +   scheduled 状态代表该任务已经被触发
 +   airflow scheduler 调度该任务，但是并没有open slots ( = all_slots - running_slots - queued_slots)，正在轮询状态中
 +   executor没有执行任务

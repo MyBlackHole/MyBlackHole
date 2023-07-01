@@ -63,5 +63,5 @@ qualifier只能是 trace,abbrev,verbose,raw,signal,read,write其中之一.value
 ## 例子
 
 ```shell
-strace -e open -ostrace.out /usr/sbin/sshd
+strace -e open -o strace.out /usr/sbin/sshd
 ```

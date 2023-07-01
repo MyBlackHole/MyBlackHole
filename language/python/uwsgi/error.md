@@ -4,3 +4,19 @@
 [uwsgi]
 listen = 500
 ```
+
+- /usr/bin/uwsgi: unrecognized option '--wsgi-file'
+```shell
+# 加上
+--plugin python3
+```
+
+- 没有python_plugin.so
+```shell
+sudo apt-get install uwsgi-plugin-python3
+```
+
+- uwsgi ModuleNotFoundError: No module named 'flask'
+```shell
+环境没有指定
+```
