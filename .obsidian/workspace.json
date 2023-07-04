@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aio/zfs 监控自动扩容.md",
+                "file": "language/python/airflow/kill_task.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aio/zfs 监控自动扩容.md",
+                "file": "language/python/airflow/kill_task.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aio/zfs 监控自动扩容.md",
+                "file": "language/python/airflow/kill_task.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aio/zfs 监控自动扩容.md"
+                "file": "language/python/airflow/kill_task.md"
               }
             }
           }
@@ -177,6 +177,15 @@
   },
   "active": "45d2e854d5d647a3",
   "lastOpenFiles": [
+    "language/python/airflow/web.md",
+    "aio/日志精简.md",
+    "language/python/airflow/kill_task.md",
+    "aio/日志精简_002.png",
+    "aio/日志精简_001.png",
+    "aio/日志精简.png",
+    "aio/database/oceanbase/log_monitor.png",
+    "aio/database/oceanbase/log_monitor.md",
+    "aio/zfs 监控自动扩容.md",
     "aio/告警与停止.md",
     "aio/database/oceanbase/log.md",
     "aio/告警与停止_002.png",
@@ -185,7 +194,6 @@
     "aio/zfs 监控自动扩容.png",
     "aio/database/oceanbase/full.png",
     "aio/database/oceanbase/restore.png",
-    "aio/database/oceanbase/log.png",
     "language/plantuml/plantuml.md",
     "language/plantuml",
     "aio/database/oceanbase/restore.md",
@@ -200,24 +208,17 @@
     "aio/database/oceanbase/oceanbase.md",
     "aio/database/oceanbase/config.md",
     "aio/database/oceanbase",
-    "language/python/airflow/web.md",
     "aio/dev_sshfs.md",
     "aio/aio_datatable.md",
     "aio/config.md",
-    "aio/zfs 监控自动扩容.md",
     "aio/database/oracle.md",
     "aio/database/oceanbase.md",
     "aio/airflow.md",
     "linux/awk.md",
     "linux/zfs/zfs.md",
-    "linux/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
     "linux/zfs/imgs",
     "linux/kernel/socket.md",
-    "linux/kernel/tcp/somaxconn.md",
-    "linux/kernel/tcp/listen.md",
     "linux/kernel/tcp",
-    "language/python/uwsgi",
-    "linux/kernel/imgs/Pasted image 20230614000049.png",
-    "linux/kernel/imgs/Pasted image 20230613233851.png"
+    "language/python/uwsgi"
   ]
 }
