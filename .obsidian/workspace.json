@@ -13,38 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aio/zfs 监控自动扩容.md",
+                "file": "linux/kernel/fcntl.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "2587871c90895927",
+            "id": "47c0e6b7f32ba8f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aio/database/oceanbase/full.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "45d2e854d5d647a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "language/python/airflow/kill_task.md",
+                "file": "linux/kernel/block/null_dev.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
     "id": "7126b760e3459d2d",
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/python/airflow/kill_task.md",
+                "file": "linux/kernel/block/null_dev.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/python/airflow/kill_task.md",
+                "file": "linux/kernel/block/null_dev.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/python/airflow/kill_task.md"
+                "file": "linux/kernel/block/null_dev.md"
               }
             }
           }
@@ -175,50 +163,53 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "45d2e854d5d647a3",
+  "active": "47c0e6b7f32ba8f6",
   "lastOpenFiles": [
-    "language/python/airflow/web.md",
-    "aio/日志精简.md",
-    "language/python/airflow/kill_task.md",
-    "aio/日志精简_002.png",
-    "aio/日志精简_001.png",
-    "aio/日志精简.png",
-    "aio/database/oceanbase/log_monitor.png",
-    "aio/database/oceanbase/log_monitor.md",
-    "aio/zfs 监控自动扩容.md",
-    "aio/告警与停止.md",
-    "aio/database/oceanbase/log.md",
-    "aio/告警与停止_002.png",
-    "aio/告警与停止_001.png",
-    "aio/告警与停止.png",
-    "aio/zfs 监控自动扩容.png",
-    "aio/database/oceanbase/full.png",
-    "aio/database/oceanbase/restore.png",
-    "language/plantuml/plantuml.md",
-    "language/plantuml",
-    "aio/database/oceanbase/restore.md",
-    "aio/database/oceanbase/日志优化.md",
-    "aio/日志优化.md",
-    "aio/database/oceanbase/full.md",
-    "language/python/logging/logging.md",
+    "linux/systemctl.md",
+    "linux/kernel/block/imgs/Pasted image 20230702133344.png",
+    "linux/kernel/block/imgs",
+    "linux/kernel/NUMA.md",
+    "linux/kernel/block/null_dev.md",
+    "linux/kernel/fs/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
+    "linux/kernel/fs/zfs/zfs.md",
+    "linux/kernel/fs/zfs/volume.md",
+    "linux/kernel/fs/zfs/storage_pool.md",
+    "linux/kernel/fs/zfs/snapshots.md",
+    "linux/kernel/fs/zfs/imgs",
+    "linux/kernel/fs/zfs/error.md",
+    "linux/kernel/fs/zfs/dataset.md",
+    "linux/kernel/fs/zfs",
+    "linux/kernel/fs/xfs/xfs.md",
+    "linux/kernel/fs/xfs/xfs_growfs.md",
+    "linux/kernel/fs/xfs",
+    "linux/kernel/block/block.md",
+    "linux/kernel/block",
+    "linux/kernel/imgs/Pasted image 20230701162042.png",
+    "linux/kernel/vfs.md",
     "language/python/sqlalchemy/error.md",
     "language/python/sqlalchemy",
+    "language/python/logging/logging.md",
     "language/python/logging",
+    "language/python/airflow/web.md",
     "language/python/airflow/scheduler.md",
-    "aio/database/oceanbase/oceanbase.md",
-    "aio/database/oceanbase/config.md",
-    "aio/database/oceanbase",
-    "aio/dev_sshfs.md",
-    "aio/aio_datatable.md",
-    "aio/config.md",
-    "aio/database/oracle.md",
-    "aio/database/oceanbase.md",
-    "aio/airflow.md",
+    "language/plantuml/plantuml.md",
+    "language/plantuml",
+    "linux/kernel/sysctl.md",
+    "linux/kernel/imgs/Pasted image 20230624183020.png",
+    "linux/kernel/device/device.md",
+    "linux/kernel/device/imgs/Pasted image 20230624181643.png",
+    "linux/kernel/device/imgs",
+    "linux/kernel/fcntl.md",
+    "linux/kernel/device",
+    "linux/alsamixer.md",
+    "linux/kernel/glibc.md",
+    "linux/kernel/udev.md",
+    "linux/kernel/ioctl.md",
     "linux/awk.md",
-    "linux/zfs/zfs.md",
-    "linux/zfs/imgs",
-    "linux/kernel/socket.md",
-    "linux/kernel/tcp",
-    "language/python/uwsgi"
+    "linux/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
+    "linux/kernel/imgs/Pasted image 20230614000049.png",
+    "linux/kernel/imgs/Pasted image 20230613233851.png",
+    "linux/kernel/imgs/Pasted image 20230613233258.png",
+    "linux/kernel/imgs/Pasted image 20230613222458.png"
   ]
 }

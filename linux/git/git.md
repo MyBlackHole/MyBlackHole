@@ -54,3 +54,8 @@ git config --global core.excludesfile ~/.gitignore
 [core]
 	excludesfile = /home/black/.gitignore
 ```
+
+- 设置多个远程分支
+```shell
+git remote set-url my git@github.com:MyBlackHole/linux.git
+```
