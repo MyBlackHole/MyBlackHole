@@ -144,3 +144,8 @@ airflow clear dag_id
 ```shell
 airflow config list
 ```
+
+- 获取所有路由
+```shell
+FLASK_APP=airflow.www.app:create_app flask routes
+```

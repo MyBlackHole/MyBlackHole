@@ -12,8 +12,19 @@ start
 end
 |task run heartbeat|
 fork
-:运行 task;
-:运行 task;
+    :运行 task;
+fork again
+    partition "task 运行监控" {
+        :terminating = false;
+        while (terminating)
+            :查询 TI (任务实例) 数据;
+            if (是否运行状态) then (否)
+                :修改 terminating 为 True;
+            endif
+        endwhile
+        :关闭监听的 task;
+        
+    }
 endfork
 end
 @enduml

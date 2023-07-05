@@ -2,6 +2,10 @@
 
 ## source 安装
 ```shell
+# centos
+yum install kernel-devel
+
+# ubuntu
 sudo apt-get install kernel-source-xxxx
 ```
 

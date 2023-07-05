@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/block/null_dev.md",
+                "file": "language/python/airflow/kill_task.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/block/null_dev.md",
+                "file": "language/python/airflow/kill_task.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/block/null_dev.md",
+                "file": "language/python/airflow/kill_task.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/block/null_dev.md"
+                "file": "language/python/airflow/kill_task.md"
               }
             }
           }
@@ -165,11 +165,19 @@
   },
   "active": "47c0e6b7f32ba8f6",
   "lastOpenFiles": [
+    "language/python/airflow/kill_task.png",
+    "linux/kernel/block/null_dev.md",
+    "language/build_system/autogen/autoreconf.md",
+    "language/build_system/autogen",
+    "linux/kernel/dkms.md",
+    "linux/kernel/modules.md",
+    "aio/zfs_auto_scale.png",
+    "aio/zfs 监控自动扩容.md",
+    "aio/zfs_auto_scale.md",
     "linux/systemctl.md",
     "linux/kernel/block/imgs/Pasted image 20230702133344.png",
     "linux/kernel/block/imgs",
     "linux/kernel/NUMA.md",
-    "linux/kernel/block/null_dev.md",
     "linux/kernel/fs/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
     "linux/kernel/fs/zfs/zfs.md",
     "linux/kernel/fs/zfs/volume.md",
@@ -199,17 +207,9 @@
     "linux/kernel/device/device.md",
     "linux/kernel/device/imgs/Pasted image 20230624181643.png",
     "linux/kernel/device/imgs",
-    "linux/kernel/fcntl.md",
-    "linux/kernel/device",
-    "linux/alsamixer.md",
-    "linux/kernel/glibc.md",
-    "linux/kernel/udev.md",
-    "linux/kernel/ioctl.md",
-    "linux/awk.md",
     "linux/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
     "linux/kernel/imgs/Pasted image 20230614000049.png",
     "linux/kernel/imgs/Pasted image 20230613233851.png",
-    "linux/kernel/imgs/Pasted image 20230613233258.png",
-    "linux/kernel/imgs/Pasted image 20230613222458.png"
+    "linux/kernel/imgs/Pasted image 20230613233258.png"
   ]
 }
