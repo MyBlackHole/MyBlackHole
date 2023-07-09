@@ -65,3 +65,82 @@ qualifier只能是 trace,abbrev,verbose,raw,signal,read,write其中之一.value
 ```shell
 strace -e open -o strace.out /usr/sbin/sshd
 ```
+
+```shell
+root@black:/media/black/z0# strace cat /dev/urandom >> 1.txt
+execve("/usr/bin/cat", ["cat", "/dev/urandom"], 0x7ffcd2060d48 /* 41 vars */) = 0
+brk(NULL)                               = 0x55c6477c9000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fffc252be90) = -1 EINVAL (无效的参数)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f596c8b2000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=168997, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 168997, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f596c888000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P<\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2072888, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2117488, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f596c600000
+mmap(0x7f596c622000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f596c622000
+mmap(0x7f596c79a000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f596c79a000
+mmap(0x7f596c7f2000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f1000) = 0x7f596c7f2000
+mmap(0x7f596c7f8000, 53104, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f596c7f8000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f596c885000
+arch_prctl(ARCH_SET_FS, 0x7f596c885740) = 0
+set_tid_address(0x7f596c885a10)         = 970741
+set_robust_list(0x7f596c885a20, 24)     = 0
+rseq(0x7f596c886060, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f596c7f2000, 16384, PROT_READ) = 0
+mprotect(0x55c645e57000, 4096, PROT_READ) = 0
+mprotect(0x7f596c8e7000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f596c888000, 168997)          = 0
+getrandom("\xd9\x1f\x96\x78\x0a\x6f\x99\xcc", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55c6477c9000
+brk(0x55c6477ea000)                     = 0x55c6477ea000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=8884624, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8884624, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f596bc00000
+close(3)                                = 0
+newfstatat(1, "", {st_mode=S_IFREG|0644, st_size=2031681536, ...}, AT_EMPTY_PATH) = 0
+openat(AT_FDCWD, "/dev/urandom", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}, AT_EMPTY_PATH) = 0
+fadvise64(3, 0, 0, POSIX_FADV_SEQUENTIAL) = 0
+mmap(NULL, 139264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f596c890000
+read(3, "B\311\236\211\1\217\365\214\277\235o\342\223\373\336\331g\315U\367\317\204t\273\253\r\20T\244\341\323\364"..., 131072) = 131072
+write(1, "B\311\236\211\1\217\365\214\277\235o\342\223\373\336\331g\315U\367\317\204t\273\253\r\20T\244\341\323\364"..., 131072) = -1 ENOSPC (设备上没有空间)
+openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=2996, ...}, AT_EMPTY_PATH) = 0
+read(4, "# Locale name alias data base.\n#"..., 4096) = 2996
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+openat(AT_FDCWD, "/usr/share/locale/zh_CN/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/usr/share/locale/zh/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/usr/share/locale-langpack/zh_CN/LC_MESSAGES/coreutils.mo", O_RDONLY) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=359385, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 359385, PROT_READ, MAP_PRIVATE, 4, 0) = 0x7f596c82d000
+close(4)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=27028, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 27028, PROT_READ, MAP_SHARED, 4, 0) = 0x7f596c889000
+close(4)                                = 0
+futex(0x7f596c7f7a6c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+write(2, "cat: ", 5cat: )                    = 5
+write(2, "\345\206\231\345\205\245\351\224\231\350\257\257", 12写入错误) = 12
+openat(AT_FDCWD, "/usr/share/locale/zh_CN/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/usr/share/locale/zh/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/usr/share/locale-langpack/zh_CN/LC_MESSAGES/libc.mo", O_RDONLY) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=130962, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 130962, PROT_READ, MAP_PRIVATE, 4, 0) = 0x7f596c80d000
+close(4)                                = 0
+write(2, ": \350\256\276\345\244\207\344\270\212\346\262\241\346\234\211\347\251\272\351\227\264", 23: 设备上没有空间) = 23
+write(2, "\n", 1
+)                       = 1
+close(1)                                = 0
+close(2)                                = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
+```

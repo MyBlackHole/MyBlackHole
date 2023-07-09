@@ -47,6 +47,8 @@ aiopool/test_write_full  22.8M  46.9G      120K  -
 ## 例子
 - 1G大小 创建卷
 ```shell
+sudo zfs create -V 1G zfs_test/test1
+
 # 创建卷
 zfs create -V 20G aiopool/iscsi_test_dev
 
@@ -69,7 +71,7 @@ lrwxrwxrwx  1 root root    6 May 26 17:15 iscsi_test_dev -> ../zd0
 zfs destroy aiopool/iscsi_test_dev_3
 ```
 
-- 测试卷写满是否会异常
+- 测试卷写满是否会异常 (重新覆盖写会堵塞)
 ```shell
 zfs create -V 20M aiopool/test_write_full
 mkfs.ext4 /dev/aiopool/test_write_full

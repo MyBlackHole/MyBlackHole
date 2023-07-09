@@ -24,8 +24,9 @@ VDEV的类型
 
 ## build
 ```shell
+# 需要关闭 python 虚拟环境
 ./autogen.sh
-./configure CFLAGS='-g -O0'
+./configure CFLAGS='-g -O0' (./configure --enable-debug)
 make all
 ```
 

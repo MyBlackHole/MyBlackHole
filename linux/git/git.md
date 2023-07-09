@@ -59,3 +59,9 @@ git config --global core.excludesfile ~/.gitignore
 ```shell
 git remote set-url my git@github.com:MyBlackHole/linux.git
 ```
+
+- 取消提交
+```shell
+git reset --soft HEAD^ (保留更改)
+git restore --staged . (取消暂存)
+```

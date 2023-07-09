@@ -86,6 +86,8 @@ fdisk[[fdisk]] 分区工具
 
 - 创建池
 ```shell
+sudo zpool create -f zfs_test sde
+
 zpool create -f aiopool sdb # 会自动挂载到根目录 aiopool 目录
 
 # RAID0 (数据条带化后，支持并行访问，提高读取速度)
