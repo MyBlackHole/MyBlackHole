@@ -7,6 +7,8 @@
 ```shell
 mysqlbinlog --base64-output=DECODE-ROWS -v binlog.000009 > binlog.sql
 
+mysqlbinlog --no-defaults -v mysql-bin.000011 > binlog.sql
+
 ```
 
 - 解析指定时间范围

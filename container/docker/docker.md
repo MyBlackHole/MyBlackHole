@@ -305,12 +305,3 @@ docker system prune -a
 docker run -it --rm --net host redis redis-cli -h 192.168.78.212
 ```
 
-- 保存容器成镜像
-```shell
-docker commit e58edbee032e aio_redis:3.6.1.0
-```
-
-- 保存成 tar
-```shell
-docker save aio_mysql:3.6.1.0 -o aio_mysql_3_6.tar
-```

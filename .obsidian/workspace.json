@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/python/airflow/kill_task.md",
+                "file": "aio/批量killtask.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/python/airflow/kill_task.md",
+                "file": "aio/批量killtask.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/python/airflow/kill_task.md",
+                "file": "aio/批量killtask.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/python/airflow/kill_task.md"
+                "file": "aio/批量killtask.md"
               }
             }
           }
@@ -165,6 +165,17 @@
   },
   "active": "47c0e6b7f32ba8f6",
   "lastOpenFiles": [
+    "container/docker/save.md",
+    "container/docker/commit.md",
+    "linux/kernel/linux_lab/choose.md",
+    "linux/git/submodule.md",
+    "linux/kernel/fs/zfs/debug.md",
+    "linux/git/reset.md",
+    "1.tar",
+    "linux/kernel/fs/xfs/error.md",
+    "aio/批量killtask.png",
+    "language/python/airflow/kill_task.md",
+    "aio/批量killtask.md",
     "language/python/airflow/kill_task.png",
     "linux/kernel/block/null_dev.md",
     "language/build_system/autogen/autoreconf.md",
@@ -193,23 +204,12 @@
     "linux/kernel/block/block.md",
     "linux/kernel/block",
     "linux/kernel/imgs/Pasted image 20230701162042.png",
-    "linux/kernel/vfs.md",
-    "language/python/sqlalchemy/error.md",
     "language/python/sqlalchemy",
-    "language/python/logging/logging.md",
     "language/python/logging",
-    "language/python/airflow/web.md",
-    "language/python/airflow/scheduler.md",
-    "language/plantuml/plantuml.md",
     "language/plantuml",
-    "linux/kernel/sysctl.md",
     "linux/kernel/imgs/Pasted image 20230624183020.png",
-    "linux/kernel/device/device.md",
     "linux/kernel/device/imgs/Pasted image 20230624181643.png",
-    "linux/kernel/device/imgs",
     "linux/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
-    "linux/kernel/imgs/Pasted image 20230614000049.png",
-    "linux/kernel/imgs/Pasted image 20230613233851.png",
-    "linux/kernel/imgs/Pasted image 20230613233258.png"
+    "linux/kernel/imgs/Pasted image 20230614000049.png"
   ]
 }

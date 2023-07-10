@@ -1,5 +1,11 @@
 ### 异常解决
 
+- mysqlbinlog: [ERROR] unknown variable 'default-character-set=utf8mb4'
+```shell
+# 加上 --no-defaults 
+mysqlbinlog --no-defaults -v mysql-bin.000011 > binlog.sql
+```
+
 - Can't read dir of '/etc/mysql/conf.d/
 ```shell
 # 启动一个没有挂载的mysql容器
