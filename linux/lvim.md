@@ -45,3 +45,14 @@ ctrl + w + L # 移动窗口到右边
 ```shell
 lvim sftp://root@192.168.78.202//home/goldendb/db1/bin/restore.py
 ```
+
+- 修改字符集
+```shell
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
+# encoding—-该选项使用于缓冲的文本(你正在编辑的文件)，寄存器，Vim 脚本文件等等。你可以把 'encoding' 选项当作是对 Vim 内部运行机制的设定。
+# fileencoding—-该选项是vim写入文件时采用的编码类型。
+# termencoding—-该选项代表输出到客户终端（Term）采用的编码类型。
+```

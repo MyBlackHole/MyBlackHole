@@ -277,3 +277,8 @@ EOF 
 
 (无反应把https的s曲调)
 ```
+
+- 声卡
+```shell
+sudo apt-get install alsa-base alsa-utils alsa-oss alsa-tools
+```
