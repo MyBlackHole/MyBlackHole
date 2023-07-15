@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/git/rebase.md",
+                "file": "linux/iscsi/iscsi.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/git/rebase.md",
+                "file": "linux/iscsi/iscsi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/git/rebase.md",
+                "file": "linux/iscsi/iscsi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/git/rebase.md"
+                "file": "linux/iscsi/iscsi.md"
               }
             }
           }
@@ -165,9 +165,19 @@
   },
   "active": "47c0e6b7f32ba8f6",
   "lastOpenFiles": [
+    "linux/kernel/net/poll.md",
+    "linux/kernel/net/Nagle.md",
+    "linux/kernel/net/socket.md",
+    "linux/kernel/linux_lab/run.md",
+    "linux/iscsi/imgs/Pasted image 20230715092732.png",
+    "linux/iscsi/PDU.md",
+    "linux/iscsi/imgs/Pasted image 20230715092131.png",
+    "linux/iscsi/imgs/Pasted image 20230715092118.png",
+    "linux/iscsi/iscsi.md",
+    "linux/iscsi/targetcli/error.md",
+    "linux/git/rebase.md",
     "linux/git/imgs/Pasted image 20230714205821.png",
     "linux/git/revert.md",
-    "linux/git/rebase.md",
     "linux/git/imgs/Pasted image 20230714205728.png",
     "linux/git/imgs/Pasted image 20230714205557.png",
     "linux/git/imgs",
@@ -195,21 +205,11 @@
     "linux/kernel/block/imgs/Pasted image 20230702133344.png",
     "linux/kernel/block/imgs",
     "linux/kernel/NUMA.md",
-    "linux/kernel/fs/zfs/imgs/img_v2_df73041f-8561-466d-a96e-9c680c24987g.webp",
-    "linux/kernel/fs/zfs/zfs.md",
-    "linux/kernel/fs/zfs/volume.md",
-    "linux/kernel/fs/zfs/storage_pool.md",
-    "linux/kernel/fs/zfs/snapshots.md",
     "linux/kernel/fs/zfs/imgs",
-    "linux/kernel/fs/zfs/error.md",
-    "linux/kernel/fs/zfs/dataset.md",
     "linux/kernel/fs/zfs",
     "linux/kernel/fs/xfs",
     "linux/kernel/block",
-    "linux/kernel/imgs/Pasted image 20230701162042.png",
     "language/python/sqlalchemy",
-    "language/python/logging",
-    "linux/kernel/imgs/Pasted image 20230624183020.png",
-    "linux/kernel/device/imgs/Pasted image 20230624181643.png"
+    "language/python/logging"
   ]
 }

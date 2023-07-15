@@ -31,7 +31,7 @@ iSCSI是由IBM发明的基于以太网的存储协议
 - iSCSI Task
      一个 iSCSI 任务是指一个需要响应的 iSCSI 请求。
 - I_T nexus
-     I_T nexus 是指一个 SCSI initiator 的端口和一个 SCSI target 端口之间 的关系。 对于 iSCSI， 这个关系对应一个 session， 它指 session 的 initiator 端和 iSCSI target 网络端口组之间的关系。I_T nexus 的标识是一对端口名称(iSCSI initiator 名称＋i＋ISID，iSCSI target 名称＋t＋网络端口组标识)。 PDU (Protocol Data Unit)
+     I_T nexus 是指一个 SCSI initiator 的端口和一个 SCSI target 端口之间 的关系。 对于 iSCSI， 这个关系对应一个 session， 它指 session 的 initiator 端和 iSCSI target 网络端口组之间的关系。I_T nexus 的标识是一对端口名称(iSCSI initiator 名称＋i＋ISID，iSCSI target 名称＋t＋网络端口组标识)。 
      initiator 和 target 之间通信时把信息分割为消息。这些 消息称为 iSCSI PDU。 SSID (Session ID)
      iSCSI initiator 和 iSCSI target 之间的 session 用 SSID 进行标识， 该标识由 initiator 部分的 ISID 和 target 部分的 TPGT 构成。
 - ISID（The initiator part of the Session Identifier）
@@ -39,3 +39,7 @@ iSCSI是由IBM发明的基于以太网的存储协议
 - TSIH (Target Session Identifying Handle)
      Target 分配给与特定名称 initiator 建立的 session 的标识。 但是 0 值被保留着用于 initiator 告知 target 这是一个新 session。 在为一个 session 添加一个 connect 时，TSIH 已经隐含指明。
 
+- PDU
+    PDU (Protocol Data Unit)
+
+![[imgs/Pasted image 20230715092732.png]]

@@ -11,6 +11,14 @@ make menuconfig # 会生成 .config
 
 lvim .config
 CONFIG_DEBUG_INFO=y
+CONFIG_GDB_SCRIPTS=y
+# CONFIG_FRAME_POINTER=y
+
+ Kernel hacking  --->                                                                                     │ │
+    [*] Kernel debugging                              
+    [ ]   Miscellaneous debug code                    
+        Compile-time checks and compiler options  --->
+
 ***.pem # 都去了
 
 make bzImage
