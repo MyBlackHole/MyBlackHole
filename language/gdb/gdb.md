@@ -110,10 +110,5 @@ gdb -p pid
 source Tools/gdb/libpython.py # cpython 里有
 ```
 
-- 查看字符串
-```shell
-x /s &ch
-p (char*)&ch
-```
 
 - 制定 gdbinit

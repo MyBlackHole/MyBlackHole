@@ -165,6 +165,7 @@
   },
   "active": "47c0e6b7f32ba8f6",
   "lastOpenFiles": [
+    "language/gdb/cmd.md",
     "linux/kernel/net/poll.md",
     "linux/kernel/net/Nagle.md",
     "linux/kernel/net/socket.md",
@@ -204,7 +205,6 @@
     "linux/systemctl.md",
     "linux/kernel/block/imgs/Pasted image 20230702133344.png",
     "linux/kernel/block/imgs",
-    "linux/kernel/NUMA.md",
     "linux/kernel/fs/zfs/imgs",
     "linux/kernel/fs/zfs",
     "linux/kernel/fs/xfs",
