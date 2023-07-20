@@ -15,3 +15,8 @@ rustup target add x86_64-unknown-linux-musl --toolchain=nightly
 
 cargo build --target x86_64-unknown-linux-musl
 ```
+
+- rust update
+```shell
+restup update
+```

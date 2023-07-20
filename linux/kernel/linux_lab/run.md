@@ -37,10 +37,11 @@ ubuntu@linux-lab:/labs/linux-lab$ make env-dump VAR=ROOTDIR
 
 - 其他根文件系统
 ```shell
-docker run -it tinylab/arm32v7-ubuntu
+# docker pull tinylab/arm32v7-ubuntu
+docker run -it tinylab/arm32v7-ubuntu:18.04
 
 (host)$ sudo apt-get install -y qemu-user-static
-(host)$ tools/root/docker/extract.sh tinylab/arm32v7-ubuntu arm
+(host)$ tools/root/docker/extract.sh tinylab/arm32v7-ubuntu arm (./labs/linux-lab/tools/root/docker/extract.sh tinylab/arm32v7-ubuntu arm)(自动拉去)
 (host)$ tools/root/docker/extract.sh tinylab/arm64v8-ubuntu arm
 
 # 用户名和密码均为 root
@@ -48,6 +49,21 @@ docker run -it tinylab/arm32v7-ubuntu
 
 # 用户名和密码均为 root
 (lab )$ make boot b=aarch64/virt V=1 ROOTDEV=nfs ROOTFS=$PWD/prebuilt/fullroot/tmp/tinylab-arm64v8-ubuntu
+
+
+docker run -d tinylab/arm32v7-ubuntu:18.04
+b3e71e3d0d384d88b29a8de8bbb7d8bfb16b9595279b79da5c00db1c7fd0a916
+
+sudo docker cp b3e71e3d0d384d88b29a8de8bbb7d8bfb16b9595279b79da5c00db1c7fd0a916:/ ./labs/linux-lab/prebuilt/fullroot/tmp/labs/3c597b890d91
+Successfully copied 270MB to /media/black/Data/Documents/linux_debug/cloud-lab/labs/linux-lab/prebuilt/fullroot/tmp/labs/3c597b890d91
+
+sudo chown black:black ./labs/linux-lab/prebuilt/fullroot/tmp/labs/3c597b890d91
+
+docker rm -f b3e71e3d0d384d88b29a8de8bbb7d8bfb16b9595279b79da5c00db1c7fd0a916
+
+sudo chroot ./labs/linux-lab/prebuilt/fullroot/tmp/labs/3c597b890d91 /bin/sh -c 'uname -a; [ -f /etc/issue ] && cat /etc/issue; exit'
+Linux BlackHole 6.2.0-25-generic #25-Ubuntu SMP PREEMPT_DYNAMIC Fri Jun 16 17:05:07 UTC 2023 armv7l armv7l armv7l GNU/Linux
+Ubuntu 18.04.2 LTS \n \l
 ```
 
 - 打补丁
