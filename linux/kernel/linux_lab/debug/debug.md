@@ -51,18 +51,28 @@ cd ..
 sudo umount fs
 ```
 
+- 抽取 ubuntu server 镜像
+```shell
+debootstrap
+```
+
 #### debug run 
 - 启动qemu
 ```shell
+sudo modprobe tun
+
 cd /media/black/Data/Documents/linux_debug
 
-qemu-system-x86_64 -kernel ./bzImage \
-    -hda ./rootfs.img  \
+qemu-system-x86_64 -kernel arch/x86_64/boot/bzImage \
+    -hda rootfs.img  \
+    -hdb disk.img  \
     -append "root=/dev/sda console=ttyS0" \
+    -net nic,model=e1000 -net tap,script=/etc/qemu-ifup,downscript=/etc/qemu-ifdown \
     -nographic
 
 -kernel # 指定编译好的内核镜像
--hda # 指定硬盘
+-hda # 指定硬盘映射到 /dev/sda
+-hdb # 指定硬盘映射到 /dev/sdb (如果 -hdc 的话还是 sdb 按顺序的)
 -append "root=/dev/sda" 指示根文件系统 console=ttyS0 把QEMU的输入输出定向到当前终端上
 -nographic 不使用图形输出窗口
 -s 是-gdb tcp::1234缩写，监听1234端口，在GDB中可以通过target remote localhost:1234连接
@@ -73,7 +83,9 @@ qemu-system-x86_64 -kernel ../github/C/linux/arch/x86_64/boot/bzImage \
     -drive format=raw,file=rootfs.img,media=disk \
     -append "root=/dev/sda console=ttyS0" \
     -s -S  -smp 1 \
+    -net nic,model=lan9118 -net tap,script=/etc/qemu-ifup,downscript=/etc/qemu-ifdown \
     -nographic
+
 # C=A X
 
 gdb ../github/C/linux/vmlinux

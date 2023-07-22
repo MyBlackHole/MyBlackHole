@@ -13,3 +13,8 @@ endif
 # 
 # 编译时指定-O0：不进行优化
 ```
+
+- /dev/net/tun: Operation not permitted
+```shell
+sudo modprobe tun
+```
