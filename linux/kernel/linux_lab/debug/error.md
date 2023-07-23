@@ -12,6 +12,9 @@ endif
 # 如果关闭了CONFIG_CC_OPTIMIZE_FOR_SIZE，就把下面的-O2改为-O0试试。
 # 
 # 编译时指定-O0：不进行优化
+
+
+内核 O0无法编译通过
 ```
 
 - /dev/net/tun: Operation not permitted
