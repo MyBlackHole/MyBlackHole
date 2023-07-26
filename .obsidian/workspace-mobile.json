@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "a020a22884e37029",
+    "type": "split",
+    "children": [
+      {
+        "id": "c75fc6391dd6adc5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7be9e7c0129c16f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/zfs/zfs.md",
+                "mode": "source",
+                "source": false
+              }
+            },
+            "group": "e44f4dba6feb4378"
+          }
+        ]
+      },
+      {
+        "id": "18cd119d2c7e8a69",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a818593fd92a7338",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "linux/zfs/zfs.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.8089179109073776,
+                  "close": false
+                }
+              }
+            },
+            "group": "e44f4dba6feb4378"
+          },
+          {
+            "id": "ca6ce1abcc6066f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/arp.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b1b86b369bdc768b",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "a16204f3e40a4de2",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "af2391c69e676d95",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "4aa061fa637c71b3",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "c33b992ccca85c20",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "4888d7db18a21948",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "5032a73bcd77fda1",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "linux/zfs/zfs.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "202f3ecc93f93120",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "linux/zfs/zfs.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "d8c6238fdb24234a",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "linux/zfs/zfs.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "random-note:开始漫游笔记": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "7be9e7c0129c16f7",
+  "lastOpenFiles": [
+    "linux/kernel/fs/squashfs.md",
+    "linux/kernel/fs/proc.md",
+    "linux/zfs/zfs.md",
+    "linux/strace.md",
+    "language/python/airflow/celery_executors.md",
+    "linux/nc.md",
+    "linux/taskset.md",
+    "linux/kernel/sysctl.md",
+    "linux/kernel/imgs/Pasted image 20230624183020.png",
+    "linux/kernel/device/imgs/Pasted image 20230624181643.png",
+    "linux/kernel/device/imgs",
+    "linux/kernel/device/device.md",
+    "linux/kernel/device",
+    "linux/add-apt-repository.md",
+    "language/python/airflow/web.md",
+    "language/python/airflow/scheduler.md",
+    "linux/nfs/nfsd_svc.md",
+    "linux/kernel/vfs.md",
+    "linux/iscsi/bug.md",
+    "linux/iscsi/centos.md",
+    "linux/sshfs.md",
+    "linux/slabtop.md",
+    "linux/rsync.md",
+    "linux/smbclient.md",
+    "linux/shell.md",
+    "linux/amixer.md",
+    "database/opengauss/opengauss.md",
+    "linux/zfs/dataset.md",
+    "linux/rpcbind/imgs/Pasted image 20230610174944.png",
+    "linux/rpcbind/rpcinfo.md",
+    "linux/rpcbind/rpcbind.md",
+    "linux/rpcbind/imgs",
+    "linux/rpcbind",
+    "linux/kernel/tcp",
+    "linux/kernel/imgs/Pasted image 20230614000049.png",
+    "linux/kernel/imgs/Pasted image 20230613233851.png",
+    "linux/kernel/imgs/Pasted image 20230613233258.png",
+    "linux/kernel/imgs/Pasted image 20230613222458.png",
+    "language/python/uwsgi"
+  ]
+}
