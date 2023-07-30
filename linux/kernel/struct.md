@@ -69,3 +69,7 @@
     2) struct pid、struct upid
     3) struct nsproxy
     4) struct mnt_namespace
+
+
+## struct task_struct
+![[imgs/Pasted image 20230730153417.png]]

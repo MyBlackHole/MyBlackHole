@@ -35,7 +35,7 @@ pyenv install --list
 pyenv global 3.6.5 
 
 # 指定版本安装 
-pyenv install 3.6.8
+pyenv install 3.6.8 (下载慢可以先下载放到 ~/.pyenv/cache)
 
 # 出现 segmentation 错误
 CC=clang pyenv install 3.6.8

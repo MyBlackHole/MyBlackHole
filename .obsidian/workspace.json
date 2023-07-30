@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/git/rebase.md",
+                "file": "linux/kernel/struct.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/git/rebase.md",
+                "file": "linux/kernel/struct.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/git/rebase.md",
+                "file": "linux/kernel/struct.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/git/rebase.md"
+                "file": "linux/kernel/struct.md"
               }
             }
           }
@@ -165,6 +165,9 @@
   },
   "active": "47c0e6b7f32ba8f6",
   "lastOpenFiles": [
+    "linux/kernel/error.md",
+    "linux/kernel/imgs/Pasted image 20230730153417.png",
+    "linux/git/rebase.md",
     "linux/npm.md",
     "postman.md",
     "container/docker/search.md",
@@ -181,7 +184,6 @@
     "language/gdb/cmd.md",
     "linux/git/imgs/Pasted image 20230714205821.png",
     "linux/git/revert.md",
-    "linux/git/rebase.md",
     "linux/git/imgs/Pasted image 20230714205728.png",
     "linux/git/imgs/Pasted image 20230714205557.png",
     "linux/git/imgs",
@@ -201,9 +203,7 @@
     "language/build_system/autogen/autoreconf.md",
     "language/build_system/autogen",
     "linux/kernel/dkms.md",
-    "linux/kernel/modules.md",
     "aio/zfs_auto_scale.png",
-    "linux/kernel/block/imgs/Pasted image 20230702133344.png",
     "linux/kernel/block/imgs",
     "linux/kernel/fs/zfs/imgs",
     "linux/kernel/fs/zfs",

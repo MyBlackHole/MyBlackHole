@@ -1,6 +1,17 @@
 # 异常处理
 
+- libpq-fe.h: 没有那个文件或目录(pip install psycopg2)
+```shell
+sudo apt-get install libpq-dev
+```
 
+- AttributeError: module 'asyncio' has no attribute 'run'
+```shell
+<!-- Python 版本低于 3.7 -->
+asyncio.run(main())
+change to
+asyncio.get_event_loop().run_until_complete(main())
+```
 
 - windows server12 r2 安装 python 失败
 ```
