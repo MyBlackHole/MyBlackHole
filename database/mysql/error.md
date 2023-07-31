@@ -1,5 +1,10 @@
 ### 异常解决
 
+- Invalid use of NULL value
+```shell
+修改表前，表源有数据不满足更新的条件
+```
+
 - mysqlbinlog: [ERROR] unknown variable 'default-character-set=utf8mb4'
 ```shell
 # 加上 --no-defaults 

@@ -128,3 +128,9 @@ qemu-system-x86_64 -s -kernel arch/x86/boot/bzImage -boot c -m 2049M -hda ../bui
 gdb ./vmlinux
 (gdb)target remote :1234
 ```
+
+- 启用 linux kernel gdb 脚本
+```shell
+(gdb) add-auto-load-safe-path /home/lgj/work/linux 
+(gdb) source /home/lgj/work/linux/vmlinux-gdb.py
+```
