@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/fcntl.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "47c0e6b7f32ba8f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/kernel/struct.md",
+                "file": "aio/监控服务.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7126b760e3459d2d",
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/struct.md",
+                "file": "aio/监控服务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/struct.md",
+                "file": "aio/监控服务.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/struct.md"
+                "file": "aio/监控服务.md"
               }
             }
           }
@@ -163,8 +151,16 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "47c0e6b7f32ba8f6",
+  "active": "6e1e3d7ea04c2c61",
   "lastOpenFiles": [
+    "language/build_system/xmake/xmake.md",
+    "language/build_system/xmake",
+    "aio/批量killtask.md",
+    "aio/监控服务.md",
+    "linux/kernel/fcntl.md",
+    "aio/database/oracle.md",
+    "middleware/prometheus/mysqld_exporter.md",
+    "linux/kernel/struct.md",
     "linux/kernel/error.md",
     "linux/kernel/imgs/Pasted image 20230730153417.png",
     "linux/git/rebase.md",
@@ -187,29 +183,21 @@
     "linux/git/imgs/Pasted image 20230714205728.png",
     "linux/git/imgs/Pasted image 20230714205557.png",
     "linux/git/imgs",
-    "aio/批量killtask.md",
     "container/docker/save.md",
     "container/docker/commit.md",
     "linux/kernel/linux_lab/choose.md",
     "linux/git/submodule.md",
     "linux/kernel/fs/zfs/debug.md",
-    "linux/git/reset.md",
     "1.tar",
-    "linux/kernel/fs/xfs/error.md",
     "aio/批量killtask.png",
-    "language/python/airflow/kill_task.md",
     "language/python/airflow/kill_task.png",
-    "linux/kernel/block/null_dev.md",
-    "language/build_system/autogen/autoreconf.md",
     "language/build_system/autogen",
-    "linux/kernel/dkms.md",
     "aio/zfs_auto_scale.png",
     "linux/kernel/block/imgs",
     "linux/kernel/fs/zfs/imgs",
     "linux/kernel/fs/zfs",
     "linux/kernel/fs/xfs",
     "linux/kernel/block",
-    "language/python/sqlalchemy",
-    "language/python/logging"
+    "language/python/sqlalchemy"
   ]
 }

@@ -86,3 +86,8 @@ SET(CMAKE_BUILD_TYPE "Debug”)
 or
 SET(CMAKE_BUILD_TYPE "Release")
 ```
+
+- 指定安装路径
+```shell
+ cmake -DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/h2o/master -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+```
