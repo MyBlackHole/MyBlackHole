@@ -1,11 +1,15 @@
 # glibc
 
 ```shell
+sudo apt install gawk
+
 mkdir build
 
 cd build
 
-../configur —prefix=/use/local/glibc
+<!-- ../configure CFLAGS='-g -O0' --prefix=/media/black/Data/lib/glibc/master -->
+<!-- 不能不优化编译 -->
+../configure CFLAGS='-g -O2' --prefix=/media/black/Data/lib/glibc/master
 
 make -j16
 

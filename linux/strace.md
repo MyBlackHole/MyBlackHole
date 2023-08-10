@@ -144,3 +144,8 @@ close(2)                                = 0
 exit_group(1)                           = ?
 +++ exited with 1 +++
 ```
+
+- 统计时间
+```shell
+strace -T -p 2081148
+```

@@ -73,3 +73,5 @@
 
 ## struct task_struct
 ![[imgs/Pasted image 20230730153417.png]]
+
+![[imgs/Pasted image 20230809094821.png]]
