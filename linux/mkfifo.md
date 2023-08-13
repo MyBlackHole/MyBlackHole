@@ -1,0 +1,5 @@
+# mkfifo
+
+```shell
+mkfifo hello
+```

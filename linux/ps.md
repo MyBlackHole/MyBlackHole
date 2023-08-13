@@ -13,3 +13,8 @@ sudo apt-get install procps
 ```shell
 ps -p 31709 -o args --no-headers
 ```
+
+- 显示进程组 id(PGID)、父进程 id(PPID)、会话 id(SID)
+```shell
+ps ajx
+```

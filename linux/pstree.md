@@ -29,3 +29,7 @@ pstree -p
 ```shell
 pstree -a
 ```
+
+```shell
+pstree -p 2967832
+```
