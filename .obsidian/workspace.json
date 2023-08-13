@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aio/监控服务.md",
+                "file": "linux/kernel/fs/zfs/zfs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aio/监控服务.md",
+                "file": "linux/kernel/fs/zfs/zfs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aio/监控服务.md",
+                "file": "linux/kernel/fs/zfs/zfs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aio/监控服务.md"
+                "file": "linux/kernel/fs/zfs/zfs.md"
               }
             }
           }
@@ -152,6 +152,13 @@
   },
   "active": "6e1e3d7ea04c2c61",
   "lastOpenFiles": [
+    "linux/kernel/fs/zfs/storage_pool.md",
+    "linux/kernel/fs/zfs/zfs.md",
+    "linux/kernel/fs/zfs/snapshots.md",
+    "linux/kernel/fs/zfs/list.md",
+    "linux/kernel/fs/zfs/zdb.md",
+    "linux/kernel/fs/zfs/imgs/Pasted image 20230813194000.png",
+    "linux/kernel/fs/zfs/dataset.md",
     "linux/kernel/imgs/Pasted image 20230809094821.png",
     "linux/kernel/struct.md",
     "aio/监控服务.md",
@@ -176,21 +183,15 @@
     "postman.md",
     "container/docker/search.md",
     "linux/kernel/net/socket.md",
-    "linux/kernel/net/poll.md",
-    "linux/kernel/net/Nagle.md",
-    "linux/kernel/linux_lab/run.md",
-    "linux/kernel/debug/error.md",
     "linux/iscsi/imgs/Pasted image 20230715092732.png",
     "linux/iscsi/imgs/Pasted image 20230715092131.png",
     "linux/iscsi/imgs/Pasted image 20230715092118.png",
-    "linux/iscsi/PDU.md",
     "linux/git/imgs/Pasted image 20230714205821.png",
     "linux/git/imgs/Pasted image 20230714205728.png",
     "linux/git/imgs/Pasted image 20230714205557.png",
     "linux/git/imgs",
     "1.tar",
     "aio/批量killtask.png",
-    "language/python/airflow/kill_task.png",
     "language/build_system/autogen",
     "linux/kernel/block/imgs",
     "linux/kernel/fs/zfs/imgs",
