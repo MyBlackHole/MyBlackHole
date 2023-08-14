@@ -61,7 +61,7 @@ docker run -p 3306:3306 --name mysql \
     -d mysql
 
 # 或
-docker run -it --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag 
+docker run -it --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=p@3Sw0rd -d mysql
 
 # 或
 
