@@ -13,6 +13,20 @@ Actions:  （快照相关操作）
 * Send / Receive    （发送/接收）
 * Clone             （克隆。译者注：关于clone和快照的区别可参看[这里](http://docs.oracle.com/cd/E19253-01/819-5461/gbcxz/index.html)）
 
+```shell
+USED(快照占用大小)
+REFER(快照克隆后挂载后文件系统 du 大小)
+root@black:/sandisk# sudo zfs list -t snapshot
+NAME                       USED  AVAIL     REFER  MOUNTPOINT
+sandisk@1                   13K      -      155M  -
+sandisk@2                   14K      -      303M  -
+sandisk@3                   13K      -      847M  -
+sandisk@4                   13K      -     1.26G  -
+sandisk/test-fs@snapbase     0B      -       24K  -
+sandisk/test-fs@snapshot     0B      -       24K  -
+
+```
+
 ## Create snapshots （创建快照）
 ```bash
 # 为单一数据集创建快照
