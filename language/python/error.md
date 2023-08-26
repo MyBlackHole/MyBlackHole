@@ -1,5 +1,12 @@
 # 异常处理
 
+- ModuleNotFoundError: No module named 'setuptools_rust'
+```shell
+python -m pip install -U pip setuptools
+pip install setuptools-rust
+```
+
+
 - libpq-fe.h: 没有那个文件或目录(pip install psycopg2)
 ```shell
 sudo apt-get install libpq-dev

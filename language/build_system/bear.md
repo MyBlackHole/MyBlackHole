@@ -1,0 +1,3 @@
+```shell
+bear -- make
+```
