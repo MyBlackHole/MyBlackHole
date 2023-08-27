@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b8d4df7ce57aca35",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "algorithm/architecture/seda.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/fs/zfs/zfs.md",
+                "file": "algorithm/architecture/seda.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/fs/zfs/zfs.md",
+                "file": "algorithm/architecture/seda.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/fs/zfs/zfs.md"
+                "file": "algorithm/architecture/seda.md"
               }
             }
           }
@@ -150,8 +163,12 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "6e1e3d7ea04c2c61",
+  "active": "b8d4df7ce57aca35",
   "lastOpenFiles": [
+    "algorithm/architecture/imgs/Pasted image 20230827181156.png",
+    "algorithm/architecture/imgs/Pasted image 20230827180804.png",
+    "algorithm/architecture/imgs/Pasted image 20230827180453.png",
+    "algorithm/architecture/imgs",
     "linux/kernel/fs/zfs/storage_pool.md",
     "linux/kernel/fs/zfs/zfs.md",
     "linux/kernel/fs/zfs/snapshots.md",
@@ -182,21 +199,17 @@
     "linux/npm.md",
     "postman.md",
     "container/docker/search.md",
-    "linux/kernel/net/socket.md",
     "linux/iscsi/imgs/Pasted image 20230715092732.png",
     "linux/iscsi/imgs/Pasted image 20230715092131.png",
     "linux/iscsi/imgs/Pasted image 20230715092118.png",
     "linux/git/imgs/Pasted image 20230714205821.png",
     "linux/git/imgs/Pasted image 20230714205728.png",
-    "linux/git/imgs/Pasted image 20230714205557.png",
     "linux/git/imgs",
     "1.tar",
-    "aio/批量killtask.png",
     "language/build_system/autogen",
     "linux/kernel/block/imgs",
     "linux/kernel/fs/zfs/imgs",
     "linux/kernel/fs/zfs",
-    "linux/kernel/fs/xfs",
-    "linux/kernel/block"
+    "linux/kernel/fs/xfs"
   ]
 }
