@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "b8d4df7ce57aca35",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "algorithm/architecture/seda.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/architecture/seda.md",
+                "file": "linux/kernel/fs/zfs/zfs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/architecture/seda.md",
+                "file": "linux/kernel/fs/zfs/zfs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/architecture/seda.md"
+                "file": "linux/kernel/fs/zfs/zfs.md"
               }
             }
           }
@@ -163,12 +150,26 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "b8d4df7ce57aca35",
+  "active": "6e1e3d7ea04c2c61",
   "lastOpenFiles": [
+    "database/oceanbase/3.2.4/restore.md",
+    "database/oceanbase/3.2.4/系统恢复.md",
+    "database/oceanbase/3.2.4/3.2.4.md",
+    "database/oceanbase/3.2.4",
+    "database/oceanbase/系统恢复.md",
+    "database/oceanbase/3.2.4.md",
+    "linux/kernel/linux_lab/lab.md",
+    "language/build_system/gcc/gcc-7.2.md",
+    "database/oceanbase/test.md",
+    "database/oceanbase/obd.md",
+    "database/oceanbase/debug.md",
+    "database/oceanbase/build.md",
     "algorithm/architecture/imgs/Pasted image 20230827181156.png",
     "algorithm/architecture/imgs/Pasted image 20230827180804.png",
     "algorithm/architecture/imgs/Pasted image 20230827180453.png",
+    "algorithm/architecture/seda.md",
     "algorithm/architecture/imgs",
+    "algorithm/architecture",
     "linux/kernel/fs/zfs/storage_pool.md",
     "linux/kernel/fs/zfs/zfs.md",
     "linux/kernel/fs/zfs/snapshots.md",
@@ -186,30 +187,16 @@
     "linux/neovim/vim.md",
     "database/mysql/行锁.md",
     "language/python/airflow/api.md",
-    "linux/file.md",
-    "language/build_system/xmake/xmake.md",
     "language/build_system/xmake",
-    "aio/批量killtask.md",
-    "linux/kernel/fcntl.md",
-    "aio/database/oracle.md",
-    "middleware/prometheus/mysqld_exporter.md",
-    "linux/kernel/error.md",
     "linux/kernel/imgs/Pasted image 20230730153417.png",
-    "linux/git/rebase.md",
-    "linux/npm.md",
-    "postman.md",
-    "container/docker/search.md",
     "linux/iscsi/imgs/Pasted image 20230715092732.png",
     "linux/iscsi/imgs/Pasted image 20230715092131.png",
     "linux/iscsi/imgs/Pasted image 20230715092118.png",
     "linux/git/imgs/Pasted image 20230714205821.png",
-    "linux/git/imgs/Pasted image 20230714205728.png",
     "linux/git/imgs",
     "1.tar",
     "language/build_system/autogen",
     "linux/kernel/block/imgs",
-    "linux/kernel/fs/zfs/imgs",
-    "linux/kernel/fs/zfs",
-    "linux/kernel/fs/xfs"
+    "linux/kernel/fs/zfs/imgs"
   ]
 }
