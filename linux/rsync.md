@@ -81,7 +81,7 @@ gid = rsync
 address = 192.168.30.5 
 
 
-#设置user chroot为yes后，rsync首先会进行chroot设置，将根映射到path参数路径下，对客户端而言，系统的根就是path参数所指定的路径。但这样做需要root权限，并且在同步符号连接资料时仅会同步名称，而内容不会同步。 
+#设置user chroot为yes后，rsync首先会进行chroot设置，将根映射到path参数路径下，对客户端而言，系统的根就是path参数所指定的路径。但这样做需要root权限，并且在同步符号连接资料时仅会同步名称，而内容不会同步
 
 use chroot = no 
 

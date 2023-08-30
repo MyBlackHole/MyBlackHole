@@ -46,3 +46,8 @@ files - 表示要查找的文件名，可以同时查找多个文件，如果省
 -w 或 --word-regexp : 只显示全字符合的列。
 -x --line-regexp : 只显示全列符合的列。
 -y : 此参数的效果和指定"-i"参数相同。
+
+
+```shell
+grep -P "^\Q8bcf05ab5e95_0_61_1693288582_oceanbase_copy_cluster_28\E" /proc/*/mounts
+```
