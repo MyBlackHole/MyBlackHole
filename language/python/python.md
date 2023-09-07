@@ -30,16 +30,20 @@ apt install libffi-dev
 Yum install libffi-devel 
 ./configure  
 <!-- enable-shared 动态 -->
-<!-- enable-optimizations 编译优化 -->
+<!-- enable-optimizations 编译优化(make build_all: 跳过 tests) -->
 <!-- with-openssl 设置自定义 openssl 安装 -->
 ./configure --prefix=/media/black/Data/lib/python/3.13/ --enable-shared --enable-optimizations --with-openssl=/media/black/Data/lib/openssl/openssl_1_1_1/
+## ./configure --prefix=/opt/python --enable-shared --enable-optimizations
 
 export LD_LIBRARY_PATH=/media/black/Data/lib/python/3.6/lib:$LD_LIBRARY_PATH
 或者
 echo "/media/black/Data/lib/python/3.6/lib" >> /etc/ld.so.conf
-
 ldconfig
+
 export PATH=/media/black/Data/lib/python/3.6/bin/:$PATH
+
+echo "/usr/local/openssl/lib" >> /etc/ld.so.conf
+ldconfig 
 
 # 自定义导入 
 make Programs/_freeze_importlib 

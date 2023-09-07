@@ -13,7 +13,11 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl/openssl_1_1_1/ \
       -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost/boost_1_77_0/ ..
 
+<!-- 导入 gcc 环境 lib 依赖 -->
+export LD_LIBRARY_PATH=/media/black/Data/lib/gmp/gmp_6_1_1/lib:/media/black/Data/lib/mpc/mpc_1_1_0/lib:/media/black/Data/lib/mpfr/mpfr_4_0_2/lib:/media/black/Data/lib/isl/isl_4_0_2/lib:/media/black/Data/lib/icu/icu_57_2/lib/:${LD_LIBRARY_PATH}
+
 # 指定 gcc 7 (>=7.4) 与安装路径
+      <!-- -DPROCPS_INCLUDE_PATH=/media/black/Data/lib/procps/procps_master/include/ 未知-->
 cmake -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/xtrabackup/xtrabackup_8_0/ \
       -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
@@ -29,6 +33,9 @@ cmake -DCMAKE_EXE_LINKER_FLAGS=-static \
       -DCMAKE_CXX_COMPILER=/usr/local/bin/g++ \
       -DCMAKE_C_COMPILER=/usr/local/bin/gcc \
       -DDOWNLOAD_BOOST=0 -DWITH_BOOST=./boost ..
+
+
+-DCMAKE_EXE_LINKER_FLAGS=-static
 ```
 
 ## 优点
