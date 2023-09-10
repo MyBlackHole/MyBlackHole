@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/fs/zfs/zfs.md",
+                "file": "language/build_system/autotools/autotools.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/fs/zfs/zfs.md",
+                "file": "language/build_system/autotools/autotools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/fs/zfs/zfs.md",
+                "file": "language/build_system/autotools/autotools.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/fs/zfs/zfs.md"
+                "file": "language/build_system/autotools/autotools.md"
               }
             }
           }
@@ -152,6 +152,10 @@
   },
   "active": "6e1e3d7ea04c2c61",
   "lastOpenFiles": [
+    "language/build_system/autotools/configure.md",
+    "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
+    "language/build_system/configure.md",
+    "linux/kernel/fs/zfs/zfs.md",
     "linux/kernel/net/dpdk/dpdk.md",
     "linux/kernel/net/dpdk/dome.md",
     "linux/kernel/net/dpdk",
@@ -186,9 +190,6 @@
     "linux/kernel/demo/ramdisk.md",
     "linux/kernel/fs/OverlayFS/OverlayFS.md",
     "linux/kernel/fs/nfs/exportfs/exportfs.md",
-    "linux/kernel/fs/nfs/exportfs/debug.md",
-    "linux/kernel/fs/nfs/statd.md",
-    "linux/kernel/fs/nfs/showmount.md",
     "algorithm/architecture/imgs/Pasted image 20230827181156.png",
     "algorithm/architecture/imgs/Pasted image 20230827180804.png",
     "algorithm/architecture/imgs/Pasted image 20230827180453.png",
@@ -196,7 +197,6 @@
     "linux/kernel/imgs/Pasted image 20230809094821.png",
     "linux/kernel/imgs/Pasted image 20230730153417.png",
     "linux/iscsi/imgs/Pasted image 20230715092732.png",
-    "linux/iscsi/imgs/Pasted image 20230715092131.png",
-    "linux/iscsi/imgs/Pasted image 20230715092118.png"
+    "linux/iscsi/imgs/Pasted image 20230715092131.png"
   ]
 }

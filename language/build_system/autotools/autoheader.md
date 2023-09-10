@@ -1,0 +1,2 @@
+# autoheader
+autoheader也是autoconf的辅助命令，用于生成一个configure的模版头文件config.h.in

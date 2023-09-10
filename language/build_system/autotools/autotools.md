@@ -167,6 +167,7 @@ ylwrap 由automake产生
 autogen.sh 早期autoreconf并不存在，软件开发者就自己编写脚本，按照顺序调用autoconf，autoheader，automake等工具。这个文件就是这样的脚本。
 
 ### makefile文件生成的基本流程
+![[imgs/Pasted image 20230903003954.png]]
 ![[imgs/Pasted image 20230425090717.png]]
 
 ## 基本命令具体介绍

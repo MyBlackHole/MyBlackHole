@@ -14,16 +14,23 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
       -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost/boost_1_77_0/ ..
 
 <!-- 导入 gcc 环境 lib 依赖 -->
-export LD_LIBRARY_PATH=/media/black/Data/lib/gmp/gmp_6_1_1/lib:/media/black/Data/lib/mpc/mpc_1_1_0/lib:/media/black/Data/lib/mpfr/mpfr_4_0_2/lib:/media/black/Data/lib/isl/isl_4_0_2/lib:/media/black/Data/lib/icu/icu_57_2/lib/:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=/media/black/Data/lib/protobuf/main/lib:/media/black/Data/lib/gmp/gmp_6_1_1/lib:/media/black/Data/lib/mpc/mpc_1_1_0/lib:/media/black/Data/lib/mpfr/mpfr_4_0_2/lib:/media/black/Data/lib/isl/isl_4_0_2/lib:/media/black/Data/lib/icu/icu_57_2/lib/:${LD_LIBRARY_PATH}
+
 
 # 指定 gcc 7 (>=7.4) 与安装路径
       <!-- -DPROCPS_INCLUDE_PATH=/media/black/Data/lib/procps/procps_master/include/ 未知-->
+<!-- PROTOBUF_INCLUDE_DIR -->
+      <!-- -DPROTOBUF_LIBRARY=/media/black/Data/lib/protobuf/3_19_x/lib \ -->
+      <!-- -DPROTOBUF_LITE_LIBRARY=/media/black/Data/lib/protobuf/3_19_x/lib \ -->
+      <!-- -DPROTOBUF_INCLUDE_DIR=/media/black/Data/lib/protobuf/3_19_x/include/ \ -->
 cmake -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/xtrabackup/xtrabackup_8_0/ \
       -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
       -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
       -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" \
       -DCMAKE_EXE_LINKER_FLAGS=-static \
+      -DPROTOBUF_LIBRARY=/media/black/Data/lib/protobuf/3_19_x/lib \
+      -DPROTOBUF_LITE_LIBRARY=/media/black/Data/lib/protobuf/3_19_x/lib \
       -DCMAKE_PREFIX_PATH=/media/black/Data/lib/openssl/openssl_1_1_1/ \
       -DCMAKE_CXX_COMPILER=/media/black/Data/lib/gcc/gcc_7_4_0/bin/g++ \
       -DCMAKE_C_COMPILER=/media/black/Data/lib/gcc/gcc_7_4_0/bin/gcc \
