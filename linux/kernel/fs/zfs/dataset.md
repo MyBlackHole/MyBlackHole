@@ -81,13 +81,13 @@ zfs destroy tank/root/home
 
 ```bash
 # 获取数据集全部属性
-$ zfs get all zroot/usr/home                                                                                              │157 # Create Volume
-NAME            PROPERTY              VALUE                  SOURCE                                                                          │158 $ zfs create -V zroot/win_vm
-zroot/home      type                  filesystem             -                                                                               │159 $ zfs list zroot/win_vm
-zroot/home      creation              Mon Oct 20 14:44 2014  -                                                                               │160 NAME                 USED  AVAIL  REFER  MOUNTPOINT
-zroot/home      used                  11.9G                  -                                                                               │161 tank/win_vm         4.13G  17.9G    64K  -
-zroot/home      available             94.1G                  -                                                                               │162 
-zroot/home      referenced            11.9G                  -                                                                               │163
+$ zfs get all zroot/usr/home                                                                                              
+NAME            PROPERTY              VALUE                  SOURCE                                                       
+zroot/home      type                  filesystem             -                                                            
+zroot/home      creation              Mon Oct 20 14:44 2014  -                                                            
+zroot/home      used                  11.9G                  -                                                            
+zroot/home      available             94.1G                  -                                                            
+zroot/home      referenced            11.9G                  -                                                            
 zroot/home      mounted               yes                    -
 ...
 # 获取数据集属性

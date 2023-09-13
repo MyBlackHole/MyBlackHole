@@ -8,3 +8,16 @@
 
 - hard
 删除工作空间改动代码，撤销commit，撤销git add . 
+
+
+- 远程重置本地当前
+```shell
+git fetch --all (同步远程所有到本地 origin)
+git reset --hard origin/master
+git pull
+
+或
+
+git reset --hard HEAD^
+git pull
+```
