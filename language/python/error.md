@@ -198,3 +198,8 @@ pip install simple-websocket
 dnf install langpacks-en glibc-all-langpacks -y
 export LC_ALL=en_US.UTF-8
 ```
+
+- SyntaxError: more than 255 arguments
+```shell
+升级 python 大于 3.6
+```

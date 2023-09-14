@@ -45,6 +45,11 @@ pyenv global 3.6.5 2.7.14
 
 ```
 
+- 指定 ssl
+```shell
+CFLAGS=-I/media/black/Data/lib/openssl/openssl_1_1_1/include/ LDFLAGS=-L/media/black/Data/lib/openssl/openssl_1_1_1/lib/ pyenv install -v 3.10.12
+```
+
 - pyenv-virtualenv
 ```shell
 # 创建进入项目环境 
