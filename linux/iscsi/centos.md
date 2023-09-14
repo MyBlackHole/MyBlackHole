@@ -1,6 +1,6 @@
 # 服务端
 ```shell
-# yum install targetcli
+yum install targetcli
 systemctl status iscsi.service
 ```
 

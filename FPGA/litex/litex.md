@@ -14,7 +14,8 @@ python3 -m litex_boards.targets.sipeed_tang_nano_20k --build --load
 git clone git@github.com:litex-hub/linux-on-litex-vexriscv.git
 wget https://raw.githubusercontent.com/enjoy-digital/litex/master/litex_setup.py
 chmod +x litex_setup.py
-./litex_setup.py --init --install --user
+./litex_setup.py --init --install
+<!-- ./litex_setup.py --init --install --user -->
 
 wget https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc-8.1.0-2019.01.0-x86_64-linux-ubuntu14.tar.gz
 tar -xvf riscv64-unknown-elf-gcc-8.1.0-2019.01.0-x86_64-linux-ubuntu14.tar.gz

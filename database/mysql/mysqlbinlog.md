@@ -25,3 +25,8 @@ mysqlbinlog --start-position=2098 \
             -d user \
             --base64-output=DECODE-ROWS -v binlog.000009 > binlog.sql
 ```
+
+- 获取远程
+```shell
+mysqlbinlog8.0 --no-defaults --read-from-remote-server --raw --host=192.168.79.25 --user=dbagent --password='Atf@2022' --result-file=/volmountpoint/aiopool/4089108a1417_20_44_1690442448_goldendb_log/binlog_1/ --port=5502 --to-last-log mysql-bin.001676
+```

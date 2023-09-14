@@ -60,11 +60,6 @@ sudo /usr/sbin/sshd -f /etc/ssh/sshd_config -D -d -p 1234
 
 ## 例子
 
-- 拷贝公钥到目标机器的授权文件 (authorized_keys)
-```shell
-ssh-copy-id root@192.168.50.189
-```
-
 - 生成 ssh 公钥 私钥
 ```shell
 ssh-keygen -t rsa -C "1358244533@qq.com"
