@@ -8,7 +8,17 @@ sudo iscsiadm -m discovery -t sendtargets -p 192.168.100.179
 192.168.100.179:3260,1 iqn.2003-01.org.linux-iscsi.black.x8664:sn.dbf8950fa890
 ```
 
+```shell
+ls -l /dev/disk/by-path
+```
+
 ## node
+
+- 所有记录
+```shell
+iscsiadm -m node
+```
+
 - 开启认证
 ```shell
 iscsiadm -m node -T iqn.2023-05.black.com:server -o update --name node.session.auth.authmethod --value=CHAP
@@ -32,11 +42,16 @@ sudo iscsiadm -d 8 -m node -T iqn.2023-05.black.com:server -p 192.168.2.77 -l
 - 退出登陆
 ```shell
 iscsiadm -m node –T iqn.2023-05.black.com:server -p 192.168.1.1:3260 –u
+iscsiadm -m node –T iqn.2023-09.activeio.com:22192.168.79.23-1694665184.882196server -p 192.168.78.213:3260 –u
+
+sudo iscsiadm -m node -T iqn.2023-09.activeio.com:22192.168.79.23-1694665184.882196server -u
+
 ```
 
 - 删除 target
 ```shell
 iscsiadm -m node -o delete -T iqn.2023-05.black.com:server -p 192.168.1.1:3260
+iscsiadm -m node -o delete -T iqn.2023-09.activeio.com:22192.168.79.23-1694665184.882196server
 ```
 
 ## session
