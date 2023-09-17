@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a5b25c397a71dd59",
+        "id": "28a63fbf6291fa05",
         "type": "tabs",
         "children": [
           {
-            "id": "6e1e3d7ea04c2c61",
+            "id": "9f22fbce0dd6ef73",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/build_system/autotools/autotools.md",
+                "file": "linux/ss.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "language/build_system/autotools/autotools.md",
+                "file": "linux/ss.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "language/build_system/autotools/autotools.md",
+                "file": "linux/ss.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "language/build_system/autotools/autotools.md"
+                "file": "linux/ss.md"
               }
             }
           }
@@ -150,8 +150,20 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "6e1e3d7ea04c2c61",
+  "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
+    "linux/pmap.md",
+    "linux/gsettings.md",
+    "linux/df.md",
+    "linux/fg.md",
+    "linux/git/rebase.md",
+    "database/mysql/sqlOptimize_dome.md",
+    "language/gdb/tbreak.md",
+    "language/build_system/autotools/autotools.md",
+    "milkv/milkv.md",
+    "milkv/cvi_pinmux.md",
+    "milkv/imgs/Pasted image 20230917211401.png",
+    "milkv/imgs",
     "language/build_system/autotools/configure.md",
     "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
     "language/build_system/configure.md",
@@ -175,28 +187,16 @@
     "linux/kernel/container/nerdctl/nerdctl.md",
     "linux/kernel/container/podman/podman.md",
     "linux/kernel/container/docker/search.md",
-    "linux/kernel/container/docker/save.md",
     "linux/kernel/container/docker/runtime",
-    "linux/kernel/container/docker/error.md",
-    "linux/kernel/container/docker/docker.md",
-    "linux/kernel/container/docker/docker-compose.md",
-    "linux/kernel/container/docker/commit.md",
     "linux/kernel/container/podman",
     "linux/kernel/container/nerdctl",
     "linux/kernel/container/docker",
-    "linux/kernel/container",
-    "linux/kernel/fs/minio/minio.md",
-    "linux/kernel/fs/minio/error.md",
-    "linux/kernel/demo/ramdisk.md",
-    "linux/kernel/fs/OverlayFS/OverlayFS.md",
-    "linux/kernel/fs/nfs/exportfs/exportfs.md",
     "algorithm/architecture/imgs/Pasted image 20230827181156.png",
     "algorithm/architecture/imgs/Pasted image 20230827180804.png",
     "algorithm/architecture/imgs/Pasted image 20230827180453.png",
     "linux/kernel/fs/zfs/imgs/Pasted image 20230813194000.png",
     "linux/kernel/imgs/Pasted image 20230809094821.png",
     "linux/kernel/imgs/Pasted image 20230730153417.png",
-    "linux/iscsi/imgs/Pasted image 20230715092732.png",
-    "linux/iscsi/imgs/Pasted image 20230715092131.png"
+    "linux/iscsi/imgs/Pasted image 20230715092732.png"
   ]
 }
