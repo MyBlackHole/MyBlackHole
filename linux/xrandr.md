@@ -52,3 +52,8 @@ xrandr --output HDMI-A-0 --off
 ```shell
 xrandr --output HDMI-A-0 --auto --output eDP --off
 ```
+
+- 自动 (镜像)
+```shell
+xrandr --output eDP --auto --output HDMI-A-0 --auto
+```
