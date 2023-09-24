@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/ss.md",
+                "file": "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "iio",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/ss.md",
+                "file": "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/ss.md",
+                "file": "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/ss.md"
+                "file": "linux/kernel/drivers/iio/mpu6050/mpu6050.md"
+              }
+            }
+          },
+          {
+            "id": "aa65557cb7cbb2d3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -152,6 +162,25 @@
   },
   "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
+    "linux/kernel/device/dst/dst.md",
+    "linux/kernel/device/dst",
+    "linux/kernel/drivers/iio/mpu6050/imgs/Pasted image 20230924111718.png",
+    "linux/kernel/drivers/iio/mpu6050/imgs",
+    "linux/kernel/drivers/iio/iio.md",
+    "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
+    "linux/kernel/drivers/iio/i2c/i2cset.md",
+    "linux/kernel/drivers/iio/i2c/i2cget.md",
+    "linux/kernel/drivers/iio/i2c/i2cdump.md",
+    "linux/kernel/drivers/iio/i2c/i2cdetect.md",
+    "linux/kernel/drivers/iio/i2c",
+    "linux/kernel/drivers/spi/error.md",
+    "linux/kernel/drivers/spi",
+    "linux/kernel/drivers/iio/mpu6050/error.md",
+    "linux/kernel/drivers/iio/mpu6050",
+    "linux/kernel/drivers/iio/imgs/Pasted image 20230923170654.png",
+    "linux/kernel/drivers/iio/imgs/Pasted image 20230923165947.png",
+    "linux/kernel/drivers/iio/imgs",
+    "linux/ss.md",
     "linux/pmap.md",
     "linux/gsettings.md",
     "linux/df.md",
@@ -173,30 +202,11 @@
     "linux/kernel/net/dpdk",
     "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
     "linux/kernel/net/rpcbind/rpcinfo.md",
-    "linux/kernel/net/rpcbind/rpcbind.md",
     "linux/kernel/net/rpcbind/imgs",
     "linux/kernel/net/rpcbind",
-    "linux/kernel/fs/vfs.md",
-    "linux/kernel/net/tcp/somaxconn.md",
-    "linux/kernel/net/tcp/listen.md",
-    "linux/kernel/net/tcp",
-    "linux/kernel/net/rpc/rpc.md",
-    "linux/kernel/net/rpc",
-    "linux/kernel/container/docker/runtime/runc.md",
-    "linux/kernel/container/docker/runtime/crun.md",
-    "linux/kernel/container/nerdctl/nerdctl.md",
-    "linux/kernel/container/podman/podman.md",
-    "linux/kernel/container/docker/search.md",
-    "linux/kernel/container/docker/runtime",
-    "linux/kernel/container/podman",
-    "linux/kernel/container/nerdctl",
-    "linux/kernel/container/docker",
     "algorithm/architecture/imgs/Pasted image 20230827181156.png",
     "algorithm/architecture/imgs/Pasted image 20230827180804.png",
     "algorithm/architecture/imgs/Pasted image 20230827180453.png",
-    "linux/kernel/fs/zfs/imgs/Pasted image 20230813194000.png",
-    "linux/kernel/imgs/Pasted image 20230809094821.png",
-    "linux/kernel/imgs/Pasted image 20230730153417.png",
-    "linux/iscsi/imgs/Pasted image 20230715092732.png"
+    "linux/kernel/fs/zfs/imgs/Pasted image 20230813194000.png"
   ]
 }

@@ -33,3 +33,8 @@ IIC0_SCL function:
 ```shell
 cvi_pinmux -w IIC0_SCL/UART1_TX
 ```
+
+- 获取引脚当前配置 
+```shell
+cvi_pinmux -r SD1_D2
+```
