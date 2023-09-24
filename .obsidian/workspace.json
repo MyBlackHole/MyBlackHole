@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
+                "file": "linux/kernel/drivers/gpio/gpio.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
+                "file": "linux/kernel/drivers/gpio/gpio.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
+                "file": "linux/kernel/drivers/gpio/gpio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/drivers/iio/mpu6050/mpu6050.md"
+                "file": "linux/kernel/drivers/gpio/gpio.md"
               }
             }
           },
@@ -162,12 +162,14 @@
   },
   "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
+    "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
+    "linux/kernel/drivers/gpio/gpio.md",
+    "linux/kernel/drivers/gpio",
     "linux/kernel/device/dst/dst.md",
     "linux/kernel/device/dst",
     "linux/kernel/drivers/iio/mpu6050/imgs/Pasted image 20230924111718.png",
     "linux/kernel/drivers/iio/mpu6050/imgs",
     "linux/kernel/drivers/iio/iio.md",
-    "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
     "linux/kernel/drivers/iio/i2c/i2cset.md",
     "linux/kernel/drivers/iio/i2c/i2cget.md",
     "linux/kernel/drivers/iio/i2c/i2cdump.md",
@@ -201,9 +203,7 @@
     "linux/kernel/net/dpdk/dome.md",
     "linux/kernel/net/dpdk",
     "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
-    "linux/kernel/net/rpcbind/rpcinfo.md",
     "linux/kernel/net/rpcbind/imgs",
-    "linux/kernel/net/rpcbind",
     "algorithm/architecture/imgs/Pasted image 20230827181156.png",
     "algorithm/architecture/imgs/Pasted image 20230827180804.png",
     "algorithm/architecture/imgs/Pasted image 20230827180453.png",
