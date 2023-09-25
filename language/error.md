@@ -1,5 +1,10 @@
 # 
 
+- ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+```shell
+需要用 sudo
+```
+
 - rm: cannot remove 'libtoolT': No such file or directory
 ```shell
 lvim configure

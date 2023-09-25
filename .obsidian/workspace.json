@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "linux/kernel/container/docker/config/proxy.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "iio",
+                "query": "docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "linux/kernel/container/docker/config/proxy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "linux/kernel/container/docker/config/proxy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md"
+                "file": "linux/kernel/container/docker/config/proxy.md"
               }
             }
           },
@@ -162,8 +162,12 @@
   },
   "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
-    "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
+    "linux/kernel/container/docker/docker.md",
     "linux/kernel/drivers/gpio/gpio.md",
+    "linux/kernel/container/docker/config/proxy.md",
+    "linux/kernel/container/docker/config",
+    "linux/kernel/container/docker/proxy.md",
+    "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
     "linux/kernel/drivers/gpio",
     "linux/kernel/device/dst/dst.md",
     "linux/kernel/device/dst",
@@ -198,12 +202,8 @@
     "language/build_system/autotools/configure.md",
     "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
     "language/build_system/configure.md",
-    "linux/kernel/fs/zfs/zfs.md",
-    "linux/kernel/net/dpdk/dpdk.md",
-    "linux/kernel/net/dpdk/dome.md",
     "linux/kernel/net/dpdk",
     "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
-    "linux/kernel/net/rpcbind/imgs",
     "algorithm/architecture/imgs/Pasted image 20230827181156.png",
     "algorithm/architecture/imgs/Pasted image 20230827180804.png",
     "algorithm/architecture/imgs/Pasted image 20230827180453.png",
