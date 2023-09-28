@@ -13,4 +13,5 @@ CREATE USER proxyro IDENTIFIED BY 'xxxxxxxxxx';
 ALTER USER proxyro IDENTIFIED BY password;
 
 SET PASSWORD FOR proxyro = password('wwDD99__ob');
+SET PASSWORD FOR proxyro = password('aaAA11__ob');
 ```

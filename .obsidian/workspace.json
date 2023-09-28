@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "middleware/kubernetes/config.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "iio",
+                "query": "git",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "middleware/kubernetes/config.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "middleware/kubernetes/config.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md"
+                "file": "middleware/kubernetes/config.md"
               }
             }
           },
@@ -162,51 +162,51 @@
   },
   "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
-    "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
-    "linux/kernel/drivers/gpio/gpio.md",
+    "middleware/kubernetes/kubesphere/config.md",
+    "middleware/kubernetes/error.md",
+    "middleware/kubernetes/kubeadm.md",
+    "middleware/kubernetes/kubectl.md",
+    "middleware/kubernetes/kubelet.md",
+    "middleware/kubernetes/kubernetes.md",
+    "middleware/kubernetes/kubesphere/kubesphere.md",
+    "middleware/kubernetes/kubesphere",
+    "middleware/kubernetes/config.md",
+    "middleware/influxdb.md",
+    "middleware/kubernetes",
+    "未命名",
+    "linux/git/git.md",
+    "linux/git/imgs/Pasted image 20230926124745.png",
+    "linux/config.md",
+    "language/python/airflow/error.md",
+    "linux/curl/curl.md",
+    "linux/ufw.md",
+    "linux/udevadm.md",
+    "linux/tcpdump.md",
+    "linux/user.md",
+    "linux/wc.md",
+    "linux/lsof.md",
+    "linux/lastlog.md",
+    "linux/killall.md",
+    "linux/jobs.md",
+    "linux/ipcs.md",
+    "linux/ip.md",
+    "linux/flock.md",
+    "linux/file.md",
+    "middleware/ffmpeg",
+    "windows",
     "linux/kernel/drivers/gpio",
-    "linux/kernel/device/dst/dst.md",
     "linux/kernel/device/dst",
     "linux/kernel/drivers/iio/mpu6050/imgs/Pasted image 20230924111718.png",
     "linux/kernel/drivers/iio/mpu6050/imgs",
-    "linux/kernel/drivers/iio/iio.md",
-    "linux/kernel/drivers/iio/i2c/i2cset.md",
-    "linux/kernel/drivers/iio/i2c/i2cget.md",
-    "linux/kernel/drivers/iio/i2c/i2cdump.md",
-    "linux/kernel/drivers/iio/i2c/i2cdetect.md",
     "linux/kernel/drivers/iio/i2c",
-    "linux/kernel/drivers/spi/error.md",
     "linux/kernel/drivers/spi",
-    "linux/kernel/drivers/iio/mpu6050/error.md",
-    "linux/kernel/drivers/iio/mpu6050",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923170654.png",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923165947.png",
-    "linux/kernel/drivers/iio/imgs",
-    "linux/ss.md",
-    "linux/pmap.md",
-    "linux/gsettings.md",
-    "linux/df.md",
-    "linux/fg.md",
-    "linux/git/rebase.md",
-    "database/mysql/sqlOptimize_dome.md",
-    "language/gdb/tbreak.md",
-    "language/build_system/autotools/autotools.md",
-    "milkv/milkv.md",
-    "milkv/cvi_pinmux.md",
     "milkv/imgs/Pasted image 20230917211401.png",
-    "milkv/imgs",
-    "language/build_system/autotools/configure.md",
     "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
-    "language/build_system/configure.md",
-    "linux/kernel/fs/zfs/zfs.md",
-    "linux/kernel/net/dpdk/dpdk.md",
-    "linux/kernel/net/dpdk/dome.md",
-    "linux/kernel/net/dpdk",
     "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
-    "linux/kernel/net/rpcbind/imgs",
     "algorithm/architecture/imgs/Pasted image 20230827181156.png",
     "algorithm/architecture/imgs/Pasted image 20230827180804.png",
-    "algorithm/architecture/imgs/Pasted image 20230827180453.png",
-    "linux/kernel/fs/zfs/imgs/Pasted image 20230813194000.png"
+    "algorithm/architecture/imgs/Pasted image 20230827180453.png"
   ]
 }
