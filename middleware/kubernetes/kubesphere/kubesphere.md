@@ -49,3 +49,8 @@ Please check the result using the command:
 
         kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l 'app in (ks-install, ks-installer)' -o jsonpath='{.items[0].metadata.name}') -f
 ```
+
+- 删除集群
+```shell
+./kk delete cluster -f config-sample.yaml
+```

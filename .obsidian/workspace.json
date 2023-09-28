@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b0701b0f2b754943",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FPGA/openFPGALoader.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "middleware/kubernetes/config.md",
+                "file": "FPGA/openFPGALoader.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "middleware/kubernetes/config.md",
+                "file": "FPGA/openFPGALoader.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "middleware/kubernetes/config.md"
+                "file": "FPGA/openFPGALoader.md"
               }
             }
           },
@@ -160,7 +173,7 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "9f22fbce0dd6ef73",
+  "active": "b0701b0f2b754943",
   "lastOpenFiles": [
     "middleware/kubernetes/kubesphere/config.md",
     "middleware/kubernetes/error.md",
