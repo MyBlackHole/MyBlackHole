@@ -15,4 +15,6 @@ source /opt/aio/airflow/bin/activate
 <!-- manual__2023-09-04T02:32:50.656654+00:00(批次) -->
 airflow tasks run aio_full_backup zfs到zfs manual__2023-09-04T02:32:50.656654+00:00 --job-id 148121 --interactive --raw --subdir DAGS_FOLDER/aio_full_backup.py
 airflow tasks run goldendb_gtmlog_backup 获取活跃事务列表备份起始位置以及大小 manual__2023-09-12T09:27:35.458090+00:00 --interactive --raw --subdir DAGS_FOLDER/goldendb_gtmlog_backup.py
+
+ActP@ssw0rd
 ```

@@ -55,4 +55,5 @@ docker-compose start nginx :  启动nignx容器
 docker-compose stop : 停止容器
 
 docker-compose up -d --build :（停止、删除）更新启动
+docker-compose up -d --build
 ```
