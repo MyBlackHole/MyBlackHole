@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/container/docker/config/proxy.md",
+                "file": "linux/kernel/bus.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/container/docker/config/proxy.md",
+                "file": "linux/kernel/bus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/container/docker/config/proxy.md",
+                "file": "linux/kernel/bus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/container/docker/config/proxy.md"
+                "file": "linux/kernel/bus.md"
               }
             }
           },
@@ -162,9 +162,14 @@
   },
   "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
+    "linux/kernel/log.md",
+    "linux/kernel/loglevel.md",
+    "linux/kernel/drivers/gpio/gpio_chip.md",
+    "linux/kernel/imgs/Pasted image 20230929150356.png",
+    "linux/kernel/container/docker/config/proxy.md",
+    "linux/kernel/bus.md",
     "linux/kernel/container/docker/docker.md",
     "linux/kernel/drivers/gpio/gpio.md",
-    "linux/kernel/container/docker/config/proxy.md",
     "linux/kernel/container/docker/config",
     "linux/kernel/container/docker/proxy.md",
     "linux/kernel/drivers/iio/mpu6050/mpu6050.md",
@@ -195,18 +200,13 @@
     "database/mysql/sqlOptimize_dome.md",
     "language/gdb/tbreak.md",
     "language/build_system/autotools/autotools.md",
-    "milkv/milkv.md",
-    "milkv/cvi_pinmux.md",
     "milkv/imgs/Pasted image 20230917211401.png",
     "milkv/imgs",
-    "language/build_system/autotools/configure.md",
     "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
-    "language/build_system/configure.md",
     "linux/kernel/net/dpdk",
     "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
     "algorithm/architecture/imgs/Pasted image 20230827181156.png",
     "algorithm/architecture/imgs/Pasted image 20230827180804.png",
-    "algorithm/architecture/imgs/Pasted image 20230827180453.png",
-    "linux/kernel/fs/zfs/imgs/Pasted image 20230813194000.png"
+    "algorithm/architecture/imgs/Pasted image 20230827180453.png"
   ]
 }
