@@ -2,6 +2,11 @@
 
 [细节](https://www.cnblogs.com/TaXueWuYun/p/15452253.html)
 
+- 导出 gpio
+```shell
+echo 495 > /sys/class/gpio/export
+```
+
 - 常用以下公式计算引脚
 ```shell
 GPIOn_Dx 
