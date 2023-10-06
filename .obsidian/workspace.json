@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/bus.md",
+                "file": "linux/kernel/debug/kgdb.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/bus.md",
+                "file": "linux/kernel/debug/kgdb.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/bus.md",
+                "file": "linux/kernel/debug/kgdb.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/bus.md"
+                "file": "linux/kernel/debug/kgdb.md"
               }
             }
           },
@@ -162,12 +162,32 @@
   },
   "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
+    "linux/kernel/drivers/iio/ssd1306/ssd1306.md",
+    "linux/kernel/drivers/iio/ssd1306",
+    "milkv/debug.md",
+    "linux/kernel/debug/imgs/Pasted image 20231005103745.png",
+    "linux/kernel/debug/imgs",
+    "milkv/milkv.md",
+    "linux/kernel/debug/kgdb.md",
+    "linux/kernel/debug",
+    "linux/kernel/fs/sysfs.md",
+    "linux/kernel/fs/debugfs.md",
+    "linux/kernel/drivers/gpio/debug.md",
+    "linux/minicom.md",
+    "uboot/uboot.md",
+    "uboot",
+    "milkv/config.md",
+    "language/gdb/rr-debug/config.md",
+    "language/gdb/rr-debug/rr.md",
+    "language/gdb/rr-debug",
+    "milkv/boot.md",
+    "milkv/imgs/Pasted image 20231003172322.png",
+    "linux/kernel/bus.md",
     "linux/kernel/log.md",
     "linux/kernel/loglevel.md",
     "linux/kernel/drivers/gpio/gpio_chip.md",
     "linux/kernel/imgs/Pasted image 20230929150356.png",
     "linux/kernel/container/docker/config/proxy.md",
-    "linux/kernel/bus.md",
     "linux/kernel/container/docker/docker.md",
     "linux/kernel/drivers/gpio/gpio.md",
     "linux/kernel/container/docker/config",
@@ -181,32 +201,12 @@
     "linux/kernel/drivers/iio/iio.md",
     "linux/kernel/drivers/iio/i2c/i2cset.md",
     "linux/kernel/drivers/iio/i2c/i2cget.md",
-    "linux/kernel/drivers/iio/i2c/i2cdump.md",
-    "linux/kernel/drivers/iio/i2c/i2cdetect.md",
     "linux/kernel/drivers/iio/i2c",
-    "linux/kernel/drivers/spi/error.md",
-    "linux/kernel/drivers/spi",
-    "linux/kernel/drivers/iio/mpu6050/error.md",
-    "linux/kernel/drivers/iio/mpu6050",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923170654.png",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923165947.png",
-    "linux/kernel/drivers/iio/imgs",
-    "linux/ss.md",
-    "linux/pmap.md",
-    "linux/gsettings.md",
-    "linux/df.md",
-    "linux/fg.md",
-    "linux/git/rebase.md",
-    "database/mysql/sqlOptimize_dome.md",
-    "language/gdb/tbreak.md",
-    "language/build_system/autotools/autotools.md",
     "milkv/imgs/Pasted image 20230917211401.png",
-    "milkv/imgs",
     "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
-    "linux/kernel/net/dpdk",
     "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
-    "algorithm/architecture/imgs/Pasted image 20230827181156.png",
-    "algorithm/architecture/imgs/Pasted image 20230827180804.png",
-    "algorithm/architecture/imgs/Pasted image 20230827180453.png"
+    "algorithm/architecture/imgs/Pasted image 20230827181156.png"
   ]
 }
