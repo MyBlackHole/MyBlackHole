@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FPGA/openFPGALoader.md",
+                "file": "linux/lftp.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FPGA/openFPGALoader.md",
+                "file": "middleware/kubernetes/config.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FPGA/openFPGALoader.md",
+                "file": "middleware/kubernetes/config.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FPGA/openFPGALoader.md"
+                "file": "middleware/kubernetes/config.md"
               }
             }
           },
@@ -151,13 +150,21 @@
                 "sortOrder": "frequency"
               }
             }
+          },
+          {
+            "id": "389539c0eb6def27",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,8 +180,10 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "b0701b0f2b754943",
+  "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
+    "linux/lftp.md",
+    "FPGA/openFPGALoader.md",
     "middleware/kubernetes/kubesphere/config.md",
     "middleware/kubernetes/error.md",
     "middleware/kubernetes/kubeadm.md",
@@ -203,8 +212,6 @@
     "linux/jobs.md",
     "linux/ipcs.md",
     "linux/ip.md",
-    "linux/flock.md",
-    "linux/file.md",
     "middleware/ffmpeg",
     "windows",
     "linux/kernel/drivers/gpio",
