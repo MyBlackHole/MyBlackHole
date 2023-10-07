@@ -7,6 +7,7 @@
 git clone https://github.com/milkv-duo/duo-buildroot-sdk.git
 cd duo-buildroot-sdk/
 ./build_milkv.sh
+./out/milkv****.img
 ```
 
 - 多步骤构建

@@ -2,6 +2,11 @@
 
 [细节](https://www.cnblogs.com/TaXueWuYun/p/15452253.html)
 
+- 导出 gpio
+```shell
+echo 495 > /sys/class/gpio/export
+```
+
 - 常用以下公式计算引脚
 ```shell
 GPIOn_Dx 
@@ -75,3 +80,20 @@ in
 |IRQF_TRIGGER_FALLING|下降沿触发|
 |IRQF_TRIGGER_HIGH|高电平触发|
 |IRQF_TRIGGER_LOW|低电平触发|
+
+
+## 核心架构
+GPIO核心框架是GPIO子系统的核心部分，它提供了与GPIO相关的核心功能
+它定义了GPIO的状态管理、中断处理、设备模型等基本机制
+GPIO核心框架中的关键数据结构包括gpio_chip、gpio_desc和gpio_irq_chip。
+
+### gpio_chip
+gpio_chip是GPIO子系统的关键数据结构之一，表示一个GPIO控制器
+每个gpio_chip实例对应一个物理或虚拟的GPIO控制器，负责管理一组GPIO引脚
+gpio_chip结构体中包含了一组函数指针，用于执行GPIO相关的操作，例如读取输入状态、设置输出状态等
+每个gpio_chip都关联着一组gpio_desc结构体，用于描述和管理具体的GPIO引脚。
+
+### gpio_desc
+gpio_desc结构体用于描述和管理GPIO引脚
+它包含了GPIO的标识符、状态信息、硬件相关的寄存器地址等
+通过gpio_desc，GPIO子系统可以对GPIO引脚进行具体的操作，如读取输入状态、设置输出状态
