@@ -54,6 +54,10 @@ umount -l 192.168.79.196:/volmountpoint/aiopool/8bcf05ab5e95_33_59_1693206731907
 
 ```shell
 mysql -h192.168.79.70  -P2883 -uroot -paaAA0724==
+
+<!-- 直接连接 observer -->
+
+mysql -h 192.168.80.140 -u root@sys -paaAA0724 -P 2881
 ```
 
 - 查询恢复进度

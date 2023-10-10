@@ -15,3 +15,14 @@ ALTER USER proxyro IDENTIFIED BY password;
 SET PASSWORD FOR proxyro = password('wwDD99__ob');
 SET PASSWORD FOR proxyro = password('aaAA11__ob');
 ```
+
+
+```shell
+/opt/taobao/install/obproxy-3.3.1/bin/obproxy -p 2883 -n ob110145146147_proxy
+```
+
+
+```shell
+<!-- ob集群信息查询 -->
+select * from __all_server;
+```

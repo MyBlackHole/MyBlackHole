@@ -330,6 +330,14 @@ super_read_only=1               # 管理员（super）用户是否可读，超�
 
 # 配置高端PCIe SSD卡的话，则可以调整的更高，比如 50000 - 80000  
 
+<!-- 1(SRV_FORCE_IGNORE_CORRUPT):忽略检查到的corrupt页。 -->
+<!-- 2(SRV_FORCE_NO_BACKGROUND):阻止主线程的运行，如主线程需要执行full purge操作，会导致crash。 -->
+<!-- 3(SRV_FORCE_NO_TRX_UNDO):不执行事务回滚操作。 -->
+<!-- 4(SRV_FORCE_NO_IBUF_MERGE):不执行插入缓冲的合并操作。 -->
+<!-- 5(SRV_FORCE_NO_UNDO_LOG_SCAN):不查看重做日志，InnoDB存储引擎会将未提交的事务视为已提交。 -->
+<!-- 6(SRV_FORCE_NO_LOG_REDO):不执行前滚的操作。 -->
+innodb_force_recovery = 0
+
 innodb_io_capacity = 4000               # 动态调整刷新脏页的数量，一般设置最大值的1/2 
 
 innodb_io_capacity_max = 8000           #动态调整刷新脏页的最大数量 

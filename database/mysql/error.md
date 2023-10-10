@@ -9,6 +9,10 @@
 ```shell
 # 加上 --no-defaults 
 mysqlbinlog --no-defaults -v mysql-bin.000011 > binlog.sql
+
+<!-- 或 -->
+
+修改配置文件my.cnf，default-character-set=utf8mb4 修改为 character-set-server = utf8mb4，但是需要重启MySQL服务
 ```
 
 - Can't read dir of '/etc/mysql/conf.d/

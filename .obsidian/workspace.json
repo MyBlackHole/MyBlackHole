@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/lftp.md",
+                "file": "system_framework/Microservices/UML/class_diagram.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "middleware/kubernetes/config.md",
+                "file": "system_framework/Microservices/UML/class_diagram.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "middleware/kubernetes/config.md",
+                "file": "system_framework/Microservices/UML/class_diagram.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "middleware/kubernetes/config.md"
+                "file": "system_framework/Microservices/UML/class_diagram.md"
               }
             }
           },
@@ -160,7 +161,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -180,53 +181,53 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "9f22fbce0dd6ef73",
+  "active": "b0701b0f2b754943",
   "lastOpenFiles": [
+    "database/oceanbase/obproxy.md",
+    "database/oceanbase/error.md",
+    "aio/Microservices/UML.md",
+    "aio/Microservices/UML.png",
+    "aio/Microservices/model/mysql_instance.md",
+    "aio/Microservices/model/entry.md",
+    "aio/Microservices/model/host.md",
+    "system_framework/Microservices/UML/class_diagram.md",
     "linux/lftp.md",
-    "FPGA/openFPGALoader.md",
-    "middleware/kubernetes/kubesphere/config.md",
-    "middleware/kubernetes/error.md",
-    "middleware/kubernetes/kubeadm.md",
-    "middleware/kubernetes/kubectl.md",
-    "middleware/kubernetes/kubelet.md",
-    "middleware/kubernetes/kubernetes.md",
-    "middleware/kubernetes/kubesphere/kubesphere.md",
-    "middleware/kubernetes/kubesphere",
+    "aio/Microservices/model/data_node.md",
+    "aio/Microservices/model/restore_node_record.md",
+    "aio/Microservices/model/restore_unit_record.md",
+    "aio/Microservices/model/crontab_unit_map.md",
+    "aio/Microservices/model/crontab.md",
+    "system_framework/Microservices/UML/object_diagram.md",
+    "system_framework/Microservices/UML/类图.md",
+    "system_framework/Microservices/UML",
+    "system_framework/Microservices",
+    "aio/Microservices/model/time_point.md",
+    "aio/Microservices/model/sub_task.md",
+    "aio/Microservices/model/total_task.md",
+    "aio/Microservices/model/timeline.md",
+    "aio/Microservices/model/snapshot.md",
+    "aio/Microservices/model/binlog.md",
+    "aio/Microservices/model/operator.md",
+    "aio/Microservices/model/instance.md",
+    "aio/Microservices/model/unit.md",
+    "aio/Microservices/model/resource.md",
+    "aio/Microservices/model",
+    "aio/Microservices",
     "middleware/kubernetes/config.md",
-    "middleware/influxdb.md",
-    "middleware/kubernetes",
-    "未命名",
-    "linux/git/git.md",
+    "uboot",
+    "milkv/imgs/Pasted image 20231003172322.png",
+    "linux/kernel/imgs/Pasted image 20230929150356.png",
+    "linux/kernel/drivers/iio/ssd1306",
+    "linux/kernel/debug/imgs/Pasted image 20231005103745.png",
+    "linux/kernel/debug/imgs",
+    "linux/kernel/debug",
+    "language/gdb/rr-debug",
+    "middleware/kubernetes/kubesphere",
     "linux/git/imgs/Pasted image 20230926124745.png",
-    "linux/config.md",
-    "language/python/airflow/error.md",
-    "linux/curl/curl.md",
-    "linux/ufw.md",
-    "linux/udevadm.md",
-    "linux/tcpdump.md",
-    "linux/user.md",
-    "linux/wc.md",
-    "linux/lsof.md",
-    "linux/lastlog.md",
-    "linux/killall.md",
-    "linux/jobs.md",
-    "linux/ipcs.md",
-    "linux/ip.md",
-    "middleware/ffmpeg",
-    "windows",
-    "linux/kernel/drivers/gpio",
-    "linux/kernel/device/dst",
     "linux/kernel/drivers/iio/mpu6050/imgs/Pasted image 20230924111718.png",
-    "linux/kernel/drivers/iio/mpu6050/imgs",
-    "linux/kernel/drivers/iio/i2c",
-    "linux/kernel/drivers/spi",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923170654.png",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923165947.png",
     "milkv/imgs/Pasted image 20230917211401.png",
-    "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
-    "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
-    "algorithm/architecture/imgs/Pasted image 20230827181156.png",
-    "algorithm/architecture/imgs/Pasted image 20230827180804.png",
-    "algorithm/architecture/imgs/Pasted image 20230827180453.png"
+    "language/build_system/autotools/imgs/Pasted image 20230903003954.png"
   ]
 }
