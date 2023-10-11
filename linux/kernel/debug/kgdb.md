@@ -30,6 +30,9 @@ CONFIG_KGDB=y
 
 - bootargs = "root=/dev/vda2 rw console=ttyS0 earlycon=sbi";
 + bootargs = "root=/dev/vda2 rw console=ttyS0 earlycon=sbi nokaslr kgdboc=ttyS1,115200 kgdbwait";
+
+<!-- 或启动后 -->
+echo "ttyS1,115200" > /sys/module/kgdboc/parameters/kgdboc
 ```
 
 

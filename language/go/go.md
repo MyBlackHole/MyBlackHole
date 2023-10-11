@@ -63,7 +63,6 @@ CGO_ENABLED=0 go build
 |                                |                                                 |
 | ------------------------------ | ----------------------------------------------- |
 | go run main.go                 | 运行go程序                                      |
-| go test                        | 测试                                            |
 | go build main.go               | 生成二进制文件                                  |
 | go build -gcflags “-N -l”      | 可 gdb 调试二进制构建                           |
 | go tool compile -N -l -S xx.go | 获取汇编代码                                    |
@@ -73,5 +72,6 @@ CGO_ENABLED=0 go build
 | go env -w GOARCH=arm64         | 架构配置                                        |
 | go env                         | 获取go环境变量                                  |
 | Gdb 适配 goroutines            | source /usr/share/go/src/runtime/runtime-gdb.py |
+| go test                        | 测试                                            |
 |go test ./mod|测试本地 mod 里所有测试案例|
-|go test -v  -run  测试函数名字|测试当前目录指定函数|                                                                                
+|go test -v -run  测试函数名字|测试当前目录指定函数|                                                                                

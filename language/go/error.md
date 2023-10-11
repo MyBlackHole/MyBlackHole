@@ -7,4 +7,10 @@ have intercepted the download attempt.
 rm go.sum
 <!-- go clean -modcache -->
 go mod tidy
+
+<!-- 或 -->
+<!-- 关闭 GOSUMDB -->
+export GOSUMDB=off
+<!-- 设置 GONOSUMDB -->
+export GONOSUMDB=*.corp.example.com,rsc.io/private
 ```

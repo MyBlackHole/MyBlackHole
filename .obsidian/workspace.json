@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "middleware/kubernetes/config.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b0701b0f2b754943",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "system_framework/Microservices/UML/class_diagram.md",
+                "file": "linux/perf/perf.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "system_framework/Microservices/UML/class_diagram.md",
+                "file": "linux/perf/perf.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "system_framework/Microservices/UML/class_diagram.md",
+                "file": "linux/perf/perf.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "system_framework/Microservices/UML/class_diagram.md"
+                "file": "linux/perf/perf.md"
               }
             }
           },
@@ -151,21 +138,13 @@
                 "sortOrder": "frequency"
               }
             }
-          },
-          {
-            "id": "389539c0eb6def27",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,53 +160,53 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "b0701b0f2b754943",
+  "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
-    "linux/kernel/net/error.md",
-    "database/redis/data_struct/list.md",
-    "database/redis/data_struct/data_struct.md",
-    "database/redis/data_struct/datastruct.md",
-    "database/redis/data_struct/set.md",
-    "database/redis/data_struct",
-    "database/redis/aof.md",
-    "database/redis/monitor.md",
-    "database/oceanbase/obproxy.md",
-    "database/oceanbase/error.md",
-    "aio/Microservices/UML.md",
-    "aio/Microservices/UML.png",
-    "aio/Microservices/model/mysql_instance.md",
-    "aio/Microservices/model/entry.md",
-    "aio/Microservices/model/host.md",
-    "system_framework/Microservices/UML/class_diagram.md",
-    "linux/lftp.md",
-    "aio/Microservices/model/data_node.md",
-    "aio/Microservices/model/restore_node_record.md",
-    "aio/Microservices/model/restore_unit_record.md",
-    "aio/Microservices/model/crontab_unit_map.md",
-    "aio/Microservices/model/crontab.md",
+    "linux/kernel/debug/kgdb.md",
+    "linux/perf/dynamic_tracing.md",
+    "linux/perf/static_tracing.md",
+    "linux/perf/porfiling.md",
+    "linux/perf/couting.md",
+    "linux/perf/perf.md",
+    "linux/perf",
     "system_framework/Microservices/UML/object_diagram.md",
-    "system_framework/Microservices/UML/类图.md",
+    "system_framework/Microservices/UML/class_diagram.md",
     "system_framework/Microservices/UML",
     "system_framework/Microservices",
-    "aio/Microservices/model/time_point.md",
-    "aio/Microservices/model/sub_task.md",
-    "aio/Microservices/model/total_task.md",
-    "aio/Microservices/model/timeline.md",
-    "aio/Microservices/model",
-    "aio/Microservices",
-    "uboot",
-    "milkv/imgs/Pasted image 20231003172322.png",
-    "linux/kernel/imgs/Pasted image 20230929150356.png",
+    "linux/kernel/net/error.md",
+    "database/redis/monitor.md",
+    "database/redis/data_struct/set.md",
+    "database/redis/data_struct/list.md",
+    "database/redis/data_struct/data_struct.md",
+    "database/redis/data_struct",
+    "database/redis/aof.md",
+    "database/oceanbase/obproxy.md",
+    "database/oceanbase/error.md",
+    "linux/kernel/drivers/iio/ssd1306/ssd1306.md",
     "linux/kernel/drivers/iio/ssd1306",
+    "milkv/debug.md",
     "linux/kernel/debug/imgs/Pasted image 20231005103745.png",
     "linux/kernel/debug/imgs",
+    "milkv/milkv.md",
     "linux/kernel/debug",
+    "linux/kernel/fs/sysfs.md",
+    "linux/kernel/fs/debugfs.md",
+    "linux/kernel/drivers/gpio/debug.md",
+    "linux/minicom.md",
+    "uboot/uboot.md",
+    "uboot",
+    "milkv/config.md",
+    "language/gdb/rr-debug/config.md",
     "language/gdb/rr-debug",
-    "linux/git/imgs/Pasted image 20230926124745.png",
+    "milkv/imgs/Pasted image 20231003172322.png",
+    "linux/kernel/imgs/Pasted image 20230929150356.png",
+    "linux/kernel/container/docker/config",
     "linux/kernel/drivers/iio/mpu6050/imgs/Pasted image 20230924111718.png",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923170654.png",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923165947.png",
     "milkv/imgs/Pasted image 20230917211401.png",
-    "language/build_system/autotools/imgs/Pasted image 20230903003954.png"
+    "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
+    "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
+    "algorithm/architecture/imgs/Pasted image 20230827181156.png"
   ]
 }
