@@ -69,14 +69,6 @@ ZREVRANGEBYSCORE key max min [WITHSCORES] [LIMIT offset count]
 2) "joe"
 127.0.0.1:6379>
 ```
-## set
-- SMEMBERS
-返回集合中所有成员
-```shell
-127.0.0.1:6379[1]> SMEMBERS _kombu.binding.192168110152
-1) "192168110152\x06\x16\x06\x16192168110152"
-```
-
 ## hash
 - hgetall
 获取 hash 所有 key alue
