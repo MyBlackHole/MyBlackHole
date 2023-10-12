@@ -162,6 +162,7 @@
   },
   "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
+    "language/go/go.mod.md",
     "linux/kernel/debug/kgdb.md",
     "linux/perf/dynamic_tracing.md",
     "linux/perf/static_tracing.md",
@@ -196,7 +197,6 @@
     "uboot/uboot.md",
     "uboot",
     "milkv/config.md",
-    "language/gdb/rr-debug/config.md",
     "language/gdb/rr-debug",
     "milkv/imgs/Pasted image 20231003172322.png",
     "linux/kernel/imgs/Pasted image 20230929150356.png",
