@@ -49,15 +49,22 @@ edit_level | DYNAMIC_EFFECTIVE
 ALTER SYSTEM CANCEL ALL BACKUP FORCE;
 ```
 
-- 发起数据备份
+- 配置 s3
 ```shell
-ALTER SYSTEM SET backup_dest='oss://mybucket?host=192.168.30.126:80&access_id=bNkZp8WKDMziff8x6hOz&access_key=OvygWaWLqxDBmCeMth3PovD12p4DZL1I5eSLNGD3';
+ALTER SYSTEM SET backup_dest='oss://mybucket?host=192.168.30.126&access_id=bNkZp8WKDMziff8x6hOz&access_key=OvygWaWLqxDBmCeMth3PovD12p4DZL1I5eSLNGD3';
+ALTER SYSTEM SET backup_dest='oss://wdg1?host=192.168.30.126&access_id=1&access_key=1';
+ALTER SYSTEM SET backup_dest='oss://oceanbase-shunde?host=zeyang@1510629197150037.onaliyun.com&access_id=LTAI5tMQYtZkbVMN2vZckpAs&access_key=zqCmshOoLs8BITRgMelbVOU73VM40i';
 oceanbase> ALTER SYSTEM SET backup_dest='oss://backuptest/test1?host=192.168.30.126&access_id=root&access_key=123456';
 ```
 
 - 发起日志归档
 ```shell
 alter system archivelog;
+```
+
+- 查看日志归档进度
+```shell
+SELECT * FROM CDB_OB_BACKUP_ARCHIVELOG;
 ```
 
 - 关闭日志归档
@@ -85,10 +92,5 @@ SELECT * FROM CDB_OB_BACKUP_SET_DETAILS;
 ```shell
 USE oceanbase;
 SELECT * FROM CDB_OB_BACKUP_PROGRESS;
-```
-
-- 查看日志备份进度
-```shell
-SELECT * FROM CDB_OB_BACKUP_ARCHIVELOG;
 ```
 
