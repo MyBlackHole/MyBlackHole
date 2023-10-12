@@ -20,3 +20,8 @@ DROP TENANT tenant_name [FORCE | PURGE]
 
 DROP TENANT t1 FORCE;
 ```
+
+- 查看租户物理元数据信息
+```sql
+select * from __all_tenant_meta_table;
+```
