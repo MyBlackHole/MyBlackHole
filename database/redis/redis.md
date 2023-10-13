@@ -2,7 +2,8 @@
 
 - docker
 ```shell
-docker run -p 6379:6379 --name redis -d redis # 拉取镜像同时运行
+<!-- 拉取镜像同时运行 -->
+docker run -p 6379:6379 --name redis -d redis
 ```
 
 - 物理机

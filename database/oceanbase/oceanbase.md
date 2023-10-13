@@ -36,4 +36,7 @@ docker exec -it obstandalone ob-mysql root
 
 ## 使用 test 用户登录集群的 test 租户
 docker exec -it obstandalone ob-mysql test
+
+
+obclient -h127.1 -uroot@sys -P2881 -p -c -A
 ```
