@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "middleware/kubernetes/config.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b0701b0f2b754943",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "aio/Microservices/archimate.md",
+                "file": "algorithm/bloom.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7126b760e3459d2d",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aio/Microservices/archimate.md",
+                "file": "algorithm/bloom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aio/Microservices/archimate.md",
+                "file": "algorithm/bloom.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aio/Microservices/archimate.md"
+                "file": "algorithm/bloom.md"
               }
             }
           },
@@ -152,21 +138,12 @@
                 "sortOrder": "frequency"
               }
             }
-          },
-          {
-            "id": "389539c0eb6def27",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
@@ -183,53 +160,53 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "b0701b0f2b754943",
+  "active": "9f22fbce0dd6ef73",
   "lastOpenFiles": [
-    "aio/Microservices/archimate.png",
-    "linux/kernel/container/docker/Dockerfile/dockerfile.md",
-    "aio/Microservices/archimate.md",
-    "linux/kernel/container/docker/cmd/run.md",
-    "linux/kernel/container/docker/cmd/network.md",
-    "linux/kernel/container/docker/docker-compose.md",
-    "system_framework/Microservices/UML/class_diagram.md",
-    "linux/kernel/container/docker/Dockerfile",
-    "linux/kernel/container/docker/cmd/inspect.md",
-    "linux/kernel/container/docker/cmd/tag.md",
+    "linux/kernel/container/docker/cmd/update.md",
+    "linux/perf/perf.md",
+    "algorithm/bloom.md",
     "middleware/etcd/etcd.md",
     "middleware/etcd",
+    "linux/kernel/container/docker/cmd/tag.md",
+    "linux/kernel/container/docker/cmd/run.md",
+    "linux/kernel/container/docker/cmd/network.md",
+    "linux/kernel/container/docker/cmd/inspect.md",
     "linux/kernel/container/docker/cmd/build.md",
     "linux/kernel/container/docker/cmd",
-    "language/go/go.mod.md",
+    "linux/kernel/container/docker/Dockerfile/dockerfile.md",
+    "linux/kernel/container/docker/Dockerfile",
+    "linux/centos/config.md",
     "database/oceanbase/mysql/oceanbase/__all_user.md",
     "database/oceanbase/mysql/oceanbase",
     "database/oceanbase/mysql",
-    "linux/centos/config.md",
     "database/oceanbase/cluster.md",
+    "language/go/go.mod.md",
+    "linux/kernel/debug/kgdb.md",
+    "linux/perf/dynamic_tracing.md",
     "linux/perf/static_tracing.md",
     "linux/perf/porfiling.md",
-    "linux/perf/perf.md",
-    "linux/perf/dynamic_tracing.md",
     "linux/perf/couting.md",
     "linux/perf",
-    "linux/kernel/net/error.md",
-    "database/redis/data_struct/list.md",
-    "database/redis/data_struct/data_struct.md",
-    "database/redis/data_struct/datastruct.md",
-    "database/redis/data_struct/set.md",
-    "database/redis/data_struct",
-    "database/redis/aof.md",
-    "aio/Microservices/UML.png",
+    "system_framework/Microservices/UML/object_diagram.md",
+    "system_framework/Microservices/UML/class_diagram.md",
     "system_framework/Microservices/UML",
     "system_framework/Microservices",
-    "aio/Microservices/model",
+    "linux/kernel/net/error.md",
+    "database/redis/monitor.md",
+    "database/redis/data_struct/set.md",
+    "database/redis/data_struct/list.md",
+    "database/redis/data_struct/data_struct.md",
+    "database/redis/data_struct",
+    "linux/kernel/drivers/iio/ssd1306",
+    "linux/kernel/debug/imgs/Pasted image 20231005103745.png",
     "milkv/imgs/Pasted image 20231003172322.png",
     "linux/kernel/imgs/Pasted image 20230929150356.png",
-    "linux/kernel/debug/imgs/Pasted image 20231005103745.png",
-    "linux/git/imgs/Pasted image 20230926124745.png",
     "linux/kernel/drivers/iio/mpu6050/imgs/Pasted image 20230924111718.png",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923170654.png",
     "linux/kernel/drivers/iio/imgs/Pasted image 20230923165947.png",
     "milkv/imgs/Pasted image 20230917211401.png",
-    "language/build_system/autotools/imgs/Pasted image 20230903003954.png"
+    "language/build_system/autotools/imgs/Pasted image 20230903003954.png",
+    "linux/kernel/net/rpcbind/imgs/Pasted image 20230610174944.png",
+    "algorithm/architecture/imgs/Pasted image 20230827181156.png"
   ]
 }
