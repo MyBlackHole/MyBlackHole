@@ -1,6 +1,11 @@
 # curl
 网络工具
 
+## install
+```shell
+./configure --prefix=/media/black/Data/lib/curl/curl-7_32_0/  --disable-ldap
+```
+
 ## 选项
 
 ### -A 

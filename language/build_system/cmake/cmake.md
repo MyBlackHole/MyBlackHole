@@ -63,6 +63,11 @@ include_directories(path/to/include/dir)
 link_directories(path/to/library/dir)
 ```
 
+- 使用系统 lib m
+```shell
+target_link_libraries(oss_c_sdk_test m)
+```
+
 - 生成 compile_commands.json
 ```shell
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
