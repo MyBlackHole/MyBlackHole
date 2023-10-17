@@ -1,5 +1,6 @@
 # rpm2cpio
 解压 rpm 包
+
 ## 安装
 ```shell
 # ubuntu

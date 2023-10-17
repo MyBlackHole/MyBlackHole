@@ -28,5 +28,5 @@ ulimit -c 1024
 /proc/sys/kernel/core_pattern
 |/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -- %E
 <!-- 修改  -->
-core
+echo "core-%p-%e" > /proc/sys/kernel/core_pattern
 ```

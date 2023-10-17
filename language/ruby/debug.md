@@ -1,5 +1,7 @@
 # debug
 
+
+## byebug
 ```shell
 sudo gem install byebug
 sudo byebug ./bin/emulator -r store -p 80

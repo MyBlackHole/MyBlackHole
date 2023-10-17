@@ -1,6 +1,37 @@
 # mvcc
 
-四种不同的隔离级别含义分别如下：
+## 四种现象
+
+1. 脏读 dirty read（读到未提交的数据）
+A事务正在修改数据但未提交，此时B事务去读取此条数据，B事务读取的是未提交的数据，A事务回滚
+解决办法：
+方法1：事务隔离级别设置为：read committed。
+方法2：读取时加排它锁（select…for update），事务提交才会释放锁，修改时加共享锁（update …lock in share mode)。加排它锁后，不能对该条数据再加锁，能查询但不能更改数据。mysql InnoDB引擎默认的修改数据语句，update,delete,insert都会自动给涉及到的数据加上排他锁，select语句默认不会加任何锁类型，如果加排他锁可以使用select …for update语句，如果事务T对数据A加上共享锁后，则其他事务只能对A再加共享锁，不能加排他锁，共享锁下其它用户可以并发读取，查询数据。但不能修改，增加，删除数据。资源共享
+
+2. 不可重复读 Non-Repeatable read（前后多次读取，数据内容不一致）
+A事务中两次查询同一数据的内容不同，B事务间在A事务两次读取之间更改了此条数据。
+解决办法：
+方法1：事务隔离级别设置为Repeatable read。
+方法2：读取数据时加共享锁，写数据时加排他锁，都是事务提交才释放锁
+    读取时候不允许其他事物修改该数据，不管数据在事务过程中读取多少次，数据都是一致的，避免了不可重复读问题。
+
+3. 幻读 repeatable read（前后多次读取，数据总量不一致）
+在同一事务中两次相同查询数据的条数不一致，例如第一次查询查到5条数据，第二次查到8条数据，这是因为在两次查询的间隙，另一个事务插入了3条数据。
+解决办法：
+方法1：事务隔离级别设置为serializable ，那么数据库就变成了单线程访问的数据库，导致性能降低很多。
+
+DEFAULT： 使用数据库设置的隔离级别 ( 默认 ) ，由 DBA 默认的设置来决定隔离级别 .
+
+READ_UNCOMMITTED： 会读到未提交的数据， 出现脏读、不可重复读、幻读 ( 隔离级别最低，并发性能高 )。
+
+READ_COMMITTED： 不会读到未提交的数据，会出现不可重复读、幻读问题（锁定正在读取的行）
+
+REPEATABLE_READ ：会出幻读（锁定所读取的所有行）
+
+SERIALIZABLE ：保证所有的情况不会发生（锁表）。
+
+
+## 四种不同的隔离级别含义分别如下
 
 - 序列化（SERIALIZABLE）
 SERIALIZABLE:
@@ -207,7 +238,7 @@ SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
 
 3. 提交读（READ COMMITTED）
-  和 READ UNCOMMITTED 相比，READ COMMITTED 主要解决了脏读的问题，对于不可重复读和幻象读则未解决。
+  和 READ UNCOMMITTED 相比，READ COMMITTED 主要解决了脏读的问题，对于**不可重复读**和**幻象读**则未解决。
 
     A:
       SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
