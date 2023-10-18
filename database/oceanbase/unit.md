@@ -49,4 +49,5 @@ obclient> ALTER RESOURCE POOL pool1 UNIT='unit1';
 
 <!-- 删除资源单元 -->
 obclient> DROP RESOURCE UNIT unit1;
+DROP RESOURCE UNIT unit2;
 ```

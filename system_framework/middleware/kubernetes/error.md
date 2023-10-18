@@ -26,3 +26,14 @@ storage: 50Gi
 storageClassName: local-storage
 EOF
 ```
+
+- 无法拉取镜像 registry.k8s.io/kube-apiserver:v1.27.1
+```shell
+设置代理
+```
+
+- validate service connection: validate CRI v1 image API for endpoint
+```shell
+sudo nvim /etc/containerd/config.toml
+# disabled_plugins = ["cri"]
+```

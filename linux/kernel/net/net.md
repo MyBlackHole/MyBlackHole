@@ -1,43 +1,67 @@
 # net
+![[imgs/Pasted image 20231018102801.png]]
+![[imgs/Pasted image 20231018102839.png]]
+## 网络层
 
-## IPVlan
-mode 12
-mode 13
+###  OSI 7层
 
-```shell
-ip netns add ns1
-ip netns add ns2
-# ip netns add ns3
-# ip netns add ns4
+国际标准化组织ISO于1984年提出了OSI（Open System Interconnection Reference Model,开放系统互联参考模型）。OSI很快成为计算机网络通信的基础模型。
 
-ip link add ipvlan1 link wlp1s0 type ipvlan mode l2
-ip link add ipvlan2 link wlp1s0 type ipvlan mode l2
-# ip link add ipvlan3 link enx0203040d3136 type ipvlan mode l2
-# ip link add ipvlan4 link enx0203040d3136 type ipvlan mode l2
+OSI依层次结构来划分：应用层（Application）、表示层（Presentation）、会话层（Session）、传输层（Transport）、网络层（Network）、数据链路层（Data Link）、物理层（Physical）。
 
-ip link set ipvlan1 netns ns1
-ip link set ipvlan2 netns ns2
-# ip link set ipvlan3 netns ns3
-# ip link set ipvlan4 netns ns4
+OSI七层参考模型的各个层次的划分遵循下列原则：
 
-ip netns exec ns1 ip addr add 192.168.100.181/24 dev ipvlan1
-ip netns exec ns2 ip addr add 192.168.100.182/24 dev ipvlan2
-# ip netns exec ns3 ip addr add 192.168.100.183/24 dev ipvlan3
-# ip netns exec ns4 ip addr add 192.168.100.184/24 dev ipvlan4
+- 同一层中的各网络节点都有相同的层次结构，具有同样的功能。
+- 同一节点内相邻层之间通过接口(可以是逻辑接口)进行通信。
+- 七层结构中的每一层使用下一层提供的服务，并且向其上层提供服务。
+- 不同节点的同等层按照协议实现对等层之间的通信。
 
-ip netns exec ns1 ip link set lo up
-ip netns exec ns2 ip link set lo up
-# ip netns exec ns3 ip link set lo up
-# ip netns exec ns4 ip link set lo up
+#### 第一层：物理层(PhysicalLayer)
 
-ip netns exec ns1 ip link set ipvlan1 up
-ip netns exec ns2 ip link set ipvlan2 up
-# ip netns exec ns3 ip link set ipvlan3 up
-# ip netns exec ns4 ip link set ipvlan4 up
+规定通信设备的机械的、电气的、功能的和过程的特性，用以建立、维护和拆除物理链路连接。具体地讲，机械 特性规定了网络连接时所需接插件的规格尺寸、引脚数量和排列情况等;电气特性规定了在物理连接上传输bit流时线路上信号电平的大小、阻抗匹配、传输速率 距离限制等;功能特性是指对各个信号先分配确切的信号含义，即定义了DTE和DCE之间各个线路的功能;规程特性定义了利用信号线进行bit流传输的一组 操作规程，是指在物理连接的建立、维护、交换信息是，DTE和DCE双放在各电路上的动作系列。在这一层，数据的单位称为比特(bit)。属于物理层定义的典型规范代表包括：EIA/TIA RS-232、EIA/TIA RS-449、V.35、RJ-45等。
 
-## (192.168.100.1 为宿主机默认网关)
-ip netns exec ns1 ip route add default via 192.168.100.1 
-ip netns exec ns2 ip route add default via 192.168.100.1
-# ip netns exec ns3 ip route add default via 192.168.100.1
-# ip netns exec ns4 ip route add default via 192.168.100.1
-```
+#### 第二层：数据链路层(DataLinkLayer)
+
+在物理层提供比特流服务的基础上，建立相邻结点之间的数据链路，通过差错控制提供数据帧(Frame)在信道上无差错的传输，并进行各电路上的动作系列。数据链路层在不可靠的物理介质上提供可靠的传输。该层的作用包括：物理地址寻址、数据的成帧、流量控制、数据的检错、重发等。在这一层，数据的单位称为帧(frame)。数据链路层协议的代表包括：SDLC、HDLC、PPP、STP、帧中继等。
+
+#### 第三层：网络层(Network)
+
+在 计算机网络中进行通信的两个计算机之间可能会经过很多个数据链路，也可能还要经过很多通信子网。网络层的任务就是选择合适的网间路由和交换结点， 确保数据及时传送。网络层将数据链路层提供的帧组成数据包，包中封装有网络层包头，其中含有逻辑地址信息- -源站点和目的站点地址的网络地址。如 果你在谈论一个IP地址，那么你是在处理第3层的问题，这是“数据包”问题，而不是第2层的“帧”。IP是第3层问题的一部分，此外还有一些路由协议和地 址解析协议(ARP)。有关路由的一切事情都在这第3层处理。地址解析和路由是3层的重要目的。网络层还可以实现拥塞控制、网际互连等功能。在这一层，数据的单位称为数据包(packet)。网络层协议的代表包括：IP、IPX、RIP、OSPF等。
+
+#### 第四层: 传输层（Transport）
+
+第4层的数据单元也称作数据包(packets)。但是，当你谈论TCP等具体的协议时又有特殊的叫法，TCP的数据单元称为段 (segments)而UDP协议的数据单元称为“数据报(datagrams)”。这个层负责获取全部信息，因此，它必须跟踪数据单元碎片、乱序到达的 数据包和其它在传输过程中可能发生的危险。第4层为上层提供端到端(最终用户到最终用户)的透明的、可靠的数据传输服务。所为透明的传输是指在通信过程中 传输层对上层屏蔽了通信传输系统的具体细节。传输层协议的代表包括：TCP、UDP、SPX等。
+
+####  第五层: 会话层（Session）
+
+这一层也可以称为会晤层或对话层，在会话层及以上的高层次中，数据传送的单位不再另外命名，而是统称为报文。会话层不参与具体的传输，它提供包括访问验证和会话管理在内的建立和维护应用之间通信的机制。如服务器验证用户登录便是由会话层完成的。
+
+#### 第六层: 表示层（Presentation）
+
+这一层主要解决拥护信息的语法表示问题。它将欲交换的数据从适合于某一用户的抽象语法，转换为适合于OSI系统内部使用的传送语法。即提供格式化的表示和转换数据服务。数据的压缩和解压缩， 加密和解密等工作都由表示层负责。
+
+####  第七层: 应用层（Application）
+
+应用层为操作系统或网络应用程序提供访问网络服务的接口。应用层协议的代表包括：Telnet、FTP、HTTP、SNMP等。
+
+###  TCP/IP体系结构
+
+4层是指TCP/IP四层模型，主要包括：应用层、运输层、网际层和网络接口层。
+
+###  五层体系结构
+
+五层体系结构包括：应用层、运输层、网络层、数据链路层和物理层。
+
+五层协议只是OSI和TCP/IP的综合，实际应用还是TCP/IP的四层结构。为了方便可以把下两层称为网络接口层。
+
+###  网络层次与数据传递
+
+**数据在各层之间的传递过程**
+![[imgs/Pasted image 20231018103638.png]]
+ 
+**结合层次所在的协议理解**
+
+图引用自《图解HTTP》。下图就是这四层协议在数据传输过程中的工作方式，在发送端是应用层-->链路层这个方向的封包过程，每经过一层都会增加该层的头部。而接收端则是从链路层-->应用层解包的过程，每经过一层则会去掉相应的首部。
+![[imgs/Pasted image 20231018103627.png]]
+
+![[imgs/Pasted image 20231018103555.png]]

@@ -158,3 +158,9 @@ nsfs /run/snapd/ns/snapd-desktop-integration.mnt nsfs rw 0 0
 /dev/loop28 /snap/core22/750 squashfs ro,nodev,relatime,errors=continue,threads=single 0 0
 /dev/sda1 /media/black/Data ext4 rw,nosuid,nodev,relatime,errors=remount-ro 0 0
 ```
+
+- /proc/sys/net/ipv4/ip_forward
+```shell
+<!-- 开启 ip 转发 -->
+echo "1" > /proc/sys/net/ipv4/ip_forward
+```

@@ -20,6 +20,7 @@ pm.sendRequest(
     pm.environment.set("Authorization", response.json().data);
   }
 );
+
 //添加请求头
 pm.request.headers.add({ 
     // These keys appears when you set a header by hand. Just for fun they are here
