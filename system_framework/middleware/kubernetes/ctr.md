@@ -7,11 +7,13 @@
 sudo ctr -n=k8s.io i ls
 ```
 
+### export
 - 导出镜像
 ```shell
 ctr images export pause.img registry.k8s.io/pause:3.9
 ```
 
+### import
 - 导入镜像
 ```shell
 ctr image import image.img
@@ -21,4 +23,10 @@ ctr -n=k8s.io image import dashboard.tar
 
 #查看镜像，可以看到可以查询到了
 crictl images
+```
+
+### rm 
+
+```shell
+ctr images rm registry.k8s.io/coredns/coredns:v1.10.1
 ```

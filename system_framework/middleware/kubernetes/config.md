@@ -1,5 +1,43 @@
 # config
 
+
+```shell
+
+// Step 1 : 关闭防火墙
+systemctl disable firewalld
+systemctl stop firewalld
+
+-------------------
+
+// Step 2 : 关闭selinux , 可以选择临时或者永久
+// - 临时禁用selinux
+setenforce 0
+// - 永久关闭 修改/etc/sysconfig/selinux文件设置
+sed -i 's/SELINUX=permissive/SELINUX=disabled/' /etc/sysconfig/selinux
+sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
+
+-------------------
+
+// Step 3 : 禁用交换分区
+// - 临时禁用
+swapoff -a
+// - 永久禁用，打开/etc/fstab注释掉swap那一行。
+sed -i 's/.*swap.*/#&/' /etc/fstab
+
+-------------------
+
+// Step 4 : 修改内核参数
+cat <<EOF >  /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward                 = 1
+EOF
+sysctl --system
+
+```
+
+## yaml
+
 ```yaml
 # yaml格式的pod定义文件完整内容：
 

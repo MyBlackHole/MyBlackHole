@@ -36,6 +36,8 @@ grant select on oceanbase.* to proxyro identified by 'wwDD99__ob';
 
 
 <!-- 启动 -->
+./bin/obproxy -p 2883 -n AntObproxy -r 192.168.78.81:2881 -o obproxy_sys_password=9234e10d803293e35ec5086cc6bd871224a58d70,observer_sys_password=47aeff29c64a6785bbe6f7e418f0dcb0d800b138,automatic_match_work_thread=false,enable_strict_kernel_release=false,work_thread_num=16,proxy_mem_limited=4G,client_max_connections=16384,log_dir_size_threshold=10G -c metadb_cluster 
+
 /opt/taobao/install/obproxy-3.3.1/bin/obproxy -p 2883 -r '192.168.80.140:2881;192.168.80.141:2881;192.168.80.142:2881' -c wdg80140141142 -n wdg80140141142
 /opt/taobao/install/obproxy-3.3.1/bin/obproxy -p 2883 -r '192.168.80.140:2881;192.168.80.141:2881;192.168.80.142:2881' -o enable_strict_kernel_release=false,enable_cluster_checkout=false -c obdemo
 
