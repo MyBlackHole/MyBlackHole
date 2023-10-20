@@ -9,8 +9,7 @@
 ## 选项
 
 ### -A 
-指定客户端的用户代理标头，即User-Agent。curl 的默认用户代理字符串是curl/[version] 
-curl -A '' https://google.com 
+指定客户端的用户代理标头，即User-Agent。curl 的默认用户代理字符串是curl/[version] curl -A '' https://google.com 
 移除User-Agent标头 
 
 ### -b 

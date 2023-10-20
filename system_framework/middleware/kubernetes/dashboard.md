@@ -1,0 +1,34 @@
+# dashboard
+
+```shell
+kubectl apply -f  https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kubernetes-dashboard
+
+kubectl -n kubernetes-dashboard create token admin-user
+eyJhbGciOiJSUzI1NiIsImtpZCI6InNvOVhnSDJ1ME9mLTBBLUxkQ2NITS1VdXltUFNWWXlQNS1IUkxReTc0QkUifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNjk3Nzg3MTEwLCJpYXQiOjE2OTc3ODM1MTAsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJhZG1pbi11c2VyIiwidWlkIjoiMzJhY2NlYjYtNWMzMy00ZDBkLTlkZTYtNmEyODBjNGRjZDliIn19LCJuYmYiOjE2OTc3ODM1MTAsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlcm5ldGVzLWRhc2hib2FyZDphZG1pbi11c2VyIn0.lXuC5M-0KcqS6vrWE0AFCL-XP0uSmbVJDWV9uGg7jKnSdq-JxYcZza-GBLueUHMDHAHvCOzqhBGN6xiNTKaJ6h_-53Od6Og6_yg35mh_oIFQ1QiqLBt4O8jr5TVK4x3FWQ39IIf-rDaCkTl5A3F4VsfLEcpiFYBTbZViLnl7bbc2Ouq3HfNsZJKvAaQ2VvGDQqPSoLchXfXr0SekEcsrPl39P-u0tfjhkF8W5n6DMsSAF9CkMcdQwi5xJ1Q--HwHByTt5lyWO7nCzsG0uDKYhBnhXN61lR8kRsXgLhinKyTOf2tjDZOb245TTVc96ccm1SnqdbZ19jVrV8KysciVig
+
+kubectl -n kubernetes-dashboard delete serviceaccount admin-user
+kubectl -n kubernetes-dashboard delete clusterrolebinding admin-user
+```
+
+

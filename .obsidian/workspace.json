@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/net/base.md",
+                "file": "system_framework/middleware/kubernetes/resource/secret.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/net/base.md",
+                "file": "system_framework/middleware/kubernetes/resource/secret.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/net/base.md",
+                "file": "system_framework/middleware/kubernetes/resource/secret.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/net/base.md"
+                "file": "system_framework/middleware/kubernetes/resource/secret.md"
               }
             }
           },
@@ -171,6 +171,23 @@
   },
   "active": "e01b6b7abbf45751",
   "lastOpenFiles": [
+    "system_framework/middleware/kubernetes/dashboard.md",
+    "system_framework/middleware/kubernetes/kubectl/patch.md",
+    "system_framework/middleware/kubernetes/resource/imgs/Pasted image 20231020113847.png",
+    "system_framework/middleware/kubernetes/resource/imgs",
+    "system_framework/middleware/kubernetes/flannel.md",
+    "system_framework/middleware/kubernetes/kubelet.md",
+    "system_framework/middleware/kubernetes/metallb.md",
+    "system_framework/middleware/prometheus/mysqld_exporter.md",
+    "system_framework/Microservices/UML/class_diagram.md",
+    "system_framework/Microservices/UML/object_diagram.md",
+    "system_framework/middleware/rabbitmq.md",
+    "system_framework/middleware/statsd.md",
+    "linux/awk.md",
+    "linux/kernel/NUMA.md",
+    "language/libtool.md",
+    "language/ruby/ruby.md",
+    "linux/kernel/net/base.md",
     "system_framework/middleware/kubernetes/resource/LoadBalancer.md",
     "system_framework/middleware/kubernetes/resource/secret.md",
     "system_framework/middleware/kubernetes/kubectl/rollout.md",
@@ -178,19 +195,13 @@
     "system_framework/middleware/kubernetes/resource",
     "system_framework/middleware/kubernetes/kubectl/edit.md",
     "system_framework/middleware/kubernetes/kubectl/proxy.md",
-    "system_framework/middleware/kubernetes/metallb.md",
     "system_framework/middleware/kubernetes/kubectl/delete.md",
     "system_framework/middleware/kubernetes/kubectl/logs.md",
     "system_framework/middleware/kubernetes/kubectl/get.md",
-    "system_framework/middleware/kubernetes/flannel.md",
     "system_framework/middleware/kubernetes/kubectl/describe.md",
     "system_framework/middleware/kubernetes/kubectl/kubectl.md",
     "system_framework/middleware/kubernetes/kubectl",
     "pause.3.6.img",
-    "system_framework/middleware/kubernetes/ctr.md",
-    "system_framework/middleware/kubernetes/crictl.md",
-    "system_framework/middleware/kubernetes/ocictl.md",
-    "system_framework/middleware/calico.md",
     "system_framework/middleware/calico.go",
     "imgs/dev-network-basic-37.jpg",
     "imgs/dev-network-basic-40.jpg",
@@ -201,21 +212,10 @@
     "imgs/dev-network-basic-26.jpg",
     "imgs/dev-network-basic-50.jpg",
     "imgs/dev-network-basic-24.jpg",
-    "imgs/dev-network-basic-29.jpg",
-    "linux/kernel/net/概念.md",
-    "tool/wireshark.md",
-    "linux/kernel/net/base.md",
-    "tool/cron.md",
-    "linux/kernel/net/dns/dns.md",
-    "linux/kernel/net/error.md",
     "linux/kernel/net/dns",
-    "linux/kernel/net/http/http.md",
-    "linux/kernel/net/udp/udp.md",
     "linux/kernel/net/http",
     "linux/kernel/net/udp",
-    "linux/kernel/net/tcp/tcp.md",
     "imgs",
-    "![[imgs",
-    "linux/kernel/net/imgs"
+    "![[imgs"
   ]
 }
