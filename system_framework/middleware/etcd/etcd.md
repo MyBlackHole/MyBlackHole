@@ -2,6 +2,14 @@
 
 分布式键值数据库
 
+[文档](https://etcd.io/docs/)
+[cmd 命令](https://www.cnblogs.com/surpassme/p/16578301.html#:~:text=%23%20%E6%B7%BB%E5%8A%A0%E8%A7%92%E8%89%B2%20etcdctl%20role%20add%20etcd-test%20--user%3Droot%3Asurpass%20%23,--user%3Droot%3Asurpass%20%23%20%E5%88%A0%E9%99%A4%E8%A7%92%E8%89%B2%20etcdctl%20role%20delete%20etcd-test%20--user%3Droot%3Asurpass)
+
+```shell
+# 集群健康状态
+etcdctl --endpoints=${ENDPOINTS} endpoint status -w table
+etcdctl --endpoints=${ENDPOINTS} endpoint health -w table
+```
 ## 例子
 - docker 
 ```shell

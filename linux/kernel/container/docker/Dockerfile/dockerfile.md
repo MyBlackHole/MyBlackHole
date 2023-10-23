@@ -1,5 +1,19 @@
 # docker file
 
+[细节](https://docs.docker.com/engine/reference/builder/)
+
+有构建缓存机制
+对每一个阶段命令生成
+```shell
+docker images --all
+```
+
+- 不使用缓存
+```shell
+--no-cache = true
+```
+
+
 |Dockerfile 指令|说明|
 |---|---|
 |FROM|指定基础镜像，用于后续的指令构建。|
@@ -21,3 +35,21 @@
 |HEALTHCHECK|定义周期性检查容器健康状态的命令。|
 |SHELL|覆盖Docker中默认的shell，用于RUN、CMD和ENTRYPOINT指令。|
 
+
+## FROM
+```Dockerfile
+FROM [--platform=<platform>] <image> [AS <name>]
+FROM [--platform=<platform>] <image>[:<tag>] [AS <name>]
+FROM [--platform=<platform>] <image>[@<digest>] [AS <name>]
+```
+
+## COPY
+- 拷贝使用指定阶段内容到当前镜像
+```Dockerfile
+FROM golang:1.20-alpine AS builder
+...
+RUN go build -ldflags="-s -w" -o /app/pub pub/pub.go
+
+FROM alpine
+COPY --from=builder /app/pub /app/pub
+```

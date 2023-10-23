@@ -1,6 +1,13 @@
 # ossutil
 [细节](https://help.aliyun.com/zh/oss/developer-reference/copy-objects-4?spm=a2c4g.11186623.0.0.70a343a3hGth1B)
 
+## install
+```shell
+git clone git@github.com:aliyun/ossutil.git
+cd ossutil
+go build ossutil.go
+```
+
 ## cp
 可以直接上传到指定目录下,即使没有对应上级目录
 
@@ -46,4 +53,5 @@ ossutil64 -e http://127.0.0.1:80 -i bNkZp8WKDMziff8x6hOz -k OvygWaWLqxDBmCeMth3P
 - 创建桶
 ```shell
 ossutil64 -e http://127.0.0.1:80 -i bNkZp8WKDMziff8x6hOz -k OvygWaWLqxDBmCeMth3PovD12p4DZL1I5eSLNGD3  mb oss://backup
+./ossutil -e http://127.0.0.1 -i bNkZp8WKDMziff8x6hOz -k OvygWaWLqxDBmCeMth3PovD12p4DZL1I5eSLNGD3  mb oss://test1
 ```
