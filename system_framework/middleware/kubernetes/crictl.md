@@ -1,6 +1,8 @@
 # crictl
 类似 docker
 
+对于 [[ctr]] 的命名空间来说 k8s.io
+
 
 ## config
 
@@ -36,6 +38,18 @@ bb774b389f1b3       73deb9a3f7025       2 minutes ago       Running             
 ```
 
 ## 例子
+
+- 查看所有镜像列表
 ```shell
 sudo crictl images
+```
+
+- 查看镜像详情
+```shell
+sudo crictl inspecti 9cea3956c04b2
+```
+
+- 查看容器详情
+```shell
+sudo crictl inspect ubuntu
 ```

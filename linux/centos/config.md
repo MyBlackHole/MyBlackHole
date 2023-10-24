@@ -15,3 +15,8 @@ sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
 
 sudo yum makecache
 ```
+
+- 防火墙
+```shell
+systemctl status firewalld.service
+```

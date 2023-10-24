@@ -30,3 +30,9 @@ crictl images
 ```shell
 ctr images rm registry.k8s.io/coredns/coredns:v1.10.1
 ```
+
+### namespaces
+
+```shell
+sudo ctr namespaces list
+```

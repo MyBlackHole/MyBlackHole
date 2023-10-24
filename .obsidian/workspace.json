@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "system_framework/middleware/kubernetes/resource/secret.md",
+                "file": "system_framework/middleware/kubernetes/flannel.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "system_framework/middleware/kubernetes/resource/secret.md",
+                "file": "system_framework/middleware/kubernetes/flannel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "system_framework/middleware/kubernetes/resource/secret.md",
+                "file": "system_framework/middleware/kubernetes/flannel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "system_framework/middleware/kubernetes/resource/secret.md"
+                "file": "system_framework/middleware/kubernetes/flannel.md"
               }
             }
           },
@@ -171,6 +171,22 @@
   },
   "active": "e01b6b7abbf45751",
   "lastOpenFiles": [
+    "system_framework/middleware/kubernetes/kubectl/taint.md",
+    "database/redis/data_struct/channel.md",
+    "system_framework/middleware/kubernetes/imgs/Pasted image 20231023121905.png",
+    "system_framework/middleware/kubernetes/imgs/img_v2_d94abbd0-99d2-4534-b2e9-192413a1d8eg.webp",
+    "system_framework/middleware/kubernetes/imgs/img_v2_211dea37-2b5d-4456-a1e7-1d1174f8ac0g.webp",
+    "system_framework/middleware/kubernetes/imgs",
+    "linux/kernel/net/iptables.md",
+    "linux/kernel/net/imgs/img_v2_9b594cff-e65c-48e6-9497-a86fd06ba79g.webp",
+    "linux/killall.md",
+    "linux/ip.md",
+    "linux/kernel/net/ip.md",
+    "system_framework/middleware/kubernetes/resource/secret.md",
+    "linux/iptables.md",
+    "linux/firewall/firewall-cmd.md",
+    "linux/firewall/firewalld.md",
+    "linux/firewall",
     "system_framework/middleware/kubernetes/dashboard.md",
     "system_framework/middleware/kubernetes/kubectl/patch.md",
     "system_framework/middleware/kubernetes/resource/imgs/Pasted image 20231020113847.png",
@@ -189,17 +205,7 @@
     "language/ruby/ruby.md",
     "linux/kernel/net/base.md",
     "system_framework/middleware/kubernetes/resource/LoadBalancer.md",
-    "system_framework/middleware/kubernetes/resource/secret.md",
-    "system_framework/middleware/kubernetes/kubectl/rollout.md",
-    "system_framework/middleware/kubernetes/resource/Ingress.md",
     "system_framework/middleware/kubernetes/resource",
-    "system_framework/middleware/kubernetes/kubectl/edit.md",
-    "system_framework/middleware/kubernetes/kubectl/proxy.md",
-    "system_framework/middleware/kubernetes/kubectl/delete.md",
-    "system_framework/middleware/kubernetes/kubectl/logs.md",
-    "system_framework/middleware/kubernetes/kubectl/get.md",
-    "system_framework/middleware/kubernetes/kubectl/describe.md",
-    "system_framework/middleware/kubernetes/kubectl/kubectl.md",
     "system_framework/middleware/kubernetes/kubectl",
     "pause.3.6.img",
     "system_framework/middleware/calico.go",
@@ -208,14 +214,8 @@
     "imgs/dev-network-basic-31.jpg",
     "imgs/dev-network-basic-38.jpg",
     "imgs/dev-network-basic-36.jpg",
-    "imgs/dev-network-basic-35.jpg",
-    "imgs/dev-network-basic-26.jpg",
-    "imgs/dev-network-basic-50.jpg",
-    "imgs/dev-network-basic-24.jpg",
     "linux/kernel/net/dns",
     "linux/kernel/net/http",
-    "linux/kernel/net/udp",
-    "imgs",
-    "![[imgs"
+    "linux/kernel/net/udp"
   ]
 }

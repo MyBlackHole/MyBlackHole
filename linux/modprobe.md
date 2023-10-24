@@ -4,6 +4,9 @@ modprobe可载入指定的个别模块，或是载入一组相依的模块
 modprobe会根据depmod所产生的相依关系，决定要载入哪些模块
 若在载入过程中发生错误，在modprobe会卸载整组的模块。
 
+<!-- 路徑 -->
+/lib/modules/{kernel version}/kernel/zfs
+
 ## 语法
 modprobe [-acdlrtvV][--help][模块文件][符号名称 = 符号值]
 

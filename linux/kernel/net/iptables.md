@@ -4,6 +4,8 @@
 ![[imgs/Pasted image 20230509150633.png]]
 ![[imgs/Pasted image 20230509150700.png]]
 ![[imgs/Pasted image 20230509150712.png]]
+![[imgs/img_v2_9b594cff-e65c-48e6-9497-a86fd06ba79g.webp]]
+
 ### 规则表
 ```shell
 1.filter表——三个链：INPUT、FORWARD、OUTPUT
