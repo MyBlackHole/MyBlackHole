@@ -18,12 +18,16 @@ kubectl apply -f cluster.yaml
 cd rook/deploy/examples
 kubectl create -f toolbox.yaml
 
+<!-- <!-- mgr 账号 --> -->
+<!-- kubectl get pod -n rook-ceph | grep mgr | awk '{print $1}' -->
+
 <!-- 部署 Ceph Dashboard -->
 cd rook/deploy/examples
 kubectl apply -f dashboard-external-https.yaml
 
-# 获取 dashboard admin密码
+# 获取 dashboard admin 账号的密码
 kubectl -n rook-ceph get secret rook-ceph-dashboard-password -o jsonpath="{['data']['password']}" | base64 -d
+#W;L8O(?PtG$AT^Q0c3H
 
 <!-- 通过 ceph-tool 工具 pod 查看 ceph 集群状态 -->
 kubectl exec -it `kubectl get pods -n rook-ceph|grep rook-ceph-tools|awk '{print $1}'` -n rook-ceph -- bash

@@ -11,3 +11,9 @@ cd /home/admin/oceanbase/
 ```shell
 或许是有节点挂了
 ```
+
+- error while loading shared libraries: libidn.so.11: cannot open shared object file: No such file or directory
+```shell
+去找一个不就好
+```
+

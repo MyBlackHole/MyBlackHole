@@ -1,5 +1,9 @@
 # delete
 
+```
+<!-- 强制删除 -->
+--force=true --grace-period=0
+```
 
 ## 例子
 - 根据 yaml 配置清除

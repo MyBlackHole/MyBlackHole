@@ -14,8 +14,9 @@ MAX_SESSION_NUM [=] sessionnum,
 [MIN_IOPS [=] iopsnum] ;
 ```
 
-- 
-```shell
+- 查询单元信息
+```sql
+select * from __all_unit_config;
 SELECT * FROM oceanbase.gv$unit;
 ```
 

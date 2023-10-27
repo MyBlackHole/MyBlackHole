@@ -3,6 +3,18 @@
 
 ## 安装
 
+### docker
+```shell
+docker run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e ALLOW_IP_RANGE=0.0.0.0/0 -v /home/postgres/data:/var/lib/postgresql -p 55433:5432 -d postgres
+<!-- –name : 自定义容器名称 -->
+<!-- -e: 添加环境变量  -->
+<!--     ALLOW_IP_RANGE=0.0.0.0/0，这个表示允许所有ip访问，如果不加，则非本机 ip 访问不了 -->
+<!--     POSTGRES_PASSWORD：数据库密码 -->
+<!-- -v :进行映射,本地目录：容器内路径 -->
+<!-- -p：映射端口,宿主机端口：容器端口 -->
+<!-- 最后是 镜像名称:端口号 -->
+```
+
 ### ubuntu apt
 ```shell
 sudo apt install postgresql postgresql-contrib
@@ -84,18 +96,18 @@ synchronous_commit = on (默认值)
 ```
 
 ## mvcc
-　　1.oid 
-oid是object identifier的简写,其相关的参数设置default_with_oids设置一般默认是false,或者创建表时指定with (oids=false)，其值长度32bit,实际的数据库系统应用中并不能完全保证其唯一性; 
-　　2.tableoid 
-是表对象的一个唯一标识符，可以和pg_class中的oid联合起来查看 
-　　3.xmin 
-是插入的事务标识符,是用来标识不同事务下的一个版本控制。每一次更新该行都会改变这个值。可以和mvcc版本结合起来看 
-　　4.xmax 
-是删除更新的事务标识符，如果该值不为0，则说明该行数据当前还未提交或回滚。比如设置begin事务时可以明显看到该值的变化 
-　　5.cmin 
-插入事务的命令标识符,从0开始 
-　　6.cmax 
-删除事务的命令标识符，或者为0 
-　　7.ctid 
-是每行数据在表中的一个物理位置标识符，和oracle的rowid类似，但有一点不同，当表被vacuum full或该行值被update时该值可能会改变。所以定义表值的唯一性最好还是自己创建一个序列值的主键列来标识比较合适。不过使用该值去查询时速度还是非常快的。
+1. oid 
+    oid是object identifier的简写,其相关的参数设置default_with_oids设置一般默认是false,或者创建表时指定with (oids=false)，其值长度32bit,实际的数据库系统应用中并不能完全保证其唯一性; 
+2. tableoid 
+    是表对象的一个唯一标识符，可以和pg_class中的oid联合起来查看 
+3. xmin 
+    是插入的事务标识符,是用来标识不同事务下的一个版本控制。每一次更新该行都会改变这个值。可以和mvcc版本结合起来看 
+4. xmax 
+    是删除更新的事务标识符，如果该值不为0，则说明该行数据当前还未提交或回滚。比如设置begin事务时可以明显看到该值的变化 
+5. cmin 
+    插入事务的命令标识符,从0开始 
+6. cmax 
+    删除事务的命令标识符，或者为0 
+7. ctid 
+    是每行数据在表中的一个物理位置标识符，和oracle的rowid类似，但有一点不同，当表被vacuum full或该行值被update时该值可能会改变。所以定义表值的唯一性最好还是自己创建一个序列值的主键列来标识比较合适。不过使用该值去查询时速度还是非常快的。
 
