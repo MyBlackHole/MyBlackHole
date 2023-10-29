@@ -145,8 +145,6 @@ curl -o [文件名] www.sina.com : 保存响应内容
 
 curl -X GET 127.0.0.1:8080/\?username=1\&age=2\&page=2 : Get 
 
-curl -X POST 127.0.0.1:8080/post -F "username=aaaa" -F "password=aaaaaaa"  : POST FORM 
-
 curl --cookie "name=xxx" www.example.com  :cookie 
 
 curl -L www.sina.com  :自动跳转 
@@ -162,14 +160,6 @@ curl -v www.sina.com
 curl --trace output.txt www.sina.com (更加详细) 
 
 curl --trace-ascii output.txt www.sina.com : 显示通信过程 
-
-curl -X POST --data "data=xxx" example.com/form.cgi 
-
-curl -H "Content-Type: application/json" -X POST -d "{\"abc\":123}" "https://httpbin.org/post"  : POST BODY data 
-
-curl -H "Content-Type: application/json" -X POST -d @test.json URL : json 数据放到文件 test.json 里 
-
-curl -X POST--data-urlencode "date=April 1" example.com/form.cgi  : 数据没有经过表单编码 
 
 curl --user-agent "[User Agent]" [URL] : user-agent 
 

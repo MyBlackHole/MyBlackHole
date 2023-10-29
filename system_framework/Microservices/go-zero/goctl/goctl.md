@@ -26,3 +26,8 @@ goctl rpc protoc greet.proto --go_out=.  --go-grpc_out=.  --zrpc_out=.
 
 goctl rpc protoc graceful.proto --go_out=./pb --go-grpc_out=./pb --zrpc_out=./pb
 ```
+
+- 生成自动运行 dome
+```shell
+goctl quickstart --service-type micro
+```

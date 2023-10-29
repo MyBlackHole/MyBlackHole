@@ -14,3 +14,10 @@ export GOSUMDB=off
 <!-- 设置 GONOSUMDB -->
 export GONOSUMDB=*.corp.example.com,rsc.io/private
 ```
+
+- no such file or directory
+```shell
+alpine 对 golang 编译结果支持有问题
+alpine 不支持动态连接, 加上 CGO_ENABLED=0
+CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" server.go
+```
