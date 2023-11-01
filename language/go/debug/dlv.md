@@ -1,13 +1,10 @@
-# debug
-
-## dlv
+# dlv
 - install
 ```shell
 go install github.com/go-delve/delve/cmd/dlv@latest
 ```
 
-## 例子
-
+## exec
 ```shell
 dlv exec ./ossutil -- -e 127.0.0.1 -i UYHTraPHdzTnsmyWWTkR -k Tzm9nDpkofV8PU0auy64LE4hH4q6bxXi9bTrlbdK ls oss://test1
 ```
@@ -26,6 +23,8 @@ break github.com/zeromicro/zero-contrib/zrpc/registry/nacos.(*builder).Build
 ```shell
 break pread.go:138
 ```
+
+## test
 
 - 调试单元测试
 ```shell
