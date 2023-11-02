@@ -5,6 +5,7 @@
 - 删除目录
 ```shell
 mc rm --recursive --force aio/dev-tools/rpc
+mc ls aio/dev-tools/3.9.1.0/scripts/oracle/remote
 ```
 
 - 删除本地文件，如下：

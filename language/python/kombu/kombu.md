@@ -1,6 +1,12 @@
 # kombu
 
+[细节](https://www.cnblogs.com/rossiXYZ/p/14769951.html)
+[细节](https://cloud.tencent.com/developer/article/1821805)
+
+
+
 ## 概念
+
 - Producers: 发送消息给exchange
 - Exchanges: 用于路由消息（消息发给exchange，exchange发给对应的queue）。路由就是比较routing-key（这个message提供）和binding-key（这个queue注册到exchange的时候提供）。使用时，需要指定exchange的名称和类型（direct，topic和fanout）。可以发现，和RabbitMQ中的exchange概念是一样的。
 - Consumers: consumer需要声明一个queue，并将queue与指定的exchange绑定，然后从queue里面接收消息。

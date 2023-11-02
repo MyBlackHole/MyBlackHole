@@ -227,3 +227,10 @@ kubectl create clusterrolebinding test:anonymous --clusterrole=cluster-admin --u
 ```shell
 kubeadm config images pull --image-repository=registry.aliyuncs.com/google_containers
 ```
+
+- default-scheduler  0/3 nodes are available: pod has unbound immediate PersistentVolumeClaims. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling..
+[[StorageClass]]
+```shell
+修改chart 文件中的pvc 取值， 让storageClass=现有的storageclass name
+或者设置默认存储
+```

@@ -10,6 +10,7 @@ sudo apt install net-tools
 - 查询端口
 ```shell
 netstat -ln4
+netstat -pnlt
 ```
 
 - 查询 连接队列 溢出情况

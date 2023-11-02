@@ -102,12 +102,11 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join 192.168.78.212:6443 --token ssulw6.xyigmnkqhe9qhz2y \
-        --discovery-token-ca-cert-hash sha256:b771e6182b7e8e9a27d1d3fb454a10b366e6e7d7c53f4706e333427326ce8951
-
 <!-- 每个子节点运行 -->
-kubeadm join 192.168.78.212:6443 --token ssulw6.xyigmnkqhe9qhz2y \
-        --discovery-token-ca-cert-hash sha256:b771e6182b7e8e9a27d1d3fb454a10b366e6e7d7c53f4706e333427326ce8951
+kubeadm join 192.168.78.212:6443 --token maepwq.fu0blbpnvy12o50h \
+        --discovery-token-ca-cert-hash sha256:ffd3493fd3f1178d507622830a4ea0aa6a0d533c64c01fdb23cd9b40687bf366
+
+################ 一定要经常备份 ETCD ################
 ```
 
 

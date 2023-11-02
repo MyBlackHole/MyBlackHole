@@ -29,3 +29,7 @@
 --limit-download 值将下载限制为最大速率（以 KiB/s、MiB/s、GiB/s 为单位）。 （默认：无限制）[$MC_LIMIT_DOWNLOAD]
 --help, -h 显示帮助
 ```
+
+```shell
+mc cp --recursive aio/dev-tools/3.9.1.0/scripts/oracle/remote/ aio/dev-tools/3.9.1.0/scripts/oracle
+```

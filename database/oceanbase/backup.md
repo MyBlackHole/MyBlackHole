@@ -77,6 +77,12 @@ alter system noarchivelog;
 alter system backup database;
 ```
 
+- 查看备份进度
+```shell
+USE oceanbase;
+SELECT * FROM CDB_OB_BACKUP_PROGRESS;
+```
+
 - 备份进度
 ```shell
 SELECT * FROM CDB_OB_BACKUP_BACKUPSET_JOB;
@@ -86,11 +92,5 @@ SELECT * FROM CDB_OB_BACKUP_BACKUPSET_JOB;
 ```shell
 USE oceanbase;
 SELECT * FROM CDB_OB_BACKUP_SET_DETAILS;
-```
-
-- 查看备份进度
-```shell
-USE oceanbase;
-SELECT * FROM CDB_OB_BACKUP_PROGRESS;
 ```
 
