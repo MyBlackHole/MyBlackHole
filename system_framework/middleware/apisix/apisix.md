@@ -6,7 +6,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 kubectl create ns ingress-apisix
 
-<!-- ingress-controller.enabled=true: 设置未默认入口控制器 -->
+<!-- ingress-controller.enabled=true: 设置为默认入口控制器 -->
 helm install apisix apisix/apisix \
   --set gateway.type=NodePort \
   --set ingress-controller.enabled=true \

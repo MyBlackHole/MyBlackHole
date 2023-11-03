@@ -10,5 +10,7 @@ Rook 利用扩展功能将其深度地集成到云原生环境中，并为调度
 ## 例子
 - 自动发现新存储设备
 ```shell
+kubectl -n rook-ceph edit configmaps rook-ceph-operator-config
+
 ROOK_ENABLE_DISCOVERY_DAEMON:⋅"true"↴
 ```

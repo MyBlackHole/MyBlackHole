@@ -52,3 +52,9 @@ obclient> ALTER RESOURCE POOL pool1 UNIT='unit1';
 obclient> DROP RESOURCE UNIT unit1;
 DROP RESOURCE UNIT unit2;
 ```
+
+
+- 修改资源
+```shell
+alter resource unit sys_unit_config max_disk_size=220902004736;
+```

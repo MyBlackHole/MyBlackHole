@@ -26,6 +26,22 @@ sudo wget https://raw.githubusercontent.com/minio/mc/master/autocomplete/bash_au
 source /etc/bash_completion.d/mc
 ```
 
+## admin
+
+- 查看日志
+```shell
+mc admin logs --debug BHOSS
+```
+
+- 跟踪请求
+```shell
+mc admin trace -v BH
+```
+
+## mb
+```shell
+MC_REGION="cn-east-1" mc --help
+```
 
 ## 例子
 ```shell
@@ -36,9 +52,4 @@ make
 
 ./mc ls BH
 [2023-10-27 12:12:36 CST]     0B test/
-```
-
-- 跟踪请求
-```shell
-mc admin trace -v BH
 ```
