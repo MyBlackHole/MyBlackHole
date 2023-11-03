@@ -37,3 +37,8 @@ make
 ./mc ls BH
 [2023-10-27 12:12:36 CST]     0B test/
 ```
+
+- 跟踪请求
+```shell
+mc admin trace -v BH
+```
