@@ -24,3 +24,14 @@ dd if=boot.img of=/dev/fd0 bs=1440k  # Linux 下制作启动盘
 ```shell
 dd if=/dev/zero of=/opt/disk.img bs=1024k count=512
 ```
+
+- 批量随机生成文件
+```shell
+tmp_dir=./temp
+mkdir $tmp_dir
+
+for i in {1..1040};do
+    echo $tmp_dir/${i}.log
+    dd if=/dev/zero of=$tmp_dir/${i}.log bs=`shuf -n 1 -i 0-16`k count=1 &>/dev/null
+done
+```

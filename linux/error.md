@@ -77,3 +77,8 @@ make clean
 perl configdata.pm --dump
 make -j8
 ```
+
+- 没有规则可制作目标“ musl libpthread.a
+```shell
+musl-1.2.4 安装
+```

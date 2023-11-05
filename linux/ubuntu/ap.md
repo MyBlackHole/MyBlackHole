@@ -2,8 +2,6 @@
 
 连 wifi 同时开热点
 
-
-
 ```shell
 sudo apt install util-linux bash procps hostapd iproute2 iw haveged git
 git clone https://github.com/oblique/create_ap

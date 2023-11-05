@@ -40,6 +40,7 @@ mc admin trace -v BH
 
 ## mb
 ```shell
+<!-- MC_REGION(指定区域) -->
 MC_REGION="cn-east-1" mc --help
 ```
 
