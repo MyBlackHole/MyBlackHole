@@ -20,6 +20,11 @@ go test ./mod
 go test . -v -test.run TestFxSplit
 ```
 
+- 指定 mod 与函数
+```shell
+go test ./cmd -v -test.run TestAllBitrotAlgorithms
+```
+
 ## testing.B
 压力测试
 

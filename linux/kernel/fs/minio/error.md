@@ -8,3 +8,11 @@
 ```shell
 // Recursive: true,
 ```
+
+- Unable to start the server: Insufficient permissions to use specified por
+```shell
+Use 'sudo setcap cap_net_bind_service=+ep /path/to/minio' to provide sufficient permissions
+sudo setcap cap_net_bind_service=+ep ./minio
+
+_MINIO_DEBUG_NO_EXIT="debug" sudo /home/black/go/bin/dlv exec ./minio -- server ./database --address :90
+```

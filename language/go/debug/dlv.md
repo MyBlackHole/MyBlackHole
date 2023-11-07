@@ -30,3 +30,9 @@ break pread.go:138
 ```shell
 dlv test . -- -test.v -test.run TestFxSplit
 ```
+
+- 调试单元测试
+```shell
+dlv test . -- -test.v -test.run TestFxSplit
+dlv test ./cmd -- -test.v -test.run TestAllBitrotAlgorithms
+```
