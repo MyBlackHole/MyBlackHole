@@ -234,3 +234,13 @@ kubeadm config images pull --image-repository=registry.aliyuncs.com/google_conta
 修改chart 文件中的pvc 取值， 让storageClass=现有的storageclass name
 或者设置默认存储
 ```
+
+- FATA[0000] validate service connection: validate CRI v1 image API for endpoint "unix:///run/containerd/containerd.sock": rpc error: code = Unimplemented desc = unknown service runtime.v1.ImageService
+```shell
+sudo nvim /etc/containerd/config.toml
+<!-- 注释 cri -->
+# disabled_plugins = ["cri"]
+
+sed -i -r '/cri/s/(.*)/#\1/' /etc/containerd/config.toml
+systemctl restart containerd
+```

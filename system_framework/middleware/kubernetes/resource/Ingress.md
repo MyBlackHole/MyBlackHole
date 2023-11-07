@@ -1,5 +1,12 @@
 # Ingress
 
+- 查询所有入口
+```shell
+<!-- -A: 所有命名空间 -->
+kubectl get ingress -A
+```
+
+
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.0/deploy/static/provider/cloud/deploy.yaml
 

@@ -7,7 +7,6 @@
 helm version                            // 查看helm版本
 helm create xxx                         // 创建一个xxx charts
 helm lint ./xxx                         // 检查包的格式或信息是否有问题
-helm install xxx1 ./xxx                 // 部署安装xxx，设置名称为xxx1
 helm list                               // 列出已经部署的charts
 helm history                            // 发布历史
 helm upgrade                            // 更新版本

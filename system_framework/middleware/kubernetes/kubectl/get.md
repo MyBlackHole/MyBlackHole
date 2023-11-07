@@ -26,6 +26,17 @@ get [(-o|--output=)json|yaml|wide|custom-columns=...|custom-columns-file=...|go-
 |kubectl get clusterinformations -o yaml|输出位yaml格式|
 |kubectl get pod {podname} -n {namespace} -o yaml \| kubectl replace --force -f -|启动的是 Pod 对象，那么是无法直接删除或者 scale 到 0 的，但可以通过上面这条命令重启。这条命令的意思是 get 当前运行的 pod 的 yaml声明，并管道重定向输出到 kubectl replace命令的标准输入，从而达到重启的目的|
 
+- A
+查看所有命名空间
+```shell
+kubectl get ingress -A
+
+NAMESPACE              NAME                       CLASS    HOSTS                            ADDRESS   PORTS     AGE
+default                httpbin-route              apisix   local.httpbin.org                          80        32m
+ingress-apisix         apisix-dashboard-ingress   apisix   apisix-dashboard.layaverse.com             80        48m
+kubernetes-dashboard   kubernetes-dashboard       nginx    my.k8s.com                                 80, 443   21h
+```
+
 ## secrets
 - 查看所有密钥
 ```shell
