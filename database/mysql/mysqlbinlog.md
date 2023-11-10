@@ -1,6 +1,17 @@
 # mysqlbinlog
 解析 binlog 工具
 
+
+## config
+- 开启 binlog
+```shell
+<!-- 开启binlog日志 -->
+log_bin=ON
+
+<!-- 查询状态 -->
+SHOW VARIABLES LIKE 'log_bin';
+```
+
 ## 例子
 
 - 解析 base64 处理过的 binlog
