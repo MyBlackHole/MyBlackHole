@@ -35,4 +35,5 @@ dlv test . -- -test.v -test.run TestFxSplit
 ```shell
 dlv test . -- -test.v -test.run TestFxSplit
 dlv test ./cmd -- -test.v -test.run TestAllBitrotAlgorithms
+ dlv test github.com/minio/mux -- -test.v -test.run TestNewRegexp
 ```

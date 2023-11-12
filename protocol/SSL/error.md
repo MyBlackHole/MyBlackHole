@@ -8,6 +8,6 @@ pip install requests==2.19.1
 
 pip install certifi==2018.8.13
 
-证书有问题
+可能是目标服务器不支持 https
 
 ```
