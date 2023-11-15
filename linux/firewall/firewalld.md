@@ -39,10 +39,10 @@
 
 ## 服务
 ```shell
-systemclt status firewalld : 状态 
-systemclt start firewalld  : 启动防火墙 
-systemclt stop firewalld  : 关闭防火墙 
-systemclt disable firewalld  : 开机自动关闭 
-systemclt enable firewalld  : 开机自动启动 
+systemctl status firewalld : 状态 
+systemctl start firewalld  : 启动防火墙 
+systemctl stop firewalld  : 关闭防火墙 
+systemctl disable firewalld  : 开机自动关闭 
+systemctl enable firewalld  : 开机自动启动 
 ```
 

@@ -107,3 +107,24 @@ stop slave
 reset slave
 start slave
 ```
+
+- mysql 监听 tcp6
+```shell
+关闭ipv6方法：
+方法1：编辑/etc/sysctl.conf文件，添加如下两行到文件
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+如果想只关闭某个网卡的ipv6地址呢，比如说关闭eth0的ipv6地址：还是修改/etc/sysctl.conf文件，添加如下配置：
+net.ipv6.conf.eth0.disable_ipv6 = 1
+保存退出，使用sysctl -p命令使配置生效
+
+方法2：
+echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
+echo 1 > /proc/sys/net/ipv6/conf/default/disable_ipv6
+或，
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sysctl -w net.ipv6.conf.default.disable_ipv6=1
+
+配置mysql的配置文件/etc/my.conf，在mysqld下面添加bind-address=0.0.0.0 然后重新启动mysql服务就能正常监听ibv4地址了
+```
+

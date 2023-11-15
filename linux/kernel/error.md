@@ -22,6 +22,8 @@ CONFIG_KALLSYMS_BASE_RELATIVE = y
 
 
 - error:  rpmh_regulator_probe: ldoe2: could not find RPMh address for resource
+```shell
+
 解析： X1 代码使用rpmh代码非高通文件--》流程使用rpmh-regulator.c， 开启宏：CONFIG_REGULATOR_RPMH
        而不是使用qcom-rpmh-regulator.c， 项目没有开启宏： CONFIG_REGULATOR_QCOM_RPMH
 
@@ -36,21 +38,50 @@ CONFIG_KALLSYMS_BASE_RELATIVE = y
     rpmh-regulator-ldoe2， rpmh-regulator-ldoe3， rpmh-regulator-ldoe4， rpmh-regulator-ldoe5， rpmh-regulator-ldoe6
     无法匹配上并且初始化是处于失败状态。确认共性，上述的节点都是pmr735a相关的，X1项目是wifi only， 没有这个pm芯片。
     所以修改点应该是项目独立去除这些node。
+```
 
 
 - qcom,qpnp-power-on c440000.qcom,spmi: qcom,pmk8350@0:pon_hlos@1300: IRQ pmic-wd-bark not found
-    qcom,qpnp-power-on c440000.qcom,spmi: qcom,pm7250b@2:qcom,power-on@800: IRQ pmic-wd-bark not found
-    修改方法：报错是因为属性值pmic-wd-bark 没有添加，参看平台和公司几个已有项目都是做不添加处理，修改方案新增项目属性值不做 
-    pmic-wd-bark 获取。
-    “pmic-wd-bark" interrupt can be added if the system needs to handle PMIC watchdog barks.
+```shell
+qcom,qpnp-power-on c440000.qcom,spmi: qcom,pm7250b@2:qcom,power-on@800: IRQ pmic-wd-bark not found
+修改方法：报错是因为属性值pmic-wd-bark 没有添加，参看平台和公司几个已有项目都是做不添加处理，修改方案新增项目属性值不做 
+pmic-wd-bark 获取。
+“pmic-wd-bark" interrupt can be added if the system needs to handle PMIC watchdog barks.
+```
 
 
 - scm_mem_protection_init_do: SCM call failed
-    函数关系： kernel/msm-5.4/drivers/firmware/qcom_scm.c （early_initcall(scm_mem_protection_init)）
-    → kernel/msm-5.4/drivers/firmware/qcom_scm-smc.c (scm_mem_protection_init_do)
-    → kernel/msm-5.4/drivers/firmware/qcom_scm-smc.c (qcom_scm_call->qcom_scm_call_smccc)
+```shell
+函数关系： kernel/msm-5.4/drivers/firmware/qcom_scm.c （early_initcall(scm_mem_protection_init)）
+→ kernel/msm-5.4/drivers/firmware/qcom_scm-smc.c (scm_mem_protection_init_do)
+→ kernel/msm-5.4/drivers/firmware/qcom_scm-smc.c (qcom_scm_call->qcom_scm_call_smccc)
+```
 
 
 - energy_model: Power domains created prior to em_debug_init
-    问题原因： 依赖rootdir 的 em_debug_create_pd(在fs_initcall(em_debug_init); 前被调用，导致rootdir为空（rootdir 是全局变量，em_debug_init进行初始化）
-    修改方法：  从log 看，函数调用和初始化挨着很近，但是还是调用在前。所以调整init初始化时间点，将fs_initcall 改为subsys_initcall ,由原来开机4s初始化到3s初始化，其他不变
+```shell
+问题原因： 依赖rootdir 的 em_debug_create_pd(在fs_initcall(em_debug_init); 前被调用，导致rootdir为空（rootdir 是全局变量，em_debug_init进行初始化）
+修改方法：  从log 看，函数调用和初始化挨着很近，但是还是调用在前。所以调整init初始化时间点，将fs_initcall 改为subsys_initcall ,由原来开机4s初始化到3s初始化，其他不变
+```
+
+
+- insmod: ERROR: could not insert module xxxxx.ko: Unknown symbol in module
+```shell
+<!-- 通过 dmesg 查看 -->
+dmesg -w
+
+[  300.333603] livepatch_sample: loading out-of-tree module taints kernel.
+[  300.333674] livepatch_sample: module verification failed: signature and/or required key missing - tainting kernel
+[  300.333747] livepatch_sample: Unknown symbol __x86_return_thunk (err 0)
+```
+
+
+- loading out-of-tree module taints kernel
+```shell
+MODULE_INFO(intree, "Y");
+```
+
+- Unknown symbol __x86_return_thunk (err 0)
+```shell
+cat /proc/kallsyms | grep "__x86_return_thunk"
+```

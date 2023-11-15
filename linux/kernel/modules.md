@@ -11,3 +11,12 @@
 ```shell
 cat /proc/modules
 ```
+
+```shell
+<!-- centos -->
+yum install kernel-devel
+
+/lib/modules/$(shell uname -r)/build
+```
+
+

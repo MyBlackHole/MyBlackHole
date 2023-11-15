@@ -1,5 +1,7 @@
 # policy
 
+[细节](https://docs.amazonaws.cn/AmazonS3/latest/userguide/access-policy-language-overview.html)
+
 ```json
 {
 "Version":"s3.v1", 
@@ -27,7 +29,7 @@
 ```
 
 * 字段说明
-![[imgs/Pasted image 20231110102004.png]]
+![[imgs/Pasted image 20231113150452.png]]
 
 |Action|API|Level|
 |---|---|---|

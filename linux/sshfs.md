@@ -3,8 +3,12 @@
 
 ## 安装
 ```shell
-
+<!-- ubuntu -->
 sudo apt install sshfs
+
+<!-- centos -->
+yum install -y epel-release
+yum -y install fuse-sshfs
 ```
 ## 配置
 ```shell

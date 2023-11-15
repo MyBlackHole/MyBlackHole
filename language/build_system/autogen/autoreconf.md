@@ -1,5 +1,0 @@
-# autoreconf
-
-```shell
-autoreconf --install
-```

@@ -33,3 +33,14 @@
 ```shell
 mc cp --recursive aio/dev-tools/3.9.1.0/scripts/oracle/remote/ aio/dev-tools/3.9.1.0/scripts/oracle
 ```
+
+- 拷贝 3.9.1.0 到 dev-tools 下 
+```shell
+<!-- -a 保留文件属性 -->
+mc cp -r -a 3.9.1.0 AIO/dev-tools/
+mc cp -r -a 3.9.1.0 AIO/dev-tools
+
+
+init 下内容到 test 目录里
+mc cp -r -a AIO/dev-tools/init/ test
+```
