@@ -25,3 +25,8 @@ libz.a的链接顺序问题
 
 target_link_libraries(oss_c_sdk_test m)
 ```
+
+- error while loading shared libraries: libnsl.so.1: cannot open shared object file: No such file or directory
+```shell
+yum install libnsl.x86_64
+```
