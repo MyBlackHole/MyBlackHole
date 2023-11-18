@@ -32,7 +32,7 @@ CONFIG_KALLSYMS_BASE_RELATIVE = y
     aggr_vreg->addr = cmd_db_read_addr(aggr_vreg->resource_name);
      if (!aggr_vreg->addr) { 
      aggr_vreg_err(aggr_vreg, "could not find RPMh address for resource\n"); 
-     return -ENODEV; 
+     return -ENODEV;
     }
     确认修改点在device tree 部分，代码中获取不到对应的设备树地址。代码打打印node 成员name 和 resource_name， 确认
     rpmh-regulator-ldoe2， rpmh-regulator-ldoe3， rpmh-regulator-ldoe4， rpmh-regulator-ldoe5， rpmh-regulator-ldoe6
@@ -73,6 +73,11 @@ dmesg -w
 [  300.333603] livepatch_sample: loading out-of-tree module taints kernel.
 [  300.333674] livepatch_sample: module verification failed: signature and/or required key missing - tainting kernel
 [  300.333747] livepatch_sample: Unknown symbol __x86_return_thunk (err 0)
+
+<!-- Makefile -->
+CONFIG_MODULE_SIG=n
+
+MODULE_INFO(intree, "Y");
 ```
 
 
@@ -84,4 +89,19 @@ MODULE_INFO(intree, "Y");
 - Unknown symbol __x86_return_thunk (err 0)
 ```shell
 cat /proc/kallsyms | grep "__x86_return_thunk"
+```
+
+- disagrees about version of symbol module_layout
+```shell
+Makefile里设置kernel源码的路径错误，没有和当前的内核版本一致，导致版本验证不通过，无法安装
+```
+
+- error: implicit declaration of function ‘within_module’ [-Werror=implicit-function-declaration]
+```shell
+1. 
+<!-- 在需要调用该函数的文件中声明该函数 -->
+extern bool within_module(unsigned long addr, const struct module *mod);
+
+2. 
+<!-- 也可在相应.h文件中声明函数 -->
 ```
