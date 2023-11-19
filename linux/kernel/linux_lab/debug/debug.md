@@ -12,6 +12,7 @@ make menuconfig # 会生成 .config
 lvim .config
 CONFIG_DEBUG_INFO=y
 CONFIG_GDB_SCRIPTS=y
+CONFIG_DEBUG_KERNEL=y
 # CONFIG_FRAME_POINTER=y
 
  Kernel hacking  --->                                                                                     │ │

@@ -38,3 +38,7 @@ ninja
 CFLAGS="-g -O0 -lcrypto" meson -Dexamples=all --reconfigure build
 ```
 
+- 编译
+```shell
+meson compile -C build
+```

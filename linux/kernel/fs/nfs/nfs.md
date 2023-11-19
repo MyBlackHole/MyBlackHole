@@ -4,6 +4,9 @@
 ```
 yum install nfs-utils
 yum install rpcbind
+
+
+apt install nfs-kernel-server
 ```
 
 ## 配置

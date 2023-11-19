@@ -1,6 +1,8 @@
+# config
+
 - 配置
 ```shell
-会自动添加到 /labs/linux-lab/boards/arm/vexpress-a9/.labconfig
+<!-- 会自动添加到 /labs/linux-lab/boards/arm/vexpress-a9/.labconfig -->
 make CONFIG_DEBUG_INFO=y
 ```
 
@@ -45,9 +47,15 @@ ubuntu@linux-lab:/labs/linux-lab$ make env-dump VAR=ROOTDIR
 # docker pull tinylab/arm32v7-ubuntu
 docker run -it tinylab/arm32v7-ubuntu:18.04
 
+<!-- 路径：labs/linux-lab -->
+<!-- tinylab/arm32v7-ubuntu                          18.04                                             3c597b890d91   4 years ago     257MB -->
+<!-- tinylab/arm32v7-ubuntu                          latest                                            3c597b890d91   4 years ago     257MB -->
 (host)$ sudo apt-get install -y qemu-user-static
 (host)$ tools/root/docker/extract.sh tinylab/arm32v7-ubuntu arm (./labs/linux-lab/tools/root/docker/extract.sh tinylab/arm32v7-ubuntu arm)(自动拉去)
 (host)$ tools/root/docker/extract.sh tinylab/arm64v8-ubuntu arm
+LOG: Running tinylab/arm32v7-ubuntu
+LOG: Creating temporary rootdir: /media/black/Data/Documents/github/Sh/cloud-lab/labs/linux-lab/prebuilt/fullroot/tmp/tinylab-arm32v7-ubuntu
+LOG: Extract docker image to /media/black/Data/Documents/github/Sh/cloud-lab/labs/linux-lab/prebuilt/fullroot/tmp/tinylab-arm32v7-ubuntu
 
 # 用户名和密码均为 root
 (lab )$ make boot b=arm/vexpress-a9 U=0 V=1 MEM=1024M ROOTDEV=nfs ROOTFS=$PWD/prebuilt/fullroot/tmp/tinylab-arm32v7-ubuntu
