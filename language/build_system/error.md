@@ -94,3 +94,21 @@ subcmd-util.h:52:21: note: call to 'realloc' here
  	return ret;
  }
 ```
+
+- 
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+error: 'daemo' is not a recognised command
+       Did you mean daemon?
+Try 'nix --help' for more information.
+```
+sudo apt-get install libgtk3-nocsd0:i386
+sudo apt-get install libgtk3-nocsd0
+
+
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
+
+
+sudo apt install gtk3-nocsd
+
+
+```
