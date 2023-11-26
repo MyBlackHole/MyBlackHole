@@ -1,5 +1,16 @@
 # postgres
+
 开源数据库
+
+## 连接
+
+```shell
+psql -h 127.0.0.1 -p 5433 -U postgres
+
+pgcli -U postgresql -h /var/run/postgresql/ -p 5433
+
+sudo -u postgres psql -p 5433
+```
 
 ## 安装
 

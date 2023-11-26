@@ -31,3 +31,24 @@ sudo systemctl restart postgresql
 ```shell
 sudo apt install postgresql-server-dev-15
 ```
+
+- 密码忘记
+```shell
+nvim /etc/postgresql/15/main/pg_hba.conf
+修改对应连接方式的 method 为 trust 
+
+<!-- 原:scram-sha-256 -->
+<!-- 这里修改 IPv4\IPv6 -->
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            trust
+# IPv6 local connections:
+host    all             all             ::1/128                 trust
+
+
+<!-- 连接 -->
+psql -h 127.0.0.1 -p 5433 -U postgres
+
+psql -h 127.0.0.1 -p 5433 -U postgres
+<!-- 修改密码 -->
+alter user postgres with password '12345678';
+```
