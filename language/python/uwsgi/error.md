@@ -20,3 +20,10 @@ sudo apt-get install uwsgi-plugin-python3
 ```shell
 环境没有指定
 ```
+
+- --- no python application found, check your startup logs for errors ---
+```shell
+初始化uwsgi.ini配置文件中，指定项目的wsgi.py文件的目录出错
+或者
+启动文件无法正常启动
+```
