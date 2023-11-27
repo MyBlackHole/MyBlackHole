@@ -105,3 +105,10 @@ extern bool within_module(unsigned long addr, const struct module *mod);
 2. 
 <!-- 也可在相应.h文件中声明函数 -->
 ```
+
+- rmmod: ERROR: Module hello is in use
+```shell
+https://blog.csdn.net/gatieme/article/details/75108154
+
+force_rmmod
+```

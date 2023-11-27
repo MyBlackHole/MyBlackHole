@@ -22,3 +22,8 @@ systemctl start rpcsvcgssd.service
 # 实现, (多个 static, 去掉)
 static key_serial_t find_key_by_type_and_desc(const char *type,
 ```
+
+- mount.nfs: failed to apply fstab options
+```shell
+尝试用 sudo (root 权限)
+```
