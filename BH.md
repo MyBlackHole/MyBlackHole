@@ -4,7 +4,7 @@
 
 沉没成本(决策时不要考虑他)
 
-[liuyubobobo/Play-Leetcode: My Solutions to Leetcode problems. All solutions support C++ language, some support Java and Python. Multiple solutions will be given by most problems. Enjoy:) 我的Leetcode解答。所有的问题都支持C++语言，一部分问题支持Java语言。近乎所有问题都会提供多个算法解决。大家加油！：） (github.com)](https://github.com/liuyubobobo/Play-Leetcode)
+[liuyubobobo/Play-Leetcode](https://github.com/liuyubobobo/Play-Leetcode)
 
 
 ```text

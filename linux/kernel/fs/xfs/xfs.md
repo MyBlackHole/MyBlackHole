@@ -1,5 +1,7 @@
 # xfs
 
+[细节](https://zhuanlan.zhihu.com/p/137906421)
+
 - 安装
 ```shell
 sudo apt-get install xfsprogs

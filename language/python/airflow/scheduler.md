@@ -76,3 +76,10 @@ FROM task_instance
                     ON dag_run_1.dag_id = task_instance.dag_id AND dag_run_1.run_id = task_instance.run_id
 WHERE task_instance.dag_id = % (dag_id_1)s AND task_instance.run_id = %(run_id_1)s AND task_instance.state != %(state_1)s AND task_instance.task_id IN (%(task_id_1)s)
 ```
+
+
+- 忽略依赖
+```shell
+<!-- 默认不提供 -->
+airflow/jobs/scheduler_job.py:_enqueue_task_instances_with_queued_state:ti.command_as_list
+```
