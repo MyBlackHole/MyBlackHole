@@ -27,3 +27,10 @@ File systems  --->
 [ ]   XFS Verbose Warnings                
 [ ]   XFS Debugging support               
 ```
+
+## 命令
+```bash
+xfs_admin      xfs_db         xfs_freeze     xfs_info       xfs_logprint   xfs_mkfile     xfs_repair
+xfs_bmap       xfsdump        xfs_fsr        xfsinvutil     xfs_mdrestore  xfs_ncheck     xfsrestore
+xfs_copy       xfs_estimate   xfs_growfs     xfs_io         xfs_metadump   xfs_quota      xfs_rtcp
+```
