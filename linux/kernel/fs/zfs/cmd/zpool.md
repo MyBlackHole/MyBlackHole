@@ -1,9 +1,7 @@
-# storage pool 
+# zpool 
 
 ZFS 使用存储池来作为底层存储提供者（VDEV）的抽象。这样可以把用户可见的文件系统和底层的物理磁盘
 布局分离开来。
-
-## 命令
 
 Actions: （存储池操作） 
 * List   （列举）
@@ -11,23 +9,41 @@ Actions: （存储池操作）
 * Destroy （删除）
 * Get/Set properties （获取/设置属性）
 
-### List zpools （列举存储池（也叫zpool））
+## create 
 
-```bash
-# 创建一个raidz类型的存储池(名称为bucket）
-$ zpool create bucket raidz1 gpt/zfs0 gpt/zfs1 gpt/zfs2
-# 列出所有存储池
-$ zpool list
-NAME    SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
-zroot   141G   106G  35.2G         -    43%    75%  1.00x  ONLINE  -
-# 列出某一存储池的详细信息
-$ zpool list -v zroot
-NAME                                     SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP HEALTH  ALTROOT
-zroot                                    141G   106G  35.2G         -    43%    75%  1.00x ONLINE  -
-  gptid/c92a5ccf-a5bb-11e4-a77d-001b2172c655   141G   106G  35.2G         -    43%    75%
+- 创建池
+```shell
+sudo zpool create -f zfs_test sde
+
+zpool create -f aiopool sdb # 会自动挂载到根目录 aiopool 目录
+
+# RAID0 (数据条带化后，支持并行访问，提高读取速度)
+zpool create -f aiopool sdb sda
+
+# RAIO1 (镜像,用一半空间用于复制)
+zpool create -f aiopool mirror sdb sda
+
+# RAIO5/RAIOZ1 (驱动器至少是3个)
+zpool create -f aiopool raidz1 sdb sda sdc
+
+# RAID6/RAIDZ2 (驱动器至少是4个)
+zpool create -f aiopool raidz2 sdb sda sdc sdd
+
+# RAID10 (条带化镜像)
+zpool create -f aiopool mirror sdb sda mirror sdc sdd
 ```
 
-### Status of zpools （存储池状态）
+## list
+List zpools （列举存储池（也叫zpool））
+```shell
+zpool list
+NAME       SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+xfs_test  28.5G   105K  28.5G        -         -     0%     0%  1.00x    ONLINE  -
+```
+
+
+## status
+Status of zpools （存储池状态）
 
 ```bash
 # 获取全部zpool状态信息
@@ -55,7 +71,8 @@ config:
 errors: No known data errors
 ```
 
-### Properties of zpools （存储池属性）
+## get|set
+Properties of zpools （存储池属性）
 
 ```bash
 # 获取某一存储池的全部属性。属性可能是系统提供，也可能是用户设置
@@ -74,48 +91,27 @@ tank   comment   -                     default
 zroot  comment   Storage of mah stuff  local
 ```
 
-### Remove zpool （删除存储池）
-
-```bash
-$ zpool destroy test
-```
-
-
-fdisk[[fdisk]] 分区工具
-使用详情[https://www.escapelife.site/posts/caf259ea.html#toc-heading-9]
-
-- 创建池
-```shell
-sudo zpool create -f zfs_test sde
-
-zpool create -f aiopool sdb # 会自动挂载到根目录 aiopool 目录
-
-# RAID0 (数据条带化后，支持并行访问，提高读取速度)
-zpool create -f aiopool sdb sda
-
-# RAIO1 (镜像,用一半空间用于复制)
-zpool create -f aiopool mirror sdb sda
-
-# RAIO5/RAIOZ1 (驱动器至少是3个)
-zpool create -f aiopool raidz1 sdb sda sdc
-
-# RAID6/RAIDZ2 (驱动器至少是4个)
-zpool create -f aiopool raidz2 sdb sda sdc sdd
-
-# RAID10 (条带化镜像)
-zpool create -f aiopool mirror sdb sda mirror sdc sdd
-```
+## destroy 
+Remove zpool （删除存储池）
 
 - 销毁池
 ```shell
 zpool destroy aiopool
 ```
 
+```bash
+$ zpool destroy test
+```
+
+## 例子
+
+fdisk[[fdisk]] 分区工具
+使用详情[https://www.escapelife.site/posts/caf259ea.html#toc-heading-9]
+
 - 查询池状态
 ```shell
 zpool status
 zpool status -x
-zpool list
 zpool get all
 
 # 对应信息解释
@@ -157,3 +153,16 @@ zpool add aiopool -f sda
 zpool remove aiopool sda
 ```
 
+```bash
+# 创建一个raidz类型的存储池(名称为bucket）
+$ zpool create bucket raidz1 gpt/zfs0 gpt/zfs1 gpt/zfs2
+# 列出所有存储池
+$ zpool list
+NAME    SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
+zroot   141G   106G  35.2G         -    43%    75%  1.00x  ONLINE  -
+# 列出某一存储池的详细信息
+$ zpool list -v zroot
+NAME                                     SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP HEALTH  ALTROOT
+zroot                                    141G   106G  35.2G         -    43%    75%  1.00x ONLINE  -
+  gptid/c92a5ccf-a5bb-11e4-a77d-001b2172c655   141G   106G  35.2G         -    43%    75%
+```

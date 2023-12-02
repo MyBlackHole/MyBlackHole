@@ -1,4 +1,6 @@
-# dataset (数据集)
+# zfs
+dataset (数据集)
+
 ZFS 数据集类似于传统的文件系统（译者注：或者说是目录），但是提供了更多的功能。ZFS的很多优势也是
 在这一层体现出来的。数据集支持 [Copy on Write](https://en.wikipedia.org/wiki/Copy-on-write)
 快照, 配额, 压缩和重复消除（de-duplication）.
@@ -8,8 +10,6 @@ ZFS 数据集类似于传统的文件系统（译者注：或者说是目录）�
 (2^78) 的空间, 可以条带化地分布于2^64 设备上. 单一主机最多可以创建2^64个存储池。这些限制可以说是相
 当大。
 
-## 使用例子
-
 Actions:   （数据集相关操作）
 * Create   （创建）
 * List     （列举）
@@ -17,7 +17,8 @@ Actions:   （数据集相关操作）
 * Delete   （删除）
 * Get/Set properties   （获取/设置属性）
 
-### Create datasets
+## create
+Create datasets
 
 ```bash
 # 创建数据集
@@ -33,7 +34,17 @@ tank/root/data/stuff on /data/stuff (zfs, local, nfsv4acls)
 
 ```
 
-### List datasets （列举数据集）
+## list
+List datasets （列举数据集）
+
+查询展示
+-o: 指定返回字段
+-t: 指定查询类型
+
+- 查询
+```shell
+zfs list -t snapshot -o name,volsize,used,refer,avail
+```
 
 ```bash
 # 列出所有数据集
@@ -63,21 +74,29 @@ zroot/var/log@daily-2015-10-15                                                  
 zroot/var/tmp@daily-2015-10-15                                                          0      -   152K  -
 ```
 
-### Rename datasets （重命名数据集）
+## rename
+Rename datasets （重命名数据集）
 
 ```bash
 $ zfs rename tank/root/home tank/root/old_home
 $ zfs rename tank/root/new_home tank/root/home
 ```
 
-### Delete dataset （删除数据集）
+### destroy
+Delete dataset （删除数据集）
+销毁快照、数据集、数据卷、标签
 
+- 清除数据卷、数据集包括之下的快照
+```shell
+zfs destroy -r aiopool/4089108a1417_20_44_1690442448_goldendb_log
+```
 ```bash
 # 数据集如果有快照则无法删除
 zfs destroy tank/root/home
 ```
 
-### Get / set properties of a dataset （获取/设置数据集属性）
+## get|set
+Get / set properties of a dataset （获取/设置数据集属性）
 
 ```bash
 # 获取数据集全部属性
