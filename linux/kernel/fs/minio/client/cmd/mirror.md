@@ -39,3 +39,62 @@ mc mirror BH/test/ BH/test2
 
 mc mirror --overwrite BH/test/ BH/test2
 ```
+
+
+## 实现流程图
+```plantuml
+@startuml
+start
+
+note right
+输入 src_url, dst_url
+end note
+
+:src_url, dst_url 校验是否本地还是 s3;
+
+note right
+暂时分两种
+全是 filesystem
+全是 s3
+end note
+if (全是 filesystem) then (是)
+    :申请一个 urls 管道;
+    note right
+    生产消费模型
+    end note
+
+    fork
+    :生产填充 urls;
+    :迭代 src_url, dst_url 获取所有目标;
+
+    if (大小不相等) then (yes)
+      :把对比结果输入到 urls;
+    elseif (修改时间不相等) then (yes)
+      :把对比结果输入到 urls;
+    elseif (对象 meta 信息不相等) then (yes)
+      :把对比结果输入到 urls;
+    endif
+
+    fork again
+    :消费 urls;
+
+    while (True)
+        switch ()
+        case ( urls 里有对象 )
+          :消费 urls;
+        case ( urls 已经关闭了 )
+            stop
+        case ( 消费退出 )
+            stop
+        endswitch
+    endwhile
+
+    end fork
+
+else (否)
+    :同文件系统;
+endif
+
+end
+@enduml
+```
