@@ -23,3 +23,8 @@ gdb bin/observer
 /media/black/Data/Documents/github/Cpp/oceanbase/deps/3rd/u01/obclient/bin/obclient -h 127.0.0.1 -P 10000 -uroot
 ```
 
+
+```shell
+apt-get install git wget rpm rpm2cpio cpio make build-essential binutils
+bash build.sh debug --init --make
+```

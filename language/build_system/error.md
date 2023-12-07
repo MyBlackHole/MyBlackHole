@@ -112,3 +112,16 @@ sudo apt install gtk3-nocsd
 
 
 ```
+
+- error while loading shared libraries: libtinfo.so.5: cannot open shared object file: No such file or directory
+```shell
+apt-get install libncurses5
+
+apt install libtinfo5
+```
+
+- clang++ error: undefined symbol: std::basic_ostringstream
+```shell
+gcc 9 切换 gcc 5, 解决过 
+本质是不存在问题
+```

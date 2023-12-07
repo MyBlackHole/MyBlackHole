@@ -215,11 +215,6 @@ systemctl status docker
 - 镜像存放位置
 默认情况下Docker的存放位置为:/var/lib/docker 
 
-- 删除所有 dangling (悬挂) 数据卷
-```shell
-docker volume rm $(docker volume ls -qf dangling=true)
-```
-
 - 删除所有关闭的容器
 ```shell
 docker ps -a | grep Exit | cut -d ’ ’ -f 1 | xargs docker rm
@@ -233,10 +228,5 @@ docker system prune
 - 删除更彻底，可以将没有容器使用Docker镜像都删掉
 ```shell
 docker system prune -a
-```
-
-- 使用默认网络 host
-```shell
-docker run -it --rm --net host redis redis-cli -h 192.168.78.212
 ```
 
