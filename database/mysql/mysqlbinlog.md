@@ -10,6 +10,9 @@ log_bin=ON
 
 <!-- 查询状态 -->
 SHOW VARIABLES LIKE 'log_bin';
+
+<!-- 查询 binlog 相关配置 -->
+show global variables like "binlog%";
 ```
 
 ## 例子
@@ -35,6 +38,11 @@ mysqlbinlog --start-position=2098 \
             --stop-position=2205 \
             -d user \
             --base64-output=DECODE-ROWS -v binlog.000009 > binlog.sql
+
+mysqlbinlog --no-defaults --database=aio --start-position=207195975 --stop-position=207208204 /opt/aio/mysql/binlog/mysql-bin.000050  > 50.dump.log
+
+mysqlbinlog --no-defaults --stop-position=207195898 /opt/aio/mysql/binlog/*  > sql.log
+
 ```
 
 - 获取远程
