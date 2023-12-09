@@ -212,8 +212,8 @@ block         drm           hda_controller  io_uring      lock           napi   
 bpf_test_run  enable        hda_intel       irq           mac80211       neigh      qdisc           signal   thp                      x86_fpu
 bpf_trace     error_report  header_event    irq_matrix    mac80211_msg   net        ras             skb      timer                    xdp
 bridge        exceptions    header_page     irq_vectors   maple_tree     netlink    raw_syscalls    smbus    tlb                      xen
-cfg80211      ext4          huge_memory     iwlwifi       mce            nmi        rcu             sock     ucsi                     xhci-hcd
-cgroup        fib           hwmon           iwlwifi_data  mctp           nvme       regmap          sof      udp
+cfg80211      ext4          huge_memory     iwlwifi       mce            nmi        rcu             sock     ucsi                     xfs
+cgroup        fib           hwmon           iwlwifi_data  mctp           nvme       regmap          sof      udp                      xhci-hcd
 clk           fib6          hyperv          iwlwifi_io    mdio           oom        regulator       spi      v4l2
 compaction    filelock      i2c             iwlwifi_msg   migrate        osnoise    resctrl         swiotlb  vb2
 ```
