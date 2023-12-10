@@ -31,17 +31,11 @@ pyenv uninstall 3.5.2
 # 查看所有可安装的版本
 pyenv install --list 
 
-# 指定全局版本 
-pyenv global 3.6.5 
-
 # 指定版本安装 
 pyenv install 3.6.8 (下载慢可以先下载放到 ~/.pyenv/cache)
 
 # 出现 segmentation 错误
 CC=clang pyenv install 3.6.8
-
-# 指定多个全局版本, 3版本优先
-pyenv global 3.6.5 2.7.14 
 
 ```
 

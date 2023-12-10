@@ -64,8 +64,12 @@ chezmoi source commit -- -m "Initial commit"
 ```
 
 ## apply
-合并
-chezmoi apply --verbose
+
+从 git 本地仓库 --> 本地系统环境
+
+```shell
+chezmoi apply .config/clash/profiles/1661434311798.yml
+```
 
 ## archive
 打包

@@ -1,11 +1,16 @@
 # configure
 
+- 静态编译
+```shell
+configure LDFLAGS=-static
+```
+
 <!-- enable-shared 动态 -->
 <!-- enable-optimizations 编译优化 -->
 <!-- with-openssl 设置自定义 openssl 安装路径 -->
 <!-- enable-shared=no enable-static=yes （静态） -->
 <!-- enable-shared=yes enable-static=no （动态） -->
-
+```shell
 --cache-file=FILE
 'configure'会在你的系统上测试存在的特性(或者bug!)。为了加速随后进行的配置，测试的结果会存储在一个cache file里。当configure一个每个子树里都有'configure'脚本的复杂的源码树时，一个很好的cache file的存在会有很大帮助。
 
@@ -137,7 +142,6 @@ $ ./configure --with-tcl=/usr/local --with-tk=/usr/local
 
 $ ./configure --without-gnu-ld
 
-
 --x-includes=DIR
 这个选项是'--with-PACKAGE'选项的一个特例。在Autoconf最初被开发出来时，流行使用'configure'来作为Imake的一个变通方法来制作运行于X的软件。'--x-includes'选项提供了向'configure'脚本指明包含X11头文件的目录的方法。
 
@@ -165,3 +169,4 @@ configure 将在安装之前检查所需要的头文件和库文件以确信你�
 
 --enable-cassert
 打开在服务器中的 assertion 检查， 它会检查许多“不可能发生”的条件．它对于代码开发的用途 而言是无价之宝，不过这些测试稍微地减慢了一些速度． 这些断言检查并不一定都是针对严重错误的，因此一些相对无害的 小虫子也可能导致 postmaster 重启--只要它触发了一次断言失败． 目前，我们不推荐在生产环境中使用这个选项，但是如果你在做开发 或者在使用 beta 版本的时候应该打开它． 
+```

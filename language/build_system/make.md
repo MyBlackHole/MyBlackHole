@@ -21,3 +21,20 @@ make VERBOSE=1
 ```shell
 make distclean
 ```
+
+- 静态编译
+[binutils](http://ftp.gnu.org/gnu/binutils/)
+```shell
+<!-- binutils -->
+<!-- libtool 支持 -->
+make LDFLAGS=-all-static
+```
+
+- 通用静态编译
+```shell
+./configure CFLAGS=-static --enable-static LDFLAGS=-static --disable-shared
+或
+./configure CFLAGS=-static LDFLAGS=-static
+或
+make CFLAGS=-static LDFLAGS=-static
+```
