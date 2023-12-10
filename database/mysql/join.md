@@ -1,4 +1,4 @@
-### 七种JOIN类型
+# 七种JOIN类型
 数据初始化
 ```sql
 MySQL root@127.0.0.1:test> CREATE TABLE `tbl_emp` (
