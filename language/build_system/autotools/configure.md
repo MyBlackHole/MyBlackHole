@@ -8,8 +8,8 @@ configure LDFLAGS=-static
 <!-- enable-shared 动态 -->
 <!-- enable-optimizations 编译优化 -->
 <!-- with-openssl 设置自定义 openssl 安装路径 -->
-<!-- enable-shared=no enable-static=yes （静态） -->
-<!-- enable-shared=yes enable-static=no （动态） -->
+<!-- --enable-shared=no --enable-static=yes （静态） -->
+<!-- --enable-shared=yes --enable-static=no （动态） -->
 ```shell
 --cache-file=FILE
 'configure'会在你的系统上测试存在的特性(或者bug!)。为了加速随后进行的配置，测试的结果会存储在一个cache file里。当configure一个每个子树里都有'configure'脚本的复杂的源码树时，一个很好的cache file的存在会有很大帮助。

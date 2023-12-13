@@ -65,4 +65,22 @@ export LD_LIBRARY_PATH=/media/black/Data/lib/glibc/glibc-2.33/lib
 ----
 
 gcc -Wl,-rpath='/root/glibc-all-in-one/libs/2.27-3ubuntu1_amd64',-dynamic-linker='/root/glibc-all-in-one/libs/2.27-3ubuntu1_amd64/ld-linux-x86-64.so.2' -s 1.c -o haha
+
+
+
+```
+
+- 指定 glibc
+```shell
+./configure LDFLAGS="-static -L/media/black/Data/lib/glibc/master/lib/ -Wl,--rpath=/media/black/Data/lib/glibc/master/lib/ -Wl,--dynamic-linker=/media/black/Data/lib/glibc/master/lib/ld-linux-x86-64.so.2" \
+    CFLAGS="-static -I /media/black/Data/lib/glibc/master/include/" --enable-static --disable-shared
+
+CFLAGS=”-I/root/build/glibc-build/include” 这个是指定头文件的查找路径，去新编译的glibc里查找
+LDFLAGS: Makefile的链接选项，其中
+-L: 告诉链接器先从指定的路径查找库来链接，如果没找到，再从默认的地方找。编译时的-L选项并不影响环境变量LD_LIBRARY_PATH
+-L 只是指定了程序编译连接时库的路径，并不影响程序执行时库的路径，系统还是会到默认路径下查找该程序所需要的库，如果找不到，还是会报错，类似cannot open shared object file。
+可以设定LD_LIBRARY_PATH来让程序在运行时查找除默认路径（默认是先搜索/lib和/usr/lib这两个目录，然后按照/etc/ld.so.conf里面的配置搜索绝对路径）之外的其他路径，
+不过LD_LIBRARY_PATH的设定作用是全局的，建议使用gcc的的-R或-rpath选项来在编译时就指定库的查找路径，并且该库的路径信息保存在可执行文件中，运行时它会直接到该路径查找库，避免了使用LD_LIBRARY_PATH环境变量查找。
+
+因此我在上面指定了-Wl,–rpath=/root/build/glibc-build/lib，说明一下，-Wl,option是将选项传给链接器
 ```
