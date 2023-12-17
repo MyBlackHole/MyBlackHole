@@ -83,6 +83,7 @@ VDEV的类型
 ```shell
 # 需要关闭 python 虚拟环境
 ./autogen.sh
+./configure CFLAGS='-g -O0' --enable-debug --enable-debuginfo
 ./configure CFLAGS='-g -O0' (./configure --enable-debug)
 # ./configure CFLAGS='-g -O0' --prefix=/media/black/Data/lib/zfs/master
 make all

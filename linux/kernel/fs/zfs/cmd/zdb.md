@@ -35,3 +35,45 @@ LABEL 0
         com.delphix:embedded_data
     labels = 0 1 2 3
 ```
+
+- 显示 zpool 配置缓存中的缓存内容
+```shell
+sudo zdb -C xfs_test
+
+MOS Configuration:
+        version: 5000
+        name: 'xfs_test'
+        state: 0
+        txg: 199073
+        pool_guid: 5492180331399569183
+        errata: 0
+        hostid: 104614418
+        hostname: 'black'
+        com.delphix:has_per_vdev_zaps
+        vdev_children: 1
+        vdev_tree:
+            type: 'root'
+            id: 0
+            guid: 5492180331399569183
+            create_txg: 4
+            children[0]:
+                type: 'disk'
+                id: 0
+                guid: 7533792297045407141
+                path: '/dev/sdb1'
+                devid: 'usb-Mass_Storage_Device_121220160204-0:0-part1'
+                phys_path: 'pci-0000:03:00.3-usb-0:2:1.0-scsi-0:0:0:0'
+                whole_disk: 1
+                metaslab_array: 131
+                metaslab_shift: 29
+                ashift: 9
+                asize: 30930370560
+                is_log: 0
+                DTL: 17
+                create_txg: 4
+                com.delphix:vdev_zap_leaf: 129
+                com.delphix:vdev_zap_top: 130
+        features_for_read:
+            com.delphix:hole_birth
+            com.delphix:embedded_data
+```

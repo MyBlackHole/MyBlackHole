@@ -1,5 +1,9 @@
-# gcc
-编译工具
+# gdb
+调试工具
+
+```
+https://github.com/cyrus-and/gdb-dashboard
+```
 
 ## 参数
 
