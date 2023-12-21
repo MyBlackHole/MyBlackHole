@@ -166,3 +166,8 @@ NAME                                     SIZE  ALLOC   FREE  EXPANDSZ   FRAG    
 zroot                                    141G   106G  35.2G         -    43%    75%  1.00x ONLINE  -
   gptid/c92a5ccf-a5bb-11e4-a77d-001b2172c655   141G   106G  35.2G         -    43%    75%
 ```
+
+- 启用缓存 (提供 zdb 访问)
+```shell
+zpool set cachefile=/etc/zfs/zpool.cache aiopool
+```
