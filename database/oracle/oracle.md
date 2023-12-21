@@ -2,7 +2,7 @@
 
 ## install
 ```shell
-# 拉取镜像
+<!-- 拉取镜像 -->
 docker pull iatebes/oracle_11g
 
 # 启动为容器
