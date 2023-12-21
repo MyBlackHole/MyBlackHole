@@ -41,3 +41,13 @@ xmake project -k compile_commands
 ```shell
 xmake l find_package mysqlclient
 ```
+- 编译
+```shell
+xmake
+```
+
+- 执行指定目标
+```shell
+<!-- 执行 netdb_learn -->
+xmake run netdb_learn getaddrinfo
+```
