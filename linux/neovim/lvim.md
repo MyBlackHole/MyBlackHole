@@ -1,5 +1,9 @@
 # lvim(neovim)
+
 [docs](https://yianwillis.github.io/vimcdoc/doc/help.html)
+
+![[imgs/Pasted image 20231221145136.png]]
+
 ```vim
 :r! {command} # 将命令{command}的标准输出插入到光标下
 ```
@@ -56,4 +60,9 @@ set encoding=utf-8
 # encoding—-该选项使用于缓冲的文本(你正在编辑的文件)，寄存器，Vim 脚本文件等等。你可以把 'encoding' 选项当作是对 Vim 内部运行机制的设定。
 # fileencoding—-该选项是vim写入文件时采用的编码类型。
 # termencoding—-该选项代表输出到客户终端（Term）采用的编码类型。
+```
+
+- 启动耗时检查
+```shell
+lvim --startuptime <file>
 ```
