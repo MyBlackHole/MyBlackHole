@@ -52,3 +52,30 @@ psql -h 127.0.0.1 -p 5433 -U postgres
 <!-- 修改密码 -->
 alter user postgres with password '12345678';
 ```
+
+- mmap(150994944) with MAP_HUGETLB failed, huge pages disabled: 无法分配内存
+```shell
+❯ cat /proc/meminfo|grep Huge
+AnonHugePages:      8192 kB
+ShmemHugePages:        0 kB
+FileHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+
+sudo sysctl vm.nr_hugepages=128
+
+❯ cat /proc/meminfo|grep Huge
+AnonHugePages:      8192 kB
+ShmemHugePages:        0 kB
+FileHugePages:         0 kB
+HugePages_Total:     128
+HugePages_Free:      128
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:          262144 kB
+```

@@ -1,6 +1,8 @@
 # build
 
 ```shell
-./configure CFLAGS='-g -O0' --prefix=/media/black/Data/tools/postgres/zh_master
+./configure CFLAGS='-g -O0' --enable-debug --prefix=/media/black/Data/lib/postgres/zh_master
 make
+
+psql postgres
 ```
