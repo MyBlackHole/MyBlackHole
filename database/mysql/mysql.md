@@ -1,7 +1,7 @@
 # mysql
 
 ## 配置、权限、用户
-```sql
+```shell
 show variables like '%data%';
 ```
 
@@ -37,7 +37,7 @@ Host
 
 ```
 
-```sql
+```shell
 # 例如
 # 8.0前
 grant all privileges on minidome.* to Black@'%' identified by '1358244533';  # 授权Blcak具有远程登陆与minidome数据库的所有权限 
@@ -49,12 +49,12 @@ show grants for 'heidong'; # 查看权限授予
 ```
 
 - 创建账号
-```sql
+```shell
 create USER BlackHole@'%' identified by '1358244533';  # 创建具有远程登陆的BlackHole用户
 ```
 
 - 删除
-```sql
+```shell
 drop user BlackHole@'localhost';  # 删除用户及权限 
 drop database minidome; # 删除数据库
 Delete FROM user Where User='Black' and Host='localhost'  # 删除用户
@@ -73,7 +73,7 @@ Delete FROM user Where User='Black' and Host='localhost'  # 删除用户
 
 ## 例子
 - 更新
-```sql
+```shell
 update mysql.user set password=password('新密码') where User="BlackHole" and Host="localhost"; # 更新密码
 ```
 
@@ -92,7 +92,7 @@ show index from task_instance;
 
 ## 命令
 - 查看正在连接会话
-```sql
+```shell
 show processlist;
 ```
 
@@ -140,23 +140,23 @@ Time: 0.016s
 ```
 
 - 获取活动的事务
-```sql
+```shell
 SELECT * from information_schema.INNODB_TRX;
 select concat('KILL ',id,';') from information_schema.processlist p inner join information_schema.INNODB_TRX x on p.id=x.trx_mysql_thread_id where db='user';
 ```
 
 - 获取活动的锁
-```sql
+```shell
 SELECT * FROM information_schema.INNODB_LOCKs;
 ```
 
 - 锁等待的对应关系
-```sql
+```shell
 mysql> SELECT * FROM information_schema.INNODB_LOCK_waits;
 ```
 
 - 表加读锁
-```sql
+```shell
 lock tables user read;
 ```
 
@@ -201,7 +201,7 @@ flush logs;
 ```
 
 - xtrabackup 备份用户创建，权限
-```sql
+```shell
 CREATE USER 'xtrabackup'@'localhost' IDENTIFIED BY 'xtrabackup';
 GRANT BACKUP_ADMIN, PROCESS, RELOAD, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'xtrabackup'@'localhost';
 GRANT SELECT ON performance_schema.log_status TO 'xtrabackup'@'localhost';
