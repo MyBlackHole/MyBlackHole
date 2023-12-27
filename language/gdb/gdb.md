@@ -56,7 +56,10 @@ child                    off              同时调试两个进程，gdb跟子�
 ### 例子
 - 设置多进程调试
 ```shell
+<!-- 调试进程 -->
 set follow-fork-mode child
+
+<!-- 禁用 fork 进程 -->
 set detach-on-fork off
 ```
 

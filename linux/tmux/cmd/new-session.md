@@ -21,6 +21,9 @@
 ```
 
 
+- 创建新会话
 ```shell
+<!-- -d 后台 -->
+<!-- -s 命名 -->
 tmux new-session -s ssh -d
 ```

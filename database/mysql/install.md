@@ -81,19 +81,23 @@ docker run -p 3306:3306 --name mysql \
 wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
 
 ## 8.0
-wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm 
+wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
 
-sudo yum instal ./mysql80-community-release-el7-1.noarch.rpm 
+yum instal ./mysql80-community-release-el7-1.noarch.rpm 
+
+<!-- gpg --export -a 3a79bd29 > 3a79bd29.asc -->
+<!-- rpm --import 3a79bd29.asc -->
+rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+
 
 yum install mysql-community-server.x86_64 
-sudo service mysqld start      //启动mysql 
-sudo service mysqld status   //查看mysql状态 
-sudo systemctl enable mysqld //配置开机启动 
-grep 'temporary password' /var/log/mysqld.log  //找到默认密码 
-mysql -uroot -p  
-setpassword for'root'@'localhost'=password('NEWPASSWORD'); 
-或者ALTERUSER 'root'@'localhost'IDENTIFIEDBY 'NEWPASSWORD';// 修改密码,注意密码要复杂一些，否则会不能通过。 
-alter user user()identified by "XXXXXX"; 
+service mysqld start      //启动mysql 
+service mysqld status   //查看mysql状态 
+systemctl enable mysqld //配置开机启动 
+grep 'temporary password' /var/log/mysqld.log  //找到默认密码
+mysql -uroot -p
+alter user 'root'@'localhost' identified by 'p@3Sw0rd'; (强制必须修改)
+create USER root@'%' identified by 'p@3Sw0rd';
 
 # ubuntu
 sudo apt-get update 

@@ -21,22 +21,23 @@ iscsiadm -m node
 
 - 开启认证
 ```shell
-iscsiadm -m node -T iqn.2023-05.black.com:server -o update --name node.session.auth.authmethod --value=CHAP
+iscsiadm -m node -T iqn.2019-09.com.example:disk -o update --name node.session.auth.authmethod --value=CHAP
+
 ```
 
 - 添加用户
 ```shell
-iscsiadm –m node –T iqn.2023-05.black.com:server –op update –name node.session.auth.username –value=test_user
+iscsiadm -m node -T iqn.2019-09.com.example:disk --op  update --name node.session.auth.username --value=wangyujie
 ```
 
 - 添加密码
 ```shell
-iscsiadm –m node –T iqn.2023-05.black.com:server –op update –name node.session.auth.password –value=test_password
+iscsiadm -m node -T iqn.2019-09.com.example:disk --op update --name node.session.auth.password --value=wangyujie
 ```
 
 - 开启 debug login
 ```shell
-sudo iscsiadm -d 8 -m node -T iqn.2023-05.black.com:server -p 192.168.2.77 -l
+iscsiadm -m node -T iqn.2019-09.com.example:disk -p 192.168.90.45 -l
 ```
 
 - 退出登陆

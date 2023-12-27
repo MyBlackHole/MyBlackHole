@@ -9,5 +9,6 @@ POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=foo
 
+<!-- -U 数据库 -->
 pgcli -h 127.0.0.1 -U postgres postgres
 ```
