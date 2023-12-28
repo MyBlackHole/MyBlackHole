@@ -221,3 +221,12 @@ o- tpg1 ........................................................................
 ```shell
 sudo targetcli iscsi/iqn.2023-05.black.com:server/tpg1/luns/ create /opt/disk.img
 ```
+
+
+
+- rmdir (需要从子往删除)
+```shell
+sudo rmdir /sys/kernel/config/target/iscsi/iqn.2023-05.black.com:server/tpgt_1/np/0.0.0.0:3260
+sudo rmdir sys/kernel/config/target/iscsi/iqn.2023-05.black.com:server/tpgt_1
+sudo rmdir sys/kernel/config/target/iscsi/iqn.2023-05.black.com:server
+```
