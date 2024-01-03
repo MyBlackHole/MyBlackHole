@@ -9,7 +9,16 @@
 <!-- <!-- 移除: 使用 snap --> -->
 <!-- sudo add-apt-repository ppa:neovim-ppa/unstable -->
 <!-- sudo apt-get install neovim -->
-snap install neovim --classic
+snap install nvim
+snap install chezmoi --classic
+<!-- curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun -->
+snap install docker
+<!-- sudo add-apt-repository ppa:longsleep/golang-backports  -->
+<!-- sudo apt-get install golang-go -->
+snap install go --classic
+snap install node --classic
+<!-- sudo apt-get install screenkey -->
+sudo apt install screenkey
 
 # 安装 edge
 
@@ -30,7 +39,7 @@ XDG_PICTURES_DIR="$HOME/Pictures"
 XDG_VIDEOS_DIR="$HOME/Videos"
 
 # 基本工具
-sudo apt install curl git zsh tmux gcc llvm g++ golang gdb python3-pip xclip libglib2.0-dev libpixman-1-dev i3 black
+sudo apt install curl git zsh tmux gcc llvm g++ gdb python3-pip xclip libglib2.0-dev libpixman-1-dev i3
 
 # 设置默认 shell 程序
 chsh --shell=/bin/zsh
@@ -42,6 +51,9 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 git config --global user.name "black"
 git config --global user.email "1358244533@qq.com"
 ssh-keygen -t rsa -C "1358244533@qq.com"
+
+chezmoi init git@github.com:MyBlackHole/Mackup.git --branch ubuntu
+chezmoi apply
 
 # zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
@@ -59,10 +71,6 @@ nvim ~/.zshrc
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source ~/.zshrc
 
-<!-- <!-- <!-- 移除 --> --> -->
-<!-- # yarn -->
-<!-- npm install -g yarn -->
-
 # tmux 配置
 git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux 
 ln -s -f .tmux/.tmux.conf
@@ -71,51 +79,30 @@ cp .tmux/.tmux.conf.local .
 # 切换 i3 环境
 sudo update-alternatives --config x-session-manager 
 
-<!-- <!-- 移除 --> -->
-<!-- # fd -->
-<!-- wget https://github.com/sharkdp/fd/releases/download/v8.7.0/fd_8.7.0_amd64.deb -->
-<!-- sudo dpkg -i fd_8.7.0_amd64.deb -->
-<!-- rm fd_8.7.0_amd64.deb -->
-
-<!-- <!-- 移除 --> -->
-<!-- npm install -g n -->
-
-<!-- <!-- 移除 --> -->
-<!-- # mackup 同步配置工具 -->
-<!-- pip install --user mackup -->
-
 # cargo
 curl https://sh.rustup.rs -sSf | sh
 
-# lvim
+# lvim (python 依赖不需要)
+sudo apt install python3-pynvim
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
 
-
-<!-- sudo add-apt-repository ppa:longsleep/golang-backports  -->
-<!-- sudo apt-get install golang-go -->
-<!-- sudo apt-get install screenkey -->
-snap install node --classic
-snap install go --classic
-snap install neovim --classic
-snap install --edge screenkey
-
-<!-- <!-- 不一定需要 --> -->
 <!-- npm 需要 -->
 sudo chown -R black:black /usr/local/{lib,bin,share}
 
 <!-- # fonts -->
 <!-- mkdir -p ~/.local/share/fonts -->
 <!-- fc-cache -f -v -->
-下载 DroidSansMono.zip 安装到 /usr/share/fonts/DroidSansMono
-# 安装 gnome tweaks 设置字体
+下载 DroidSansMono.zip 安装到 /usr/share/fonts/DroidSansMono (可以直接双击字体文件安装, 三个都需要)
 
-<!-- 不一定需要 -->
-sudo apt install ibus ibus-libpinyin ibus-clutter ibus-gtk im-config
-im-config -s ibus
-ibus-setup
+<!-- 设置输入切换 -->
+ibus-setup (中文输入法需要安装)
 reboot
 
-# docker
-<!-- curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun -->
-snap install docker
+
+sudo apt install xorg lightdm lightdm-gtk-greeter i3-wm i3lock i3status i3blocks dmenu terminator
+
+sudo systemctl enable lightdm.service
+sudo systemctl start lightdm.service
+
+sudo apt install rofi polybar
 ```
