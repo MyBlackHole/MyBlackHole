@@ -34,6 +34,9 @@ apt的缓存位置在/var/cache/apt/目录下。
 
 - source
 下载指定安装包的源代码到当前目录下 
+```shell
+sudo apt-get source iputils-ping
+```
 
 - download
 下载指定的deb安装包到当前目录下 
