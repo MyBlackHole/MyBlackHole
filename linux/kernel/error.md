@@ -112,3 +112,9 @@ https://blog.csdn.net/gatieme/article/details/75108154
 
 force_rmmod
 ```
+
+- 编译 mod 内核版本不对
+```shell
+<!-- 指定版本 -->
+sudo yum install "kernel-devel-uname-r == $(uname -r)"
+```
