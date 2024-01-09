@@ -10,9 +10,9 @@
 
 - 跳转
 ```
-
 gg  # 到文件头
 G   # 到文件尾
+
 
 Ngg # 到N行
 NG  #
@@ -65,4 +65,10 @@ set encoding=utf-8
 - 启动耗时检查
 ```shell
 lvim --startuptime <file>
+```
+
+- 跳转到文件指定字节位置
+```shell
+光标到文件 1222 字节位置
+:1222go
 ```
