@@ -82,3 +82,12 @@ make -j8
 ```shell
 musl-1.2.4 安装
 ```
+
+- Looking for protoc -- not found
+```shell
+sudo apt-get install protobuf-compiler
+yum install protobuf-compiler
+```
+- Looking for grpc_cpp_plugin -- not found
+```shell
+```

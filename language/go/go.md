@@ -61,6 +61,8 @@ go mod init hello
 - 静态编译
 ```shell
 CGO_ENABLED=0 go build
+
+CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" server.go
 ```
 
 |                                |                                                 |

@@ -1,5 +1,7 @@
 # bear
 
+<!-- 2.4.4 版本容易编译 -->
+
 - compile_commands.json 生成
 ```shell
 bear -- make

@@ -63,4 +63,9 @@ sshfs -o ro,reconnect,nonempty,port=2222 black@192.168.78.212:/media/black/Data/
 
 sshfs -o ro,reconnect,nonempty,port=22 black@192.168.78.212:/media/black/Data/Documents/github/Cpp/oceanbase /root/oceanbase
 
+sshfs -o reconnect,nonempty,port=2222 black@192.168.78.212:/media/black/Data/Documents/github/Cpp/openGauss-server /media/black/Data/Documents/github/Cpp/openGauss-server
+
+sshfs -o reconnect,nonempty,port=2222 black@192.168.78.212:/media/black/Data/Documents/github/Demo/OpenGauss/openGauss-third_party_binarylibs_Centos7.6_x86_64 /media/black/Data/Documents/github/Demo/OpenGauss/openGauss-third_party_binarylibs_Centos7.6_x86_64
+
+
 ```

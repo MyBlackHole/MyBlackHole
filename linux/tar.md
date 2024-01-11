@@ -34,7 +34,6 @@
 
 |   |   |
 |---|---|
-|tar -cvf log.tar log2012.log|仅打包，不压缩|
 |tar -zcvf log.tar.gz log2012.log|打包后，以 gzip 压缩|
 |tar -jcvf log.tar.bz2 log2012.log|打包后，以 bzip2 压缩|
 |查　询|tar -jtvf filename.tar.bz2|
@@ -49,4 +48,14 @@
 - 解压 bz2
 ```shll
 tar xfj xxxxxxxxxxxx.tar.bz2
+```
+
+- 仅打包，不压缩
+```shell
+tar -cvf log.tar log2012.log
+```
+
+- 压缩
+```shell
+tar -zcvf log.tar log2012.log
 ```
