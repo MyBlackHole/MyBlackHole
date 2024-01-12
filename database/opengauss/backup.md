@@ -4,7 +4,7 @@
 ## 备份流程
 
 1. 打开参数enable_cbm_tracking,跟踪数据页的变化
-```sql
+```shell
 docker exec -it opengauss_master /bin/bash
 su - omm
 gsql
@@ -216,7 +216,7 @@ gs_probackup restore -B /home/omm/backup_1/ --instance=gs_master_backup_1 -D /va
 
 ## 补充
 1. 远程备份
-```sql
+```shell
 # server 端 用户与权限要求
 omm=# create user rep1 with sysadmin replication identified by 'gauss@123';  --rep1权限：sysadmin+replication
 NOTICE:  The encrypted password contains MD5 ciphertext, which is not secure.

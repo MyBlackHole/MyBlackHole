@@ -1,7 +1,7 @@
 # backup
 
 - 查看备份配置
-```sql
+```shell
 obclient> SHOW PARAMETERS LIKE 'backup_dest'\G
 ***************************[ 1. row ]***************************
 zone       | zone1
