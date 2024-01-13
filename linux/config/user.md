@@ -99,10 +99,8 @@ ibus-setup (中文输入法需要安装)
 reboot
 
 
-sudo apt install xorg lightdm lightdm-gtk-greeter i3-wm i3lock i3status i3blocks dmenu terminator
+sudo apt install xorg lightdm lightdm-gtk-greeter i3-wm i3lock i3status i3blocks dmenu terminator rofi polybar mate-power-manager
 
 sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
-
-sudo apt install rofi polybar
 ```

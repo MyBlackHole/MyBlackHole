@@ -308,6 +308,8 @@ EOF 
 - 声卡
 ```shell
 sudo apt-get install alsa-base alsa-utils alsa-oss alsa-tools
+或
+sudo apt install pulseaudio
 ```
 
 - 查询大小端
