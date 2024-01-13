@@ -99,8 +99,19 @@ ibus-setup (中文输入法需要安装)
 reboot
 
 
-sudo apt install xorg lightdm lightdm-gtk-greeter i3-wm i3lock i3status i3blocks dmenu terminator rofi polybar mate-power-manager
+sudo apt install xorg lightdm lightdm-gtk-greeter i3-wm i3lock i3status i3blocks dmenu terminator rofi polybar mate-power-manager xserver-xorg-input-libinput
 
 sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
+
+sudo nvim /etc/X11/xorg.conf.d/70-synaptics.conf
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        Driver "libinput"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Option "Tapping" "on"
+        Option "NaturralScrolling" "true"
+        Option "ClickMethod" "clickfinger"
+EndSection
 ```
