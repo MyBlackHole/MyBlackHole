@@ -57,3 +57,8 @@ xmake run netdb_learn getaddrinfo
 <!-- 执行 netdb_learn -->
 xmake run -d netdb_learn getaddrinfo
 ```
+
+- 静态链接
+```shell
+add_ldflags("-static")
+```

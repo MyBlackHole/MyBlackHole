@@ -14,3 +14,5 @@ https://mirrors.tuna.tsinghua.edu.cn/rubygems/
 
 bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
 ```
+
+## cnfig

@@ -24,12 +24,21 @@ omm=# show enable_cbm_tracking;
 gaussdb=# SELECT pg_cbm_tracked_location();
  pg_cbm_tracked_location
 -------------------------
+ 00000000/3E9F4FA0
+(1 row)
+
+gaussdb=# SELECT pg_cbm_tracked_location();
+ pg_cbm_tracked_location
+-------------------------
  00000000/1834A1D0
 (1 row)
 ```
 
 - 查询指定 lsn 范围修改块 map
 ```shell
+0/15001F78
+gaussdb=# SELECT path,changed_block_number,changed_block_list FROM pg_cbm_get_changed_block('0/F001480', '0/15001F78') where path='base/12737/16401';
+
 gaussdb=# SELECT path,changed_block_number,changed_block_list FROM pg_cbm_get_changed_block('00000000/1833A1D0', '00000000/1834A1D0');
         path         | changed_block_number |                                                                        changed_block_list
 ---------------------+----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------

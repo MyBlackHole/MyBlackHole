@@ -18,5 +18,5 @@ cargo build --target x86_64-unknown-linux-musl
 
 - rust update
 ```shell
-restup update
+restup update 
 ```

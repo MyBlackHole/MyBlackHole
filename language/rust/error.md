@@ -21,3 +21,8 @@ cargo clean && cargo build -vv 2>/dev/null | grep 'rustc-link-lib'
 ```shell
 RUSTFLAGS="-C target-feature=-crt-static" cargo run --target x86_64-unknown-linux-musl
 ```
+
+- path matching sidecar/clash-meta-x86_64-unknown-linux-gnu not found.
+```shell
+???
+```

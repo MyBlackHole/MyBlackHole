@@ -21,6 +21,17 @@
 
     delete : 文件或目录被删除在监控目录中 
 
+
+
+sudo sysctl fs.inotify.max_user_instances=8192
+sudo sysctl fs.inotify.max_user_watches=524288
+sudo sysctl -p
+```
+
+## install
+```shell
+yum install epel-release
+yum install inotify-tools
 ```
 
 ## 例子
@@ -29,4 +40,12 @@
 /usr/bin/inotifywait -mrq --timefmt '%d/%m/%y %H:%M' \
     --format '%T %w %f %e' -e create,delete,modify,attrib \
     test
+
+inotifywait -mrq --timefmt '%d/%m/%y %H:%M' \
+    --format '%T %w %f %e' -e create,delete,modify,attrib \
+    /volmountpoint/aiopool/aio_s3
+
+inotifywait -mrq --timefmt '%d/%m/%y %H:%M' \
+    --format '%T %w %f %e'  \
+    /volmountpoint/aiopool/aio_s3
 ```
