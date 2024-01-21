@@ -31,4 +31,8 @@ go test ./cmd -v -test.run TestAllBitrotAlgorithms
 - bench
 ```shell
 go test -bench BenchmarkFx
+
+go test -v -bench=. benchmark_test.go
+
+go test -v -bench=. -benchtime=5s benchmark_test.go
 ```
