@@ -72,3 +72,8 @@ ssh-keygen -t rsa -C "1358244533@qq.com"
 ```shell
 ssh -i ~/.ssh/id_rsa black@127.0.0.1 -p 1234
 ```
+
+- debug (-v)
+```shell
+ssh git@github.com -vT
+```
