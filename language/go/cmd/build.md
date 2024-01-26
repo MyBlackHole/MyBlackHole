@@ -7,3 +7,13 @@
 ```shell
 GOOS=linux go build -ldflags="-s -w" server.go
 ```
+
+- 静态编译
+```shell
+CGO_ENABLED=0 GOOS=linux go build
+```
+
+- 提供更多调试信息
+```shell
+go build -gcflags="all=-N -l"
+```

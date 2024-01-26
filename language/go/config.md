@@ -12,3 +12,9 @@
 此环境变量用于启用或禁用Go语言运行时的调试信息
 其中一个选项是`gctrace=1`，用于打印垃圾回收的详细日志，包括内存分配和回收的信息
 ```
+
+- 设置代理
+```shell
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.io,direct
+```
