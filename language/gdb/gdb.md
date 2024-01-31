@@ -54,9 +54,32 @@ child                    off              同时调试两个进程，gdb跟子�
 - shell: 使你能不离开gdb就执行UNIX shell命令
 
 ### 例子
+- 多线程调试
+```shell
+
+
+info threads   查看当前进程的线程。
+    GDB会为每个线程分配一个ID, 后面操作线程的时候会用到这个ID.
+    前面有*的是当前调试的线程.
+thread <ID>  切换调试的线程为指定ID的线程。
+
+break ChangeTrackup thread all  为所有经过 ChangeTrackup 的线程设置断点。
+set scheduler-locking off|on|step    
+      在使用step或者continue命令调试当前被调试线程的时候，其他线程也是同时执行的,
+      怎么只让被调试程序执行呢？
+      通过这个命令就可以实现这个需求。
+         off      不锁定任何线程，也就是所有线程都执行，这是默认值。
+         on       只有当前被调试程序会执行。
+         step     在单步的时候，除了next过一个函数的情况
+                  (熟悉情况的人可能知道，这其实是一个设置断点然后continue的行为)以外，
+                  只有当前线程会执行。
+thread apply ID1 ID2 command        让一个或者多个线程执行GDB命令command
+thread apply all command            让所有被调试线程执行GDB命令command。
+```
+
 - 设置多进程调试
 ```shell
-<!-- 调试进程 -->
+<!-- 调试子进程 -->
 set follow-fork-mode child
 
 <!-- 禁用 fork 进程 -->

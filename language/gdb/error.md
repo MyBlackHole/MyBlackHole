@@ -1,5 +1,10 @@
 # error 
 
+- Thread debugging using libthread_db enabled
+```shell
+正常提示,说明启用了线程调试
+```
+
 - <optimized out>
 ```shell
 -O0：这个等级（字母“O”后面跟个零）关闭所有优化选项，也是CFLAGS或CXXFLAGS中没有设置-O等级时的默认等级。这样就不会优化代码，这通常不是我们想要的。
