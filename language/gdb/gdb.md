@@ -6,13 +6,22 @@ https://github.com/cyrus-and/gdb-dashboard
 ```
 
 ## 参数
+| follow-fork-mode | detach-on-fork | 说明 |
+| ---- | ---- | ---- |
+| parent | on | 只调试主进程( GDB 默认) |
+| child | on | 只调试子进程 |
+| parent | off | 同时调试两个进程, gdb 跟主进程, 子进程 block 在 fork 位置 |
+| child | off | 同时调试两个进程, gdb 跟子进程, 主进程 block 在 fork 位置 |
 
-- follow-fork-mode detach-on-fork 
+```shell
+// 设置默认跟踪子进程
+set follow-fork-mode child
+// 看上面，即开启调试多个进程，并且主进程 block 在 fork 位置
+set detach-on-fork off
+b main
+b xxxxxx
 ```
-parent                   on               只调试主进程（GDB默认）
-child                    on               只调试子进程
-parent                   off              同时调试两个进程，gdb跟主进程，子进程block在fork位置
-child                    off              同时调试两个进程，gdb跟子进程，主进程block在fork位置
+
 ```
 
 ### 常用命令
