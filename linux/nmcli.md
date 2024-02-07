@@ -38,8 +38,8 @@ nmcli connection { show \| up \| down \| modify \| add \| edit \| clone \| delet
 |nmcli connection delete prof1|删除一个配置， delete [ id \| uuid \| path ] ID...|
 |nmcli connection add type ethernet ifname enp5s0|创建一个连接。这里没有指定method，则默认使用auto，也就是自动配置。类型是以太网，类型有以太网、wifi，adsl等，具体参考文章头部给的url|
 |nmcli connection add ifname enp5s0 autoconnect yes type ethernet ip4 10.1.1.1/8 gw4 10.1.0.1|创建一个静态ip的以太网连接(自动连接)|
-|nmcli connection modify  myEth +ipv4.dns 8.8.8.8|给myEth的配置添加dns|
-|nmcli connection modify  myEth ipv4.method manual  ipv4.addresses "192.168.43.64/24,10.0.0.23/8"|修改myEth连接为手动，ip地址设置为<br><br>两个|
+|nmcli connection modify myEth +ipv4.dns 8.8.8.8|给myEth的配置添加dns|
+|nmcli connection modify myEth ipv4.method manual ipv4.addresses "192.168.43.64/24,10.0.0.23/8"|修改myEth连接为手动，ip地址设置为<br><br>两个|
 |nmcli con mod myEth  autoconnect no|设置myEth连接配置为不自动连接(重启操作系统或从起NetworkManager就能看到不会自动连接了)|
 
 ### device

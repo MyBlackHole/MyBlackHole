@@ -1,5 +1,18 @@
 ### 异常处理
 
+
+- Permission denied: '/dev/ttyUSB1'
+```shell
+❯ ls -alh /dev/ttyUSB1
+crw-rw---- 1 root dialout 188, 1 Feb  7 09:22 /dev/ttyUSB1
+sudo usermod -aG dialout $USER
+sudo chmod 777 /dev/ttyUSB1
+
+硬件序列号：ATTRS{serial}=="FTSYWCXZ"这个号是唯一的
+vim /etc/udev/rules.d/usb.rules
+ATTRS{serial}=="FTSYWCXZ", MODE:="0777", GROUP:="dialout", SYMLINK+="usb_0"
+```
+
 - libcharset.so.1 is not a symbolic link
 ```shell
 因为 libcharset.so.1 正常情况下应该是一个符号链接,而不是实体文集件,修改其为符号链接即可

@@ -1,5 +1,16 @@
 # gradle
 
+## install
+```shell
+wget https://objects.githubusercontent.com/github-production-release-asset-2e65be/696192900/30b914b2-256d-49b6-a68b-acaee9259642?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240205T022619Z&X-Amz-Expires=300&X-Amz-Signature=c9f60548777c2e9358cf50896398e2ba54ab4f9d6ed26ecb5e779c57b0ec6186&X-Amz-SignedHeaders=host&actor_id=39358316&key_id=0&repo_id=696192900&response-content-disposition=attachment%3B%20filename%3Dgradle-8.6-bin.zip&response-content-type=application%2Foctet-stream
+mkdir /opt/gradle
+unzip -d /opt/gradle gradle-8.6-bin.zip
+ls /opt/gradle/gradle-8.6
+```
+
+
+## config
+
 - 设置代理
 ```shell
 org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1080
