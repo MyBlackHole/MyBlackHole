@@ -1,3 +1,10 @@
+# error
+
+- 错误：只允许在 C99 模式下使用‘for’循环初始化声明
+```shell
+gcc xxx.c --std=c99
+```
+
 - 错误： ‘enum fsconfig_command’多次定义
 https://github.com/gcc-mirror/gcc/commit/2701442d0cf6292f6624443c15813d6d1a3562fe
 
