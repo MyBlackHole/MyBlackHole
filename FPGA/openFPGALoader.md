@@ -1,8 +1,5 @@
 # openFPGALoader
 
-
-
-
 烧录工具
 
 - 安装
@@ -24,43 +21,61 @@ sudo apt install \
 git clone git@github.com:trabucayre/openFPGALoader.git
 cd openFPGALoader
 mkdir build
-cmake ..
+cmake -DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/openFPGALoader/master \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+    -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
+    -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g" ..
 make 
-sudo make install
+make install
 <!-- cargo install ecpdap -->
 ```
 
 - 检测板卡
 ```shell
-sudo ./openFPGALoader --detect # 对于这行命令应当在你上一步执行make install的目录下执行 
-# 下面是正常执行后显示的log
+❯ sudo ./bin/openFPGALoader --detect
+empty
+No cable or board specified: using direct ft2232 interface
 Jtag frequency : requested 6.00MHz   -> real 6.00MHz
 index 0:
-        idcode 0x100481b
+        idcode 0x81b
         manufacturer Gowin
-        family GW1N
-        model  GW1N(R)-9C
+        family GW2A
+        model  GW2A(R)-18(C)
         irlength 8
 ```
 
 - 下载流
 ```shell
-$ sudo ./openFPGALoader -b tangnano9k -f ../../nano9k_lcd/impl/pnr/Tang_nano_9K_LCD.fs
-# 其中的 -b 表示目标板型号，具体可以参考下面表格
-# -f 表示下载到 flash，不加的话会下载到 sram 中
-# 最后的是需要烧录的文件，应该找到对应目录下的 .fs 文件
-# 下面是成功执行后的log
+<!-- -b 表示目标板型号，具体可以参考下面表格 -->
+<!-- -f 表示下载到 flash，不加的话会下载到 sram 中 -->
+<!-- 最后的是需要烧录的文件，应该找到对应目录下的 .fs 文件 -->
+❯ sudo ./bin/openFPGALoader -b tangnano20k -f /media/black/Data/Documents/github/Glsl/TangNano-20K-example/hdmi/hdmi.fs
+empty
 write to flash
-Jtag frequency : requested 6.00MHz   -> real 6.00MHz  
-Parse file Parse ../../nano9k_lcd/impl/pnr/Tang_nano_9K_LCD.fs: 
+Jtag frequency : requested 6.00MHz   -> real 6.00MHz
+Parse file Parse /media/black/Data/Documents/github/Glsl/TangNano-20K-example/hdmi/hdmi.fs:
 Done
 DONE
-Jtag frequency : requested 2.50MHz   -> real 2.00MHz  
-erase SRAM Done
-erase Flash Done
-write Flash: [==================================================] 100.00%
+after program flash: displayReadReg 00006020
+        Memory Erase
+        Done Final
+        Security Final
+Erase SRAM DONE
+Jtag probe limited to %d MHz6000000
+Jtag frequency : requested 10.00MHz  -> real 6.00MHz
+Detected: Winbond W25Q64 128 sectors size: 64Mb
+Detected: Winbond W25Q64 128 sectors size: 64Mb
+RDSR : 00
+WIP  : 0
+WEL  : 0
+BP   : 0
+TB   : 0
+SRWD : 0
+00000000 00000000 00000000 00
+Erasing: [==================================================] 100.00%
 Done
-CRC check: Success
+Writing: [==================================================] 100.00%
+Done
 
 ```
 - 其中-b表示目标板型，可以使用以下取值：
@@ -73,4 +88,3 @@ CRC check: Success
 |tangnano9k|GW1NR-9C QN88P|OK|Internal Flash|
 |tangnano20k|GW2AR-18C QN88|OK|External Flash|
 |tangprimer20k|GW2A-18C BGA256|OK|External Flash|
-
