@@ -27,3 +27,6 @@
 |尺寸|22.55mm x 54.04mm|精确尺寸可以参考 3D 文件|
 
 ![[imgs/Pasted image 20240203090308.png]]
+
+![[imgs/Pasted image 20240208085900.png]]
+![[imgs/Pasted image 20240208085934.png]]
