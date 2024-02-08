@@ -68,7 +68,7 @@ systemctl restart nfs-server
 nvim /etc/exports
 ## 添加 
 /aiopool 192.168.78.0/24(rw,sync,no_subtree_check)
-systemctl reload nfs
+systemctl reload nfs (或 exportfs -r)
 
 showmount -e 192.168.78.214
 Export list for 192.168.78.214:
@@ -83,3 +83,5 @@ nvim /etc/fstab
 192.168.78.214:/aiopool  /root/aiopool       nfs    defaults 0 0
 mount -a
 ```
+
+![[imgs/Pasted image 20240208100622.png]]

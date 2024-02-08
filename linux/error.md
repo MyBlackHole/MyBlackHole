@@ -104,3 +104,8 @@ yum install protobuf-compiler
 - Looking for grpc_cpp_plugin -- not found
 ```shell
 ```
+
+- gui 显示乱码
+```shell
+sudo apt install -y fonts-wqy-zenhei
+```
