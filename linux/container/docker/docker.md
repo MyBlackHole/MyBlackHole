@@ -230,3 +230,8 @@ docker system prune
 docker system prune -a
 ```
 
+- 设置 docker 打开文件数量
+```shell
+<!-- docker 执行 run 加上 -->
+--ulimit nofile=65535:65535
+```

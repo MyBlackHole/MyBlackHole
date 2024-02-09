@@ -12,6 +12,9 @@ docker run -p 2881:2881 --name oceanbase-ce -e MODE=normal -d oceanbase/oceanbas
 
 # deploy a quick-start instance in any mode as desired to the current container
 docker run -p 2881:2881 --name oceanbase-ce -e FASTBOOT=true -d oceanbase/oceanbase-ce
+
+
+docker run -p 2881:2881 --ulimit nofile=65535:65535 --name obstandalone -d oceanbase/oceanbase-ce:3.1.3
 ```
 
 ```shell
@@ -20,6 +23,9 @@ boot success!
 ```
 
 ```shell
+docker exec -it obstandalone ob-mysql sys
+
+
 docker exec -it oceanbase-ce ob-mysql sys # Connect to sys tenant
 docker exec -it oceanbase-ce ob-mysql root # Connect to the root account of a general tenant
 docker exec -it oceanbase-ce ob-mysql test # Connect to the test account of a general tenant
