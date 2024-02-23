@@ -119,6 +119,39 @@ C-b E	均匀地展开窗格	Spread panes out evenly
 C-b L	切换到最后一个客户	Switch to the last client
 C-b M	清除标记的窗格	Clear the marked pane
 C-b [	进入复制模式	Enter copy mode
+    ```shell
+        vi             emacs        功能
+        ^              M-m          反缩进
+        Escape         C-g          清除选定内容
+        Enter          M-w          复制选定内容
+        j              Down         光标下移
+        h              Left         光标左移
+        l              Right        光标右移
+        L                           光标移到尾行
+        M              M-r          光标移到中间行
+        H              M-R          光标移到首行
+        k              Up           光标上移
+        d              C-u          删除整行
+        D              C-k          删除到行末
+        $              C-e          移到行尾
+        :              g            前往指定行
+        C-d            M-Down       向下滚动半屏
+        C-u            M-Up         向上滚动半屏
+        C-f            Page down    下一页
+        w              M-f          下一个词
+        p              C-y          粘贴
+        C-b            Page up      上一页
+        b              M-b          上一个词
+        q              Escape       退出
+        C-Down or J    C-Down       向下翻
+        C-Up or K      C-Up         向下翻
+        n              n            继续搜索
+        ?              C-r          向前搜索
+        /              C-s          向后搜索
+        0              C-a          移到行首
+        Space          C-Space      开始选中
+                       C-t          字符调序
+    ```
 C-b ]	粘贴最新的粘贴缓冲区	Paste the most recent paste buffer
 C-b c	创建一个新窗口	Create a new window
 C-b d	分离当前客户	Detach the current client
@@ -166,3 +199,5 @@ C-b S-Down	向下移动窗口的可见部分	Move the visible part of the window
 C-b S-Left	向左移动窗口的可见部分	Move the visible part of the window left
 C-b S-Right	向右移动窗口的可见部分	Move the visible part of the window right
 C-b C-o	互换窗口位置
+
+

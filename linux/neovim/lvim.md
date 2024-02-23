@@ -4,6 +4,12 @@
 
 ![[imgs/Pasted image 20231221145136.png]]
 
+
+## install
+```shell
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+```
+
 ```vim
 :r! {command} # 将命令{command}的标准输出插入到光标下
 ```
