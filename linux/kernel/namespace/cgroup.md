@@ -11,7 +11,7 @@
 因为系统上默认仍然开启cgroup v1，所以我们需要配置一下系统，并且换成cgroup v2。为了确认切换是否成功，我们需要先看一下v1什么样？
 
 ```auto
-[root@localhost zorro]# mount
+[root@localhost]# mount
 ......
 cgroup on /sys/fs/cgroup/rdma type cgroup (rw,nosuid,nodev,noexec,relatime,rdma)
 cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
@@ -31,25 +31,25 @@ mount命令中显示的这些cgroup的目录，就是v1的样子。下面我们�
 
 systemd.unified_cgroup_hierarchy=1
 
-这个参数的意思是，打开cgroup的unified属性。是的，unified的cgroup就是v2了。我们加上参数重新引导之后看一下状态：
+这个参数的意思是，打开 cgroup 的 unified 属性。是的，unified 的 cgroup 就是v2了。我们加上参数重新引导之后看一下状态：
 
 ```auto
 grubby --update-kernel=ALL --args=systemd.unified_cgroup_hierarchy=1
 ```
 
-在grub2中加入相关内核参数，之后重启系统。
+在 grub2 中加入相关内核参数，之后重启系统。
 
 ```auto
-[root@localhost zorro]# mount|grep cgroup
+[root@localhost]# mount|grep cgroup
 cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
 ```
 
-cgroup v1比v2啰嗦了不少，切换v2后世界清爽了很多。
+cgroup v1比v2啰嗦了不少，切换 v2 后世界清爽了很多。
 
 我们再来看一下cgroup v2的目录树结构：
 
 ```auto
-[root@localhost zorro]# ls -p /sys/fs/cgroup/
+[root@localhost]# ls -p /sys/fs/cgroup/
 cgroup.controllers      cgroup.stat             cpuset.cpus.effective  machine.slice/
 cgroup.max.depth        cgroup.subtree_control  cpuset.mems.effective  memory.pressure
 cgroup.max.descendants  cgroup.threads          init.scope/            system.slice/
@@ -60,15 +60,10 @@ cgroup.procs            cpu.pressure            io.pressure            user.slic
 
 ## 如何新建一个cgroup？
 
-根v1类似，我们也是通过在cgroup相关目录下创建新的目录来创建cgoup控制对象的。比如我们想创建一个叫zorro的cgroup组：
+根 v1 类似，我们也是通过在 cgroup 相关目录下创建新的目录来创建 cgoup 控制对象的。比如我们想创建一个叫 zorro 的 cgroup 组：
 
 ```auto
-[root@localhost zorro]# cd /sys/fs/cgroup/
-[root@localhost cgroup]# ls
-cgroup.controllers      cgroup.stat             cpuset.cpus.effective  machine.slice
-cgroup.max.depth        cgroup.subtree_control  cpuset.mems.effective  memory.pressure
-cgroup.max.descendants  cgroup.threads          init.scope             system.slice
-cgroup.procs            cpu.pressure            io.pressure            user.slice
+[root@localhost]# cd /sys/fs/cgroup/
 [root@localhost cgroup]# mkdir zorro
 [root@localhost cgroup]# ls zorro/
 cgroup.controllers      cgroup.stat             io.pressure     memory.min           memory.swap.max
@@ -81,42 +76,48 @@ cgroup.procs            cpu.stat                memory.max      memory.swap.even
 
 解释一下目录中的文件：
 
-cgroup.controllers：这个文件显示了当前cgoup可以限制的相关资源有哪些？v2之所以叫unified，除了在内核中实现架构的区别外，体现在外在配制方法上也有变化。比如，这一个文件就可以控制当前cgroup都支持哪些资源的限制。而不是像v1一样资源分别在不同的目录下进行创建相关cgroup。
+cgroup.controllers：这个文件显示了当前 cgoup 可以限制的相关资源有哪些？
+v2 之所以叫 unified，除了在内核中实现架构的区别外，体现在外在配制方法上也有变化。
+比如，这一个文件就可以控制当前 cgroup 都支持哪些资源的限制。
+而不是像v1一样资源分别在不同的目录下进行创建相关 cgroup。
 
-默认创建出来的zorro组中的cgroup.controllers内容为：
+默认创建出来的 zorro 组中的 cgroup.controllers 内容为：
 
 ```auto
 [root@localhost cgroup]# cat zorro/cgroup.controllers
 memory pids
 ```
 
-表示当前cgroup只支持针对memory和pids的限制。如果我们要创建可以支持更多资源限制能力的组，就要去其上一级目录的文件中查看，整个cgroup可以支持的资源限制有哪些？
+表示当前 cgroup 只支持针对 memory 和 pids 的限制。
+如果我们要创建可以支持更多资源限制能力的组，就要去其上一级目录的文件中查看，整个 cgroup 可以支持的资源限制有哪些？
 
 ```auto
 [root@localhost zorro]# cat /sys/fs/cgroup/cgroup.controllers
 cpuset cpu io memory pids
 ```
 
-当前cgroup可以支持cpuset cpu io memory pids的资源限制。
+当前 cgroup 可以支持 cpuset cpu io memory pids 的资源限制。
 
-cgroup.subtree\_control：这个文件内容应是cgroup.controllers的子集。其作用是限制在当前cgroup目录层级下创建的子目录中的cgroup.controllers内容。就是说，子层级的cgroup资源限制范围被上一级的cgroup.subtree\_control文件内容所限制。
+cgroup.subtree_control：这个文件内容应是 cgroup.controllers 的子集。
+其作用是限制在当前 cgroup 目录层级下创建的子目录中的 cgroup.controllers 内容。
+就是说，子层级的 cgroup 资源限制范围被上一级的 cgroup.subtree_control 文件内容所限制。
 
-所以，如果我们想创建一个可以支持cpuset cpu io memory pids全部五种资源限制能力的cgroup组的话，应该做如下操作：
+所以，如果我们想创建一个可以支持 cpuset cpu io memory pids 全部五种资源限制能力的 cgroup 组的话，应该做如下操作：
 
 ```auto
-[root@localhost zorro]# cat /sys/fs/cgroup/cgroup.controllers
+[root@localhost]# cat /sys/fs/cgroup/cgroup.controllers
 cpuset cpu io memory pids
-[root@localhost zorro]# cat /sys/fs/cgroup/cgroup.subtree_control
+[root@localhost]# cat /sys/fs/cgroup/cgroup.subtree_control
 cpu memory pids
-[root@localhost zorro]# echo '+cpuset +cpu +io +memory +pids' > /sys/fs/cgroup/cgroup.subtree_control
-[root@localhost zorro]# cat !$
+[root@localhost]# echo '+cpuset +cpu +io +memory +pids' > /sys/fs/cgroup/cgroup.subtree_control
+[root@localhost]# cat !$
 cat /sys/fs/cgroup/cgroup.subtree_control
 cpuset cpu io memory pids
-[root@localhost zorro]# mkdir /sys/fs/cgroup/zorro
-[root@localhost zorro]# cat /sys/fs/cgroup/zorro/cgroup.controllers
+[root@localhost]# mkdir /sys/fs/cgroup/zorro
+[root@localhost]# cat /sys/fs/cgroup/zorro/cgroup.controllers
 cpuset cpu io memory pids
-[root@localhost zorro]# cat /sys/fs/cgroup/zorro/cgroup.subtree_control
-[root@localhost zorro]# ls /sys/fs/cgroup/zorro/
+[root@localhost]# cat /sys/fs/cgroup/zorro/cgroup.subtree_control
+[root@localhost]# ls /sys/fs/cgroup/zorro/
 cgroup.controllers      cpu.pressure           io.max               memory.oom.group
 cgroup.events           cpu.stat               io.pressure          memory.pressure
 cgroup.freeze           cpu.weight             io.stat              memory.stat
@@ -130,28 +131,36 @@ cgroup.type             io.bfq.weight          memory.max
 cpu.max                 io.latency             memory.min
 ```
 
-此时我们创建的zorro组就有cpu，cpuset，io，memory，pids等常见的资源限制能力了。另外要注意，被限制进程只能添加到叶子结点的组中，不能添加到中间结点的组内。
+此时我们创建的 zorro 组就有 cpu，cpuset，io，memory，pids 等常见的资源限制能力了。
+另外要注意，被限制进程只能添加到叶子结点的组中，不能添加到中间结点的组内。
 
 我们再来看一下其他cgroup开头的文件说明：
+cgroup.events：包含两个只读的 key-value。
+    populated：
+        1 表示当前 cgroup 内有进程，
+        0 表示没有。
+    frozen：
+        1 表示当前 cgroup 为 frozen 状态，
+        0 表示非此状态。
+cgroup.type：表示当前cgroup的类型，cgroup 类型包括：“domain”：默认类型。
+    “domain threaded”：作为threaded类型cgroup的跟结点。
+    “domain invalid”：无效状态cgroup。
+    “threaded”：threaded类型的cgoup组。
 
-cgroup.events：包含两个只读的key-value。populated：1表示当前cgroup内有进程，0表示没有。frozen：1表示当前cgroup为frozen状态，0表示非此状态。
-
-cgroup.type：表示当前cgroup的类型，cgroup类型包括：“domain”：默认类型。“domain threaded”：作为threaded类型cgroup的跟结点。“domain invalid”：无效状态cgroup。“threaded”：threaded类型的cgoup组。
-
-这里引申出一个新的知识，即：cgroup v2支持threaded模式。所谓threaded模式其本质就是控制对象从进程为单位支持到了线程为单位。我们可以在一个由domain threaded类型的组中创建多个threaded类型的组，并把一个进程的多个线程放到不同的threaded类型组中进行资源限制。
-
+这里引申出一个新的知识，
+即：cgroup v2支持threaded模式。
+所谓threaded模式其本质就是控制对象从进程为单位支持到了线程为单位。
+我们可以在一个由domain threaded类型的组中创建多个threaded类型的组，并把一个进程的多个线程放到不同的threaded类型组中进行资源限制。
 创建threaded类型cgroup的方法就是把cgroup.type改为对应的类型即可。
 
-cgroup.procs：查看这个文件显示的是当前在这个cgroup中的pid list。echo一个pid到这个文件可以将对应进程放入这个组中进行资源限制。
-
+cgroup.procs：查看这个文件显示的是当前在这个 cgroup 中的 pid list。
+    echo 一个 pid 到这个文件可以将对应进程放入这个组中进行资源限制。
 cgroup.threads：跟上一个文件概念相同，区别是针对tid进行控制。
-
 cgroup.max.descendants：当前cgroup目录中可以允许的最大子cgroup个数。默认值为max。
-
 cgroup.max.depth：当前cgroup目录中可以允许的最大cgroup层级数。默认值为max。
-
-cgroup.stat：包含两个只读的key-value。nr\_descendants：当前cgroup下可见的子孙cgroup个数。nr\_dying\_descendants：这个cgroup下曾被创建但是已被删除的子孙cgroup个数。
-
+cgroup.stat：包含两个只读的key-value。
+    nr_descendants：当前cgroup下可见的子孙cgroup个数。
+    nr_dying_descendants：这个cgroup下曾被创建但是已被删除的子孙cgroup个数。
 cgroup.freeze：值为1可以将cgroup值为freeze状态。默认值为0，
 
 当然，相关说明大家也可以在内核源代码中的：Documentation/admin-guide/cgroup-v2.rst 找到其解释。
@@ -172,21 +181,14 @@ cpuset.cpus：用来制定当前cgroup绑定的cpu编号。如：
 ```
 
 cpuset.cpus.effective：显示当前cgroup真实可用的cpu列表。
-
 cpuset.mems：用来在numa架构的服务器上绑定node结点。比如：
-
 cpuset.mems.effective：显示当前cgroup真实可用的mem node列表。
-
 cpuset.cpus.partition：这个文件可以被设置为：root或member，主要功能是用来设置当前cgroup是不是作为一个独立的scheduling domain进行调度。这个功能其实就可以理解为，在root模式下，所有分配给当前cgroup的cpu都是独占这些cpu的，而member模式则可以多个cgroup之间共享cpu。设置为root将使当前cgroup使用的cpu从上一级cgroup的cpuset.cpus.effective列表中被拿走。设置为root之后，如果这个cgroup有下一级的cgroup，这个cgroup也将不能再切换回member状态。在这种模式下，上一级cgroup不可以把自己所有的cpu都分配给其下一级的cgroup，其自身至少给自己留一个cpu。
 
 设置为root需要当前cgroup符合以下条件：
-
 1、cpuset.cpus中设置不为空且设置的cpu list中的cpu都是独立的。就是说这些cpu不会共享给其他平级cgroup。
-
 2、上一级cgroup是partition root配置。
-
 3、当前cgroup的cpuset.cpus作为集合是上一级cgroup的cpuset.cpus.effective集合的子集。
-
 4、下一级cgroup中没有启用cpuset资源隔离。
 
 更细节的说明可以参见文档。
@@ -206,7 +208,8 @@ cat /sys/fs/cgroup/zorro/cpu.max
 50000 100000
 ```
 
-这个含义是，在100000所表示的时间周期内，有50000是分给本cgroup的。也就是配置了本cgroup的cpu占用在单核上不超过50%。我们来测试一下：
+这个含义是，在100000所表示的时间周期内，有50000是分给本cgroup的。
+也就是配置了本cgroup的cpu占用在单核上不超过50%。我们来测试一下：
 
 ```auto
 [root@localhost zorro]# cat while.sh
@@ -248,17 +251,17 @@ cpu.weight.nice：当前可以支持使用nice值的方式设置权重。取值�
 
 cpu.stat：是当前cgroup的cpu消耗统计。显示的内容包括：
 
-usage\_usec：占用cpu总时间。
+usage_usec：占用cpu总时间。
 
-user\_usec：用户态占用时间。
+user_usec：用户态占用时间。
 
-system\_usec：内核态占用时间。
+system_usec：内核态占用时间。
 
-nr\_periods：周期计数。
+nr_periods：周期计数。
 
-nr\_throttled：周期内的限制计数。
+nr_throttled：周期内的限制计数。
 
-throttled\_usec：限制执行的时间。
+throttled_usec：限制执行的时间。
 
 cpu.pressure：显示当前cgroup的cpu使用压力状态。详情参见：Documentation/accounting/psi.rst。psi是内核新加入的一种负载状态检测机制，可以目前可以针对cpu、memory、io的负载状态进行检测。通过设置，我们可以让psi在相关资源负载达到一定阈值的情况下给我们发送一个事件。用户态可以通过对文件事件的监控，实现针对相关负载作出相关相应行为的目的。psi的话题可以单独写一个文档，所以这里不细说了。
 
@@ -296,7 +299,7 @@ memory.pressure：当前cgroup内存使用的psi接口文件。
 
 ## IO资源隔离
 
-io资源隔离相比cgroup v1的改进亮点就是实现了buffer io的限制，让io限速使用在生产环境的条件真正成熟了。我们先来看一下效果：
+io 资源隔离相比 cgroup v1 的改进亮点就是实现了 buffer io 的限制，让io限速使用在生产环境的条件真正成熟了。我们先来看一下效果：
 
 ```auto
 [root@localhost zorro]# df
@@ -412,7 +415,9 @@ io.stat：查看本cgroup的io相关信息统计。包括：
 
 io.weight：权重方式分配io资源的接口。默认为：default 100。default可以替换成$MAJ:$MIN表示的设备编号，如：8:0
 
-，表示针对那个设备的配置。后面的100表示权重，取值范围是：\[1, 10000\]。表示本cgroup中的进程使用某个设备的io权重是多少？如果有多个cgroup同时争抢一个设备的io使用的话，他们将按权重进行io资源分配。
+，表示针对那个设备的配置。
+后面的100表示权重，取值范围是：[1, 10000]。
+表示本cgroup中的进程使用某个设备的io权重是多少？如果有多个cgroup同时争抢一个设备的io使用的话，他们将按权重进行io资源分配。
 
 io.bfq.weight：针对bfq的权重配置文件。
 
@@ -425,7 +430,9 @@ cat /sys/fs/cgroup/zorro/io.latency
 253:0 target=100
 ```
 
-target的单位是ms。如果cgroup检测到当前cgroup内的io响应延迟时间超过了这个target，那么cgroup可能会限制同一个父级cgroup下的其他同级别cgroup的io负载，以尽量让当前cgroup的target达到预期。更详细文档可以查看：Documentation/admin-guide/cgroup-v2.rst
+target的单位是ms。如果cgroup检测到当前cgroup内的io响应延迟时间超过了这个target，
+那么cgroup可能会限制同一个父级cgroup下的其他同级别cgroup的io负载，以尽量让当前cgroup的target达到预期。
+更详细文档可以查看：Documentation/admin-guide/cgroup-v2.rst
 
 io.pressure：当前cgroup的io资源的psi接口文件。
 
@@ -437,4 +444,6 @@ pids.current：显示当前cgroup中的进程个数。包括其子孙cgroup。
 
 ## 最后
 
-以上是cgroup v2的配置说明。我们会发现，跟v1相比，新版cgroup配置上的复杂度要小很多。并且加入了包括buffer io限制和psi等新的功能。新版cgroup也放弃了配置网络资源隔离的接口，当然需要的话，网络资源隔离部分还是可以直接使用tc进行配置。
+以上是cgroup v2的配置说明。我们会发现，跟v1相比，新版cgroup配置上的复杂度要小很多。
+并且加入了包括buffer io限制和psi等新的功能。新版cgroup也放弃了配置网络资源隔离的接口，
+当然需要的话，网络资源隔离部分还是可以直接使用tc进行配置。
