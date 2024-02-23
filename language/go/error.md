@@ -1,3 +1,11 @@
+# error
+
+- linkmode requires external (cgo) linking, but cgo is not enabled
+```shell
+源码拉取直接编译正常
+奇怪,算了不重要
+```
+
 - 
 SECURITY ERROR
 This download does NOT match an earlier download recorded in go.sum.
