@@ -1,5 +1,14 @@
 # ulimit
 
+-H: 对给定资源的硬限制(hard limit)
+-S: 对给定资源软限制(soft limit)
+
+- 系统级别进程打开文件最大限制
+```shell
+cat /proc/sys/fs/file-max
+9223372036854775807
+```
+
 - 查看所有限制
 ```shell
 ulimit -a
