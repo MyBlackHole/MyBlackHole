@@ -128,14 +128,10 @@ Source directories searched: /media/black/Data/Documents/github/C/tbox:/media/bl
 break sys_socket_learn/shutdown_test.c:66
 ```
 
-- 函数调用
-```shell
-call close(3)
-```
-
 - 预编译
 ```shell
 gcc -E macro.c
+gcc -I./ -I./include -E -P  libbcachefs/opts.c > opts_test.h
 ```
 
 - 调试 pid 进程
