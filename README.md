@@ -21,4 +21,4 @@ docke、kubernetes、kubesphere、nginx、ELK
 AES、RSA、BASE64、BASE62…
 
 ### 开发板
-ESP32、STM32
+ESP32、STM32，FPGA
