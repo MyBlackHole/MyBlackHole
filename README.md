@@ -1,5 +1,5 @@
 ### 开发环境
-ubuntu、i3wm、tmux、lvim（neovim）
+arch、hypland、kitty、lvim（neovim）
 
 ### 开发语言
 C、golang、python 、flutter
