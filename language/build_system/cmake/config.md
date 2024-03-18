@@ -67,7 +67,6 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
 
 <!-- 或 -->
-
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 ```
 
@@ -98,4 +97,12 @@ target_link_libraries(oss_c_sdk_test m)
 - 指定安装路径
 ```shell
  cmake -DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/h2o/master -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+```
+
+
+## CMAKE_BUILD_TYPE
+
+- RelWithDebInfo (等价 -02 -g)
+```shell
+CMAKE_BUILD_TYPE=RelWithDebInfo
 ```

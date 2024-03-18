@@ -18,3 +18,12 @@
 info macro raxNodeFirstChildPtr
 ```
 
+- 查看进程列表
+```shell
+(gdb) info inferiors 
+  Num  Description       Connection           Executable        
+* 1    process 185298    1 (native)           /run/media/black/Data/lib/postgres/zh_master/bin/postgres 
+  2    process 185379    1 (native)           /run/media/black/Data/lib/postgres/zh_master/bin/postgres 
+  3    process 185385    1 (native)           /run/media/black/Data/lib/postgres/zh_master/bin/postgres 
+  4    process 185465    1 (native)           /run/media/black/Data/lib/postgres/zh_master/bin/postgres 
+```

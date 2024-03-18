@@ -20,6 +20,8 @@ $(reg)	获取windows注册表配置项的值	>= 2.1.5
 - 生成 c 工程 console 类型
 ```shell
 xmake create -l c -t console test
+
+xmake create -l c -t tbox.static test
 ```
 
 - debug 模式

@@ -18,3 +18,9 @@
 -O2 进一步优化。
 -O3 比 -O2 更进一步优化，包括 inline 函数。
 ```
+
+- Target multi-thread does not support this command. (执行反向调试)
+```shell
+<!-- 需要激活指令记录 -->
+record
+```
