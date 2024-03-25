@@ -24,16 +24,6 @@ xmake create -l c -t console test
 xmake create -l c -t tbox.static test
 ```
 
-- debug 模式
-```shell
-xmake config -m debug
-```
-
-- 配置
-```shell
-xmake config --menu
-```
-
 - 生成 compile_commands.json
 ```shell
 xmake project -k compile_commands
@@ -43,24 +33,13 @@ xmake project -k compile_commands
 ```shell
 xmake l find_package mysqlclient
 ```
-- 编译
+- 编译 (-D 显示详情信息)
 ```shell
-xmake
-```
-
-- 执行指定目标
-```shell
-<!-- 执行 netdb_learn -->
-xmake run netdb_learn getaddrinfo
-```
-
-- gdb debug 指定目标
-```shell
-<!-- 执行 netdb_learn -->
-xmake run -d netdb_learn getaddrinfo
+xmake -D
 ```
 
 - 静态链接
 ```shell
 add_ldflags("-static")
 ```
+

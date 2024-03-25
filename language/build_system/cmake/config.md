@@ -101,7 +101,7 @@ target_link_libraries(oss_c_sdk_test m)
 
 
 ## CMAKE_BUILD_TYPE
-
+<!-- CMakeCache.txt -->
 - RelWithDebInfo (等价 -02 -g)
 ```shell
 CMAKE_BUILD_TYPE=RelWithDebInfo
