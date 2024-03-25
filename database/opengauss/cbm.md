@@ -51,4 +51,7 @@ gaussdb=# SELECT path,changed_block_number,changed_block_list FROM pg_cbm_get_ch
  base/12737/12212    |                    1 | 48
  base/12737/12290    |                    1 | 1
 (8 rows)
+
+SELECT path,changed_block_number,changed_block_list FROM pg_cbm_get_changed_block('00000000/1833A1D0', '0/C9EF7310');
+
 ```

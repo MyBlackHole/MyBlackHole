@@ -28,3 +28,8 @@ gdb bin/observer
 apt-get install git wget rpm rpm2cpio cpio make build-essential binutils
 bash build.sh debug --init --make
 ```
+
+- 归档逻辑
+```shell
+ob_archive_sender.cpp:ObArchiveSender::handle
+```
