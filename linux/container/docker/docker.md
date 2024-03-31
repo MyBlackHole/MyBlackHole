@@ -1,4 +1,4 @@
-# docker (推荐 nerdctl)
+# docker (推荐 podman)
 ## install
 
 ### 离线安装
