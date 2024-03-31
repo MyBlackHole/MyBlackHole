@@ -28,7 +28,7 @@ inferior 4
 - 多进程 debug
 ```shell
 
-braek fork
+break fork
 
 
 // 设置默认跟踪子进程
