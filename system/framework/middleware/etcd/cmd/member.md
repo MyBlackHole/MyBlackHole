@@ -36,3 +36,11 @@ etcd --name=etcd4 --data-dir=/etcd-data \
   --initial-cluster-state=existing
 ```
 
+
+```shell
+[root@pg02 etcd]# etcdctl --endpoints http://192.168.60.218:3379,http://192.168.60.219:3379,http://192.168.60.220:3379 member list
+72949a285662caa0: name=etcd23 peerURLs=http://192.168.60.220:3380 clientURLs=http://192.168.60.220:3379 isLeader=false
+7b436bc46de995ed: name=etcd21 peerURLs=http://192.168.60.218:3380 clientURLs=http://192.168.60.218:3379 isLeader=true
+e74b4c16b058015c: name=etcd22 peerURLs=http://192.168.60.219:3380 clientURLs=http://192.168.60.219:3379 isLeader=false
+
+```
