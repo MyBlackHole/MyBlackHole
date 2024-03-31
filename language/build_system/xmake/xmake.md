@@ -24,15 +24,11 @@ xmake create -l c -t console test
 xmake create -l c -t tbox.static test
 ```
 
-- 生成 compile_commands.json
-```shell
-xmake project -k compile_commands
-```
-
 - 查找系统包(mysqlclient)信息
 ```shell
 xmake l find_package mysqlclient
 ```
+
 - 编译 (-D 显示详情信息)
 ```shell
 xmake -D

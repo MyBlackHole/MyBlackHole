@@ -25,3 +25,8 @@ configure 加入
 yum install gcc-c++
 yum install glibc-headers (不一定要)
 ```
+
+- cc1plus没有找到或目录
+```shell
+yum install gcc-c++
+```
