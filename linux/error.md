@@ -109,3 +109,8 @@ yum install protobuf-compiler
 ```shell
 sudo apt install -y fonts-wqy-zenhei
 ```
+
+- 'xterm-kitty': unknown terminal type
+```shell
+export TERM=xterm
+```

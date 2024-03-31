@@ -178,18 +178,18 @@ C-b Up	选择活动窗格上方的窗格	Select the pane above the active pane
 C-b Down	选择活动窗格下面的窗格	Select the pane below the active pane
 C-b Left	选择活动窗格左侧的窗格	Select the pane to the left of the active pane
 C-b Right	选择活动窗格右侧的窗格	Select the pane to the right of the active pane
-C-b M-1	设置水平布局	Set the even-horizontal layout
-C-b M-2	设置偶数垂直布局	Set the even-vertical layout
-C-b M-3	设置主水平布局	Set the main-horizontal layout
-C-b M-4	设置主垂直布局	Set the main-vertical layout
-C-b M-5	选择平铺的布局	Select the tiled layout
-C-b M-n	选择带有警报的下一个窗口	Select the next window with an alert
-C-b M-o	反向旋转窗格	Rotate through the panes in reverse
-C-b M-p	选择带有警报的上一个窗口	Select the previous window with an alert
-C-b M-Up	调整窗格大小为5	Resize the pane up by 5
-C-b M-Down	将窗格缩小5	Resize the pane down by 5
-C-b M-Left	调整左窗格大小为5	Resize the pane left by 5
-C-b M-Right	将窗格右移5	Resize the pane right by 5
+C-b M-1(A-1)	设置水平布局	Set the even-horizontal layout
+C-b M-2(A-2)	设置偶数垂直布局	Set the even-vertical layout
+C-b M-3(A-3)	设置主水平布局	Set the main-horizontal layout
+C-b M-4(A-4)	设置主垂直布局	Set the main-vertical layout
+C-b M-5(A-5)	选择平铺的布局	Select the tiled layout
+C-b M-n(A-n)	选择带有警报的下一个窗口	Select the next window with an alert
+C-b M-o(A-o)	反向旋转窗格	Rotate through the panes in reverse
+C-b M-p(A-p)	选择带有警报的上一个窗口	Select the previous window with an alert
+C-b M-Up(...)	调整窗格大小为5	Resize the pane up by 5
+C-b M-Down(...)	将窗格缩小5	Resize the pane down by 5
+C-b M-Left(...)	调整左窗格大小为5	Resize the pane left by 5
+C-b M-Right(...)	将窗格右移5	Resize the pane right by 5
 C-b C-Up	调整窗格大小 up	Resize the pane up
 C-b C-Down	调整窗格大小 down	Resize the pane down
 C-b C-Left	调整窗格大小 left	Resize the pane left
