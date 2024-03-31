@@ -9,6 +9,7 @@ cd build
 
 <!-- ../configure CFLAGS='-g -O0' --prefix=/media/black/Data/lib/glibc/master -->
 <!-- 不能不优化编译 -->
+export LD_LIBRARY_PATH=
 ../configure CFLAGS='-g -O2' --prefix=/media/black/Data/lib/glibc/master
 
 make -j16

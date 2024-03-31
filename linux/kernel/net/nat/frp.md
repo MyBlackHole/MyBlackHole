@@ -69,5 +69,8 @@ systemctl daemon-reload
 systemctl start frpc
 systemctl enable frpc
 
+<!-- 检查 -->
+lsof -i:80
+
 ssh -oPort=2222 black@127.0.0.1
 ```
