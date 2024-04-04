@@ -24,3 +24,12 @@
 <!-- 需要激活指令记录 -->
 record
 ```
+
+-   89521 segmentation fault (core dumped)  ./src/bin/pg_waldump/pg_waldump
+```shell
+[29627.947755] pg_waldump[89521]: segfault at 59792a8e5106 ip 0000597929b0114a sp 00007ffd75d8e6a0 error 4 in pg_waldump[597929aff000+16000] likely on CPU 4 (core 2, socket 0)
+[29627.947795] Code: 45 b0 c7 00 00 00 00 00 48 8b 45 10 48 c7 00 00 00 00 00 0f b6 45 d4 83 e0 40 85 c0 74 3d 48 8b 45 d8 48 89 45 f0 48 8b 45 f0 <0f> b7 00 0f b7 d0 48 8b 45 18 89 10 48 8b 45 f0 48 8d 50 02 48 8b
+
+<!-- ??? -->
+objdump -d ./src/bin/pg_waldump/pg_waldump | 59792a8e5106 
+```
