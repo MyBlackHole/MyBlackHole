@@ -30,7 +30,6 @@ Debug
     --instance=local
 INFO: Instance 'local' successfully initialized
 
-
 tree Debug
 Debug
 └── backup
@@ -51,6 +50,16 @@ Debug
     --remote-port=22 \
     --remote-user=root \
     --remote-path=`pwd`
+```
+
+## del instance
+```shell
+
+./pg_probackup del-instance \
+    -B `pwd`/Debug/backup \
+    -D /run/media/black/Data/Documents/github/C/postgres/Debug/database/ \
+    --instance=local
+
 ```
 
 ## backup
@@ -99,12 +108,16 @@ INFO: Backup SB7IQQ completed
 --external-dirs=/etc/dir1:/etc/dir2
 ```
 
-- archive (?)
+- archive
 ```shell
 ./pg_probackup archive-get \
     -B `pwd`/Debug/backup \
     --instance local \
     -d postgres
+
+lvim Debug/database/postgresql.conf
+archive_mode = on
+archive_command = '/run/media/black/Data/Documents/github/C/pg_probackup/pg_probackup archive-push -B /run/media/black/Data/Documents/github/C/pg_probackup/Debug/backup --instance local --wal-file-path=%p --wal-file-name %f'
 ```
 
 - inc
@@ -207,8 +220,8 @@ BACKUP INSTANCE 'local'
     -B `pwd`/Debug/backup \
     --instance local \
     --archive
-```
 
+```
 
 ## 保留策略 (retention policy)
 ```shell

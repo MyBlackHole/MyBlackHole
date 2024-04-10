@@ -12,3 +12,9 @@ apt-get install git wget rpm rpm2cpio cpio make build-essential binutils libtinf
 podman run --name dev -v /run/media/black/Data:/run/media/black/Data/  -it centos:centos7 bash
 yum install -y git wget rpm* cpio make glibc-devel glibc-headers binutils m4
 ```
+
+- 配置 docker 镜像源
+```shell
+sudo lvim /etc/containers/registries.conf
+unqualified-search-registries⋅=⋅["docker.io"]↴
+```

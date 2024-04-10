@@ -86,3 +86,8 @@ Common options:
 
 
 ```
+
+- 测试 demo
+```shell
+pgbench -i -s 5 test
+```

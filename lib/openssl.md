@@ -16,3 +16,8 @@ make install
 ```shell
 openssl ciphers -v
 ```
+
+- pem to crt
+```shell
+openssl x509 -outform der -in cacert.pem -out client.crt
+```

@@ -14,9 +14,10 @@ sudo -u postgres psql -p 5433
 
 ## 安装
 
-### docker
+### docker (podman)
 ```shell
 docker run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e ALLOW_IP_RANGE=0.0.0.0/0 -v /home/postgres/data:/var/lib/postgresql -p 55433:5432 -d postgres
+podman run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e ALLOW_IP_RANGE=0.0.0.0/0 -v /home/postgres/data:/var/lib/postgresql -p 5432:5432 -d postgres
 <!-- –name : 自定义容器名称 -->
 <!-- -e: 添加环境变量  -->
 <!--     ALLOW_IP_RANGE=0.0.0.0/0，这个表示允许所有ip访问，如果不加，则非本机 ip 访问不了 -->
@@ -29,6 +30,38 @@ docker run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e
 ### ubuntu apt
 ```shell
 sudo apt install postgresql postgresql-contrib
+```
+
+### arch
+```shell
+yay -S postgresql
+sudo su -l postgres -c "initdb --locale=C.UTF-8 --encoding=UTF8 -D '/var/lib/postgres/data'"
+systemctl start postgresql
+systemctl status postgresql
+● postgresql.service - PostgreSQL database server
+     Loaded: loaded (/usr/lib/systemd/system/postgresql.service; disabled; preset: disabled)
+     Active: active (running) since Mon 2024-04-01 16:36:58 CST; 10s ago
+    Process: 206715 ExecStartPre=/usr/bin/postgresql-check-db-dir ${PGROOT}/data (code=exited, status=0/SUCCESS)
+   Main PID: 206717 (postgres)
+      Tasks: 6 (limit: 18205)
+     Memory: 17.4M (peak: 18.5M)
+        CPU: 109ms
+     CGroup: /system.slice/postgresql.service
+             ├─206717 /usr/bin/postgres -D /var/lib/postgres/data
+             ├─206719 "postgres: checkpointer "
+             ├─206720 "postgres: background writer "
+             ├─206722 "postgres: walwriter "
+             ├─206723 "postgres: autovacuum launcher "
+             └─206724 "postgres: logical replication launcher "
+
+Apr 01 16:36:57 black systemd[1]: Starting PostgreSQL database server...
+Apr 01 16:36:58 black postgres[206717]: 2024-04-01 16:36:58.062 CST [206717] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.2.1 20230801, 64-bit
+Apr 01 16:36:58 black postgres[206717]: 2024-04-01 16:36:58.063 CST [206717] LOG:  listening on IPv6 address "::1", port 5432
+Apr 01 16:36:58 black postgres[206717]: 2024-04-01 16:36:58.063 CST [206717] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+Apr 01 16:36:58 black postgres[206717]: 2024-04-01 16:36:58.063 CST [206717] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+Apr 01 16:36:58 black postgres[206721]: 2024-04-01 16:36:58.068 CST [206721] LOG:  database system was shut down at 2024-04-01 16:35:30 CST
+Apr 01 16:36:58 black postgres[206717]: 2024-04-01 16:36:58.074 CST [206717] LOG:  database system is ready to accept connections
+Apr 01 16:36:58 black systemd[1]: Started PostgreSQL database server.
 ```
 
 ### 源码构建
