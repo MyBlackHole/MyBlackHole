@@ -55,6 +55,10 @@ ALTER SYSTEM SET backup_dest='oss://mybucket?host=192.168.30.126&access_id=bNkZp
 ALTER SYSTEM SET backup_dest='oss://wdg1?host=192.168.30.126&access_id=1&access_key=1';
 ALTER SYSTEM SET backup_dest='oss://oceanbase-shunde?host=zeyang@1510629197150037.onaliyun.com&access_id=LTAI5tMQYtZkbVMN2vZckpAs&access_key=zqCmshOoLs8BITRgMelbVOU73VM40i';
 oceanbase> ALTER SYSTEM SET backup_dest='oss://backuptest/test1?host=192.168.30.126&access_id=root&access_key=123456';
+
+
+
+ALTER SYSTEM SET backup_dest='file:///obtest/archive';
 ```
 
 - 发起日志归档

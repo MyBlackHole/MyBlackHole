@@ -70,3 +70,9 @@ src/archive/ob_archive_sender.cpp:ObArchiveSender::handle
     src/archive/ob_archive_sender.cpp:ObArchiveSender::archive_log_
         src/archive/ob_archive_sender.cpp:ObArchiveSender::do_archive_log_
 ```
+
+
+## restore
+```shell
+ObRestoreScheduler::process_restore_job
+```

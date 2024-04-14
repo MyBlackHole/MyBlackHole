@@ -34,7 +34,7 @@ MySQL [oceanbase]> SELECT * FROM oceanbase.__all_unit_config;
 - 创建资源，绑定数据池
 ```shell
 <!-- 创建资源单元 -->
-obclient> CREATE RESOURCE UNIT unit1 MAX_CPU 4, MAX_MEMORY '5G', MAX_IOPS 128,MAX_DISK_SIZE '10G', MAX_SESSION_NUM 64, MIN_CPU=4, MIN_MEMORY= '5G', MIN_IOPS=128;
+obclient> CREATE RESOURCE UNIT unit1 MAX_CPU 4, MAX_MEMORY '1G', MAX_IOPS 128,MAX_DISK_SIZE '1G', MAX_SESSION_NUM 64, MIN_CPU=4, MIN_MEMORY= '1G', MIN_IOPS=128;
 
 MySQL [oceanbase]> SELECT * FROM oceanbase.__all_unit_config;
 +----------------------------+----------------------------+----------------+-----------------+---------+---------+------------+------------+----------+----------+---------------+---------------------+
