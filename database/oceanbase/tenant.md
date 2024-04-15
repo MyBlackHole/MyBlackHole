@@ -7,6 +7,8 @@ CREATE TENANT IF NOT EXISTS tenant1 CHARSET='utf8mb4', ZONE_LIST=('zone1','zone2
 CREATE TENANT IF NOT EXISTS tenant1 CHARSET='utf8mb4',  RESOURCE_POOL_LIST=('pool_wdg_t_1_zone2_eex');
 
 oceanbase> CREATE TENANT IF NOT EXISTS tenant2 CHARSET='utf8mb4',  RESOURCE_POOL_LIST=('pool1');
+
+oceanbase> CREATE TENANT IF NOT EXISTS wdg_tenant1 CHARSET='utf8mb4',  RESOURCE_POOL_LIST=('pool_admin_zone1_60_tyq');
 ```
 
 - 查看租户信息

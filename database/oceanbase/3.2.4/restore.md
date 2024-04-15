@@ -132,3 +132,34 @@ mysql> SELECT * FROM oceanbase.CDB_OB_RESTORE_HISTORY;
 umount 192.168.79.196:/volmountpoint/aiopool/8bcf05ab5e95_33_59_1693206731907_oceanbase_copy_tenant_73-obtest-999999-incarnation_1-1007_1693207964_clone/data
 umount 192.168.79.194:/volmountpoint/aiopool/8bcf05ab5e95_0_59_1693206040_oceanbase/obtest/999999/incarnation_1
 ```
+
+
+
+```shell
+## localhost
+sudo mkdir -p /volmountpoint/aiopool/wdg_physical
+
+sudo zfs clone aiopool/bf755ad3a077_0_39_1713162478_oceanbase@wdg1 \
+         aiopool/wdg_physical \
+         -o mountpoint=/volmountpoint/aiopool/wdg_physical
+
+sudo chown -R nfsnobody:nfsnobody /volmountpoint/aiopool/wdg_physical
+
+sudo zfs get sharenfs aiopool/wdg_physical | grep off
+
+sudo zfs set sharenfs='all_squash,rw=*' aiopool/wdg_physical
+
+sudo showmount -e localhost|grep /volmountpoint/aiopool/wdg_physical
+
+## source 
+mountpoint -q /volmountpoint/aiopool/wdg_physical
+
+sudo mkdir -p /volmountpoint/aiopool/wdg_physical
+sudo mount -tnfs4 \
+         -o rw,nfsvers=4.1,sync,lookupcache=positive,hard,timeo=600,wsize=1048576,rsize=1048576,namlen=255 \
+         192.168.78.213:/volmountpoint/aiopool/wdg_physical \
+         /volmountpoint/aiopool/wdg_physical
+
+
+ALTER SYSTEM RESTORE tenant02_1713163935 FROM tenant02 at "file:///volmountpoint/aiopool/wdg_physical" UNTIL "2024-04-15 14:44:03" WITH "backup_cluster_name=zq_ob324_606162&backup_cluster_id=1675402869&pool_list=pool_tenant01_zone3_grt,pool_tenant01_zone1_dso,pool_tenant01_zone2_kji";
+```
