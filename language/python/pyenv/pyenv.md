@@ -44,7 +44,7 @@ CC=clang pyenv install 3.6.8
 CFLAGS=-I/media/black/Data/lib/openssl/openssl_1_1_1/include/ LDFLAGS=-L/media/black/Data/lib/openssl/openssl_1_1_1/lib/ pyenv install -v 3.10.12
 ```
 
-- pyenv-virtualenv
+- pyenv-virtualenv (2.4 后没有此命令, 使用 local 替换)
 ```shell
 # 创建进入项目环境 
 pyenv virtualenv 3.8.1 first_project 
@@ -63,3 +63,5 @@ pyenv deactivate
 # 删除项目环境 
 pyenv virtualenv-delete first_project 
 ```
+
+

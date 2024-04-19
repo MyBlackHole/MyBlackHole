@@ -25,3 +25,8 @@ xmake config -k shared
 ```shell
 xmake config -m debug -k shared
 ```
+
+- 导出选项配置
+```shell
+xmake config --export=build/config.txt
+```
