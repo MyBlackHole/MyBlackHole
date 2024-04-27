@@ -63,6 +63,10 @@ src/rootserver/restore/ob_restore_scheduler.cpp:ObRestoreScheduler::run3
 src/share/backup/ob_backup_info_mgr.cpp:ObRestoreBackupInfoUtil::get_restore_backup_info
     src/share/backup/ob_backup_info_mgr.cpp:ObRestoreBackupInfoUtil::get_restore_backup_info_v1_
     src/share/backup/ob_backup_info_mgr.cpp:ObRestoreBackupInfoUtil::get_restore_backup_info_v2_
+
+<!-- 恢复时间检查 -->
+src/share/backup/ob_multi_backup_dest_util.cpp:ObMultiBackupDestUtil::get_compat_backup_piece_list
+    src/share/backup/ob_log_archive_backup_info_mgr.cpp:ObExternLogArchiveBackupInfo::get_log_archive_status
 ```
 
 

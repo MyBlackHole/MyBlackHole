@@ -138,12 +138,21 @@ umount 192.168.79.194:/volmountpoint/aiopool/8bcf05ab5e95_0_59_1693206040_oceanb
 ```shell
 ## localhost
 sudo mkdir -p /volmountpoint/aiopool/wdg_physical
+zfs destroy aiopool/wdg_physical
+zfs snapshot aiopool/bf755ad3a077_0_45_1713234707_oceanbase@wdg
 
-sudo zfs clone aiopool/bf755ad3a077_0_39_1713162478_oceanbase@wdg1 \
+ 
+sudo zfs clone aiopool/bf755ad3a077_0_45_1713234707_oceanbase@1713241704152 \
          aiopool/wdg_physical \
          -o mountpoint=/volmountpoint/aiopool/wdg_physical
 
+<!-- sudo zfs clone aiopool/bf755ad3a077_0_45_1713234707_oceanbase@wdg \ -->
+<!--          aiopool/wdg_physical \ -->
+<!--          -o mountpoint=/volmountpoint/aiopool/wdg_physical -->
+
 sudo chown -R nfsnobody:nfsnobody /volmountpoint/aiopool/wdg_physical
+
+<!-- sudo chown -R nobody:nobody /volmountpoint/aiopool/wdg_physical -->
 
 sudo zfs get sharenfs aiopool/wdg_physical | grep off
 
@@ -151,15 +160,49 @@ sudo zfs set sharenfs='all_squash,rw=*' aiopool/wdg_physical
 
 sudo showmount -e localhost|grep /volmountpoint/aiopool/wdg_physical
 
+<!-- log -->
+sudo zfs destroy aiopool/wdg_physical_log
+sudo mkdir -p /volmountpoint/aiopool/wdg_physical_log
+sudo zfs snapshot aiopool/bf755ad3a077_0_45_1713234707_oceanbase@wdg_physical_log
+sudo zfs clone aiopool/bf755ad3a077_0_45_1713234707_oceanbase@wdg_physical_log aiopool/wdg_physical_log \
+         -o mountpoint=/volmountpoint/aiopool/wdg_physical_log
+sudo chown -R nfsnobody:nfsnobody /volmountpoint/aiopool/wdg_physical_log
+sudo zfs set sharenfs='all_squash,rw=*' aiopool/wdg_physical_log
+sudo showmount -e localhost|grep /volmountpoint/aiopool/wdg_physical_log
+cd /volmountpoint/aiopool/wdg_physical/obtest/999999/incarnation_1/1015
+rm -rf ./clog
+
+
+
 ## source 
 mountpoint -q /volmountpoint/aiopool/wdg_physical
 
 sudo mkdir -p /volmountpoint/aiopool/wdg_physical
 sudo mount -tnfs4 \
          -o rw,nfsvers=4.1,sync,lookupcache=positive,hard,timeo=600,wsize=1048576,rsize=1048576,namlen=255 \
-         192.168.78.213:/volmountpoint/aiopool/wdg_physical \
+         192.168.90.29:/volmountpoint/aiopool/wdg_physical \
          /volmountpoint/aiopool/wdg_physical
 
+<!-- log -->
+sudo mkdir -p /volmountpoint/aiopool/wdg_physical_log
+<!-- sudo mount -tnfs4 \ -->
+<!--          -o rw,nfsvers=4.1,sync,lookupcache=positive,hard,timeo=600,wsize=1048576,rsize=1048576,namlen=255 \ -->
+<!--          192.168.90.29:/volmountpoint/aiopool/wdg_physical_log \ -->
+<!--          /volmountpoint/aiopool/wdg_physical_log -->
+sudo mount -tnfs4 \
+         -o rw,nfsvers=4.1,sync,lookupcache=positive,hard,timeo=600,wsize=1048576,rsize=1048576,namlen=255 \
+         192.168.90.29:/volmountpoint/aiopool/wdg_physical_log \
+         /volmountpoint/aiopool/wdg_physical/obtest/999999/incarnation_1/1015/clog
+
+ln -sf /volmountpoint/aiopool/wdg_physical_log/obtest/999999/incarnation_1/1015/clog/ \
+       /volmountpoint/aiopool/wdg_physical/obtest/999999/incarnation_1/1015
 
 ALTER SYSTEM RESTORE tenant02_1713163935 FROM tenant02 at "file:///volmountpoint/aiopool/wdg_physical" UNTIL "2024-04-15 14:44:03" WITH "backup_cluster_name=zq_ob324_606162&backup_cluster_id=1675402869&pool_list=pool_tenant01_zone3_grt,pool_tenant01_zone1_dso,pool_tenant01_zone2_kji";
+
+<!-- ALTER SYSTEM RESTORE wdg_tenant1_1713238884 FROM wdg_tenant1 at "file:///volmountpoint/aiopool/wdg_physical" UNTIL "2024-04-15 19:02:38" WITH "backup_cluster_name=zq_ob324_606162&backup_cluster_id=1675402869&pool_list=pool1" -->
+
+ALTER SYSTEM RESTORE tenant01_1713238748 FROM tenant01 at "file:///volmountpoint/aiopool/wdg_physical" UNTIL "2024-04-16 10:55:02" WITH "backup_cluster_name=obtest&backup_cluster_id=999999&pool_list=pool1"
+
+ALTER SYSTEM RESTORE tenant01_1713245546 FROM tenant01 at "file:///volmountpoint/aiopool/wdg_physical" UNTIL "2024-04-16 13:09:29" WITH "backup_cluster_name=obtest&backup_cluster_id=999999&pool_list=pool1"
 ```
+

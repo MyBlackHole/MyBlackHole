@@ -40,6 +40,9 @@ oceanbase> CREATE RESOURCE POOL pool1 UNIT='config_wdg_t_1_zone3_aio_pcr',UNIT_N
 
 CREATE RESOURCE POOL pool1 UNIT='unit1',UNIT_NUM=1,ZONE_LIST=('zone1');
 CREATE RESOURCE POOL pool2 UNIT='unit1',UNIT_NUM=1,ZONE_LIST=('zone2');
+
+CREATE RESOURCE POOL pool1 UNIT='unit1',UNIT_NUM=1,ZONE_LIST=('zone1', 'zone2', 'zone3');
+
 ```
 
 - 删除
