@@ -2,8 +2,33 @@
 
 ## .tmux.conf
 
-tmux.conf 可以在 tmux 启动时自动设置选项，类似于 .vimrc 或 init.el 的用法。
+```shell
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# 启用 vi
+# CTL+b+[
+setw -g mode-keys vi
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'nordtheme/tmux'
+set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+# 关闭自动恢复
+# set -g @plugin 'tmux-plugins/tmux-continuum'
+# set -g @continuum-restore 'on'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'git@github.com/user/plugin'
+# set -g @plugin 'git@bitbucket.com/user/plugin'
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '~/.tmux/plugins/tpm/tpm'
+```
+
+
+- 旧的
 ```
 # tmux.conf 示例
 # 2014.10
