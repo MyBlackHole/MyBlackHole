@@ -37,4 +37,29 @@ ls -alh Debug/database/pg_wal/summaries
 Permissions Size User  Date Modified Name
 .rw-------  1.4k black 31 Mar 10:01   000000010000000009000D080000000009493C98.summary
 .rw-------   20k black 31 Mar 10:01   000000010000000009493C980000000011C0ABF8.summary
+
+
+
+postgres=# select pg_available_wal_summaries();
+ pg_available_wal_summaries
+----------------------------
+ (1,0/90002D0,0/901E190)
+ (1,0/901E190,0/10B1A640)
+(2 rows)
+
+postgres=# select pg_wal_summary_contents(1,'0/90002D0','0/901E190') limit 10;
+ pg_wal_summary_contents
+-------------------------
+ (1259,1663,1,0,8,f)
+ (1259,1663,1,0,3,f)
+ (1259,1663,1,0,0,f)
+ (2619,1663,1,0,12,f)
+ (2619,1663,1,0,23,f)
+ (2619,1663,1,0,10,f)
+ (2619,1663,1,0,13,f)
+ (2619,1663,1,0,14,f)
+ (2619,1663,1,0,22,f)
+ (2619,1663,1,0,24,f)
+(10 rows)
+
 ```
