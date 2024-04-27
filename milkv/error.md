@@ -12,3 +12,9 @@
 
 最终还是没有用的
 ```
+
+- not rndis
+```shell
+# archlinux 可能未启用 usbfunc:rndis 模块
+sudo modprobe usbfunc:rndis
+```

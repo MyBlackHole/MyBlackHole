@@ -1,14 +1,15 @@
 # build
 
-- docker 环境搭建与测试
+- podman 环境搭建与测试
 ```shell
 (官方)
-docker run -itd --name duodocker -v $(pwd):/home/work milkvtech/milkv-duo:latest /bin/bash
+podman run -itd --name milkv-duo -v $(pwd):/home/work milkvtech/milkv-duo:latest /bin/bash
+
 ```
 
 - 多步骤构建
 ```shell
-<!-- docker start hopeful_liskov -->
+<!-- podman start hopeful_liskov -->
 <!-- 环境配置 -->
 export MILKV_BOARD=milkv-duo
 source milkv/boardconfig-milkv-duo.sh
