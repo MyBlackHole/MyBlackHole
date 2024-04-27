@@ -12,3 +12,39 @@ watch i > 999
 
 一旦 i > 999，程序就会被中断，GDB指出改变条件的代码。
 ```
+
+## 例子
+
+
+```shell
+(gdb) b main 
+Breakpoint 1 at 0x80483ed: file test.c, line 7.
+(gdb) watch b
+No symbol "b" in current context.//现在还有变量b
+(gdb) r
+Starting program: /home/test/test 
+ 
+Breakpoint 1, main () at test.c:7
+7	  a = 1;
+(gdb) watch b
+Hardware watchpoint 2: b//已经进入main函数，变量b存在 
+(gdb) c
+Continuing.
+Hardware watchpoint 2: b
+ 
+Old value = 134513753//没有初始化b是随机值
+New value = 2
+main () at test.c:9
+9	  c = 3;
+(gdb) c
+Continuing.
+Hardware watchpoint 2: b
+ 
+Old value = 2
+New value = 0
+0x08048416 in main () at test.c:10
+10	  memset(&a,0,4*sizeof(int));//这里越界导致b，c被修改
+(gdb) c
+Continuing.
+0 0 
+```
