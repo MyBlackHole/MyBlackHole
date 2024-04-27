@@ -67,3 +67,8 @@ mount -t overlay -o lowerdir=lower,upperdir=upper,workdir=work overlay merge  # 
 mount -t overlay -o lowerdir=upper:lower overlay merge  # 如下同样将lower和upper进行overlay到merge，但是merge为只读属性。 
 mount -t minix -o loop,offset=1024 $OSLAB_PATH/hdc-0.11.img $OSLAB_PATH/hdc  # 挂载minix 
 ```
+
+- 如果发现u盘或移动硬盘打开之后中文文件名乱码，要设置字符集
+```shell
+mount -o iocharset=utf8 /dev/sdc1 /usb
+```
