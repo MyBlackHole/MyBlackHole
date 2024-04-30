@@ -52,6 +52,9 @@ export C_INCLUDE_PATH=/media/black/Data/lib/gmp/gmp_6_1_1/include:/media/black/D
 ./configure --prefix=/media/black/Data/lib/gcc/gcc_7_3_0 --with-gmp=/media/black/Data/lib/gmp/gmp_6_1_1 --with-mpfr=/media/black/Data/lib/mpfr/mpfr_4_0_2 --with-mpc=/media/black/Data/lib/mpc/mpc_1_1_0 --with-isl=/media/black/Data/lib/isl/isl_4_0_2 --disable-multilib --enable-languages=c,c++ --disable-libsanitizer
 make -j8
 make install
+
+
+./configure --disable-multilib --enable-languages=c,c++ --disable-libsanitizer
 ```
 
 

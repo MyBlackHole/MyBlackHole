@@ -11,6 +11,7 @@ cd build
 <!-- 不能不优化编译 -->
 export LD_LIBRARY_PATH=
 ../configure CFLAGS='-g -O2' --prefix=/media/black/Data/lib/glibc/master
+<!-- ../configure  --disable-sanity-checks (直接覆盖系统的，危险操作!!!!!!!) -->
 
 make -j16
 
@@ -20,6 +21,14 @@ sudo ln -s /use/local/glibc-xxx/lib /lib32或64
 ```
 
 ## build
+
+- make 版本过低
+```shell
+<!-- 如果已经安装过 make -->
+mv /usr/bin/make /usr/bin/make_old
+```
+
+
 - 异常
 ```shell
 git clone https://sourceware.org/git/glibc.git
@@ -27,6 +36,17 @@ cd glibc
 mkdir build
 cd build
 ../configure CFLAGS="-Werror=use-after-free -g -O2" --prefix=/media/black/Data/lib/glibc/glibc-2.33
+```
+
+- libstdc++.so 版本未被更新
+```shell
+cp /usr/local/gcc-8.2.0/lib64/libstdc++.so.6.0.24  /usr/lib64/
+<!-- cp /usr/local/lib64/libstdc++.so.6.0.24  /usr/lib64/ -->
+```
+
+- 查询版本支持
+```shell
+strings /usr/lib64/libc.so.6 |grep GLIBC_
 ```
 
 - glibc-all-in-one
