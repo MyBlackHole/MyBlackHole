@@ -1,3 +1,4 @@
+# RSA
 
 质数 p q 
 n = p x q 
@@ -7,3 +8,4 @@ e . f(n) 互质 私钥 d
 e x d 除以 f(n) 余 1 
 加密：m^e 除以 n 余 c 
 解密：c^d 除以 n 余 m 
+

@@ -18,3 +18,10 @@ crun run sh
 bin    etc    lib    mnt    proc   run    srv    tmp    var
 dev    home   media  opt    root   sbin   sys    usr
 ```
+
+```shell
+crun run --bundle alpine-bundle sh
+/ # ls
+bin    etc    lib    mnt    proc   run    srv    tmp    var
+dev    home   media  opt    root   sbin   sys    usr
+```

@@ -25,3 +25,28 @@
 ```shell
 evince 文件.pdf 
 ```
+
+- 打开PDF的第2页
+```shell
+evince 文件.pdf --page-index=2 
+```
+
+- 打开PDF的第2页的第3个字母
+```shell
+evince 文件.pdf --page-index=2 --find=字母 
+```
+
+- 打开PDF的第2页的第3个字母，并以全屏模式打开
+```shell
+evince 文件.pdf --page-index=2 --find=字母 --fullscreen 
+```
+
+- 打开PDF的第2页的第3个字母，并以放映模式打开
+```shell
+evince 文件.pdf --page-index=2 --find=字母 --presentation 
+```
+
+- 打开PDF的第2页的第3个字母，并以预览程序模式打开
+```shell
+evince 文件.pdf --page-index=2 --find=字母 --preview 
+```

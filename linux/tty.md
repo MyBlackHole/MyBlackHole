@@ -1,1 +1,0 @@
-[Linux TTY、PTS、PTY详解 - 城市之雾的个人空间 - OSCHINA - 中文开源技术交流社区](https://my.oschina.net/u/3477605/blog/3025534)

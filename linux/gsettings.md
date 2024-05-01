@@ -1,5 +1,6 @@
 # gsettings
 
+
 ```shell
 # 通过命令行更改系统代理设置为手动
 gsettings set org.gnome.system.proxy.http host 'my.proxy.com' 

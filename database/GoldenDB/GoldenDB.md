@@ -65,3 +65,16 @@ su - omm -c "ommtool -moni -start"
 su - manager -c "dbstate"
 su - manager -c "dbmoni -start"
 ```
+
+- 停止
+```shell
+su - omm -c "ommtool -moni -stop"
+su - manager -c "dbmoni -stop"
+```
+
+- 重启
+```shell
+su - omm -c "ommtool -moni -restart"
+su - manager -c "dbmoni -restart"
+```
+

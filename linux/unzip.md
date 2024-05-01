@@ -62,8 +62,12 @@ unzip -O GBK test.zip
 unzip -O UTF-8 test.zip
 ```
 
-|   |   |
-|---|---|
-|Unzip XXX.zip|解压xxx.zip|
-|Unzip -O GBK  xxx.zip|中文支持|
-|unzip -O GB2312  微博项目文档.zip|中文支持|
+- 解压密码
+```shell
+unzip -P 123456 test.zip
+```
+
+- 解压指定文件
+```shell
+unzip -x "test.txt" test.zip
+```

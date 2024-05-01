@@ -13,6 +13,14 @@ ls /opt/gradle/gradle-8.6
 
 - 设置代理
 ```shell
+lvim ~/.gradle/gradle.properties
+# proxy settings
+systemProp.http.proxyHost=127.0.0.1
+systemProp.http.proxyPort=1080
+systemProp.https.proxyHost=127.0.0.1
+systemProp.https.proxyPort=1080
+
+# or
 org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1080
 org.gradle.jvmargs=-Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1080 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080
 
@@ -31,4 +39,45 @@ systemProp.https.proxyPort=1080
 <!-- systemProp.https.proxyPassword=password -->
 <!-- 此处是不使用代理的host列表，可以把内网地址和国内的地址添加上去。 -->
 <!-- systemProp.https.nonProxyHosts=*.nonproxyrepos.com|localhost -->
+```
+
+## usage
+
+1. build
+```shell
+gradle build
+```
+2. clean
+```shell
+gradle clean
+```
+
+3. run
+```shell
+gradle run
+```
+
+4. test
+```shell
+gradle test
+```
+
+5. dependency
+```shell
+gradle dependencies
+```
+
+6. wrapper
+```shell
+gradle wrapper
+```
+
+7. publish
+```shell
+gradle publish
+```
+
+8. install
+```shell
+gradle install
 ```

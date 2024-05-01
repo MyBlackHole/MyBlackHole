@@ -1,4 +1,5 @@
 # locale
+
 设置和显示程序运行的语言环境
 
 - 查看当前可用的语言环境
@@ -51,4 +52,32 @@ en_ZW.utf8
 POSIX
 zh_CN.utf8
 zh_SG.utf8
+```
+
+- 设置语言环境
+```shell
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:zh_CN
+export LC_ALL=en_US.UTF-8
+```
+
+- 临时设置语言环境
+```shell
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:zh_CN
+export LC_ALL=en_US.UTF-8
+echo $LANG
+echo $LANGUAGE
+echo $LC_ALL
+```
+
+- 永久设置语言环境
+```shell
+sudo lvim /etc/locale.gen
+# 找到 zh_CN.UTF-8 UTF-8，并取消注释
+sudo locale-gen
+sudo update-locale LANG=en_US.UTF-8 LANGUAGE=en_US:zh_CN LC_ALL=en_US.UTF-8
+echo $LANG
+echo $LANGUAGE
+echo $LC_ALL
 ```

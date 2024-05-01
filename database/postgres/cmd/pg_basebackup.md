@@ -128,6 +128,38 @@ pg_basebackup 备份参数 -F -t -X
 
 ## 恢复
 
+
+### 例子
+```shell
+pg_basebackup -D /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06 -Ft -U black -h 127.0.0.1 -p 5432 -P
+
+
+/run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06
+❯ ls -alh
+Permissions Size User  Date Modified Name
+.rw-------  138k black  6 Jan 11:56   backup_manifest
+.rw-------   24M black  6 Jan 11:56   base.tar
+.rw-------   17M black  6 Jan 11:56   pg_wal.tar
+
+cd /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/
+mkdir /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data
+tar xvf base.tar -C /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data/
+
+chmod -R 700 /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data
+
+mkdir /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/pg_wal
+tar xvf pg_wal.tar -C /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/pg_wal/
+
+lvim /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data/postgresql.conf
+restore_command = 'cp /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/pg_wal/%f %p'
+
+touch /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data/recovery.signal
+
+# 启动数据库
+<!-- ./src/backend/postgres -D /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data -p 5432 -h 127.0.0.1 -c config_file=/run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data/postgresql.conf -->
+pg_ctl -D /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data -l /run/media/black/Data/Documents/github/C/postgres/Debug/buackup/2024-01-06/data/pg_log start
+```
+
 ### 切换日志
 ```shell
 在需要备份的库中创建标记表，并检查点和归档指令

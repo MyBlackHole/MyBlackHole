@@ -1,4 +1,5 @@
 # grep
+
 Linux grep (global regular expression) 命令用于查找文件里符合条件的字符串或正则表达式。
 
 ## 语法
@@ -50,4 +51,9 @@ files - 表示要查找的文件名，可以同时查找多个文件，如果省
 
 ```shell
 grep -P "^\Q8bcf05ab5e95_0_61_1693288582_oceanbase_copy_cluster_28\E" /proc/*/mounts
+```
+
+- 便利所有文件出现的字符串，并匹配字符串开头的数字，如：8bcf05ab5e95_0_61_1693288582_oceanbase_copy_cluster_28
+```shell
+grep -rnw /path/to/directory -e "^[0-9]"
 ```

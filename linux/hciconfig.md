@@ -1,6 +1,9 @@
+## hciconfig
+
 配置蓝牙设备
 
 -a: 显示蓝牙设备信息
+
 up :开启蓝牙设备 
 
 down :关闭蓝牙设备 
@@ -14,3 +17,10 @@ pscan :启用页面扫描，禁用查询扫描
 ```shell
 sudo hciconfig hci0 up
 ```
+
+- 关闭hci0设备
+```shell
+sudo hciconfig hci0 down
+```
+
+

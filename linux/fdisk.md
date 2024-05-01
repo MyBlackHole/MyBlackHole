@@ -30,3 +30,24 @@ fdisk /dev/sdb
 d (这个会默认选择一个分区)
 w
 ```
+
+- 扩展分区
+```shell
+fdisk /dev/sdb
+n
+p
++500M
+t
+1
+w
+```
+
+- 格式化分区
+```shell
+mkfs.ext4 /dev/sdb1
+```
+
+<!-- - 清除分区 -->
+<!-- ```shell -->
+<!-- dd if=/dev/zero of=/dev/sdb1 bs=1M count=100 -->
+<!-- ``` -->

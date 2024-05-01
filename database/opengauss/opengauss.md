@@ -19,12 +19,13 @@ fi
 # $kernel 通过 lsb_release -d | awk -F ' ' '{print $2}'| tr A-Z a-z 获得
 ```
 
-## docker
+## podman
 ```shell
-docker run --name opengauss --privileged=true -d -e GS_PASSWORD=openGauss@123 -p5432:5432 opengauss/opengauss:5.0.0
+podman run --name opengauss --privileged=true -d -e GS_PASSWORD=openGauss@123 -p5432:5432 opengauss/opengauss:5.0.0
 
-docker exec -it opengauss bash
-su - opengauss
+podman exec -it opengauss bash
+<!-- su - opengauss -->
+
 # 安装目录
 cd /usr/local/opengauss
 
@@ -38,7 +39,7 @@ ldconfig
 ./gsql -d postgres -U gaussdb -W 'openGauss@123' -h 127.0.0.1 -p 5432
 
 # docker client
-docker run --rm --link=opengauss -p 8081:8081 opengauss/opengauss-webclient:1.0.4
+podman run --rm --link=opengauss -p 8081:8081 opengauss/opengauss-webclient:1.0.4
 ```
 
 ## 命令

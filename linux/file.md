@@ -1,4 +1,5 @@
 # file
+
 识别文件类型
 获取转换文件字符集
 
@@ -15,4 +16,14 @@
 - 获取文件字符集
 ```shell
 file -i file.txt
+```
+
+- 获取文件类型
+```shell
+file file.txt
+```
+
+- 获取压缩文件类型
+```shell
+file file.zip
 ```

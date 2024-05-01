@@ -1,4 +1,5 @@
 # fsck
+
 用于检查文件系统并修复出现的错误
 
 ## 格式
@@ -14,6 +15,20 @@ fsck [选项] 分区设备文件名
 -y: 自动修复，和 -a 作用一致，不过有些文件系统只支持 -y。
 
 ## 例子
+
+- 检查并修复 /dev/sda1 分区的文件系统。
 ```shell
 sudo fsck -r /dev/sda1
 ```
+
+- 检查并修复 /dev/sda1 分区的文件系统，并显示进度条。
+```shell
+sudo fsck -C -r /dev/sda1
+```
+
+- 检查并修复 /dev/sda1 分区的文件系统，并自动修复。
+```shell
+sudo fsck -y /dev/sda1
+```
+
+

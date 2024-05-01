@@ -16,3 +16,17 @@ udisksctl unmount -b /dev/sda1
 ```shell
 udisksctl power-off -b /dev/sda1
 ```
+
+- 重启 (先卸载)
+```shell
+udisksctl power-cycle -b /dev/sda1
+```
+- 格式化
+```shell
+udisksctl format -b /dev/sda1
+```
+
+- 显示所有设备
+```shell
+udisksctl info -b /dev/sda1
+```
