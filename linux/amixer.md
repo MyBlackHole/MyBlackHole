@@ -1,4 +1,8 @@
 # amixer
+
+## 基本用法
+
+
 ```shell
 amixer set Master 10%+ #增加10%音量 
 amixer set Master 10%- #降低10%音量 

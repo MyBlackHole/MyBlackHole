@@ -1,5 +1,7 @@
 # protobuf
 
+数据序列化协议，Google开发的一种高效的结构化数据序列化格式。
+
 - 24.x
 ```shell
 git submodule update --init --recursive
