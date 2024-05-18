@@ -1,5 +1,9 @@
 # kgdb
 
+[官方文档](https://www.kernel.org/doc/html/latest/dev-tools/kgdb.html)
+[案例](https://blog.csdn.net/weixin_38832162/article/details/115347640)
+
+## 配置
 - 代码位置
 kernel/debug/debug_core.c
 
@@ -48,13 +52,18 @@ echo "ttyS1,115200" > /sys/module/kgdboc/parameters/kgdboc
                   <*> KGDB: use kgdb over the serial console
 ```
 
-- 进入 kdb
+## 调试内核启动流程
 ```shell
-echo g > /proc/sysrq-trigger
-```
-
-- 调试内核启动流程
-```shell
+<!-- 目标机器 -->
 <!-- 启动命令行参数中添加以下选项 -->
 kgdbwait
+
+<!-- 或 -->
+
+echo g > /proc/sysrq-trigger
+
+<!-- host 连接目标机器 -->
+gdb vmlinux
+set serial baud 115200
+target remote /dev/ttyUSB0
 ```
