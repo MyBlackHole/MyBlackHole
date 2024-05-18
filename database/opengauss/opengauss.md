@@ -1,22 +1,37 @@
 # opengauss
 
 ## build
-[细节](https://zhuanlan.zhihu.com/p/364397999)
 ```shell
-export CMAKEROOT=$cmake_prefix     ##编译cmake指定的--prefix
-export GCC_PATH=$gcc_prefix        ##编译gcc指定的--prefix
-export CC=$GCC_PATH/gcc/bin/gcc
-export CXX=$GCC_PATH/gcc/bin/g++
-export LD_LIBRARY_PATH=$GCC_PATH/gcc/lib64:$GCC_PATH/isl/lib:$GCC_PATH/mpc/lib/:$GCC_PATH/mpfr/lib/:$GCC_PATH/gmp/lib/:$CMAKEROOT/lib:$LD_LIBRARY_PATH
-export PATH=$GCC_PATH/gcc/bin:$CMAKEROOT/bin:$PATH
+CODE_BASE=$MYHOME/Documents/github/Cpp/openGauss-server-5.1.0     # openGauss-server的路径(不支持软链?)
+BINARYLIBS=$MYHOME/Documents/github/Demo/OpenGauss/openGauss-third_party_binarylibs_Centos7.6_x86_64    # binarylibs的路径
+GAUSSHOME=$CODE_BASE/dest
+GCC_PATH=$BINARYLIBS/buildtools/gcc10.3    # gcc的版本，根据三方包中对应的gcc版本进行填写即可，一般有gcc7.3或gcc10.3两种
+CC=$GCC_PATH/gcc/bin/gcc
+CXX=$GCC_PATH/gcc/bin/g++
+LD_LIBRARY_PATH=$GAUSSHOME/lib:$GCC_PATH/gcc/lib64:$GCC_PATH/isl/lib:$GCC_PATH/mpc/lib/:$GCC_PATH/mpfr/lib/:$GCC_PATH/gmp/lib/:$LD_LIBRARY_PATH
+PATH=$GAUSSHOME/bin:$GCC_PATH/gcc/bin:$PATH
 
-# 修改 openGauss-third_party/build/get_PlatForm_str.sh 增加新的平台
+```
 
-if [ "$kernel"x = "ubuntu"x ]
-then
-    plat_form_str=ubuntu_"$cpu_bit"
-fi
-# $kernel 通过 lsb_release -d | awk -F ' ' '{print $2}'| tr A-Z a-z 获得
+<!-- - archlinux 环境下编译 -->
+<!-- ```shell -->
+<!-- <!-- 缺少 libssl.so.1.1，需要安装 openssl-1.1 --> -->
+<!-- parn -S openssl-1.1 -->
+
+<!-- paru -S gcc10 -->
+<!-- ``` -->
+- podman 环境下编译
+```shell
+podman run \
+    -v $MYHOME:$MYHOME \
+    --rm -it dokken/centos-7 bash
+
+podman run \
+    -v $MYHOME:$MYHOME \
+    --name opengauss_dev \
+    -it localhost/opengauss:dev bash
+
+yum install bison flex readline-devel libaio-devel glibc-devel ncurses-devel patch lsb_release perl-devel gcc gcc-c++ make cmake3 git wget unzip -y
 ```
 
 ## podman

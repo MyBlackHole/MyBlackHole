@@ -30,10 +30,10 @@ cmake -DCMAKE_BUILD_TYPE=Debug \
 #       -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/media/black/Data/lib/boost ..
 ```
 
-- docker 版
+- podman 版
 ```shell
 # 拉去镜像
-docker pull mysql
+podman pull mysql
 
 # 启动
 ```shell
@@ -41,17 +41,17 @@ docker pull mysql
 #sudo chowm 999:999 data conf logs
     <!-- --privileged=true \ -->
 
-docker run -p 3306:3306 --name mysql \
+podman run -p 3306:3306 --name mysql \
     -v /etc/localtime:/etc/localtime:ro \
-    -v /opt/docker/mysql5/conf:/etc/mysql \
-    -v /opt/docker/mysql5/logs:/var/log/mysql \
-    -v /opt/docker/mysql5/data:/var/lib/mysql \
+    -v /opt/podman/mysql5/conf:/etc/mysql \
+    -v /opt/podman/mysql5/logs:/var/log/mysql \
+    -v /opt/podman/mysql5/data:/var/lib/mysql \
     -e MYSQL_ROOT_PASSWORD=p@3Sw0rd \
     -d mysql:5.7
 
 # 修改data、logs、conf 用户与用户组为 999:999
 #sudo chowm 999:999 data conf logs
-docker run -p 3306:3306 --name mysql \
+podman run -p 3306:3306 --name mysql \
     -v /etc/localtime:/etc/localtime:ro \
     -v $(pwd)/test_mysql/conf:/etc/mysql \
     -v $(pwd)/test_mysql/logs:/var/log/mysql \
@@ -60,16 +60,16 @@ docker run -p 3306:3306 --name mysql \
     -d mysql
 
 # 或
-docker run -it --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=p@3Sw0rd -d mysql
+podman run -it --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=p@3Sw0rd -d mysql
 
 # 或
 
-mkdir -p /opt/docker/mysql/conf/conf.d
-docker run -p 3306:3306 --name mysql \
+mkdir -p /opt/podman/mysql/conf/conf.d
+podman run -p 3306:3306 --name mysql \
     -v /etc/localtime:/etc/localtime:ro \
-    -v /opt/docker/mysql/conf:/etc/mysql \
-    -v /opt/docker/mysql/logs:/var/log/mysql \
-    -v /opt/docker/mysql/data:/var/lib/mysql \
+    -v /opt/podman/mysql/conf:/etc/mysql \
+    -v /opt/podman/mysql/logs:/var/log/mysql \
+    -v /opt/podman/mysql/data:/var/lib/mysql \
     -e MYSQL_ROOT_PASSWORD=p@3Sw0rd \
     -d mysql:8
 ```

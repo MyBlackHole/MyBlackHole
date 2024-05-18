@@ -68,7 +68,7 @@ alter system archivelog;
 
 - 查看日志归档进度
 ```shell
-SELECT * FROM CDB_OB_BACKUP_ARCHIVELOG;
+SELECT * FROM oceanbase.CDB_OB_BACKUP_ARCHIVELOG;
 ```
 
 - 关闭日志归档
