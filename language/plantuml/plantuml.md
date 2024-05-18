@@ -1,6 +1,9 @@
 # plantuml
 
+## 安装
 ```shell
+paru -S graphviz
+
 # gui
 java -jar .\plantuml-1.2022.5.jar
 

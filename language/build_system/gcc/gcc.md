@@ -57,6 +57,13 @@ make install
 ./configure --disable-multilib --enable-languages=c,c++ --disable-libsanitizer
 ```
 
+- centos
+```shell
+yum install centos-release-scl
+yum install devtoolset-8
+scl enable devtoolset-8 bash
+```
+
 
 ### 语法
 
