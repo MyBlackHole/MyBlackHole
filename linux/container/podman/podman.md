@@ -1,18 +1,14 @@
 # podman
 
 ## 安装
-- 下载安装包
+- centos7
 ```shell
-wget https://github.com/containers/podman/releases/download/v3.4.4/podman-remote-v3.4.4.tar.gz
-tar -zxvf podman-remote-v3.4.4.tar.gz
-cd podman-remote-v3.4.4/
-sudo mv bin/podman /usr/local/bin/
+非常麻烦
 ```
-
-- 配置环境变量
+- ubuntu
 ```shell
-echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
-source ~/.bashrc
+sudo apt-get update
+sudo apt-get install -y podman
 ```
 
 ## 基本用法

@@ -1,6 +1,9 @@
 # git
+
 版本管理工具
+
 ![[imgs/Pasted image 20230926124745.png]]
+
 ## 配置
 ```shell
 git config --global user.name "black"
@@ -64,6 +67,65 @@ git remote set-url my git@github.com:MyBlackHole/linux.git
 ```shell
 git reset --soft HEAD^ (保留更改)
 git restore --staged . (取消暂存)
+```
+
+- 合并分支
+```shell
+git merge [branch]
+```
+
+- 合并冲突
+```shell
+git mergetool --tool=nvimdiff
+```
+
+- 合并提交
+```shell
+git rebase -i HEAD~3
+除了第一行(必须保留第一个)，其他都改成 squash(合并到上一个提交)，然后保存退出。
+
+git rebase --edit-todo(二次修改)
+```
+- 回退版本
+```shell
+git reset --hard HEAD^
+```
+
+- 远程分支
+```shell
+git push origin --delete [branch-name]
+git branch -dr [remote/branch]
+```
+
+- 标签
+```shell
+git tag -a v1.0 -m "version 1.0"
+git push origin v1.0
+```
+
+- 忽略文件
+```shell
+echo "target" >> .gitignore
+```
+
+- 克隆仓库
+```shell
+git clone <repository>
+```
+
+- 克隆指定分支
+```shell
+git clone -b <branch> <repository>
+```
+
+- 克隆指定版本
+```shell
+git clone -b <branch> --single-branch --depth=<depth> <repository>
+```
+
+- 克隆指定目录
+```shell
+git clone --depth=<depth> --branch=<branch> <repository> <directory>
 ```
 
 
