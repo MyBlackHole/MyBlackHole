@@ -24,3 +24,11 @@ cmake -DCMAKE_INSTALL_PREFIX=/media/black/Data/lib/protobuf/main \
 make -j16
 make install
 ```
+
+
+- 解析库听说不错
+```shell
+git@github.com:capnproto/capnproto.git
+capnp --version
+[连接](https://capnproto.org/)
+```
