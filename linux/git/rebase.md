@@ -18,3 +18,13 @@ pick a5f4a0d added cat-file
 删除commit a5f4a0d，就是把『pick a5f4a0d added cat-file』这一行删掉
 保存并退出编辑器，git就把 commit a5f4a0d删掉了
 ```
+
+
+- 合并提交
+```shell
+git rebase -i HEAD~3
+除了第一行(必须保留第一个)，其他都改成 squash(合并到上一个提交)，然后保存退出。
+
+git rebase --edit-todo(二次修改)
+```
+

@@ -79,13 +79,6 @@ git merge [branch]
 git mergetool --tool=nvimdiff
 ```
 
-- 合并提交
-```shell
-git rebase -i HEAD~3
-除了第一行(必须保留第一个)，其他都改成 squash(合并到上一个提交)，然后保存退出。
-
-git rebase --edit-todo(二次修改)
-```
 - 回退版本
 ```shell
 git reset --hard HEAD^
