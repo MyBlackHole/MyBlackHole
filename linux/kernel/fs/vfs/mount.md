@@ -51,7 +51,7 @@ minix
 ### 例子
 ```shell
 如出现只读错误
-    umount /dev/sda1  #（出现目标正忙就把文件系统先该成只读）
+    umount /dev/sda1  # (出现目标正忙就把文件系统先该成只读)
     sudo ntfsfix /dev/sda1 # 修复文件系统 
     mount -t nfs 192.168.31.5:/medis/heidong/shijian ~/Documents/shijian # 挂载NFS文件服务器的文件 
 

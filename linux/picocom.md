@@ -1,10 +1,12 @@
-### 描述
+# picocom
+
 **串口调试工具**
-### 安装
+
+## 安装
 ```shell
 sudo apt-get install picocom 
 ```
-### 快捷键
+## 快捷键
 ```
 Ctrl+a进入转义模式，然后Ctrl+h 可以获取当前版本支持的命令 
 Ctrl-u ：提高波特率 

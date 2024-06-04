@@ -54,10 +54,10 @@ Subsystem sftp /usr/lib/ssh/sftp-server -R
 
 - 允许非空与指定端口
 ```shell
-sshfs -o nonempty,port=2222 black@192.168.78.212:/media/black/Data/Documents/AIO/aio-airflow/airflow/dags/aio_tasks /opt/aio/airflow/lib/python3.6/site-packages/aio_tasks
+sshfs -o nonempty,port=2222 black@192.168.78.212:/media/black/Data/Documents/aio/aio-airflow/airflow/dags/aio_tasks /opt/aio/airflow/lib/python3.6/site-packages/aio_tasks
 
 <!-- 只读，自动重连 -->
-sshfs -o ro,reconnect,nonempty,port=2222 black@192.168.78.212:/media/black/Data/Documents/AIO/aio-airflow/airflow/dags/aio_tasks /opt/aio/airflow/lib/python3.6/site-packages/aio_tasks
+sshfs -o ro,reconnect,nonempty,port=2222 black@192.168.78.212:/media/black/Data/Documents/aio/aio-airflow/airflow/dags/aio_tasks /opt/aio/airflow/lib/python3.6/site-packages/aio_tasks
 
 sshfs -o ro,reconnect,nonempty,port=2222 black@192.168.78.212:/media/black/Data/Documents/github/Cpp/oceanbase /root/oceanbase
 
