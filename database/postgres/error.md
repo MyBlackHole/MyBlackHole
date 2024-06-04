@@ -79,3 +79,8 @@ HugePages_Surp:        0
 Hugepagesize:       2048 kB
 Hugetlb:          262144 kB
 ```
+
+- 忽略系统索引 (pg_class_oid_index 异常)
+```shell
+echo "ignore_system_indexes='true'" >> $PGDATA/postgresql.auto.conf
+```

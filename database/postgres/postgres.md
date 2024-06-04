@@ -137,6 +137,11 @@ synchronous_commit = on (默认值)
 
 ## remote_write
 当事务提交时,仅写入本地磁盘即可返回客户端事务提交成功,而不管是否有同步备库
+
+<!-- 开启归档模式 -->
+lvim postgres.conf
+archive_mode = on
+archive_command ='cp %p /pg/archivelog/%f'
 ```
 
 ## mvcc
