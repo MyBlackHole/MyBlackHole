@@ -1,0 +1,4 @@
+# gc
+
+Garbage Collection
+[[gc]]

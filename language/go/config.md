@@ -15,6 +15,11 @@
 
 - 设置代理
 ```shell
-go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.io,direct
+<!-- go env -w GO111MODULE=on -->
+<!-- go env -w GOPROXY=https://goproxy.io,direct -->
+
+# 配置 GOPROXY 环境变量
+export GOPROXY=https://goproxy.io,direct
+# 还可以设置不走 proxy 的私有仓库或组，多个用逗号相隔（可选）
+export GOPRIVATE=git.mycompany.com,github.com/my/private
 ```

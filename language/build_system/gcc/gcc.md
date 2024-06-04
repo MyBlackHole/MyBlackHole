@@ -62,6 +62,11 @@ make install
 yum install centos-release-scl
 yum install devtoolset-8
 scl enable devtoolset-8 bash
+source /opt/rh/devtoolset-8/enable(无效时可尝试执行这一步)
+
+<!-- yum install centos-release-scl -->
+<!-- yum install devtoolset-8-gcc devtoolset-8-gcc-c++ -->
+<!-- scl enable devtoolset-8 -- bas -->
 ```
 
 
