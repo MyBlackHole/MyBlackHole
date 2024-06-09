@@ -1,11 +1,7 @@
-# timedatectl
-
-命令用于查看当前时区设置
-
-![[imgs/Pasted image 20230428023131.png]]
-
+# Arch Linux Configuration
 
 - 时间同步
+[[timedatectl]]
 ```shell
 timedatectl set-timezone Asia/Shanghai
 timedatectl set-ntp true
