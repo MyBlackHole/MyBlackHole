@@ -118,3 +118,22 @@ force_rmmod
 <!-- 指定版本 -->
 sudo yum install "kernel-devel-uname-r == $(uname -r)"
 ```
+
+- 'make menuconfig' requires the ncurses libraries.
+```shell
+<!-- paru -S ncurses5-compat-libs -->
+
+
+<!-- lvim scripts/kconfig/lxdialog/check-lxdialog.sh -->
+--- a/scripts/kconfig/lxdialog/check-lxdialog.sh
++++ b/scripts/kconfig/lxdialog/check-lxdialog.sh
+@@ -63,7 +63,7 @@ trap "rm -f $tmp ${tmp%.tmp}.d" 0 1 2 3 15
+ check() {
+         $cc -x c - -o $tmp 2>/dev/null <<'EOF'
+ #include CURSES_LOC
+-main() {}
++int main() {}
+ EOF
+ 	if [ $? != 0 ]; then
+ 	    echo " *** Unable to find the ncurses libraries or the"       1>&2
+```
