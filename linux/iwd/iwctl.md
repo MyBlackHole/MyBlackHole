@@ -36,3 +36,16 @@ sudo lvim /var/lib/iwd/BH.psk (加入)
 AddressOverride=0a:64:9b:b2:fe:b6
 ```
 
+
+## useful commands
+```shell
+device list
+
+station wlan0 connect SSID
+
+<!-- 使用该网卡扫描附近的 wifi 热点 -->
+station wlan0 scan
+
+<!-- 打印 wifi 热点信息 -->
+station wlan0 get-networks
+```
