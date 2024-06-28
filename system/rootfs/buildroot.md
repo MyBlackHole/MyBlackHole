@@ -33,6 +33,9 @@ make menuconfig
 ##     [ ] i386-efi
 ##     [*] x86-64-efi
 ##     (boot linux ext4 fat squash4 part_msdos part_gpt normal efi_gop) builtin modules
+
+export PATH=/usr/bin:/bin
+
 make -j $(nproc) # 开始编译
 
 ## 编译完成后，在output/images/目录下可以找到编译好的镜像文件。
