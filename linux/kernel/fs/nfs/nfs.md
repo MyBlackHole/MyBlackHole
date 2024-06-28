@@ -65,7 +65,7 @@ systemctl restart nfs-server
 
 ```shell
 # 服务端
-nvim /etc/exports
+lvim /etc/exports
 ## 添加 
 /aiopool 192.168.78.0/24(rw,sync,no_subtree_check)
 systemctl reload nfs (或 exportfs -r)
@@ -82,6 +82,10 @@ mount -t nfs 192.168.78.214:/aiopool ~/aiopool
 nvim /etc/fstab
 192.168.78.214:/aiopool  /root/aiopool       nfs    defaults 0 0
 mount -a
+
+
+
+mount -t nfs 10.6.64.152:/ob_data /ob_data
 ```
 
 ![[imgs/Pasted image 20240208100622.png]]

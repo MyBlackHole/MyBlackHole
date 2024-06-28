@@ -76,8 +76,11 @@ ip route show table table_number
 查看table-name的表 
 ip route show table table_name 
 
-添加一个默认路由 
+- 添加一个默认路由
+```shell
+<!-- route add default gw 10.6.67.254 dev ens192 -->
 ip route add default gw 20.0.0.1 
+```
 
 添加一个路由表，eth X是10.0.1所在的网卡, 3 是路由表的编号 
 ip route add table 3 via 10.0.0.1 dev ethX 

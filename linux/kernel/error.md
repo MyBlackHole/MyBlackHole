@@ -137,3 +137,20 @@ sudo yum install "kernel-devel-uname-r == $(uname -r)"
  	if [ $? != 0 ]; then
  	    echo " *** Unable to find the ncurses libraries or the"       1>&2
 ```
+
+
+- cc1: error: code model kernel does not support PIC mode
+```shell
+KBUILD_CFLAGS 尾部加 -fno-pie
+```
+
+- include/linux/compiler-gcc.h:106:1: fatal error: linux/compiler-gcc14.h: No such file or directory
+```shell
+提示缺少compiler-gcc14.h这个文件，是由于内核版本较低和我的gcc版本不匹配造成:
+
+重装一个版本低一点的gcc。
+
+<!-- 或 -->
+
+cp include/linux/compiler-gcc4.h include/linux/compiler-gcc14.h
+```
