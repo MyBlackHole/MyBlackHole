@@ -151,6 +151,7 @@ sudo zfs clone aiopool/bf755ad3a077_0_45_1713234707_oceanbase@1713241704152 \
 <!--          -o mountpoint=/volmountpoint/aiopool/wdg_physical -->
 
 sudo chown -R nfsnobody:nfsnobody /volmountpoint/aiopool/wdg_physical
+<!-- sudo chown -R nfsnobody:nfsnobody /ob_data -->
 
 <!-- sudo chown -R nobody:nobody /volmountpoint/aiopool/wdg_physical -->
 

@@ -11,6 +11,15 @@ cmake -DDOWNLOAD_BOOST=1 \
       -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_C_FLAGS_DEBUG="-O0" \
       -DCMAKE_CXX_FLAGS_DEBUG="-O0" ..
+
+
+cmake -DCMAKE_INSTALL_PREFIX=/root/mysql-server-mysql-5.7.44/mysql_5.7.44 \
+      -DBUILD_CONFIG=mysql_release \
+      -DWITH_UNIT_TESTS=0 \
+      -DDOWNLOAD_BOOST=1 \
+      -DWITH_BOOST=dwith_boost \
+      ..
+# DBUILD_CONFIG: mysql_release (官方编译默认配置)
 # DCMAKE_EXPORT_COMPILE_COMMANDS 启用编译数据库文件生成
 # DCMAKE_BUILD_TYPE 启用 -g
 # DCMAKE_C_FLAGS_DEBUG 关闭编译优化

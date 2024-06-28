@@ -43,6 +43,14 @@ cmake -DCMAKE_EXE_LINKER_FLAGS=-static \
 
 
 -DCMAKE_EXE_LINKER_FLAGS=-static
+
+
+
+cmake \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+  -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
+  -DDOWNLOAD_BOOST=1 -DWITH_BOOST=./boost\
+   ..
 ```
 
 ## 优点
