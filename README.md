@@ -22,26 +22,6 @@ Tag: v0.40.0-27-g5e7925ea, commits: 4633
 flags: (if any)
 
 <!-- archlinux -->
-    コンピューター
-┌──────────────────────────────────────────┐
-   OS : Arch Linux x86_64
-   Kernel : 6.8.9-arch1-1
-   Packages : 1203 (pacman), 1 (dpkg)
-   Display : 1920x1080 @ 60Hz [External]
-   Display : 1920x1080 @ 60Hz [Built-in]
-   WM : Hyprland (Wayland)
-   Terminal : tmux 3.4
-└──────────────────────────────────────────┘
-
-   : black@black
-┌──────────────────────────────────────────┐
-   CPU : AMD Ryzen 7 PRO 4750U
-   GPU : AMD Radeon RX Vega 6 (Ryzen 4000/5000 Mobile Series) @ 0.64 GHz [Integrated]
-   GPU Driver : amdgpu
-  ﬙ Memory : 6.21 GiB / 14.86 GiB (42%)
-└──────────────────────────────────────────┘
-
-  ● ● ● ● ● ● ● ●
 
 ## 开发语言
 C、golang、python
