@@ -46,3 +46,15 @@ search --no-floppy --fs-uuid --set=root 07849a7005302683
 linux	"/BOOT/ubuntu_ty4pf5@/vmlinuz-6.2.0-39-generic" root=ZFS="rpool/ROOT/ubuntu_ty4pf5" ro quiet splash ${vt_handoff}
 initrd	"/BOOT/ubuntu_ty4pf5@/initrd.img-6.2.0-39-generic"
 ```
+
+- 设置 console 为 ttyS0 输出
+```shell
+vi /etc/default/grub
+
+GRUB_CMDLINE_LINUX="rhgb quiet"
+<!-- to  -->
+GRUB_CMDLINE_LINUX="console=ttyS0,115200n8"
+GRUB_CMDLINE_LINUX="console=ttyS0,115200"
+
+grub2-mkconfig -o /boot/grub2/grub.cfg
+```
