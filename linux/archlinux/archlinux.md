@@ -21,3 +21,11 @@ arch-chroot /mnt
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+## config
+
+- amd gpu driver
+```shell
+paru -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
+```
+

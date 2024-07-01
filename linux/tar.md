@@ -10,7 +10,7 @@
 |-B|设置区块大小；|
 |-c或--create|建立新的备份文件；|
 |-C <目录>|这个选项用在解压缩，在特定目录解压缩|
-|-d|记录文件的差别；|
+|-d|记录文件的差别;|
 |-x或--extract或--get|从备份文件中还原文件；|
 |-t或--list|列出备份文件的内容；|
 |-z或--gzip或--ungzip|通过gzip指令处理备份文件；|
@@ -40,10 +40,14 @@
 |压　缩bz2|tar -jcvf file.tar.bz2 要被压缩的文件或目录|
 |解压缩bz2|tar -jxvf filename.tar.bz2 -C 欲解压缩的目录|
 |压　缩xz|tar caf 压缩包.tar.xz \*.txt（要压缩的文件）|
-|解压缩xz|tar xf 压缩包.tar.xz|
+|解压缩xz|tar xvf 压缩包.tar.xz|
 |解压缩gz|tar -zxvf cmd_markdown_linux64.tar.gz|
 |压　缩gz|tar -zcvf file.tar.gz 要被压缩的文件或目录|
 
+- 解压 xz
+```shell
+tar -xvf xx.tar.xz
+```
 
 - 解压 bz2
 ```shll

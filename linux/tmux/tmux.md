@@ -199,5 +199,3 @@ C-b S-Down	向下移动窗口的可见部分	Move the visible part of the window
 C-b S-Left	向左移动窗口的可见部分	Move the visible part of the window left
 C-b S-Right	向右移动窗口的可见部分	Move the visible part of the window right
 C-b C-o	互换窗口位置
-
-

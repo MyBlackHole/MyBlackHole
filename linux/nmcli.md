@@ -88,6 +88,14 @@ nmcli device wifi show
 nmcli connection up wifi_name 
 ```
 
+- 账号密码连接
+```shell
+nmcli connection add type wifi con-name NAME ifname wlan0 ssid SSID -- wifo-sec.key-mgmt wpa-eap 802-1x.eap ttls 802-1x.phase2-auth mschapv2 802-1x.identity USERNAME
+
+<!-- ask: 提示输入密码 -->
+nmcli --ask connection up NAME
+```
+
 - 删除连接配置
 ```shell
 nmcli connection del wifi_name 

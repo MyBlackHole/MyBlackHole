@@ -12,3 +12,8 @@ ssh-copy-id root@192.168.50.189
 ```shell
 ssh-keygen -t rsa
 ```
+
+- ERROR: No identities found
+```shell
+ssh-keygen -t rsa
+```

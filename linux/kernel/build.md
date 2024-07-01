@@ -1,5 +1,26 @@
 # build
 
+## config
+```shell
+make config - 纯文本界面 (最常用的选择)。 
+make menuconfig - 基于文本彩色菜单和单选列表。这个选项可以加快开发者开发速度。需要安装ncurses(ncurses-devel)。 
+make nconfig - 基于文本的彩色菜单。需要安装curses (libcdk5-dev)。 
+make xconfig - QT/X-windows 界面。需要安装QT。 
+make gconfig - Gtk/X-windows 界面。需要安装GTK。 
+make oldconfig - 纯文本界面，但是其默认的问题是基于已有的本地配置文件。 
+make silentoldconfig - 和oldconfig相似，但是不会显示配置文件中已有的问题的回答。 
+make olddefconfig -和silentoldconfig相似，但有些问题已经以它们的默认值选择。 
+make defconfig - 这个选项将会创建一份以当前系统架构为基础的默认设置文件。 
+make ${PLATFORM}defconfig - 创建一份使用arch/$ARCH/configs/${PLATFORM}defconfig中的值的配置文件。 
+make allyesconfig - 这个选项将会创建一份尽可能多的问题回答都为‘yes’的配置文件。 
+make allmodconfig - 这个选项将会创建一份将尽可能多的内核部分配置为模块的配置文件。
+
+make allnoconfig - 这个选项只会生成内核所必要代码的配置文件。它对尽可能多的问题都回答no。这有时会导致内核无法工作在为编译该内核的硬件上。 
+make randconfig - 这个选项会对内核选项随机选择。 
+make localmodconfig - 这个选项会根据当前已加载模块列表和系统配置来生成配置文件。 
+make localyesconfig - 将所有可装载模块（LKM）都编译进内核(
+```
+
 ```shell
 /home/black/aio-data/linux-4.19.315
 cd /home/black/aio-data && wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.315.tar.xz
@@ -18,6 +39,14 @@ make menuconf
 ##        [*] Provide GDB scripts for kernel debugging
 ##    Generic Kernel Debugging Instruments --->
 ##        [*] KGDB: kernel debugger
+## General setup  --->  
+##     [*] Configure standard kernel features (expert users)  --->
+##         （选中此项，才有/proc/kallsyms接口文件, oops问题，选中此选项即可，子选项可以忽略）
+##         [*]   Load all symbols for debugging/ksymoops 
+##               [*]   Include all symbols in kallsyms
+##               [*]   Do an extra kallsyms pass  
+## 
+
 make -j $(nproc)   # 进行编译,此处nproc变量为cpu核心的个数
 
 

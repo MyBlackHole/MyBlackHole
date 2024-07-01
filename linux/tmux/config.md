@@ -1,5 +1,10 @@
 # config
 
+- terminal capability cm required
+```shell
+export TERM=screen-256color
+```
+
 ## .tmux.conf
 
 ```shell
