@@ -35,3 +35,9 @@ sudo apt install libacl1-dev
 ```shell
 yum install libnsl.x86_64
 ```
+
+- 崩溃异常地址位置查询
+[[addr2line]]
+```shell
+addr2line
+```

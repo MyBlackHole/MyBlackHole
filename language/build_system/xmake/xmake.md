@@ -39,3 +39,7 @@ xmake -D
 add_ldflags("-static")
 ```
 
+- 强制编译
+```shell
+xmake -P .
+```

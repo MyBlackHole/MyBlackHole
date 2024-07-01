@@ -1,5 +1,7 @@
 # valgrind
 
+[来源](https://blog.csdn.net/weixin_45518728/article/details/119865117)
+
 ## 基本选项
 1. Memcheck。这是valgrind应用最广泛的工具，一个重量级的内存检查器，能够发现开发中绝大多数内存错误使用情况，
    比如：使用未初始化的内存，使用已经释放了的内存，内存访问越界等。这也是本文将重点介绍的部分。
@@ -48,6 +50,10 @@
 示例:
 ```shell
 valgrind --tool=memcheck --log-file=log.txt --leak-check=yes  ./test
+
+<!-- –log-file=memchecklog 指记录日志文件 -->
+<!-- –tool=memcheck 和 –leak-check=full 用于内存检测 -->
+valgrind --tool=memcheck --leak-check=full --track-origins=yes --leak-resolution=high --show-reachable=yes --log-file=memchecklog ./fs-cli
 ```
 
 ### memcheck
@@ -60,6 +66,9 @@ Memcheck是valgrind应用最广泛的工具，能够发现开发中绝大多数�
 5. 申请的空间是否有释放(Memory leaks – where pointers to malloc’d blocks are lost forever)
 6. malloc/free/new/delete申请和释放内存的匹配(Mismatched use of malloc/new/new [] vs free/delete/delete [])
 7. src和dst的重叠(Overlapping src and dst pointers in memcpy() and related functions)
+
+
+- 示例代码
 ```c
 #include<iostream>
 int main()
@@ -116,3 +125,40 @@ valgrind --leak-check=yes --log-file=1_g ./test1_g
 
 https://blog.csdn.net/weixin_45518728/article/details/119865117
 ```
+
+
+### Callgrind
+
+Callgrind性能分析工具，它不需要在编译源码时附加特殊选项。
+Callgrind使用cachegrind的统计信息Ir（I cache reads，即一条指令执行的次数）来统计程序中函数的调用情况，
+建立函数调用关系图，还可以有选择地进行cache模拟。
+
+在运行结束时，它会把分析数据写入一个文件，callgrind_annotate可以把这个文件的内容转化成可读的形式。
+
+- 示例
+```shell
+
+```
+
+### Cachegrind
+
+1. Cachegrind基于Valgrind的剖析器（profiler）计算机系统变得越来越复杂，剖析存储系统往往是系统瓶颈，需要剖析Cache
+2. 功能
+    1. 模拟L1、L2 Cache
+    2. 剖析Cache行为，执行次数、失效率等
+    3. 按照文件、函数、代码行、汇编指令剖析
+
+### massif
+
+Massif是一个内存剖析工具。通过不断的取程序堆的快照来达到监视程序内存分配的目的。
+
+
+### Helgrind
+
+
+Helgrind是Valgrind的一个重点功能 本节主要针对与多线程基本安全问题进行检测。
+1. 资源不安全访问
+2. 死锁问题
+3. POSIX pthreads API的错误使用
+4. 在前面几个基础上都能安全无误的情况下 多于多线程程序就是要能够能好将同步块尽量缩到最小
+

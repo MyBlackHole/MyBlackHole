@@ -38,3 +38,17 @@ make LDFLAGS=-all-static
 或
 make CFLAGS=-static LDFLAGS=-static
 ```
+
+```shell
+--Werror
+视警告为错误;出现任何警告即放弃编译.
+
+-Wall 
+会打开一些很有用的警告选项，建议编译时加此选项。
+
+-Wextra 
+打印一些额外的警告信息。
+
+-w 
+禁止显示所有警告信息。
+```

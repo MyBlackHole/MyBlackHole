@@ -1,76 +1,49 @@
 # gcc
 
-## build
-- 依赖
+## 简介
+GNU Compiler Collection (GCC) 是一套开源的、跨平台的编译器套件，它包含了 C、C++、Fortran、Java、Ada、Go、Pascal、Objective-C、Perl、Python、Ruby、Swift 等语言的编译器。
+
+编译过程：预处理 -> 编译 -> 汇编 -> 链接 -> 优化 -> 输出
+
+1. 预处理：预处理器（cpp）将源代码中的宏定义、条件编译指令、头文件包含、类型定义等进行处理，生成预处理后的源代码。
+2. 编译：编译器（cc1、cc1plus、cc）将预处理后的源代码编译成汇编代码。
+3. 汇编：汇编器（as）将汇编代码转换成机器代码。
+4. 链接：链接器（ld）将多个目标文件和库文件链接成一个可执行文件。
+5. 优化：优化器（opt）对生成的机器代码进行优化。
+
+例如：
 ```shell
-# 手动下载
-gmp:http://ftp.gnu.org/gnu/gmp/gmp-6.1.1.tar.xz
-mpfr:http://ftp.gnu.org/gnu/mpfr/mpfr-4.0.2.tar.gz
-mpc:http://ftp.gnu.org/gnu/mpc/mpc-1.1.0.tar.gz
-isl:https://gcc.gnu.org/pub/gcc/infrastructure/isl-0.18.tar.bz2
+<!-- lvim test.c -->
+int main(void)  
+{
+        printf("Hello World\n");  
+        return 0;  
+}
 
-## gmp
-./configure --prefix=/media/black/Data/lib/gmp/gmp_6_1_1
-make –j8
-make install
+<!-- 预处理 -->
+<!-- 这里主要负责展开在源文件中定义的宏，并向其中插入#include语句所包含的内容 -->
+gcc -E test.c -o test.i
 
-## mpfr
-./configure --prefix=/media/black/Data/lib/mpfr/mpfr_4_0_2 --with-gmp=/media/black/Data/lib/gmp/gmp_6_1_1
-make –j8
-make install
+<!-- 编译 -->
+<!-- 这里将预处理后的源代码编译成汇编代码 -->
+gcc -S test.i -o test.s
 
-## mpc
-./configure --prefix=/media/black/Data/lib/mpc/mpc_1_1_0 --with-gmp=/media/black/Data/lib/gmp/gmp_6_1_1 --with-mpfr=/media/black/Data/lib/mpfr/mpfr_4_0_2
-make –j8
-make install
+<!-- 汇编 -->
+<!-- 这里将汇编代码转换成机器代码 -->
+gcc -c test.s -o test.o
 
-## isl
-./configure --prefix=/media/black/Data/lib/isl/isl_4_0_2 --with-gmp-prefix=/media/black/Data/lib/gmp/gmp_6_1_1
-make –j8
-make install
--------
-# 用其自带的下载脚本
-./contrib/download_prerequisites
-```
-- gcc
-```shell
-sudo apt-get install bison build-essential flex
+<!-- 链接 -->
+<!-- 这里将多个目标文件和库文件链接成一个可执行文件 -->
+gcc test.o -o test
 
+<!-- 优化 -->
+<!-- 这里对生成的机器代码进行优化 -->
+gcc -O2 test.o -o test
 
-# 在 glibc>=2.28, 去掉了 ustat.h 文件，gcc源码需要删除相关信息
-vim ./libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cc
-## 注释掉如下内容
-第157行 //#include <sys/ustat.h>
-第250行 //unsigned struct_ustat_sz = sizeof(struct ustat);
-
-# 导入环境变量
-export LD_LIBRARY_PATH=/media/black/Data/lib/gmp/gmp_6_1_1/lib:/media/black/Data/lib/mpc/mpc_1_1_0/lib:/media/black/Data/lib/mpfr/mpfr_4_0_2/lib:/media/black/Data/lib/isl/isl_4_0_2/lib:/media/black/Data/lib/icu/icu_57_2/lib/:${LD_LIBRARY_PATH}
-
-export C_INCLUDE_PATH=/media/black/Data/lib/gmp/gmp_6_1_1/include:/media/black/Data/lib/mpc/mpc_1_1_0/include:/media/black/Data/lib/mpfr/mpfr_4_0_2/include:/media/black/Data/lib/isl/isl_4_0_2sl/include:${C_INCLUDE_PATH}
-
-# ./configure CFLAGS='-fstack-protector-strong -Wl,-z,noexecstack -Wl,-z,relro,-z,now' --prefix=/media/black/Data/lib/gcc/gcc_7_3_0 --with-gmp=/media/black/Data/lib/gmp/gmp_6_1_1 --with-mpfr=/media/black/Data/lib/mpfr/mpfr_4_0_2 --with-mpc=/media/black/Data/lib/mpc/mpc_1_1_0 --with-isl=/media/black/Data/lib/isl/isl_4_0_2 --disable-multilib --enable-languages=c,c++
-./configure --prefix=/media/black/Data/lib/gcc/gcc_7_3_0 --with-gmp=/media/black/Data/lib/gmp/gmp_6_1_1 --with-mpfr=/media/black/Data/lib/mpfr/mpfr_4_0_2 --with-mpc=/media/black/Data/lib/mpc/mpc_1_1_0 --with-isl=/media/black/Data/lib/isl/isl_4_0_2 --disable-multilib --enable-languages=c,c++ --disable-libsanitizer
-make -j8
-make install
-
-
-./configure --disable-multilib --enable-languages=c,c++ --disable-libsanitizer
-```
-
-- centos
-```shell
-yum install centos-release-scl
-yum install devtoolset-8
-scl enable devtoolset-8 bash
-source /opt/rh/devtoolset-8/enable(无效时可尝试执行这一步)
-
-<!-- yum install centos-release-scl -->
-<!-- yum install devtoolset-8-gcc devtoolset-8-gcc-c++ -->
-<!-- scl enable devtoolset-8 -- bas -->
 ```
 
 
-### 语法
+## 语法
 
 -Wl,-rpath,/xxxx/lib (推荐)
 -Wl,--dynamic-linker编译参数
