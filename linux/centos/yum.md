@@ -2,6 +2,7 @@
 
 ## 常用命令
 ```
+# yum check-update # 检查可更新的包
 # yum install package_name # 安装包
 # yum remove package_name # 卸载包
 # yum update package_name # 更新包
