@@ -21,14 +21,14 @@ arch-chroot /mnt
 <!-- 修改 root 密码: 需要操作不然无法进入系统 -->
 passwd
 
-adduser -m black
+useradd -m black
 passwd black
 
 <!-- 默认启用 iwd 服务 -->
 systectl enable iwd
 
 <!-- 给 black 用户添加 sudo 权限 -->
-neovim /etc/sudoers
+nvim /etc/sudoers
 black ALL=(ALL) ALL
 
 
@@ -46,6 +46,9 @@ cd /run/media/black/Data/Documents/github/shell/Hyprdots/Scripts/
 ssh-keygen -t rsa -C '1358244533@qq.com' 
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+timedatectl set-timezone Asia/Shanghai
+timedatectl set-ntp true
 
 reboot
 ```
