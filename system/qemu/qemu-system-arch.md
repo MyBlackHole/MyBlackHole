@@ -1,5 +1,32 @@
 # qemu-system-arch
 
+- u-boot + kernel + sd + qemu-system-arm
+```shell
+
+dd if=/dev/zero of=./sd_card bs=1G count=5
+
+<!-- 使用losetup 将 sd_card 文件虚拟成块设备/dev/loop0 -->
+sudo losetup /dev/loop0 sd_card
+
+<!-- 分区1用于存放内核和设备树 -->
+sudo mkfs.vfat -I /dev/loop0p1
+
+<!-- 分区2用于存放文件系统 -->
+sudo mkfs.ext4 /dev/loop0p2
+
+
+qemu-system-arm -M vexpress-a9 -m 1024M -kernel ./u-boot -sd sd_card -nographic
+<!-- 查看 sd 卡信息 -->
+=> mmcinfo 
+<!-- 加载内核到ddr中，load <硬件接口> <设备号:分区> <加载地址> <文件名> -->
+=> load mmc 0:0 0x60008000 zImage
+=> load mmc 0:0 0x61000000 vexpress-v2p-ca9.dtb
+<!-- 设置环境变量 bootargs  -->
+=> setenv bootargs "root=/dev/mmcblk0 rw console=ttyAMA0"
+<!-- 启动内核 -->
+=> bootz 0x60008000 - 0x61000000
+```
+
 - busybox + initramfs + qemu-system-x86_64 (不推荐)
 ```shell
 <!-- qemu 启动 -->
@@ -12,7 +39,7 @@ qemu-system-x86_64 \
 
 
 <!-- debug -->
-add-auto-load-safe-path ~/linux/scripts/gdb/vmlinux-gdb.py
+add-auto-load-safe-path /run/media/black/Data/Documents/linux_debug/linux-4.19.315/vmlinux-gdb.py
 
 
 :~$ gdb vmlinux
@@ -87,5 +114,5 @@ qemu-system-x86_64 -m 2048 -smp 2 --enable-kvm ubuntu-20.04.5-amd64.img
 
 qemu-system-x86_64 -smp 4 -m 2048 -cdrom /run/media/black/Data/Downloads/iso/CentOS-7-x86_64-Minimal-2009.iso centos7.img
 
-qemu-system-x86_64 -enable-kvm -smp 4 -m 2048 -nographic centos7.img
+qemu-system-x86_64 -enable-kvm -smp 4 -m 4096 -nographic centos7.img
 ```

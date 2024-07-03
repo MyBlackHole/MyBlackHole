@@ -5,6 +5,21 @@
 yum install network-scripts 
 ```
 
+- 静态路由配置
+```shell
+lvim /etc/sysconfig/static-routes
+192.168.255.0/24 via 192.168.255.2 dev eno16777736
+
+service network restart
+
+在网络服务 network 启动过程中，会判断 /etc/sysconfig/static-routes 文件是否存在，
+如果存在则会通过 route 命令对该文件中记录以 any 开头的路由进行添加，添加命令为 /sbin/route add -$args。
+根据上述脚本，尝试编写 static-routes 文件：
+
+any net 192.168.64.0/20 gw 192.168.64.1
+any net 10.0.10.0/24 gw 10.0.10.222
+```
+
 
 - 配置
 ```shell
@@ -60,7 +75,8 @@ USERCTL=no
 NETMASK=255.255.128.0
 IPADDR=192.168.100.211
 PEERDNS=no
-GATEWAY="192.168.100.1"
+# GATEWAY="192.168.100.1" # 内网网关, 不需要
+GATEWAY="10.6.67.254"  # 网关地址
 DNS1="223.5.5.5"
 DNS2="10.6.3.108"
 
@@ -87,7 +103,7 @@ DEVICE="ens192:0"
 ONBOOT="yes"
 IPADDR="10.6.66.7"
 NETMASK="255.255.252.0"
-GATEWAY="10.6.67.254"
+# GATEWAY="10.6.67.254"
 DNS1="223.5.5.5"
 DNS2="10.6.3.108"
 

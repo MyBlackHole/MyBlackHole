@@ -36,3 +36,14 @@ yum install kernel-devel
 ```
 
 
+- 编译携带调试信息的模块
+```shell
+EXTRA_CFLAGS= -O0
+-------------------
+
+EXTRA_CFLAGS = -g
+
+all:
+	make -C $(KDIR) M=$(PWD) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE) modules
+```
+

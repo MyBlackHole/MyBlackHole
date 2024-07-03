@@ -4,7 +4,7 @@
 ```shell
 bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
  
-atuin register -u <USERNAME> -e <EMAIL> -p <PASSWORD>
+atuin register -u MBlackHole -e MBlackHole@gmail.com -p MBlackHole
 atuin import auto
 atuin sync
 ```
@@ -18,8 +18,8 @@ atuin import auto
 
 - 账号
 ```shell
-BlackHole: 密码(你猜)
-myisblackhole@gmail.com
+MBlackHole: MBlackHole
+MBlackHole@gmail.com
 ```
 
 - 状态
@@ -35,10 +35,15 @@ Deleted history count: 0
 
 [Remote]
 Address: https://api.atuin.sh
-Username: BlackHole
+Username: MBlackHole
 ```
 
 - 导入本地历史到 atuin
 ```shell
 atuin import auto
+```
+
+- 登陆
+```shell
+atuin login -u MBlackHole -p MBlackHole -k MBlackHole
 ```

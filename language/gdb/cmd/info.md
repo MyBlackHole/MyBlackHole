@@ -27,3 +27,16 @@ info macro raxNodeFirstChildPtr
   3    process 185385    1 (native)           /run/media/black/Data/lib/postgres/zh_master/bin/postgres 
   4    process 185465    1 (native)           /run/media/black/Data/lib/postgres/zh_master/bin/postgres 
 ```
+
+- 查看自动加载的脚本
+```shell
+(gdb) info auto-load
+gdb-scripts:  No auto-load scripts.
+guile-scripts:  No auto-load scripts.
+libthread-db:  No auto-loaded libthread-db.
+local-gdbinit:  Local .gdbinit file was not found.
+python-scripts:
+Loaded  Script
+Yes     /run/media/black/Data/Documents/linux_debug/linux-4.19.315/vmlinux-gdb.py
+```
+
