@@ -1,5 +1,51 @@
 # objdump
 
+- 符号表
+```shell
+objdump -t hello.ko
+
+hello.ko:     file format elf64-x86-64
+
+SYMBOL TABLE:
+0000000000000000 l    d  .text  0000000000000000 .text
+0000000000000000 l    d  .init.text     0000000000000000 .init.text
+0000000000000000 l    d  .exit.text     0000000000000000 .exit.text
+0000000000000000 l    d  .rodata.str1.1 0000000000000000 .rodata.str1.1
+0000000000000000 l    d  .modinfo       0000000000000000 .modinfo
+0000000000000000 l    d  .orc_unwind_ip 0000000000000000 .orc_unwind_ip
+0000000000000000 l    d  .orc_unwind    0000000000000000 .orc_unwind
+0000000000000000 l    d  .note.gnu.property     0000000000000000 .note.gnu.property
+0000000000000000 l    d  .note.gnu.build-id     0000000000000000 .note.gnu.build-id
+0000000000000000 l    d  .note.Linux    0000000000000000 .note.Linux
+0000000000000000 l    d  .data  0000000000000000 .data
+0000000000000000 l    d  .gnu.linkonce.this_module      0000000000000000 .gnu.linkonce.this_module
+0000000000000000 l    d  .bss   0000000000000000 .bss
+0000000000000000 l    d  .debug_info    0000000000000000 .debug_info
+0000000000000000 l    d  .debug_abbrev  0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_aranges 0000000000000000 .debug_aranges
+0000000000000000 l    d  .debug_rnglists        0000000000000000 .debug_rnglists
+0000000000000000 l    d  .debug_line    0000000000000000 .debug_line
+0000000000000000 l    d  .debug_str     0000000000000000 .debug_str
+0000000000000000 l    d  .debug_line_str        0000000000000000 .debug_line_str
+0000000000000000 l    d  .comment       0000000000000000 .comment
+0000000000000000 l    d  .note.GNU-stack        0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .debug_frame   0000000000000000 .debug_frame
+0000000000000000 l    df *ABS*  0000000000000000 hello.c
+0000000000000000 l     F .init.text     0000000000000012 lk_hello
+0000000000000000 l     F .exit.text     000000000000000e lk_exit
+0000000000000000 l     O .modinfo       000000000000000c __UNIQUE_ID_license27
+0000000000000000 l    df *ABS*  0000000000000000 hello.mod.c
+0000000000000000 l     O .note.Linux    0000000000000018 _note_6
+0000000000000010 l     O .modinfo       0000000000000022 __UNIQUE_ID_vermagic26
+0000000000000032 l     O .modinfo       000000000000000b __UNIQUE_ID_name27
+000000000000003d l     O .modinfo       000000000000000c __UNIQUE_ID_retpoline28
+0000000000000050 l     O .modinfo       0000000000000009 __module_depends
+0000000000000000 g     O .gnu.linkonce.this_module      0000000000000340 __this_module
+0000000000000000 g     F .exit.text     000000000000000e cleanup_module
+0000000000000000 g     F .init.text     0000000000000012 init_module
+0000000000000000         *UND*  0000000000000000 printk
+```
+
 
 arm-linux-objdump
 参数选项：

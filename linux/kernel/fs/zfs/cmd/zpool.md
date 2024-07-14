@@ -15,6 +15,10 @@ Actions: （存储池操作）
 ```shell
 sudo zpool create -f zfs_test sde
 
+<!-- fdisk /dev/sdb -->
+<!-- create sdb1 -->
+<!-- ./zpool create -f zfs_test /dev/sdb1 -->
+
 zpool create -f aiopool sdb # 会自动挂载到根目录 aiopool 目录
 
 # RAID0 (数据条带化后，支持并行访问，提高读取速度)

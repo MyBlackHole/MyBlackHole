@@ -1,5 +1,16 @@
 # 异常处理集
 
+- Requires: container-selinux >= 2:2.74
+```shell
+yum install -y epel-release
+<!-- 更新 docker 版本 -->
+```
+
+- missing signature key
+```shell
+
+```
+
 - 连接权限不够
 ```shell
 # 将当前用户添加到 docker 组(重启生效)

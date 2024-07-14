@@ -1,5 +1,64 @@
 # mod_debug
 
+- 调试再入函数 (没起作用)
+```shell
+
+objdump -t hello.ko
+0000000000000000 l     F .init.text     0000000000000012 lk_hello
+
+break do_init_module
+c
+
+p /x mod.sect_attrs.attrs[1].address
+$1 = 0xffffffffa0000000
+
+print mod->sect_attrs->attrs[1]->name 
+print mod->sect_attrs->attrs[7]->name 
+print mod->sect_attrs->attrs[9]->name 
+print /x mod->sect_attrs->attrs[1]->address 
+print /x mod->sect_attrs->attrs[7]->address 
+print /x mod->sect_attrs->attrs[9]->address
+
+<!-- add-symbol-file /run/media/black/Data/Documents/c/linux_module_learn/hello/hello.ko <text addr> -s .data <data addr> -s .bss <bss addr> -->
+add-symbol-file /run/media/black/Data/Documents/c/linux_module_learn/hello/hello.ko 0xffffffffa0000000
+
+break lk_hello
+
+<!-- 给地址下断点 -->
+break *0xffffffffa0000012
+
+
+# cat /proc/modules
+hello 16384 0 - Live 0xffffffffa0000000 (O)
+
+
+
+(gdb) p  mod.sect_attrs.attrs[0].battr.attr.name
+$5 = 0xffff88813afd2170 ".init.text"
+
+
+(gdb) p  mod.sect_attrs.attrs[1].battr.attr.name
+$7 = 0xffff88813afd2160 ".exit.text"
+
+
+<!-- 如果断点设置在module中的某个函数，执行代码断点没生效，解决方法： -->
+<!-- 1）kernel编译关闭：Randomize the address of the kernel image (KASLR) -->
+<!-- 2）kernel编译打开： -->
+<!--   [*]    Compile the kernel with debug info -->
+<!--   [*]    Provide GDB scripts for kernel debugging -->
+<!-- 3）断点函数是inline类型，需去掉inline属性 -->
+<!-- 4）断点函数被优化，需加 __attribute__((optimize("O0")));声明不要优化，如： -->
+<!-- int upload_to_server(char *server_dir, char *local_file) __attribute__((optimize("O0"))); -->
+
+可以更改/etc/grub2.conf 添加 nokasrl 命令参数。
+然后`grub2-mkconfig -o /boot/grub2/grub.cfg`
+
+Processor type and features -> 
+[ ] Build a relocatable kernel
+取消后 Build a relocatable kernel 的子项 Randomize the address of the kernel image (KASLR) 也会一并被取消
+
+```
+
 - 载入后调试模块
 ```shell
 insmod fsbackup.ko
@@ -24,6 +83,24 @@ target remote:1234
 gdb ./vmlinux
 
 add-symbol-file ./fsbackup.ko 0xffffffffa0000000 -s .data 0xffffffffa000a000 -s .bss 0xffffffffa000a580
+
+# cat /sys/module/fsbackup/sections/.text
+0xffffffffa000d000
+# cat /sys/module/fsbackup/sections/.data
+0xffffffffa0015000
+# cat /sys/module/fsbackup/sections/.bss
+0xffffffffa0015540
+
+add-symbol-file /run/media/black/Data/Documents/aio/aio-tools/fsbackup_kernel_4.x/fsbackup.ko 0xffffffffa0000000 -s .data 0xffffffffa0008000 -s .bss 0xffffffffa0008540
+
+
+# cat /sys/module/fsbackup/sections/.text
+0xffffffffa0000000
+# cat /sys/module/fsbackup/sections/.data
+0xffffffffa0008000
+# cat /sys/module/fsbackup/sections/.bss
+0xffffffffa0008540
+
 
 break fsbackup_init
 ```

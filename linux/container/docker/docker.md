@@ -51,10 +51,16 @@ systemctl daemon-reload
 ### 在线安装
 - centos
 ```shell
+yum install -y epel-release
 yum install -y yum-utils device-mapper-persistent-data lvm2 
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo 
+
+cd /etc/yum.repos.d
+wget http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
 yum list docker-ce --showduplicates | sort -r 
-yum install -y docker-ce-18.06.3.ce-3.el7 
+
+yum install docker-ce docker-ce-cli containerd.io
+
 systemctl start docker 
 systemctl enable docker 
 ```
