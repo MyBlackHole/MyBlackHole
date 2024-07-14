@@ -16,6 +16,7 @@ cmake -DDOWNLOAD_BOOST=1 \
 cmake -DCMAKE_INSTALL_PREFIX=/root/mysql-server-mysql-5.7.44/mysql_5.7.44 \
       -DBUILD_CONFIG=mysql_release \
       -DWITH_UNIT_TESTS=0 \
+      # -DWITHOUT_SERVER=1 \
       -DDOWNLOAD_BOOST=1 \
       -DWITH_BOOST=dwith_boost \
       ..
@@ -25,6 +26,9 @@ cmake -DCMAKE_INSTALL_PREFIX=/root/mysql-server-mysql-5.7.44/mysql_5.7.44 \
 # DCMAKE_C_FLAGS_DEBUG 关闭编译优化
 
 make -j 4
+
+# 构建包 (依赖 CPack)
+make package
 
 lvim my.cnf
 [client]

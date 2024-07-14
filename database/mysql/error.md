@@ -128,3 +128,4 @@ sysctl -w net.ipv6.conf.default.disable_ipv6=1
 配置mysql的配置文件/etc/my.conf，在mysqld下面添加bind-address=0.0.0.0 然后重新启动mysql服务就能正常监听ibv4地址了
 ```
 
+
