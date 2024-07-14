@@ -76,4 +76,9 @@ sudo brctl showstp br0
 ```
 # storage device
 -drive file=path/to/image.img,if=virtio
+
+qemu-img create -f raw block.img 320M
+-hda block.img
+-hdb block.img
+-hdc block.img
 ```

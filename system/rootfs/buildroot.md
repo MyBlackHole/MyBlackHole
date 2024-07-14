@@ -34,6 +34,8 @@ make menuconfig
 ##     [*] x86-64-efi
 ##     (boot linux ext4 fat squash4 part_msdos part_gpt normal efi_gop) builtin modules
 
+网络: dhcpcd
+
 export PATH=/usr/bin:/bin
 
 make -j $(nproc) # 开始编译
@@ -41,6 +43,29 @@ make -j $(nproc) # 开始编译
 ## 编译完成后，在output/images/目录下可以找到编译好的镜像文件。
 ```
 
+- 自动启动配置
+```shell
+# ls -lha /etc/init.d/
+total 72K
+drwxr-xr-x    2 root     root        4.0K Jul 14 09:51 .
+drwxr-xr-x   15 root     root        4.0K Jul 14 09:49 ..
+-rwxr-xr-x    1 root     root        1.2K Jul 13 08:00 S01seedrng
+-rwxr-xr-x    1 root     root        1012 Jul 13 07:46 S01syslogd
+-rwxr-xr-x    1 root     root        1004 Jul 13 07:46 S02klogd
+-rwxr-xr-x    1 root     root        2.7K Jul 13 07:46 S02sysctl
+-rwxr-xr-x    1 root     root        1.5K Jul 14 09:28 S29netplug
+-rwxr-xr-x    1 root     root        1.6K Jul 13 07:47 S30dbus
+-rwxr-xr-x    1 root     root         454 Jul 14 09:34 S30rpcbind
+-rwxr-xr-x    1 root     root         618 Jul 13 07:56 S40iwd
+-rwxr-xr-x    1 root     root         438 Jul 13 07:56 S40network
+-rwxr-xr-x    1 root     root         617 Jul 14 09:11 S41dhcpcd
+-rwxr-xr-x    1 root     root         586 Jul 13 07:57 S50nginx
+-rwxr-xr-x    1 root     root        1.1K Jul 13 07:58 S50sshd
+-rwxr-xr-x    1 root     root        1.2K Jul 14 09:10 S80dhcp-relay
+-rwxr-xr-x    1 root     root        1.1K Jul 14 09:10 S80dhcp-server
+-rwxr-xr-x    1 root     root         423 Jul 13 07:56 rcK
+-rwxr-xr-x    1 root     root         408 Jul 13 07:56 rcS
+```
 - make sdk
 ```shell
 <!-- Buildroot 编译时会生成 toolchain，相关内容位于 output/host/ 目录。 -->

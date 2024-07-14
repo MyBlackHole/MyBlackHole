@@ -39,7 +39,8 @@ qemu-system-x86_64 \
 
 
 <!-- debug -->
-add-auto-load-safe-path /run/media/black/Data/Documents/linux_debug/linux-4.19.315/vmlinux-gdb.py
+add-auto-load-safe-path /run/media/black/Data/Documents/linux_debug/linux-4.19.315/
+source /run/media/black/Data/Documents/linux_debug/linux-4.19.315/vmlinux-gdb.py
 
 
 :~$ gdb vmlinux
