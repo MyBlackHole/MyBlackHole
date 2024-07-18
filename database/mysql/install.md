@@ -46,8 +46,8 @@ podman run -p 3306:3306 --name mysql \
     -v /opt/podman/mysql5/conf:/etc/mysql \
     -v /opt/podman/mysql5/logs:/var/log/mysql \
     -v /opt/podman/mysql5/data:/var/lib/mysql \
-    -e MYSQL_ROOT_PASSWORD=p@3Sw0rd \
-    -d mysql:5.7
+    -e MYSQL_ROOT_PASSWORD=88888888 \
+    -d mysql
 
 # 修改data、logs、conf 用户与用户组为 999:999
 #sudo chowm 999:999 data conf logs
@@ -70,7 +70,7 @@ podman run -p 3306:3306 --name mysql \
     -v /opt/podman/mysql/conf:/etc/mysql \
     -v /opt/podman/mysql/logs:/var/log/mysql \
     -v /opt/podman/mysql/data:/var/lib/mysql \
-    -e MYSQL_ROOT_PASSWORD=p@3Sw0rd \
+    -e MYSQL_ROOT_PASSWORD=88888888 \
     -d mysql:8
 ```
 

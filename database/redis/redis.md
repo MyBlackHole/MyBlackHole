@@ -1,9 +1,12 @@
-### 安装
+# redis
 
-- docker
+- podman
 ```shell
 <!-- 拉取镜像同时运行 -->
-docker run -p 6379:6379 --name redis -d redis
+podman run -p 6379:6379 --name redis -d redis
+
+<!-- 设置密码 -->
+podman run -d -p 6379:6379 --name aio-redis redis --requirepass "88888888888888"
 ```
 
 - 物理机

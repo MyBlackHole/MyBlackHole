@@ -1,4 +1,6 @@
-### 配置
+# config
+
+## 配置
 ```shell
 Redis 的配置信息在 /etc/redis/redis.conf 下。 
 
