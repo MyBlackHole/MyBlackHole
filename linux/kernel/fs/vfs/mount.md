@@ -72,3 +72,9 @@ mount -t minix -o loop,offset=1024 $OSLAB_PATH/hdc-0.11.img $OSLAB_PATH/hdc  # �
 ```shell
 mount -o iocharset=utf8 /dev/sdc1 /usb
 ```
+
+- 通过 uuid 挂载
+```shell
+<!-- sudo mount -t vfat /dev/disk/by-uuid/xxxx-xxxx /mnt/usb -->
+sudo mount -U UUID /mnt/usb
+```

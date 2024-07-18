@@ -140,3 +140,14 @@ sr0     11:0    1  1024M  0 rom
 ```shell
 lsblk -lpnb -o NAME,SIZE,ROTA,MOUNTPOINT,FSTYPE
 ```
+
+
+- uuid
+```shell
+❯ lsblk -o name,mountpoint,size,uuid
+NAME        MOUNTPOINT              SIZE UUID
+sda         /run/media/black/Data   1.8T 81e71ef6-d3be-4b2d-bfee-ff49e14fe6a2
+nvme0n1                           476.9G
+├─nvme0n1p1 /boot                     1G C287-DDC7
+└─nvme0n1p2 /                     475.9G dc10bd9d-d7ca-4ba5-816b-683230108cb6
+```
