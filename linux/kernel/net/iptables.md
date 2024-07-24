@@ -1,10 +1,10 @@
 # iptables
 真正实现防火墙功能的是netfilter
-![[imgs/Pasted image 20230509153444.png]]
-![[imgs/Pasted image 20230509150633.png]]
-![[imgs/Pasted image 20230509150700.png]]
-![[imgs/Pasted image 20230509150712.png]]
-![[imgs/img_v2_9b594cff-e65c-48e6-9497-a86fd06ba79g.webp]]
+![[../../imgs/iptables.png]]
+![[../../imgs/iptables-1.png]]
+![[../../imgs/iptables-2.png]]
+![[../../imgs/iptables-3.png]]
+![[imgs/iptables.webp]]
 
 ### 规则表
 ```shell

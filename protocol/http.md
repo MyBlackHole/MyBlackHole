@@ -14,4 +14,4 @@ git clone git@github.com:h2o/h2o.git
 ```shell
 git clone git@github.com:jeremycw/httpserver.h.git
 ```
-![[imgs/state_diagram.png]]
+![[imgs/http.png]]

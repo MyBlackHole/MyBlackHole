@@ -1,7 +1,7 @@
 # boot
 
 引导过程：
-![[imgs/Pasted image 20231003172322.png]]
+![[imgs/boot.png]]
 
 
 [详细](https://community.milkv.io/t/uboot/181)

@@ -9,7 +9,7 @@ git@github.com:h2o/quicly.git
 
 QUIC 全称：Quick UDP Internet Connections，是一种基于 UDP 的传输层协议。由 Google 自研，2012 年部署上线，2013 年提交 IETF，2021 年 5 月，IETF 推出标准版 RFC9000。
 
-![](imgs/v2-d61a62fdfb08ed3882e1018136ce6b2f_b.jpg)
+![](../imgs/QUIC.jpg)
 
 从协议栈可以看出：QUIC = HTTP/2 + TLS + UDP
 
@@ -19,7 +19,7 @@ QUIC 全称：Quick UDP Internet Connections，是一种基于 UDP 的传输层�
 
 一个 QUIC 数据包的格式如下：
 
-![](imgs/v2-60231adb6c7014c7f043712839f77ab5_b.jpg)
+![](../imgs/QUIC-1.jpg)
 
 由 header 和 data 两部分组成。
 
@@ -29,11 +29,11 @@ data 是加密的，可以包含 1 个或多个 frame，每个 frame 又分为 t
 
 数据帧有很多类型：Stream、ACK、Padding、Window\_Update、Blocked 等，这里重点介绍下用于传输应用数据的 Stream 帧。
 
-![](imgs/v2-f1cb88ac186e851a724a85dbd4f3de01_b.jpg)
+![](../imgs/QUIC-2.jpg)
 
 **Frame Type：** 帧类型，占用 1 个字节
 
-![](imgs/v2-eb52f6d7f4d12a2599085f62f9240162_b.jpg)
+![](../imgs/QUIC-3.jpg)
 
 （1）Bit7：必须设置为 1，表示 Stream 帧
 
@@ -57,13 +57,13 @@ data 是加密的，可以包含 1 个或多个 frame，每个 frame 又分为 t
 
 先分析下 HTTPS 的握手过程，包含 TCP 握手和 TLS 握手，TCP 握手：
 
-![](imgs/v2-1fb94488942494ec9425ecf6682ed6e1_b.jpg)
+![](../imgs/QUIC-4.jpg)
 
 从图中可以看出，TCP 握手需要 2 个 RTT。
 
 TLS 握手：密钥协商（1.3 版本）
 
-![](imgs/v2-86cc5e2cf1b509083759b9c22800e2a7_b.jpg)
+![](../imgs/QUIC-5.jpg)
 
 从图中可以看出，TLS 握手需要 1 个 RTT，也就是 1 次 RTT 就把通信密钥协商好了，这是怎么做到的？
 
@@ -83,7 +83,7 @@ TLS 握手：密钥协商（1.3 版本）
 
 其实原理很简单：客户端缓存了 ServerConfig（B=b\*G%P），下次建连直接使用缓存数据计算通信密钥：
 
-![](imgs/v2-3862b1eeb75898f4f32de223b6123ddb_b.jpg)
+![](../imgs/QUIC-6.jpg)
 
 （1）客户端：生成随机数 c，选择公开的大数 G 和 P，计算 A=c\*G%P，将 A 和 G 发送给服务器，也就是 Client Hello 消息
 
@@ -99,7 +99,7 @@ TLS 握手：密钥协商（1.3 版本）
 
 前向安全：是指用来产生会话密钥的长期密钥泄露出去，不会泄漏以前的通讯内容。
 
-![](imgs/v2-d5e6bf3b74ae07927b0d62bccfa3c095_b.jpg)
+![](../imgs/QUIC-7.jpg)
 
 （1）客户端：生成随机数 a，选择公开的大数 G 和 P，计算 A=a\*G%P，将 A 和 G 发送给服务器，也就是 Client Hello 消息
 
@@ -129,7 +129,7 @@ QUIC 是基于 UDP 协议的，而 UDP 是不可靠传输协议，那 QUIC 是�
 
 解决方案：通过包号（PKN）和确认应答（SACK）
 
-![](imgs/v2-aace93419dd55c73ab4b5fd2976e1375_b.jpg)
+![](../imgs/QUIC-8.jpg)
 
 （1）客户端：发送 3 个数据包给服务器（PKN = 1，2，3）
 
@@ -145,7 +145,7 @@ QUIC 是基于 UDP 协议的，而 UDP 是不可靠传输协议，那 QUIC 是�
 
 每个数据包都有一个 offset 字段，表示在整个数据中的偏移量。
 
-![](imgs/v2-e6abef5bc9316fd87905a5e97b547050_b.jpg)
+![](../imgs/QUIC-9.jpg)
 
 接收端根据 offset 字段就可以对异步到达的数据包进行排序了。为什么 QUIC 要将 PKN 设计为单调递增？解决 TCP 的重传歧义问题：
 
@@ -155,17 +155,17 @@ QUIC 是基于 UDP 协议的，而 UDP 是不可靠传输协议，那 QUIC 是�
 
 和 TCP 一样，QUIC 也是利用滑动窗口机制实现流量控制：
 
-![](imgs/v2-2b659a36da1993c1a65bed4830606997_b.jpg)
+![](../imgs/QUIC-10.jpg)
 
 发送端的窗口大小由接收端告知，包括发送窗口和可用窗口，如果发送端收到了接收端的 ACK 确认应答（比如 ACK 36），那整个窗口就会向右滑动，发送新的数据包。
 
-![](imgs/v2-62c627de56caf4617f97628215c4fa03_b.jpg)
+![](../imgs/QUIC-11.jpg)
 
 和 TCP 不同的是，QUIC 的滑动窗口分为 Connection 和 Stream 两种级别。Connection 流量控制：规定了所有数据流的总窗口大小；Stream 流量控制：规定了每个流的窗口大小。
 
 假设现在有 3 个 Stream，滑动窗口分别如下：
 
-![](imgs/v2-a5f95afac0935ae11f4672d3fdf9bf3e_b.jpg)
+![](../imgs/QUIC-12.jpg)
 
 则整个 Connection 的可用窗口大小为：20+30+10 = 60
 
@@ -183,7 +183,7 @@ swnd = min（cwnd，rwnd）
 
 **慢启动算法**： 当发送方每收到一个 ACK，拥塞窗口就加 1（cwnd++）
 
-![](imgs/v2-54d7f3cc6ec67a9ae47fa5dfa3fccfc0_b.jpg)
+![](../imgs/QUIC-13.jpg)
 
 由此可以看出，慢启动阶段，拥塞窗口呈指数增长，那增长到多少是个头？
 
@@ -202,7 +202,7 @@ swnd = min（cwnd，rwnd）
 
 **拥塞避免算法：** 当发送方每收到一个 ACK，拥塞窗口就加 1/cwnd
 
-![](imgs/v2-1072c63fd6e97e671affe2d9346c3836_b.jpg)
+![](../imgs/QUIC-14.jpg)
 
 假设现在的 cwnd=8，可以发送 8 个数据包，当收到这 8 个包的 ACK 时，拥塞窗口才会加 1，由此可知，在拥塞避免阶段，拥塞窗口是线性增长的。
 
@@ -219,7 +219,7 @@ swnd = min（cwnd，rwnd）
 +   cwnd = 1  
     
 
-![](imgs/v2-dcefc32fcbaca9acf5a347580b56ff3c_b.jpg)
+![](../imgs/QUIC-15.jpg)
 
 重新使用慢启动和拥塞避免算法增加拥塞窗口的大小。
 
@@ -236,7 +236,7 @@ swnd = min（cwnd，rwnd）
 
 快速恢复算法：cwnd = ssthresh + 3（因为收到 3 个 ACK），然后进入拥塞避免阶段。
 
-![](imgs/v2-9158217fe2e02f6b17a29aadf649cdd2_b.jpg)
+![](../imgs/QUIC-16.jpg)
 
 ## **2.5.5、常见算法**
 
@@ -255,7 +255,7 @@ swnd = min（cwnd，rwnd）
 
 概念：单条 TCP 连接上可以同时发送多个 HTTP 请求，解决了 HTTP1.1 中单个连接 1 次只能发送 1 个请求的性能瓶颈。HTTP/2 能实现多路复用的根本原因是采用了二进制帧格式的数据结构。
 
-![](imgs/v2-9ec2f3b580d86711ce10bf983705e0a5_b.jpg)
+![](../imgs/QUIC-17.jpg)
 
 +   Length：表示 Payload 的长度  
     
@@ -270,11 +270,11 @@ swnd = min（cwnd，rwnd）
 
 一个请求就对应一条流，通过 Stream ID 就可以判断该数据帧属于哪个请求，假设有 A 和 B 两个请求，对应的 Stream ID 分别为 1 和 2，那这个 TCP 连接上传输的数据大概如下：
 
-![](imgs/v2-33cc6b4531a4de38b94da1b2a7b6ee8a_b.jpg)
+![](../imgs/QUIC-18.jpg)
 
 虽然在 HTTP 应用层，可以同时发送多个请求，但是在 TCP 传输层，仍然只有 1 个滑动窗口来发送这些数据包，考虑下面的情形：
 
-![](imgs/v2-0454bee543863c36908765244b989a56_b.jpg)
+![](../imgs/QUIC-19.jpg)
 
 客户端发送的 5 个数据包（56789）服务器都收到了，并且回应了 5 个 ACK，但是第 5 个数据包的 ACK 丢失了，导致客户端的发送窗口无法向前移动，也就无法发送新的数据，这就是 TCP 层的队头阻塞问题。
 
@@ -282,7 +282,7 @@ HTTP/2 虽然通过多路复用解决了 HTTP 层的队头阻塞，但仍然存�
 
 QUIC 就是这么做的：
 
-![](imgs/v2-b5a52474167933083a90ff8baa040005_b.jpg)
+![](../imgs/QUIC-20.jpg)
 
 A 请求流上的丢包不会影响 B 请求流上的数据发送。但是，对于每个请求流而言，也是存在队头阻塞问题的，也就是说，虽然 QUIC 解决了 TCP 层的队头阻塞，但仍然存在单条流上的队头阻塞。这就是 QUIC 声明的无队头阻塞的多路复用。
 
@@ -290,7 +290,7 @@ A 请求流上的丢包不会影响 B 请求流上的数据发送。但是，对
 
 连接迁移：当客户端切换网络时，和服务器的连接并不会断开，仍然可以正常通信，对于 TCP 协议而言，这是不可能做到的。因为 TCP 的连接基于 4 元组：源 IP、源端口、目的 IP、目的端口，只要其中 1 个发生变化，就需要重新建立连接。但 QUIC 的连接是基于 64 位的 Connection ID，网络切换并不会影响 Connection ID 的变化，连接在逻辑上仍然是通的。
 
-![](imgs/v2-f82f920a417188160d2354757db44567_b.jpg)
+![](../imgs/QUIC-21.jpg)
 
 假设客户端先使用 IP1 发送了 1 和 2 数据包，之后切换网络，IP 变更为 IP2，发送了 3 和 4 数据包，服务器根据数据包头部的 Connection ID 字段可以判断这 4 个包是来自于同一个客户端。QUIC 能实现连接迁移的根本原因是底层使用 UDP 协议就是面向无连接的。
 

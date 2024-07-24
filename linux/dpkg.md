@@ -7,4 +7,4 @@ deb 管理工具
 ```shell
 dpkg -x xxx.deb
 ```
-![[imgs/Pasted image 20230428022751.png]]
+![[imgs/dpkg.png]]

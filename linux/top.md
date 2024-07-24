@@ -1,5 +1,5 @@
 # top
-![[imgs/Pasted image 20230405110419.png]]
+![[imgs/top.png]]
 
 细节[https://blog.csdn.net/u011391839/article/details/107407466]
 

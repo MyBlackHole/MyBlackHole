@@ -1,6 +1,7 @@
 # pidof
+
 用于查找指定名称进程的所有进程号
-![[imgs/Pasted image 20230428015242.png]]
+![[imgs/pidof.png]]
 
 ## 语法
 ```shell

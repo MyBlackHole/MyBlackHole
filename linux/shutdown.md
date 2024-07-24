@@ -1,6 +1,6 @@
 # shutdown
 关闭计算机
-![[imgs/Pasted image 20230428023006.png]]
+![[imgs/shutdown.png]]
 
 ## 例子
 - 定时关机, 2 小时

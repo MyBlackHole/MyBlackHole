@@ -29,7 +29,7 @@
 ```
 
 * 字段说明
-![[imgs/Pasted image 20231113150452.png]]
+![[imgs/policy.png]]
 
 |Action|API|Level|
 |---|---|---|

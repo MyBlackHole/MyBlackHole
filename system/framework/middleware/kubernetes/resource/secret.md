@@ -2,7 +2,7 @@
 
 
 ## cert-manager
-![[imgs/Pasted image 20231020113847.png]]
+![[imgs/secret.png]]
 ```shell
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.13.1/cert-manager.yaml
 

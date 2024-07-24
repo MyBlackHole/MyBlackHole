@@ -2,7 +2,7 @@
 
 [docs](https://yianwillis.github.io/vimcdoc/doc/help.html)
 
-![[imgs/Pasted image 20231221145136.png]]
+![[imgs/lvim.png]]
 
 
 ## install

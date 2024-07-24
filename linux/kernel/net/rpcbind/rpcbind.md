@@ -1,5 +1,5 @@
 # rpcbind
-![[imgs/Pasted image 20230610174944.png]]
+![[imgs/rpcbind.png]]
 
 配置 rpcbind 监听方式: /etc/netconfig
 

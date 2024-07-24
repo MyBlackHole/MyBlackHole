@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "protocol/QUIC.md",
-                "mode": "preview",
+                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "protocol/QUIC.md",
+                "file": "linux/kernel/drivers/gpio/gpio.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "protocol/QUIC.md",
+                "file": "linux/kernel/drivers/gpio/gpio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "protocol/QUIC.md"
+                "file": "linux/kernel/drivers/gpio/gpio.md"
               }
             }
           }
@@ -167,46 +167,46 @@
   },
   "active": "5e1d9b4c5d806204",
   "lastOpenFiles": [
-    "protocol/protobuf.md",
-    "protocol/KMS.md",
-    "protocol/http.md",
-    "protocol/ftp.md",
-    "protocol/ascii.md",
-    "protocol/AMQP.md",
-    "README.md",
-    "BH.md",
-    "FPGA/LUT.md",
-    "fstype/iso.md",
-    "FPGA/openFPGALoader.md",
-    "algorithm/运算.md",
-    "algorithm/雪花算法.md",
-    "algorithm/序列密码.md",
-    "algorithm/对称加密算法.md",
-    "algorithm/分组密码.md",
-    "URL.md",
-    "linux/kernel/fs/vfs/mount.md",
-    "linux/kernel/fs/vfs/umount.md",
-    "linux/kernel/fs/vfs/vfs.md",
-    "linux/kernel/fs/vfs/imgs/20240719094047.png",
-    "Pasted image 20240719094039.png",
-    "Pasted image 20240719094033.png",
-    "linux/kernel/fs/vfs/imgs",
+    "linux/kernel/fs/sysfs.md",
     "linux/kernel/fs/fs.md",
-    "linux/archlinux/archlinux.md",
-    "protocol/xbsa.md",
-    "linux/kernel/System.map.md",
-    "linux/kernel/syscall_table.md",
-    "language/c/tools/sparse.md",
-    "protocol/imgs/Pasted image 20240711213344.png",
-    "protocol/imgs/Pasted image 20240711213112.png",
+    "linux/kernel/fs/squashfs.md",
+    "linux/kernel/imgs/Pasted image 20230624183020.png",
+    "linux/kernel/imgs/Pasted image 20230514100521.png",
+    "linux/kernel/imgs/Pasted image 20230514100448.png",
+    "linux/kernel/imgs/Pasted image 20230514100151.png",
+    "linux/kernel/imgs/Pasted image 20230514095905.png",
+    "linux/kernel/ipc/互斥锁.md",
+    "linux/kernel/kernel_struct/struct.md",
+    "linux/kernel/kernel_struct/task_struct.md",
+    "linux/kernel/net/imgs/Pasted image 20231018103602.png",
+    "linux/kernel/net/nat/error.md",
+    "linux/kernel/net/nat/frp.md",
+    "linux/kernel/net/rpcbind/rpcbind.md",
+    "linux/kernel/net/rpcbind/rpcinfo.md",
+    "linux/kernel/net/sysctl/config.md",
+    "linux/kernel/net/tcp/listen.md",
+    "linux/kernel/net/tcp/somaxconn.md",
+    "linux/kernel/net/tcp/tcp.md",
+    "linux/kernel/net/tcp/tcp_keepalive.md",
+    "linux/kernel/net/tcp/status.md",
+    "linux/kernel/net/base.md",
+    "linux/kernel/net/bridge.md",
+    "linux/kernel/net/error.md",
+    "linux/kernel/net/ip.md",
+    "linux/kernel/net/iptables.md",
+    "linux/kernel/net/ipvlan.md",
+    "linux/kernel/net/net.md",
+    "linux/kernel/net/Nagle.md",
+    "linux/kernel/net/poll.md",
+    "linux/kernel/net/socket.md",
+    "linux/neovim/imgs/lvim.png",
+    "protocol/S3/imgs/Pasted image 20231110102004.png",
+    "protocol/S3/imgs/policy.png",
+    "linux/kernel/fs/vfs/imgs/20240719094047.png",
+    "linux/kernel/fs/vfs/imgs",
     "未命名",
-    "linux/kernel/fs/bcachefs/imgs/Pasted image 20240505182212.png",
-    "linux/kernel/fs/bcachefs/imgs/Pasted image 20240505182129.png",
-    "linux/kernel/fs/bcachefs/imgs/Pasted image 20240505182043.png",
     "linux/kernel/fs/bcachefs/imgs",
     "linux/kernel/fs/bcachefs",
-    "protocol/imgs/Pasted image 20240413095132.png",
-    "protocol/imgs/Pasted image 20240413095103.png",
     "database/postgres/imgs",
     "FPGA/TangNano20k/imgs",
     "linux/kernel/devices/rpmsg/imgs"

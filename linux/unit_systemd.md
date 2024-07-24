@@ -1,12 +1,12 @@
 # systemctl
-![[imgs/Pasted image 20230428011440.png]]
+![[imgs/unit_systemd.png]]
 ## Service unit：系统服务
 ### Unit
-![[imgs/Pasted image 20230428010948.png]]
+![[imgs/unit_systemd-1.png]]
 ### Service
-![[imgs/Pasted image 20230428011047.png]]
+![[imgs/unit_systemd-2.png]]
 ### install
-![[imgs/Pasted image 20230428011120.png]]
+![[imgs/unit_systemd-3.png]]
 ### Target unit：多个 Unit 构成的一个组 
 
 ### Device Unit：硬件设备 

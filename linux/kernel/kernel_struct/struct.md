@@ -72,9 +72,9 @@
 
 
 ## struct task_struct
-![[imgs/Pasted image 20230730153417.png]]
+![[imgs/struct.png]]
 
-![[imgs/Pasted image 20230809094821.png]]
+![[imgs/struct-1.png]]
 
 R: 程序正在运行或者是在等待运行的队列中
 S: 处于休眠状态的进程，等待触发事件。

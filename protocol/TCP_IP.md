@@ -4,7 +4,7 @@
 
 TCP/IP协议实际上是一个协议族。
 
-![[imgs/Pasted image 20240711213112.png]]
+![[imgs/TCP_IP.png]]
 
 1.  LISTEN:TCP正等待从对端TCP节点发来的连接请求
 2. SYN_SENT:TCP发送一个SYN报文，代表应用程序执行了一个主动打开的操作，并等待对端回应以此完成连接的建立
@@ -18,4 +18,4 @@ TCP/IP协议实际上是一个协议族。
 10. LAST_ACK：应用程序执行被动关闭，而之前处于CLOSE_WAIT状态的TCO节点发送一个FIN报文给对端，并等待对端的确认。当收到对端发来的确认ACK报文时，连接关闭，相关的内核资源都会得到释放。
 11. LCLOSED：关闭状态。
 
-![[imgs/Pasted image 20240711213344.png]]
+![[imgs/TCP_IP-1.png]]

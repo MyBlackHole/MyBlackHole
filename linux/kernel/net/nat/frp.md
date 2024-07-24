@@ -3,7 +3,7 @@
 内网穿透
 [github](git clone git@github.com:fatedier/frp.git)
 
-![[imgs/Pasted image 20231114121702.png]]
+![[imgs/frp.png]]
 ## start
 ```shell
 <!-- /etc/systemd/system/frps.service -->

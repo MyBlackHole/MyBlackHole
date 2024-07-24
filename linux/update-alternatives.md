@@ -2,7 +2,7 @@
 
 进行版本切换
 
-![[imgs/Pasted image 20230428022352.png]]
+![[imgs/update-alternatives.png]]
 
 ```shell
 $ update-alternatives --help

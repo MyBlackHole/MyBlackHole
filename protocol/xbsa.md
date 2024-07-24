@@ -1,7 +1,7 @@
 # xbsa
 
 ## 创建对象
-![[imgs/Pasted image 20240413095103.png]]
+![[imgs/xbsa-3.png]]
 
 - BSAQueryApiVersion：该接口用于确定Netbackup XBSA接口的当前版本。
 - BSAInit：该接口用于对XBSA应用程序进行身份验证，与NetBackup XBSA接口建立session会话，并为调用者的后续API调用建立环境。注意，BSAInit不支持嵌套创建session会话。
@@ -36,7 +36,7 @@ BSATerminate调用终止与NetBackup XBSA接口的会话，该接口由BSAInit�
 
 ## 获取对象
 
-![[imgs/Pasted image 20240413095132.png]]
+![[imgs/xbsa-4.png]]
 
 - BSAQueryObject：
 

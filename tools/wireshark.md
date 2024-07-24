@@ -229,7 +229,7 @@ ip.src==192.168.10.10 and http.request.method=="POST"
 
 详解请[参考前文](https://pdai.tech/md/develop/protocol/dev-protocol-tcpip.html)
 
-![](imgs/dev-network-tcpip-4.jpg)
+![](../imgs/tcp-2.jpg)
 
 > 注：以下例子来源于：https://blog.csdn.net/shengjie87/article/details/106095866, 同时我还推荐你看下这篇 [wireshark抓包分析——TCP/IP协议在新窗口打开](https://sq.163yun.com/blog/article/193066493804396544?tag=M_tg_144_70)
 

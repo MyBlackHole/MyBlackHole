@@ -7,7 +7,7 @@ net/socket.c:socket
                 net/socket.c:__sock_create
                     net/socket.c:sock_alloc
 
-![[imgs/Pasted image 20230613222458.png]]
+![[imgs/socket.png]]
 
 
 # TCP
@@ -28,10 +28,10 @@ net/socket.c:recv
                                                         kernel/sched/core.c:__schedule
                                                             kernel/sched/core.c:deactivate_task
                                                             kernel/sched/core.c:pick_next_task
-![[imgs/Pasted image 20230613233258.png]]
-![[imgs/Pasted image 20230613233851.png]]
+![[imgs/socket-1.png]]
+![[imgs/socket-2.png]]
 
 # listen
 
-![[imgs/Pasted image 20230614000049.png]]
+![[imgs/socket-3.png]]
 [细节](https://heapdump.cn/article/2300883)
