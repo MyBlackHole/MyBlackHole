@@ -23,3 +23,10 @@ b 表示单字节
 h 表示双字节
 w 表示四字节
 g 表示八字节
+
+
+## 例子
+```shell
+(gdb) x /t &iattr.ia_valid
+0xffffc90001f23e68:     01000001
+```

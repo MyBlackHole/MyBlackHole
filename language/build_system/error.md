@@ -125,3 +125,8 @@ apt install libtinfo5
 gcc 9 切换 gcc 5, 解决过 
 本质是不存在问题
 ```
+
+- variable has incomplete type struct tm
+```shell
+#include <time.h>
+```

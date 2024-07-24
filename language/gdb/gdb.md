@@ -32,7 +32,6 @@ https://github.com/cyrus-and/gdb-dashboard
 - display 变量名:跟踪查看一个变量，每次停下来都显示它的值
 - undisplay：取消对先前设置的那些变量的跟踪
 - until <linenum>:脱离，跳至 linenum 行
-- print(p) var：打印变量值
 - next(n)：单条执行
 - inferiors: 切换进程id(info inferiors 为 NUM)
 - directory(dir): 设置源码目录

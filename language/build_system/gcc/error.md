@@ -44,3 +44,13 @@ yum install gcc-c++
 -O2 进一步优化。
 -O3 比 -O2 更进一步优化，包括 inline 函数。
 ```
+
+- defined but not used [-Wunused-function] 
+```shell
+<!-- 使用 __attribute__((unused)) 告诉编译器忽略此告警 -->
+__attribute__((unused))
+
+__attribute__((unused)) static char const* xxxx()
+{
+}
+```

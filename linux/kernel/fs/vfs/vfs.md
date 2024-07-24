@@ -8,6 +8,10 @@ VFS背后的核心idea是引入了通用文件模型（common file model），�
 
 ![[imgs/Pasted image 20230624183020.png]]
 
+[来源](https://www.cnblogs.com/jimbo17/p/10436222.html#:~:text=generic_file_direct_write)
+![[imgs/20240719094047.png]]
+
+
 ## 通用文件模型（common file model）
 
 通用文件模型由superblock、inode、dentry、file四种数据结构构成，这四种数据结构都是保存在内核空间中的。

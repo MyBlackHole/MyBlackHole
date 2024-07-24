@@ -37,4 +37,13 @@ net.ipv4.tcp_max_tw_buckets = 5000
 #TIME_WAIT套接字将立刻被清除并打印警告信息。默认为180000，改为5000。
 #对于Apache、Nginx等服务器，上几行的参数可以很好地减少TIME_WAIT套接字数量，
 #但是对于Squid，效果却不大。此项参数可以控制TIME_WAIT套接字的最大数量，避免Squid服务器被大量的TIME_WAIT套接字拖死
+
+
+
+cat /proc/sys/net/ipv4/tcp_keepalive_time
+7200
+cat /proc/sys/net/ipv4/tcp_keepalive_probes
+9
+cat /proc/sys/net/ipv4/tcp_keepalive_intvl
+75
 ```

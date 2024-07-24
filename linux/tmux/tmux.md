@@ -78,7 +78,7 @@
   C-Left, C-Right
   M-Up, M-Down       # 改变当前窗格的大小，每按一次增减五个单位
   M-Left, M-Right
-  :setw synchronise-panes on  # 开启多 pane 同步输入
+  :setw synchronise-panes  # 开启多 pane 同步输入
 ```
 
 快捷键	翻译	原文

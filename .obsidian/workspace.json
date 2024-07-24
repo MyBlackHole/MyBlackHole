@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "64b60de7d636abe5",
+    "type": "split",
+    "children": [
+      {
+        "id": "84a3638fe5139745",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5e1d9b4c5d806204",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "protocol/QUIC.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "85b2e9e1f8f22ba1",
+    "type": "split",
+    "children": [
+      {
+        "id": "389fd2be1f87dced",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "629aa994a488bb73",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "28d86bc9d63f52c1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tcp",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "595152cbfe22d314",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0702a88724a3ed1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "14c1b9f707e71e70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38200a41e020fa1f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "protocol/QUIC.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c1ef174f60aa9a46",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "protocol/QUIC.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "679d6351874c96e4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b395d7fce1206ba5",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "44b5594a7b062d5d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "protocol/QUIC.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "random-note:开始漫游笔记": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "workspaces:管理工作区布局": false,
+      "audio-recorder:开始/结束录音": false
+    }
+  },
+  "active": "5e1d9b4c5d806204",
+  "lastOpenFiles": [
+    "protocol/protobuf.md",
+    "protocol/KMS.md",
+    "protocol/http.md",
+    "protocol/ftp.md",
+    "protocol/ascii.md",
+    "protocol/AMQP.md",
+    "README.md",
+    "BH.md",
+    "FPGA/LUT.md",
+    "fstype/iso.md",
+    "FPGA/openFPGALoader.md",
+    "algorithm/运算.md",
+    "algorithm/雪花算法.md",
+    "algorithm/序列密码.md",
+    "algorithm/对称加密算法.md",
+    "algorithm/分组密码.md",
+    "URL.md",
+    "linux/kernel/fs/vfs/mount.md",
+    "linux/kernel/fs/vfs/umount.md",
+    "linux/kernel/fs/vfs/vfs.md",
+    "linux/kernel/fs/vfs/imgs/20240719094047.png",
+    "Pasted image 20240719094039.png",
+    "Pasted image 20240719094033.png",
+    "linux/kernel/fs/vfs/imgs",
+    "linux/kernel/fs/fs.md",
+    "linux/archlinux/archlinux.md",
+    "protocol/xbsa.md",
+    "linux/kernel/System.map.md",
+    "linux/kernel/syscall_table.md",
+    "language/c/tools/sparse.md",
+    "protocol/imgs/Pasted image 20240711213344.png",
+    "protocol/imgs/Pasted image 20240711213112.png",
+    "未命名",
+    "linux/kernel/fs/bcachefs/imgs/Pasted image 20240505182212.png",
+    "linux/kernel/fs/bcachefs/imgs/Pasted image 20240505182129.png",
+    "linux/kernel/fs/bcachefs/imgs/Pasted image 20240505182043.png",
+    "linux/kernel/fs/bcachefs/imgs",
+    "linux/kernel/fs/bcachefs",
+    "protocol/imgs/Pasted image 20240413095132.png",
+    "protocol/imgs/Pasted image 20240413095103.png",
+    "database/postgres/imgs",
+    "FPGA/TangNano20k/imgs",
+    "linux/kernel/devices/rpmsg/imgs"
+  ]
+}

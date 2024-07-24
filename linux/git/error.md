@@ -16,3 +16,12 @@ git config --global --add safe.directory /home/black/Documents/aio-cdm
 ```shell
 git config --global http.sslVerify "false"
 ```
+
+- tag 占用, 删除分支后无法拉远程
+```shell
+<!-- 删除远程 tag -->
+git push origin --delete tag 4.6.0.0-release
+
+<!-- 拉取远程 分支 -->
+git fetch origin 4.6.0.0-release:4.6.0.0-release
+```
