@@ -11,6 +11,18 @@ watch var
 watch i > 999
 
 一旦 i > 999，程序就会被中断，GDB指出改变条件的代码。
+
+```
+
+- 显示监视点的列表。
+```shell
+info watchpoints
+
+```
+
+- 删除监视点。
+```shell
+delete num
 ```
 
 ## 例子
@@ -47,4 +59,13 @@ New value = 0
 (gdb) c
 Continuing.
 0 0 
+```
+
+- 地址内容变化监视点 (推荐)
+```shell
+(gdb) p m_backupTime
+$1 = 0
+(gdb) p &m_backupTime
+$2 = (uint64_t *) 0x579fc10547c8
+(gdb) watch *0x579fc10547c8 != 0
 ```

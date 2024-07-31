@@ -11,6 +11,18 @@ OpenSSL_1_1_1 (有些版本默认静态编译 shared, 而不是 --enable-shared)
 perl configdata.pm --dump (有些版本不用)
 make
 make install
+
+<!-- centos -->
+wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz
+tar zxvf openssl-1.1.1k.tar.gz
+cd openssl-1.1.1k
+./config
+make -j 4
+make install
+
+ln -s /usr/local/bin/openssl /usr/bin/openssl
+ln -s /usr/local/include/openssl /usr/include/openssl
+echo "/usr/local/lib64/" >> /etc/ld.so.conf
 ```
 
 ## install

@@ -1,4 +1,4 @@
-## VFS简介
+# VFS 简介
 
 VFS的理念是使用统一的数据结构在内核中保存不同类型文件系统的信息（含操作）。
 
@@ -56,32 +56,32 @@ inode中没有直接存储文件的每个块的位置，根据ext2的的Data Blo
 
 #### 包含的域（仅列举部分）：
 
-| 类型 | 域名 | 描述 |
-| --- | --- | --- |
-| struct super_block * | i_sb | 指向inode所在的superblock对象 |
-| struct list_head | i_dentry | 这是一个双向链表的头节点，链表中保存的是指向该inode的dentry对象 |
-| unsigned long | i_ino | inode编号 |
-| umode_t | i_mode | 文件类型和访问权限域 |
-| unsigned int | i_nlink | 指向该inode的硬链接数量，为0时意味着该inode要销毁了 |
-| uid_t | i_uid | inode所有者的id |
-| struct timespec | i_atime | 上次访问的时间戳 |
-| unsigned long | i_blocks | 文件的块数目 |
-| unsigned short | i_bytes | 文件最后一个块的字节大小 |
-| struct inode_operations * | i_op | inode operations,inode的操作函数 |
+| 类型                        | 域名       | 描述                                    |
+| ------------------------- | -------- | ------------------------------------- |
+| struct super_block *      | i_sb     | 指向inode所在的superblock对象                |
+| struct list_head          | i_dentry | 这是一个双向链表的头节点，链表中保存的是指向该inode的dentry对象 |
+| unsigned long             | i_ino    | inode编号                               |
+| umode_t                   | i_mode   | 文件类型和访问权限域                            |
+| unsigned int              | i_nlink  | 指向该inode的硬链接数量，为0时意味着该inode要销毁了       |
+| uid_t                     | i_uid    | inode所有者的id                           |
+| struct timespec           | i_atime  | 上次访问的时间戳                              |
+| unsigned long             | i_blocks | 文件的块数目                                |
+| unsigned short            | i_bytes  | 文件最后一个块的字节大小                          |
+| struct inode_operations * | i_op     | inode operations,inode的操作函数           |
 
 #### inode operations(存储在i_op中，仅列举部分)
 
-| 函数 | 功能 |
-| --- | --- |
-| create(dir, dentry, mode, nameidata) | 创建一个inode |
-| lookup(dir, dentry, nameidata) | 在一个目录文件中查找和dentry包含的文件名匹配的inode |
-| link(old_dentry, dir, new_dentry) | 创建一个指向new_dentry的硬链接，保存在old_dentry中，该old_dentry和new_dentry指向同一个inode，即同一个文件。 |
-| symlink(dir, dentry, symname) | 创建一个新的inode，该inode是一个软连接文件，指向参数dentry |
-| mkdir(dir, dentry, mode) | 为dentry创建一个目录文件的inode |
+| 函数                                   | 功能                                                                           |
+| ------------------------------------ | ---------------------------------------------------------------------------- |
+| create(dir, dentry, mode, nameidata) | 创建一个inode                                                                    |
+| lookup(dir, dentry, nameidata)       | 在一个目录文件中查找和dentry包含的文件名匹配的inode                                              |
+| link(old_dentry, dir, new_dentry)    | 创建一个指向new_dentry的硬链接，保存在old_dentry中，该old_dentry和new_dentry指向同一个inode，即同一个文件。 |
+| symlink(dir, dentry, symname)        | 创建一个新的inode，该inode是一个软连接文件，指向参数dentry                                        |
+| mkdir(dir, dentry, mode)             | 为dentry创建一个目录文件的inode                                                        |
 
-### dentry数据结构
+### dentry 数据结构
 
-dentry数据结构用于将inode（表示文件）和目录项（表示文件路径）关联起来。inode中是没有文件路径的，所以需要dentry来将文件路径和文件关联起来。dentry在磁盘中没有对应的镜像，所以不需要考虑该dentry是否需要更新。
+dentry 数据结构用于将 inode（表示文件）和目录项（表示文件路径）关联起来。inode中是没有文件路径的，所以需要dentry来将文件路径和文件关联起来。dentry在磁盘中没有对应的镜像，所以不需要考虑该dentry是否需要更新。
 
 内核在进行路径查找的时候会为每一级都建立一个dentry，比如/home/damon/cppfile/test.cpp。就需要建立5个dentry（第一个是根目录/，第二个是home,第5个是test.cpp）。
 

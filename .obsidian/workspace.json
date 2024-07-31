@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "333a5046df236031",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "algorithm/雪花算法.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -49,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tcp",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "algorithm/雪花算法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "algorithm/雪花算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md"
+                "file": "algorithm/雪花算法.md"
               }
             }
           }
@@ -165,11 +179,18 @@
       "audio-recorder:开始/结束录音": false
     }
   },
-  "active": "5e1d9b4c5d806204",
+  "active": "333a5046df236031",
   "lastOpenFiles": [
-    "linux/kernel/fs/sysfs.md",
-    "linux/kernel/fs/fs.md",
+    "algorithm/运算.md",
+    "algorithm/椭圆曲线密码学.md",
+    "linux/kernel/fs/vfs/vfs.md",
+    "linux/kernel/fs/zfs/zfs.md",
+    "linux/kernel/fs/vfs/umount.md",
+    "linux/kernel/fs/debugfs.md",
     "linux/kernel/fs/squashfs.md",
+    "linux/kernel/fs/fs.md",
+    "linux/kernel/fs/OverlayFS/OverlayFS.md",
+    "linux/kernel/fs/sysfs.md",
     "linux/kernel/imgs/Pasted image 20230624183020.png",
     "linux/kernel/imgs/Pasted image 20230514100521.png",
     "linux/kernel/imgs/Pasted image 20230514100448.png",
@@ -192,13 +213,6 @@
     "linux/kernel/net/base.md",
     "linux/kernel/net/bridge.md",
     "linux/kernel/net/error.md",
-    "linux/kernel/net/ip.md",
-    "linux/kernel/net/iptables.md",
-    "linux/kernel/net/ipvlan.md",
-    "linux/kernel/net/net.md",
-    "linux/kernel/net/Nagle.md",
-    "linux/kernel/net/poll.md",
-    "linux/kernel/net/socket.md",
     "linux/neovim/imgs/lvim.png",
     "protocol/S3/imgs/Pasted image 20231110102004.png",
     "protocol/S3/imgs/policy.png",

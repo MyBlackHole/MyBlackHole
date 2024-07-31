@@ -41,3 +41,9 @@ yum install libnsl.x86_64
 ```shell
 addr2line
 ```
+
+- error: unknown type name ‘pid_t’
+```shell
+#include <sys/types.h>
+#include <unistd.h>
+```

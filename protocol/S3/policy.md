@@ -43,3 +43,27 @@
 |s3:AbortMultipartUpload|Abort Multipart Upload|Object|
 |s3:ListMultipartUploadParts|List Parts|Object|
 |s3:*|All API above|Bucket、Object|
+
+
+- test 所有API的权限
+```json
+{
+    "Version": "",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListAllMyBuckets",
+                "s3:ListBucket",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": [
+                "arn:aws:s3:::test/*"
+            ]
+        }
+    ]
+}
+```
