@@ -245,3 +245,11 @@ cat trace
               sh-3442906 [002] ..... 450108.473917: sys_chroot(filename: 5570e93630ed)
            a.out-3445425 [006] ..... 450134.333248: sys_chroot(filename: 55ad1cbc60ed)
 ```
+
+
+- 清空 trace
+```shell
+echo 0 > tracing_on
+echo 0 > trace
+cat  trace
+```
