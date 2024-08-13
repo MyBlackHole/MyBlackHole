@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/雪花算法.md",
+                "file": "linux/kernel/net/poll.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/雪花算法.md",
+                "file": "linux/kernel/net/poll.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/雪花算法.md",
+                "file": "linux/kernel/net/poll.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/雪花算法.md"
+                "file": "linux/kernel/net/poll.md"
               }
             }
           }
@@ -181,6 +181,9 @@
   },
   "active": "333a5046df236031",
   "lastOpenFiles": [
+    "linux/kernel/net/imgs/poll.png",
+    "linux/kernel/build.md",
+    "algorithm/雪花算法.md",
     "algorithm/运算.md",
     "algorithm/椭圆曲线密码学.md",
     "linux/kernel/fs/vfs/vfs.md",
@@ -210,9 +213,6 @@
     "linux/kernel/net/tcp/tcp.md",
     "linux/kernel/net/tcp/tcp_keepalive.md",
     "linux/kernel/net/tcp/status.md",
-    "linux/kernel/net/base.md",
-    "linux/kernel/net/bridge.md",
-    "linux/kernel/net/error.md",
     "linux/neovim/imgs/lvim.png",
     "protocol/S3/imgs/Pasted image 20231110102004.png",
     "protocol/S3/imgs/policy.png",
