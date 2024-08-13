@@ -33,3 +33,15 @@ record
 <!-- ??? -->
 objdump -d ./src/bin/pg_waldump/pg_waldump | 59792a8e5106 
 ```
+
+- 
+Cannot find thread-local storage for process 2752030, shared library /lib64/libc.so.6:
+Cannot find thread-local variables on this target
+```shell
+<!-- pthread 被 stripped 了 -->
+file /usr/lib64/libthread_db-1.0.so
+/usr/lib64/libthread_db-1.0.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=48ba3467af87cece145819e2ccef090b1166053a, for GNU/Linux 3.2.0, stripped
+
+file /usr/lib64/libpthread-2.28.so
+/usr/lib64/libpthread-2.28.so: ELF 64-bit LSB shared object, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=d2cf4af642fe88c5343e1dc83dfef2e5d4466a68, for GNU/Linux 3.2.0, stripped
+```
