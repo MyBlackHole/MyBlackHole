@@ -119,6 +119,7 @@ sudo xtrabackup --defaults-file=/media/black/Data/Documents/github/CPP/percona-x
 --port=3306 \
 --backup \
 --target-dir=/media/black/Data/Documents/github/CPP/percona-xtrabackup/Debug/docker_mysql/mysql_backup
+
 --slave-info 在从库上备份的时候开启该参数，会生成一个xtrabakcup_slave_info，
 
 该文件会记录备份完成的时候从库执行到主库的哪个位点。
@@ -141,6 +142,26 @@ sudo xtrabackup --defaults-file=/media/black/Data/Documents/github/CPP/percona-x
 --backup \
 --target-dir=/media/black/Data/Documents/github/CPP/percona-xtrabackup/Debug/docker_mysql/mysql_backup_in \
 --incremental-basedir=/media/black/Data/Documents/github/CPP/percona-xtrabackup/Debug/docker_mysql/mysql_backup
+
+
+sudo xtrabackup --defaults-file=/etc/mysql/my.cnf \
+--datadir=/var/lib/mysql/ \
+--host='127.0.0.1' \
+--user='root' \
+--password='3edc#EDC' \
+--port=3306 \
+--backup \
+--target-dir=/opt/aio/xtrabackup
+
+
+sudo xtrabackup --defaults-file=/etc/mysql/my.cnf \
+--datadir=/var/lib/mysql/ \
+--host='127.0.0.1' \
+--user='root' \
+--password='p@3Sw0rd' \
+--port=3306 \
+--backup \
+--stream=xbstream | ./aio-speed -h 127.0.0.1 -p 6611 --nc 'xbstream -x -C /opt/aio/xtrabackup/xbstream_full_test1'
 ```
 
 - 还原

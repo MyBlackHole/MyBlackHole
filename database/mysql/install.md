@@ -110,3 +110,15 @@ service mysql stop
 https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-8.0.26-winx64.msi 
 ```
 
+
+- archlinux
+```shell
+paru -S percona-server-clients percona-server
+systemctl start mysqld
+sudo nvim /var/log/mysqld.log  # 查看默认密码
+
+alter user 'root'@'localhost' identified with mysql_native_password by 'xxxx';
+flush privileges;
+
+sudo usermod -G black mysql
+```
