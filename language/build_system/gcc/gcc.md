@@ -67,3 +67,9 @@ int x, y;
 else 
     y = -1;
 ```
+
+## 获取默认宏
+```shell
+gcc -E -dM - < /dev/null
+```
+
