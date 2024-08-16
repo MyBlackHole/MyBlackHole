@@ -1,4 +1,5 @@
 # LLDP
+
 LLDP(Link Layer Discovery Protocol，链路层发现协议)
 它提供了一种标准的链路层发现方式，
 可以将本端设备的的主要能力*管理地址**设备标识*接口标识等信息组织成不同的TLV(Type/Length/Value，类型/长度/值),

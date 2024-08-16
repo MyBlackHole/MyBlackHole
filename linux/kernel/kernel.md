@@ -9,35 +9,6 @@ yum install kernel-devel
 sudo apt-get install kernel-source-xxxx
 ```
 
-## 交叉编译
-[来源](https://blog.51cto.com/u_14230/7350171)
-```shell
-paru -S arm-linux-gnueabihf-linaro-bin
-<!--# 配置交叉编译环境-->
-<!--echo "CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf-" >> ~/.bashrc-->
-<!--source ~/.bashrc-->
-
-# 编译
-<!--make ARCH=arm imx_v7_defconfig-->
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
-make ARCH=arm64 CROSS_COMPILE=arm-linux-gnueabihf- 
-
-# 安装
-sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- modules_install
-
-
-paru -S aarch64-linux-gnu-gcc
-
-# 配置生成处理
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- O=build menconfig
-# 编译
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- O=build -j8
-# O=build: 编译输出到 build 目录
-
-# busybox 
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- 0=build
-```
-
 ## 生成 compile_commands.json
 ```shell
 scripts/clang-tools/gen_compile_commands.py

@@ -47,3 +47,15 @@ atuin import auto
 ```shell
 atuin login -u MBlackHole -p MBlackHole -k MBlackHole
 ```
+
+- 配置登录时自动同步
+```shell
+nvim ~/.config/atuin/config.toml
+auto_sync = true
+```
+
+- 配置同步频率 (deamon)
+```shell
+nvim ~/.config/atuin/config.toml
+sync_frequency = "1h"
+```
