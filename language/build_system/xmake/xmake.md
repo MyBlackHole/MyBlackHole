@@ -43,3 +43,11 @@ add_ldflags("-static")
 ```shell
 xmake -P .
 ```
+
+- 配置交叉编译
+```shell
+xmake config -m debug --cross=aarch64-linux-gnu- -c
+# -a aarch64 指定输出架构目录名
+xmake config -m debug --cross=aarch64-linux-gnu- -a aarch64 -c
+```
+
