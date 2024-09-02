@@ -13,3 +13,19 @@ paru -S devbox nix
 systemctl start nix-daemon
 sudo chmod ugo=rwx /nix/var/nix/daemon-socket
 ```
+
+## 使用
+```shell
+# 创建一个新的环境
+devbox init
+
+# 安装软件包
+devbox add python3
+
+# 启动环境
+devbox shell
+
+# 退出环境
+exit
+
+```

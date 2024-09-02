@@ -21,6 +21,7 @@ meson configure
 ```shell
 # 推荐参数设置方式
 CFLAGS="-g -O0 -lcrypto" meson build
+CFLAGS="-g -O0" meson build
 
 # 有问题, TODO 有可能不生效,没空查
 meson build -Dc_args="-g -O0"

@@ -54,3 +54,9 @@ __attribute__((unused)) static char const* xxxx()
 {
 }
 ```
+
+- relocation R_X86_64_32 against `.xxx‘ can not be used when making a PIE object； recompile with -fPIE
+```shell
+<!--加入 -fPIC 选项, 重新编译-->
+./configure CFLAGS='-g -O0 -fPIC' --enable-debug --prefix=/run/media/black/Data/Documents/github/c/aliyun-oss-c-sdk/build/install/apr/
+```
