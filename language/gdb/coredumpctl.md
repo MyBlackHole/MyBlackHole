@@ -1,6 +1,43 @@
 # coredumpctl
 
+## 配置
+```shell
+cat /proc/sys/kernel/core_pattern
+|/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h
 
+ulimit -c unlimited
+
+
+-----------------------
+
+#!/bin/bash
+
+### Filename: coredumpshell.sh
+### Description: enable coredump and format the name of core file on centos system
+
+# enable coredump whith unlimited file-size for all users
+echo -e "\n# enable coredump whith unlimited file-size for all users\n* soft core unlimited" >> /etc/security/limits.conf
+
+# format the name of core file.   
+# %% – 符号%
+# %p – 进程号
+# %u – 进程用户id
+# %g – 进程用户组id
+# %s – 生成core文件时收到的信号
+# %t – 生成core文件的时间戳(seconds since 0:00h, 1 Jan 1970)
+# %h – 主机名
+# %e – 程序文件名    
+# for centos7 system(update 2017.4.2 21:44)
+echo -e "\nkernel.core_pattern=/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h" >> /etc/sysctl.conf
+
+# suffix of the core file name
+echo -e "1" > /proc/sys/kernel/core_uses_pid
+
+sysctl -p /etc/sysctl.conf
+
+```
+
+## 案例
 
 ```shell
 coredumpctl
