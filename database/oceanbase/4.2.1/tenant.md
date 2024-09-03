@@ -24,7 +24,7 @@ CREATE RESOURCE POOL mq_pool_01
                 ZONE_LIST=('zone1');
 
 
- SELECT * FROM oceanbase.DBA_OB_RESOURCE_POOLS WHERE NAME ='mq_pool_01';
+SELECT * FROM oceanbase.DBA_OB_RESOURCE_POOLS WHERE NAME ='mq_pool_01';
 
 +------------------+------------+-----------+----------------------------+----------------------------+------------+----------------+-----------+--------------+
 | RESOURCE_POOL_ID | NAME       | TENANT_ID | CREATE_TIME                | MODIFY_TIME                | UNIT_COUNT | UNIT_CONFIG_ID | ZONE_LIST | REPLICA_TYPE |
@@ -50,4 +50,10 @@ obclient -h172.30.xx.xx -P2883 -uroot@mq_t1#cluster  -A
 
 ALTER USER root IDENTIFIED BY '****';
 Query OK, 0 rows affected
+
+
+DROP TENANT mq_t1;
+
+<!--恢复租户-->
+FLASHBACK TENANT mq_t1 TO BEFORE DROP;
 ```
