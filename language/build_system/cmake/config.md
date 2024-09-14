@@ -100,9 +100,17 @@ target_link_libraries(oss_c_sdk_test m)
 ```
 
 
-## CMAKE_BUILD_TYPE
+- CMAKE_BUILD_TYPE, 设置构建模式，例如 debug
 <!-- CMakeCache.txt -->
 - RelWithDebInfo (等价 -02 -g)
 ```shell
 CMAKE_BUILD_TYPE=RelWithDebInfo
+
+
+cmake \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+    -DCMAKE_C_FLAGS_DEBUG="-O0 -g" \
+    -DCMAKE_CXX_FLAGS_DEBUG="-O0 -g"  \
+    -DCMAKE_BUILD_TYPE="DEBUG" \
+    ..
 ```
