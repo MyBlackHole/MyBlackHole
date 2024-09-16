@@ -58,4 +58,5 @@ auto_sync = true
 ```shell
 nvim ~/.config/atuin/config.toml
 sync_frequency = "1h"
+sync_frequency = "10s"
 ```
