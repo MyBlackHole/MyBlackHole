@@ -81,3 +81,10 @@ podman run [options] IMAGE [COMMAND] [ARG...]
 ```
 # podman run -it --rm --name myubuntu ubuntu /bin/bash
 ```
+
+- host 模式运行
+```
+podman run --rm --net=host alpine ping www.baidu.com
+```
+
+
