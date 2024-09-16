@@ -20,9 +20,9 @@ make menuconfig
 ##     [*] Install glibc utilities
 ##     [*] Enable C++ support
 ##     [*] Build cross gdb for the host
-##     [*] TUI support
-##     [*] Python support
-##     [*] Simulator support
+##      [*] TUI support
+##      [*] Python support
+##      [*] Simulator support
 ## Filesystem images --->
 ##     [*] ext2/3/4 root filesystem
 ##         ext2/3/4 variant --->

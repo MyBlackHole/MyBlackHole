@@ -24,7 +24,7 @@
 -net nic -net user (默认就是这个, 虚拟机可以连接外面，外面无法连接虚拟机包括宿主机器)
 
 <!-- 动态 ip -->
-lvim etc/network/interface
+nvim /etc/network/interface
 auto lo
 iface lo inet loopback
 auto eth0
