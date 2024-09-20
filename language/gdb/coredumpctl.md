@@ -5,7 +5,15 @@
 cat /proc/sys/kernel/core_pattern
 |/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h
 
+# 临时生效
 ulimit -c unlimited
+
+# 永久生效
+echo " * soft core 4194304" >> /etc/security/limits.conf
+echo " * hard core 4194304" >> /etc/security/limits.conf
+
+# 测试是否生效
+kill -s SIGSEGV $$
 
 
 -----------------------
