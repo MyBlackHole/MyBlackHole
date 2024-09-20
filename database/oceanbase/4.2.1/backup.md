@@ -1,5 +1,53 @@
 # backup
 
+## archive log backup 
+```shell
+# 设置归档路径
+ALTER SYSTEM SET LOG_ARCHIVE_DEST='LOCATION=oss://backup/archive_4216/?host=10.5.13.27&access_id=1358&access_key=1358' TENANT = mq_t1;
+
+# 开启归档
+ALTER SYSTEM ARCHIVELOG TENANT = mq_t1;
+
+
++-----------+-------------+-------------+----------------------------+----------------------------+--------------+---------------+-------------------+--------------------+--------+---------------+--------+-------------+-------------------+------------------+---------------------+---------------------+---------------------+---------------------+--------------+----------------------------+----------+------------+-----------+
+| TENANT_ID | TENANT_NAME | TENANT_TYPE | CREATE_TIME                | MODIFY_TIME                | PRIMARY_ZONE | LOCALITY      | PREVIOUS_LOCALITY | COMPATIBILITY_MODE | STATUS | IN_RECYCLEBIN | LOCKED | TENANT_ROLE | SWITCHOVER_STATUS | SWITCHOVER_EPOCH | SYNC_SCN            | REPLAYABLE_SCN      | READABLE_SCN        | RECOVERY_UNTIL_SCN  | LOG_MODE     | ARBITRATION_SERVICE_STATUS | UNIT_NUM | COMPATIBLE | MAX_LS_ID |
++-----------+-------------+-------------+----------------------------+----------------------------+--------------+---------------+-------------------+--------------------+--------+---------------+--------+-------------+-------------------+------------------+---------------------+---------------------+---------------------+---------------------+--------------+----------------------------+----------+------------+-----------+
+| 1         | sys         | SYS         | 2024-09-20 10:10:11.046130 | 2024-09-20 10:10:11.046130 | RANDOM       | FULL{1}@zone1 | <null>            | MYSQL              | NORMAL | NO            | NO     | PRIMARY     | NORMAL            | 0                | <null>              | <null>              | <null>              | <null>              | NOARCHIVELOG | DISABLED                   | 1        | 4.2.1.6    | 1         |
+| 1001      | META$1002   | META        | 2024-09-20 10:12:46.363322 | 2024-09-20 10:13:04.589214 | zone1        | FULL{1}@zone1 | <null>            | MYSQL              | NORMAL | NO            | NO     | PRIMARY     | NORMAL            | 0                | <null>              | <null>              | <null>              | <null>              | NOARCHIVELOG | DISABLED                   | 1        | 4.2.1.6    | 1         |
+| 1002      | mq_t1       | USER        | 2024-09-20 10:12:46.371508 | 2024-09-20 10:13:04.640042 | zone1        | FULL{1}@zone1 | <null>            | MYSQL              | NORMAL | NO            | NO     | PRIMARY     | NORMAL            | 0                | 1726798937789951757 | 1726798937789951757 | 1726798937789951757 | 4611686018427387903 | ARCHIVELOG   | DISABLED                   | 1        | 4.2.1.6    | 1001      |
++-----------+-------------+-------------+----------------------------+----------------------------+--------------+---------------+-------------------+--------------------+--------+---------------+--------+-------------+-------------------+------------------+---------------------+---------------------+---------------------+---------------------+--------------+----------------------------+----------+------------+-----------+
+
+# 查看归档信息
+SELECT * FROM oceanbase.CDB_OB_ARCHIVELOG\G
+
+# 关闭归档
+ALTER SYSTEM NOARCHIVELOG TENANT = mq_t1;
+```
+
+## data backup
+```shell
+# 设置备份路径
+ALTER SYSTEM SET DATA_BACKUP_DEST='oss://backup/data_4216?host=10.5.13.27&access_id=1358&access_key=1358' TENANT = mq_t1;
+
+# 备份数据
+ALTER SYSTEM BACKUP TENANT = mq_t1;
+
+# 备份增量数据
+alter system backup incremental database PLUS ARCHIVELOG;
+
+# 查看备份进度
+SELECT * FROM CDB_OB_BACKUP_TASKS;
+
+# 查看备份文件信息
+SELECT * FROM OCEANBASE.CDB_OB_BACKUP_SET_FILES\G
+
+# 查看备份任务信息
+SELECT JOB_ID,PLUS_ARCHIVELOG,BACKUP_TYPE,START_TIMESTAMP,END_TIMESTAMP,STATUS,PATH,DESCRIPTION,COMMENT FROM OCEANBASE.DBA_OB_BACKUP_JOBS;
+```
+
+
+## error
+
 ```shell
 #0  oceanbase::rootserver::ObBackupSetTaskMgr::backup_user_meta_ (this=0x748cb394dda8) at ./src/rootserver/backup/ob_backup_data_set_task_mgr.cpp:499
 #1  0x000064cc6c92fd0b in oceanbase::rootserver::ObBackupSetTaskMgr::process (this=0x748cb394dda8) at ./src/rootserver/backup/ob_backup_data_set_task_mgr.cpp:157

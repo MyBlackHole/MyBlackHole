@@ -4,8 +4,8 @@
 - 创建租户
 ```shell
 CREATE RESOURCE UNIT S1_unit_config
-                MEMORY_SIZE = '5G',
-                MAX_CPU = 1, MIN_CPU = 1,
+                MEMORY_SIZE = '1G',
+                MAX_CPU = 2, MIN_CPU = 1,
                 LOG_DISK_SIZE = '6G',
                 MAX_IOPS = 10000, MIN_IOPS = 10000, IOPS_WEIGHT=1;
 
@@ -18,13 +18,13 @@ SELECT * FROM oceanbase.DBA_OB_UNIT_CONFIGS WHERE NAME = 'S1_unit_config';
 +----------------+----------------+----------------------------+----------------------------+---------+---------+-------------+---------------+----------+----------+-------------+
 
 
-CREATE RESOURCE POOL mq_pool_01
+CREATE RESOURCE POOL mq_pool
                 UNIT='S1_unit_config',
                 UNIT_NUM=1,
                 ZONE_LIST=('zone1');
 
 
-SELECT * FROM oceanbase.DBA_OB_RESOURCE_POOLS WHERE NAME ='mq_pool_01';
+SELECT * FROM oceanbase.DBA_OB_RESOURCE_POOLS WHERE NAME ='mq_pool';
 
 +------------------+------------+-----------+----------------------------+----------------------------+------------+----------------+-----------+--------------+
 | RESOURCE_POOL_ID | NAME       | TENANT_ID | CREATE_TIME                | MODIFY_TIME                | UNIT_COUNT | UNIT_CONFIG_ID | ZONE_LIST | REPLICA_TYPE |
@@ -36,7 +36,7 @@ SELECT * FROM oceanbase.DBA_OB_RESOURCE_POOLS WHERE NAME ='mq_pool_01';
 
 CREATE TENANT IF NOT EXISTS mq_t1 
                 PRIMARY_ZONE='zone1', 
-                RESOURCE_POOL_LIST=('mq_pool_01')
+                RESOURCE_POOL_LIST=('mq_pool')
                 set OB_TCP_INVITED_NODES='%';
 
 SELECT * FROM DBA_OB_TENANTS WHERE TENANT_NAME = 'mq_t1';
