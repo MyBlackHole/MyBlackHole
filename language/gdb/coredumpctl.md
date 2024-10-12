@@ -5,16 +5,21 @@
 cat /proc/sys/kernel/core_pattern
 |/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h
 
+echo "|/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h" > /proc/sys/kernel/core_pattern
+
 # 临时生效
 ulimit -c unlimited
 
 # 永久生效
-echo " * soft core 4194304" >> /etc/security/limits.conf
-echo " * hard core 4194304" >> /etc/security/limits.conf
+echo " * soft core unlimited" >> /etc/security/limits.conf
+echo " * hard core unlimited" >> /etc/security/limits.conf
+
 
 # 测试是否生效
 kill -s SIGSEGV $$
 
+# core 文件存放路径
+ls -alh /var/lib/systemd/coredump/
 
 -----------------------
 
@@ -101,4 +106,9 @@ coredumpctl info 2345
 - 转储 core
 ```shell
 coredumpctl -o core.gz dump 89521
+```
+
+- 清理 core, 保留最近 1 天的 core
+```shell
+sudo journalctl --vacuum-time=1d
 ```
