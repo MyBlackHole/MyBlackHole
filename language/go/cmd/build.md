@@ -17,8 +17,3 @@ CGO_ENABLED=0 GOOS=linux go build
 ```shell
 go build -gcflags="all=-N -l"
 ```
-
-- 保存依赖到项目 vendor 目录
-```shell
-go build -mod vendor
-```
