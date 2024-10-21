@@ -103,6 +103,8 @@ sudo tgtadm --mode target --op show
 ## 客户端
 ```shell
 sudo apt install open-iscsi
+------
+paru -S open-iscsi
 
 # 客户端发现服务端 target
 sudo iscsiadm -m discovery -t st -p 192.168.2.77
