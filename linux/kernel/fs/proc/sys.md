@@ -29,3 +29,10 @@
 | /proc/sys/net/ipv4/tcp_low_latency      | 允许TCP/IP栈适应在高吞吐量情况下低延时的情况，这个选项应该禁用。                                                                                                                  | 0                     |                        |
 | /proc/sys/net/ipv4/tcp_westwood         | 启用发送者端的拥塞控制算法，它可以维护对吞吐量的评估，并试图对带宽的整体利用情况进行优化，对于WAN 通信来说应该启用这个选项。                                                                                     | 0                     |                        |
 | /proc/sys/net/ipv4/tcp_bic              | 为快速长距离网络启用Binary Increase Congestion，这样可以更好地利用以GB速度进行操作的链接，对于WAN通信应该启用这个选项。                                                                          | 1                     |                        |
+
+
+- /proc/sys/net/ipv4/ip_forward
+```shell
+<!-- 开启 ip 转发 -->
+echo "1" > /proc/sys/net/ipv4/ip_forward
+```

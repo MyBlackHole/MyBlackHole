@@ -1,4 +1,4 @@
-# proc pid
+# pid
 
 - /proc/[pid]/auxv
 包含传递给进程的 ELF 解释器信息，格式是每一项都是一个 unsigned long长度的 ID 加上一个 unsigned long 长度的值。最后一项以连续的两个 0x00 开头
