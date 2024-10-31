@@ -233,4 +233,3 @@ bind() to 0.0.0.0:80 failed (13: Permission denied)
 +   [Linux Capabilities in a nutshell](https://k3a.me/linux-capabilities-in-a-nutshell/)
 +   [Linux的capabilities机制](http://rk700.github.io/2016/10/26/linux-capabilities/)
 
-\-------他日江湖相逢 再当杯酒言欢-------
