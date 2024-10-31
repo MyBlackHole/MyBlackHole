@@ -17,6 +17,11 @@ git clone https://github.com/litespeedtech/lsquic.git
 
 ./bin/echo_client \
     -s 127.0.0.1:3345 \
+    -l event=debug,engine=debug \
+    -L debug
+
+./bin/echo_client \
+    -s 127.0.0.1:3345 \
     -l event=info,engine=debug
 ```
 

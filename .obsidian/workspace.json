@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/drivers/gpio/gpio.md",
+                "file": "protocol/TCP/TCP.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -26,7 +26,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/kernel/net/poll.md",
+                "file": "database/cluster/2PC.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9b50082de0d622f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "protocol/capnp.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -100,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/kernel/net/poll.md",
+                "file": "protocol/capnp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/kernel/net/poll.md",
+                "file": "protocol/capnp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,16 +165,24 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/kernel/net/poll.md"
+                "file": "protocol/capnp.md"
               }
             }
+          },
+          {
+            "id": "c23ad68e54b2b15f",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,49 +195,48 @@
       "markdown-importer:打开 Markdown 格式转换器": false,
       "zk-prefixer:创建时间戳笔记": false,
       "random-note:开始漫游笔记": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "workspaces:管理工作区布局": false,
       "audio-recorder:开始/结束录音": false
     }
   },
-  "active": "333a5046df236031",
+  "active": "9b50082de0d622f9",
   "lastOpenFiles": [
-    "linux/kernel/net/imgs/poll.png",
-    "linux/kernel/build.md",
-    "algorithm/雪花算法.md",
-    "algorithm/运算.md",
-    "algorithm/椭圆曲线密码学.md",
-    "linux/kernel/fs/vfs/vfs.md",
-    "linux/kernel/fs/zfs/zfs.md",
-    "linux/kernel/fs/vfs/umount.md",
-    "linux/kernel/fs/debugfs.md",
-    "linux/kernel/fs/squashfs.md",
-    "linux/kernel/fs/fs.md",
-    "linux/kernel/fs/OverlayFS/OverlayFS.md",
-    "linux/kernel/fs/sysfs.md",
-    "linux/kernel/imgs/Pasted image 20230624183020.png",
-    "linux/kernel/imgs/Pasted image 20230514100521.png",
-    "linux/kernel/imgs/Pasted image 20230514100448.png",
-    "linux/kernel/imgs/Pasted image 20230514100151.png",
-    "linux/kernel/imgs/Pasted image 20230514095905.png",
-    "linux/kernel/ipc/互斥锁.md",
-    "linux/kernel/kernel_struct/struct.md",
-    "linux/kernel/kernel_struct/task_struct.md",
-    "linux/kernel/net/imgs/Pasted image 20231018103602.png",
-    "linux/kernel/net/nat/error.md",
-    "linux/kernel/net/nat/frp.md",
-    "linux/kernel/net/rpcbind/rpcbind.md",
-    "linux/kernel/net/rpcbind/rpcinfo.md",
-    "linux/kernel/net/sysctl/config.md",
-    "linux/kernel/net/tcp/listen.md",
-    "linux/kernel/net/tcp/somaxconn.md",
-    "linux/kernel/net/tcp/tcp.md",
-    "linux/kernel/net/tcp/tcp_keepalive.md",
-    "linux/kernel/net/tcp/status.md",
-    "linux/neovim/imgs/lvim.png",
-    "protocol/S3/imgs/Pasted image 20231110102004.png",
-    "protocol/S3/imgs/policy.png",
-    "linux/kernel/fs/vfs/imgs/20240719094047.png",
+    "未命名.md",
+    "protocol/TCP/TCP.md",
+    "protocol/TCP/imgs/TCP9.png",
+    "protocol/TCP/imgs/TCP8.png",
+    "protocol/TCP/imgs/TCP7.png",
+    "protocol/TCP/imgs/TCP6.png",
+    "protocol/TCP/imgs/TCP4.png",
+    "protocol/TCP/imgs/TCP3.png",
+    "protocol/TCP/TCP_IP.md",
+    "protocol/TCP/imgs/TCP2.png",
+    "protocol/TCP/imgs/TCP1.png",
+    "protocol/TCP/imgs/TCP.png",
+    "protocol/TCP/imgs/Pasted image 20240913113405.png",
+    "database/读放大.md",
+    "database/空间放大.md",
+    "linux/kernel/drivers/gpio/gpio.md",
+    "database/cluster/2PC.md",
+    "database/checkpoint.md",
+    "database/mysql/cmd/binlog2sql.md",
+    "database/mysql/cmd/mysqld_safe.md",
+    "database/mysql/cmd/mysqlslap.md",
+    "database/mysql/xtrabackup/error.md",
+    "database/mysql/xtrabackup/xtrabackup.md",
+    "database/mysql/alter.md",
+    "database/mysql/build.md",
+    "database/mysql/config.md",
+    "database/mysql/error.md",
+    "database/mysql/explain.md",
+    "database/mysql/grants.md",
+    "database/mysql/indexes.md",
+    "database/mysql/install.md",
+    "database/mysql/join.md",
+    "database/mysql/master_slave.md",
+    "database/mysql/mvcc.md",
+    "database/mysql/mysql.md",
+    "database/mysql/plugin.md",
     "linux/kernel/fs/vfs/imgs",
     "未命名",
     "linux/kernel/fs/bcachefs/imgs",
