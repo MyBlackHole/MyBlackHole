@@ -102,7 +102,7 @@ tcpdump -i eth0 -vnn net 192.168.1.0/24
 tcpdump -i eth0 -vnn port 22
 ```
 
-- 抓取指定协议格式的数据包，协议格式可以是 [udp,icmp,arp,ip] 中的任何一种,例如以下命令：
+- 抓取指定协议格式的数据包，协议格式可以是 [udp,icmp,arp,ip] 中的任何一种,例如以下命令:
 ```shell
 tcpdump udp -i eth0 -vnn
 ```

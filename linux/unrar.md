@@ -9,7 +9,7 @@
 |-t|检测压缩文件|
 |-v[t,b]|列出压缩文档的详细信息[technical,bare]|
 
-
+- 解析
 ```shell
 unrar x scripts.rar
 ```

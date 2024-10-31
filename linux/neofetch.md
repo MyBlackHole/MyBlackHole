@@ -1,6 +1,7 @@
 # neofetch
 
 基本的系统环境信息
+推荐：[[fastfetch]]
 
 ```shell
 ❯ neofetch
