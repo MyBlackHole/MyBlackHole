@@ -1,4 +1,4 @@
-# dynamic tracing
+# probe
 
 ```shell
 # Add a tracepoint for the kernel tcp_sendmsg() function entry ("--add" is optional):

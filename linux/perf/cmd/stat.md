@@ -1,4 +1,13 @@
-# couting
+# stat
+
+Perf Stat：分析性能。
+
+```shell
+perf stat -p $pid -d     # 进程级别统计
+perf stat -a -d sleep 5  # 系统整体统计
+perf stat -p $pid -e 'syscalls:sys_enter' sleep 10  #分析进程调用系统调用的情形
+```
+
 
 ```shell
 # CPU counter statistics for the specified command:

@@ -2,12 +2,15 @@
 
 ## 安装
 ```shell
+<!--ubuntu-->
 sudo apt install linux-tools-common
+
+<!--archlinux-->
+paru -S perf
 ```
 
-|   |   |   |
-|---|---|---|
 |序号|命令|作用|
+|---|---|---|
 |1|annotate|解析perf record生成的perf.data文件，显示被注释的代码。|
 |2|archive|根据数据文件记录的build-id，将所有被采样到的elf文件打包。利用此压缩包，可以再任何机器上分析数据文件中记录的采样数据。|
 |3|bench|perf中内置的benchmark，目前包括两套针对调度器和内存管理子系统的benchmark。|
@@ -31,80 +34,3 @@ sudo apt install linux-tools-common
 |21|top|类似于linux的top命令，对系统性能进行实时分析。|
 |22|trace|关于syscall的工具。|
 |23|probe|用于定义动态检查点。|
-
-## list
-
-Perf List：查看当前软硬件平台支持的性能事件列表，性能事件的属性。
-
-1. u: 仅统计用户空间程序触发的性能事件
-2. k: 仅统计内核触发的性能事件
-3. h: 仅统计 Hypervisor 触发的性能事件
-4. G: 在 KVM 虚拟机中，仅统计 Guest 系统触发的性能事件
-5. H: 仅统计 Host 系统触发的性能事件
-6. p: 精度级别
-
-
-## stat
-
-Perf Stat：分析性能。
-```shell
-perf stat -p $pid -d     # 进程级别统计
-perf stat -a -d sleep 5  # 系统整体统计
-perf stat -p $pid -e 'syscalls:sys_enter' sleep 10  #分析进程调用系统调用的情形
-```
-
-## top
-
-Perf Top：实时显示系统/进程的性能统计信息, 默认性能事件为 cycles ( CPU 周期数 )。与 Linux top tool 功能类似。
-```shell
-perf top -p $pid -g     # 进程级别
-perf top -g  # 系统整体
-```
-
-## record
-
-Perf Record：记录一段时间内系统/进程的性能事件, 默认性能事件为 cycles ( CPU 周期数 )。
-
-- 采集数据
-```shell
-perf record -e cpu-clock -g -p 44160
-
-perf record -p $pid -g -e cycles -e cs #进程采样
-perf record -a -g -e cycles -e cs #系统整体采样
-```
-
-## script
-
-读取 Perf Record 结果。
-
-```shell
--i, --input <file>    input file name
--G, --hide-call-graph
-                      When printing symbols do not display call chain
--F, --fields <str>    comma separated output fields prepend with 'type:'. Valid types: hw,sw,trace,raw. Fields: comm,tid,pid,time,cpu,event,trace,ip,sym,dso,addr,symoff,period
--a, --all-cpus        system-wide collection from all CPUs
--S, --symbols <symbol[,symbol...]>
-                      only consider these symbols
--C, --cpu <cpu>       list of cpus to profile
--c, --comms <comm[,comm...]>
-                      only display events for these comms
-    --pid <pid[,pid...]>
-                      only consider symbols in these pids
-    --tid <tid[,tid...]>
-                      only consider symbols in these tids
-    --time <str>      Time span of interest (start,stop)
-    --show-kernel-path
-                      Show the path of [kernel.kallsyms]
-    --show-task-events
-                      Show the fork/comm/exit events
-    --show-mmap-events
-                      Show the mmap events
-    --per-event-dump  Dump trace output to files named by the monitored events
-```
-
-## report
-
-- 浏览数据
-```shell
-perf report
-```
