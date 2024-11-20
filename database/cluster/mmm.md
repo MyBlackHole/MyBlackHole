@@ -1,7 +1,7 @@
 # mmm (Multi Master Replication Manager)
 多主复制管理器
 
-![[imgs/Pasted image 20230402112447.png]]
+![[imgs/mmm.png]]
 
 | 资源     | 数量  | 说明                                       |
 | -------- | ----- | ------------------------------------------ |

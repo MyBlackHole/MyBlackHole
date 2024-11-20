@@ -64,7 +64,7 @@ cmake \
 7. 在不增加服务负载的情况下备份数据？
 
 ## 原理
-![[imgs/Pasted image 20230325184640.png]]
+![[imgs/xtrabackup.png]]
 
 1. innobackupex启动后，会先fork一个进程，用于启动xtrabackup，然后等待xtrabackup备份ibd数据文件；
 2. xtrabackup在备份innoDB数据是，有2种线程：redo拷贝线程和ibd数据拷贝线程。xtrabackup进程开始执行后，会启动一个redo拷贝的线程，用于从最新的checkpoint点开始顺序拷贝redo.log；再启动ibd数据拷贝线程，进行拷贝ibd数据。这里是先启动redo拷贝线程的。在此阶段，innobackupex进行处于等待状态（等待文件被创建）

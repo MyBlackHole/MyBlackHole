@@ -8,7 +8,7 @@
 MySQL主从复制就是将数据库群中一台或多台服务器作为主（master）数据库，其他数据库作为从（slave）数据库，然后指向主库，实时同步主库中的数据；当主库数据发生变化时，会将变化的数据实时同步到一个或多个从库
 
 ## 过程
-![[imgs/Pasted image 20230323170347.png]]
+![[imgs/master_slave.png]]
 
 - Binary log dump 线程
 当从节点连接主节点后，主节点会创建一个log dump线程，用于发送binlog日志中的内容

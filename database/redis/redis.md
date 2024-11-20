@@ -29,4 +29,4 @@ redis-server --service-install redis.windows.conf --service-name redis  #守护�
 ```
 
 ### 线程模型
-![[imgs/GetImage.png]]
+![[imgs/redis.png]]

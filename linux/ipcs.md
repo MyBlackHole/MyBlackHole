@@ -50,3 +50,45 @@ key        shmid      owner      perms      bytes      nattch     status
 0x00000000 23         black      600        524288     2          dest
 0x66210001 30         black      0          4096       0
 ```
+
+- 查询共享内存限制
+```shell
+ipcs -l
+------ Messages Limits --------
+max queues system wide = 32000
+max size of message (bytes) = 8192
+default max size of queue (bytes) = 16384
+
+------ Shared Memory Limits --------
+max number of segments = 4096
+max seg size (kbytes) = 18014398509465599
+max total shared memory (kbytes) = 18446744073709551612
+min seg size (bytes) = 1
+
+------ Semaphore Limits --------
+max number of arrays = 32000
+max semaphores per array = 32000
+max semaphores system wide = 1024000000
+max ops per semop call = 500
+semaphore max value = 32767
+```
+
+- 限制共享内存的大小
+```c
+
+#define SHMMIN 1			 /* min shared seg size (bytes) */
+
+/*cat /proc/sys/kernel/shmmni*/
+/*sysctl -w kernel.shmmni=4096*/
+#define SHMMNI 4096			 /* max num of segs system wide */
+
+/*cat /proc/sys/kernel/shmmax*/
+/*sysctl kernel.shmmax */
+/*sysctl -w kernel.shmmax = xxxx*/
+#define SHMMAX (ULONG_MAX - (1UL << 24)) /* max shared seg size (bytes) */
+
+/*cat /proc/sys/kernel/shmall*/
+/*sysctl -w kernel.shmall=2097152*/
+#define SHMALL (ULONG_MAX - (1UL << 24)) /* max shm system wide (pages) */
+#define SHMSEG SHMMNI			 /* max shared segs per process */
+```

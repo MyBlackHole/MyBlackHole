@@ -1,7 +1,7 @@
 # MHA （MySQL Master High Availability）
 Mysql Master 高可用
 
-![[imgs/Pasted image 20230402113645.png]]
+![[imgs/MHA.png]]
 
 | 资源     | 数量  | 说明                                       |
 |-------------- | -------------- | -------------- |

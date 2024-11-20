@@ -5,7 +5,7 @@
 GoldenDB整体架构如下图所示包括：
     计算节点CN、数据节点DN、全局事务节点GTM、管理节点，其中管理节点分为集群管理和Insight运维管理平台
     集群管理部分包括元数据管理Metadataserver、ClusterManager和ProxyManager，这一部分实现分布式数据库架下的整个集群元数据、数据节点和计算节点的管理和维护
-![[imgs/Pasted image 20230402183813.png]]
+![[imgs/GoldenDB.png]]
 
 
 ### OMM (Operations, Maintenance & Monitoring Manager）功能
@@ -33,11 +33,11 @@ GoldenDB整体架构如下图所示包括：
 ## GoldenDB组件和进程关系
 - GoldenDB中各组件模块和进程列表
 
-![[imgs/Pasted image 20230402184438.png]]
+![[imgs/GoldenDB-1.png]]
 
 - 各个功能组件之间的访问关系如下图所示
 
-![[imgs/Pasted image 20230402184501.png]]
+![[imgs/GoldenDB-2.png]]
 
 1. 计算节点和数据节点之间通过dbagent建立长连接，所有的副本都需要建立
 2. 数据节点主节点和从节点之间通过mysql的binlog同步复制原理，实现数据的同步
@@ -49,7 +49,7 @@ GoldenDB整体架构如下图所示包括：
 
 - Insight运维管理平台访问关系
 
-![[imgs/Pasted image 20230402184606.png]]
+![[imgs/GoldenDB-3.png]]
 
 1. InsightAgent是主机代理，每台主机上部署，执行insightserver下发的命令，并将数据收集推送到kafka
 2. Filebeat是日志采集代理，用于收集每台服务器的日志数据

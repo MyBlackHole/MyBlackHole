@@ -13,7 +13,7 @@ GTID是全局事务ID,由主库上生成的与事务绑定的唯一标识，这�
 
 ## GTID 有什么优点
 
-![[imgs/Pasted image 20230402120854.png]]
+![[imgs/GTID.png]]
 
 优点:
 GTID相对于行复制数据安全性更高，故障切换更简单。
@@ -60,7 +60,7 @@ GTID相对于行复制数据安全性更高，故障切换更简单。
 
 ## GTID 主从复制原理
 
-![[imgs/Pasted image 20230402123445.png]]
+![[imgs/GTID-1.png]]
 
 1. 当一个事务在主库端执行并提交时，产生 GTID，一同记录到 binlog 日志中。
 2. binlog 传输到 slave,并存储到 slave 的 relaylog 后，读取这个 GTID 的这个值设置 gtid_next 变量，即告诉 Slave，下一个要执行的 GTID 值。
@@ -71,7 +71,7 @@ GTID相对于行复制数据安全性更高，故障切换更简单。
 
 ## GTID 生命周期
 
-![[imgs/Pasted image 20230402123635.png]]
+![[imgs/GTID-2.png]]
 
 1. 当事务于主库执行时，系统会为事务分配一个由server uuid加序列号组成的GTID（当然读事务或者被主动过滤掉的事务不会被分配GTID），写binlog日志时此GTID标志着一个事务的开始
 2. binlog中写GTID的event被称作Gtid_log_event，当binlog切换或者mysql服务关闭时，之前binlog中的所有gtid都会被加入mysql.gtid_executed表中。此表内容如下（slave中此表记录数会有多条，取决于主从个数）：

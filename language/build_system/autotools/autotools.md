@@ -27,7 +27,7 @@ make install可以将软件安装到默认或者指定的系统路径
 
 > 作为用户，我们就是通过上述三步将软件安装到我们系统中的
 > 
->   ![[imgs/Pasted image 20230425090604.png]]
+>   ![[imgs/autotools.png]]
 
 +   在上图中，开发者在分发源码包时，除了源代码中的头文件(.h)和程序源文件(.c)，还有许多支持软件构建的文件和工具。
 +   最重要的就是Makefile.in和config.h。
@@ -65,7 +65,7 @@ Autotools包括了autoconf和automake等命令
 autoreconf程序能够自动按照合理的顺序调用autoconf，automake，aclocal程序
 
   
-![[imgs/Pasted image 20230425090632.png]]
+![[imgs/autotools-1.png]]
 ##### configure.ac
 
 configure.ac用于生成configure脚本，autoconf工具用来完成这一步。
@@ -149,7 +149,7 @@ configure.ac实际是依靠宏展开来得到configure。因此，能否成功�
 autoconf会从自身安装路径下寻找事先定义好的宏。然而对于像automake，libtool，gettex等第三方扩展宏，autoconf便无从知晓。  
 因此，aclocal将在configure.ac同一个目录下生成aclocal.m4，在扫描configure.ac过程中，将第三方扩展和开发者自己编写的宏定义复制进去。  
 如此一来，autoconf遇到不认识的宏时，就会从aclocal.m4中查找
-![[imgs/Pasted image 20230425090655.png]]
+![[imgs/autotools-2.png]]
 ##### libtool
 
 libtool试图解决不同平台下，库文件的差异。libtool实际是一个shell脚本，实际工作中，调用了目标平台的cc编译器和链接器，以及给予合适的命令行参数。  
@@ -167,8 +167,8 @@ ylwrap 由automake产生
 autogen.sh 早期autoreconf并不存在，软件开发者就自己编写脚本，按照顺序调用autoconf，autoheader，automake等工具。这个文件就是这样的脚本。
 
 ### makefile文件生成的基本流程
-![[imgs/Pasted image 20230903003954.png]]
-![[imgs/Pasted image 20230425090717.png]]
+![[imgs/autotools-3.png]]
+![[imgs/autotools-4.png]]
 
 ## 基本命令具体介绍
 

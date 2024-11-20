@@ -1,6 +1,6 @@
 # PXC (Percona 的)
 
-![[imgs/Pasted image 20230402132406.png]]
+![[imgs/PXC.png]]
 
 Percona XtraDB Cluster是MySQL高可用性和可扩展性的解决方案, 的特性如下：
 - 同步复制，事务要么在所有节点提交或不提交。

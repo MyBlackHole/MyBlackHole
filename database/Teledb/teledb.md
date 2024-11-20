@@ -1,5 +1,5 @@
 # teledb
-![[imgs/Pasted image 20230415190437.png]]
+![[imgs/teledb-1.png]]
 ## 表类型
 - 分片表
 - 全局表

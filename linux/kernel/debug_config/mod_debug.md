@@ -1,5 +1,27 @@
 # mod_debug
 
+给内核模块打断点需要使用 hbreak 打硬件断点
+CONFIG_DEBUG_RODATA=n
+CONFIG_DEBUG_RODATA_TEST=n
+CONFIG_DEBUG_SET_MODULE_RONX=n
+然后参照上面的方法加载调试符号即可，可以直接使用 break 来设置断点，不需要用硬件断点
+
+
+- 快速获取模块地址
+```shell
+#!/bin/bash
+cd /sys/module/$1/sections
+echo -n add-symbol-file $2 `/bin/cat .text`
+for section in .[a-z]* *; do
+    if [ $section != ".text" ]; then
+echo " \\"
+echo -n " -s" $section `/bin/cat $section`
+    fi
+done
+echo
+```
+
+
 - 调试再入函数 (没起作用)
 ```shell
 

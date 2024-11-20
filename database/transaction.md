@@ -47,8 +47,8 @@ SELECT @@transaction_isolation;
 ```
 
 ## 事务隔离
-![[imgs/GetImage 1.jpeg]]
-![[imgs/GetImage 2.jpeg]]
+![[imgs/transaction.jpeg]]
+![[imgs/transaction-1.jpeg]]
 innoDB默认是可重复读
 
 未提交读(read uncommitted)

@@ -20,11 +20,11 @@
 
 其中：K1表示3DES中第一个8字节密钥，K2表示第二个8字节密钥，K3表示第三个8字节密钥，K1、K2、K3决定了算法的安全性，若三个密钥互不相同，本质上就相当于用一个长为168位的密钥进行加密。多年来，它在对付强力攻击时是比较安全的。若数据对安全性要求不那么高，K1可以等于K3。在这种情况下，密钥的有效长度为112位，即K1对应KL（左8字节），K2对应KR（右8字节），K3对应KL（左8字节）。
 
-![](imgs/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82NTM0NDQ4LWUxMTkzYTRhNzBiZTlmMjcuanBn.png)
+![](imgs/3DES.png)
 
 当三重密钥均相同时，前两步相互抵消，相当于仅实现了一次加密，因此可实现对普通DES加密算法的兼容。
 
-![](imgs/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82NTM0NDQ4LTE4YWExMDljNTBmOGQzYjguanBn.png)
+![](imgs/3DES-1.png)
 
 由于DES加解密算法是每8个字节作为一个加解密数据块，因此在实现该算法时，需要对数据进行分块和补位（即最后不足8字节时，要补足8字节）。Java本身提供的API中NoPadding，Zeros填充和PKCS5Padding。假设我们要对9个字节长度的数据进行加密，则其对应的填充说明如下：
 
@@ -52,4 +52,4 @@ PKCS7Padding 的填充方式和PKCS5Padding 填充方式一样。只是加密块
 
 3DES解密过程，与加密过程相反，即逆序使用密钥。是以密钥3、密钥2、密钥1的顺序执行 `解密->加密->解密`。
 
-![](imgs/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82NTM0NDQ4LTBlN2I1ZmZkNDkwNDhkNDMucG5n.png)
+![](imgs/3DES-2.png)

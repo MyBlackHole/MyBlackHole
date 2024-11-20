@@ -96,6 +96,23 @@ nmcli connection add type wifi con-name NAME ifname wlan0 ssid SSID -- wifo-sec.
 nmcli --ask connection up NAME
 ```
 
+- PEAP 连接
+```shell
+# nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID
+# nmcli con edit id CONNECTION_NAME
+nmcli> set ipv4.method auto
+nmcli> set 802-1x.eap peap
+nmcli> set 802-1x.phase2-auth mschapv2
+nmcli> set 802-1x.identity USERNAME
+nmcli> save
+nmcli> activate
+
+<!--nmcli> set 802-1x.password PASSWORD-->
+<!--nmcli> set 802-1x.anonymous-identity ANONYMOUS-IDENTITY-->
+<!--nmcli> set wifi-sec.key-mgmt wpa-eap-->
+```
+
+
 - 删除连接配置
 ```shell
 nmcli connection del wifi_name 

@@ -59,7 +59,7 @@ MySQL root@127.0.0.1:test> select * from tbl_dept
 ```
 
 1. A∩ B 
-![[imgs/GetImage.png]]
+![[imgs/join.png]]
 ```sql
 MySQL root@127.0.0.1:test> SELECT *
                         -> FROM tbl_emp a
@@ -79,7 +79,7 @@ MySQL root@127.0.0.1:test> SELECT *
 ```
 
 2. A(=A∩ B+A*) 
-![[imgs/GetImage 1.jpeg]]
+![[imgs/join.jpeg]]
 ```sql
 MySQL root@127.0.0.1:test> SELECT *
                         -> FROM tbl_emp a
@@ -100,7 +100,7 @@ MySQL root@127.0.0.1:test> SELECT *
 ```
 
 3. B(=A∩ B+B*)
-![[imgs/GetImage 1.png]]
+![[imgs/join-1.png]]
 ```sql
 MySQL root@127.0.0.1:test> SELECT *
                         -> FROM tbl_emp a
@@ -121,7 +121,7 @@ MySQL root@127.0.0.1:test> SELECT *
 ```
 
 4. A*(=A-A∩ B)
-![[imgs/GetImage 2.jpeg]]
+![[imgs/join-1.jpeg]]
 ```sql
 MySQL root@127.0.0.1:test> SELECT *
                         -> FROM tbl_emp a
@@ -136,7 +136,7 @@ MySQL root@127.0.0.1:test> SELECT *
 ```
 
 5. B*(=B-A∩ B)
-![[imgs/GetImage 3.jpeg]]
+![[imgs/join-2.jpeg]]
 ```sql
 MySQL root@127.0.0.1:test> SELECT *
                         -> FROM tbl_emp a
@@ -151,7 +151,7 @@ MySQL root@127.0.0.1:test> SELECT *
 ```
 
 6. A∪ B
-![[imgs/GetImage 4.jpeg]]
+![[imgs/join-3.jpeg]]
 ```sql
 SELECT < select_list > 
 FROM TableA A 
@@ -183,7 +183,7 @@ MySQL root@127.0.0.1:test> SELECT *
 ```
 
 7. A∪ B-A∩ B
-![[imgs/GetImage 5.jpeg]]
+![[imgs/join-4.jpeg]]
 ```sql
 SELECT < select_list > 
 FROM TableA A 

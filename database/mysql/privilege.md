@@ -1,5 +1,5 @@
 # 权限
-![[imgs/Pasted image 20230508152607.png]]
+![[imgs/privilege.png]]
 
 
 ## 描述 

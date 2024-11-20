@@ -6,5 +6,5 @@ checkpoint表示在此操作之前，相关数据已经被保存到永久存储�
 checkpoint本身也是一条xlog记录，该记录包含了redo点的位置，因此，每次恢复数据时，先从xloh记录里找到最近的一次checkpoint记录，并根据该记录找到相应的redo点位置，这就是执行本次恢复的起始点位置。
 如图所示，checkpoint操作记录了redo点的位置。
 
-![[imgs/Pasted image 20240111122814.png]]
+![[imgs/checkpoint.png]]
 

@@ -9,7 +9,7 @@ value往往不受程序控制
 
 例如
 - redis的key是歌单ID,redis的value是个list,list包含了用户ID,用户可能很多,就导致list长度不可控
-![[imgs/GetImage.jpeg]]
+![[imgs/bigKey.jpeg]]
 
 ## 影响
 redis核心工作是单线程的(新版中多线程只是用来处理请求任务)
