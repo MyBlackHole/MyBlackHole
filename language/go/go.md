@@ -65,6 +65,17 @@ CGO_ENABLED=0 go build
 CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" server.go
 ```
 
+- 交叉静态编译
+```shell
+set GOARCH=arm64
+set GOOS=linux
+set CGO_ENABLED=0
+go build
+
+GOARCH=arm64 CGO_ENABLED=0 go build
+```
+
+
 |                                |                                                 |
 | ------------------------------ | ----------------------------------------------- |
 | go run main.go                 | 运行go程序                                      |
