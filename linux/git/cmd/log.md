@@ -15,6 +15,9 @@
 5. gitk --follow filename
 以图形化界面的方式显示修改列表
 
+6. git log -S rpc_download_file
+搜索提交中包含指定字符串的提交记录
+
 - 生成 changlog 文件
 ```
 git log --pretty=format:"%h - %an, %ar : %s" > CHANGELOG.md
