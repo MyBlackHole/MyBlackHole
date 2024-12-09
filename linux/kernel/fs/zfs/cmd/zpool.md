@@ -175,3 +175,13 @@ zroot                                    141G   106G  35.2G         -    43%    
 ```shell
 zpool set cachefile=/etc/zfs/zpool.cache aiopool
 ```
+
+- 卸载数据池
+```shell
+zpool export aiopool
+```
+
+- 导入数据池
+```shell
+zpool import aiopool
+```
