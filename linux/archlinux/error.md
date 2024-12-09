@@ -122,3 +122,9 @@ Server = https://us-ut-mirror.chaotic.cx/$repo/$arch
 # * By: RubenKelevra / pacman.store
 # Server = http://chaotic-aur.pkg.pacman.store.ipns.localhost:8080/$arch
 ```
+
+
+- invalid or corrupted package (PGP signature)
+```shell
+paru -S archlinux-keyring
+```
