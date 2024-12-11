@@ -59,6 +59,15 @@ make install
 
 - centos
 ```shell
+# 清除yum缓存
+yum clean all
+# 重新生成yum缓存
+yum makecache
+# 检查可用更新
+yum check-update
+# 执行全部更新
+yum -y update
+
 yum install centos-release-scl
 yum install devtoolset-8
 scl enable devtoolset-8 bash
