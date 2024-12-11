@@ -20,6 +20,19 @@ cmake -DCMAKE_INSTALL_PREFIX=/root/mysql-server-mysql-5.7.44/mysql_5.7.44 \
       -DDOWNLOAD_BOOST=1 \
       -DWITH_BOOST=dwith_boost \
       ..
+
+wget http://sourceforge.net/projects/boost/files/boost/1.59.0/boost_1_59_0.tar.gz
+tar zxvf boost_1_59_0.tar.gz
+
+# 依赖 openssl-1.1.1k
+cmake -DCMAKE_INSTALL_PREFIX=/root/mysql-server-mysql-5.7.44/mysql_5.7.44 \
+      -DBUILD_CONFIG=mysql_release \
+      -DWITH_UNIT_TESTS=0 \
+      # -DWITHOUT_SERVER=1 \
+      -DDOWNLOAD_BOOST=0 \
+      -DWITH_BOOST=boost_1_59_0 \
+      ..
+
 # DBUILD_CONFIG: mysql_release (官方编译默认配置)
 # DCMAKE_EXPORT_COMPILE_COMMANDS 启用编译数据库文件生成
 # DCMAKE_BUILD_TYPE 启用 -g

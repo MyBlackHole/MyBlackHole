@@ -51,6 +51,7 @@ ALTER SYSTEM CANCEL ALL BACKUP FORCE;
 
 - 配置 s3
 ```shell
+ALTER SYSTEM SET backup_dest='oss://bucket?host=10.6.66.7&access_id=1358&access_key=1358';
 ALTER SYSTEM SET backup_dest='oss://mybucket?host=192.168.30.126&access_id=bNkZp8WKDMziff8x6hOz&access_key=OvygWaWLqxDBmCeMth3PovD12p4DZL1I5eSLNGD3';
 ALTER SYSTEM SET backup_dest='oss://wdg1?host=192.168.30.126&access_id=1&access_key=1';
 ALTER SYSTEM SET backup_dest='oss://oceanbase-shunde?host=zeyang@1510629197150037.onaliyun.com&access_id=LTAI5tMQYtZkbVMN2vZckpAs&access_key=zqCmshOoLs8BITRgMelbVOU73VM40i';
