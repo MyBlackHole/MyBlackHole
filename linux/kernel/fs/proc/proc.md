@@ -9,10 +9,6 @@ sudo mount -t proc none /proc
 
 ### /proc/sys/kernel/
 
-
-
-
-
 #### panic
 
 此配置决定了内核触发 panic 后的行为
