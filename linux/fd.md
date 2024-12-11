@@ -99,3 +99,8 @@ fd -t d .
 ```shell
 fd 1.txt -x rm
 ```
+
+- 查询文件后 ls -alh 文件
+```shell
+fd -I .mod.c -x ls -alh {}
+```

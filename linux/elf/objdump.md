@@ -160,3 +160,8 @@ arm-linux-objdump
 
 @file 
 可以将选项集中到一个文件中，然后使用这个@file选项载入。
+
+- 反汇编
+```shell
+objdump -Sd open.o |grep filp_close
+```
