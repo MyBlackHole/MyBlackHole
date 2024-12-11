@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "language/python/pudb.md",
+                "file": "linux/kernel/mm/mmu.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pudb"
+              "title": "mmu"
             }
           }
         ],
@@ -195,7 +195,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -206,11 +205,23 @@
       "zk-prefixer:创建时间戳笔记": false,
       "random-note:开始漫游笔记": false,
       "workspaces:管理工作区布局": false,
-      "audio-recorder:开始/结束录音": false
+      "audio-recorder:开始/结束录音": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "333a5046df236031",
   "lastOpenFiles": [
+    "linux/kernel/mm/imgs/mmu-1.png",
+    "linux/kernel/mm/imgs/mmu.png",
+    "linux/kernel/mm/PGD.md",
+    "linux/kernel/mm/mmu.md",
+    "linux/kernel/fs/proc/proc.md",
+    "linux/kernel/mm/imgs/PGD.png",
+    "linux/kernel/mm/imgs",
+    "linux/kernel/tools/crash.md",
+    "linux/kernel/tools/imgs/crash.png",
+    "linux/kernel/tools/imgs",
+    "language/python/pudb.md",
     "language/python/pyinotify.md",
     "language/python/python.md",
     "language/rust/error.md",
@@ -232,21 +243,12 @@
     "database/Teledb/config.md",
     "database/redis/redis.md",
     "database/redis/persistence.md",
-    "database/redis/monitor.md",
-    "database/redis/error.md",
-    "database/redis/bigKey.md",
-    "database/redis/config.md",
-    "database/redis/aof.md",
     "database/redis/imgs/bigKey.jpeg",
-    "database/postgres/txid.md",
     "database/postgres/imgs/txid.png",
     "database/mysql/imgs/master_slave.png",
     "database/GoldenDB/imgs/GoldenDB.png",
     "algorithm/imgs/Pasted image 20230312115728.png",
     "algorithm/imgs/Pasted image 20230312115823.png",
-    "database/GoldenDB/imgs/GoldenDB-3.png",
-    "database/cluster/imgs/2PC.png",
-    "language/build_system/imgs/Pasted image 20230528115058.png",
     "linux/kernel/fs/vfs/imgs",
     "未命名",
     "linux/kernel/fs/bcachefs/imgs",
