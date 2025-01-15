@@ -28,4 +28,8 @@ lvim /etc/systemd/coredump.conf
 #JournalSizeMax=767M
 #MaxUse=
 #KeepFree=
+
+lz4 -d core.lz4 > core
+
+gdb app core
 ```
