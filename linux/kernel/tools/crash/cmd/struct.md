@@ -1,4 +1,4 @@
-# struct 
+# struct
 
 - 查看结构体的定义
 ```shell
@@ -242,4 +242,10 @@ struct file {
   f_mapping = 0xffff80217999baa8,
   f_wb_err = 0
 }
+```
+
+
+- 查看结构体的成员变量
+```shell
+dentry -l dentry.d_iname 0xffff80226b0b4900
 ```

@@ -4,6 +4,8 @@
 
 ## 安装
 ```shell
+paru -S minicom
+
 sudo apt-get install minicom
 ```
 

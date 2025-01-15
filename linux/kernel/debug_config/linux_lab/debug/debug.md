@@ -76,7 +76,7 @@ qemu-system-x86_64 -kernel arch/x86_64/boot/bzImage \
 -hdb # 指定硬盘映射到 /dev/sdb (如果 -hdc 的话还是 sdb 按顺序的)
 -append "root=/dev/sda" 指示根文件系统 console=ttyS0 把QEMU的输入输出定向到当前终端上
 -nographic 不使用图形输出窗口
--s 是-gdb tcp::1234缩写，监听1234端口，在GDB中可以通过target remote localhost:1234连接
+-s -S 是 -gdb tcp::1234缩写，监听1234端口，在GDB中可以通过target remote localhost:1234连接
 ```
 - 内核函数调试
 ```shell
@@ -125,7 +125,7 @@ qemu-system-x86_64 -kernel arch/x86/boot/bzImage -boot c -m 2049M -hda ../buildr
 username: root
 
 # debug
-qemu-system-x86_64 -s -kernel arch/x86/boot/bzImage -boot c -m 2049M -hda ../buildroot/output/images/rootfs.ext2 -append "root=/dev/sda rw console=ttyS0,115200 acpi=off nokaslr" -serial stdio -display none
+qemu-system-x86_64 -s -S -kernel arch/x86/boot/bzImage -boot c -m 2049M -hda ../buildroot/output/images/rootfs.ext2 -append "root=/dev/sda rw console=ttyS0,115200 acpi=off nokaslr" -serial stdio -display none
 gdb ./vmlinux
 (gdb)target remote :1234
 ```

@@ -1,3 +1,5 @@
+# udev
+
 如果你使用Linux比较长时间了，那你就知道，在对待设备文件这块，Linux改变了几次策略。在Linux早期，设备文件仅仅是是一些带有适当的属性集的普通文件，它由mknod命令创建，文件存放在/dev目录下。后来，采用了devfs,一个基于内核的动态设备文件系统，他首次出现在2.3.46 内核中。Mandrake，Gentoo等Linux分发版本采用了这种方式。devfs创建的设备文件是动态的。但是devfs有一些严重的限制，从 2.6.13版本后移走了。目前取代他的便是文本要提到的udev－－一个用户空间程序。
 
 目前很多的Linux分发版本采纳了udev的方式，因为它在Linux设备访问，特别是那些对设备有极端需求的站点（比如需要控制上千个硬盘）和热插拔设备（比如USB摄像头和MP3播放器）上解决了几个问题。下面我我们来看看如何管理udev设备。
@@ -398,6 +400,6 @@ ACTION=="add", KERNEL=="sd[a-z][0-9]", RUN+="/bin/mount -t auto -o rw,noauto,syn
 ACTION=="remove", KERNEL=="sd[a-z][0-9]", RUN+="/bin/rm -f /mnt/usbhd-%k"  
 ACTION=="remove", KERNEL=="sd[a-z][0-9]", RUN+="/bin/umount -l /media/usbhd-%k"  
 ACTION=="remove", KERNEL=="sd[a-z][0-9]", RUN+="/bin/rmdir /media/usbhd-%k", OPTIONS="last_rule"  
- 
+
 
 注意！ 如果你是用的其它的固定设备（例如SATA的硬盘，您可以从/etc/fstab中查看）被识别为/dev/sdX，您必须从sd[a-z] 中去掉你的那个sdX。例如，如果您的SATA硬盘被是识别为/dev/sda，您就需要把所有的“sd[a-z]”替换成“sd[b-z]”。在规则文件的文件名前加上数字（如:010.udev.rules）是个很好的主意，这样udev在读取标准规则前，将会读取这个规则文件。这些规则设置后不需要修改/etc/fstab文件。请查看mount命令的参数来修改权限等特性（您可以从论坛搜索查看mount命令的参数，然后根据您的需要修改它们）。

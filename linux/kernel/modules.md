@@ -47,3 +47,8 @@ all:
 	make -C $(KDIR) M=$(PWD) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE) modules
 ```
 
+
+- 指定内核源码路径 交叉编译
+```shell
+KDIR=/run/media/black/Data/Documents/linux_debug/arm/linux-4.19.315 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-
+```

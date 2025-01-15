@@ -36,12 +36,6 @@
 
 ## 例子
 
-- 配置日志内核打印等级
-```shell
-cat /proc/sys/kernel/printk
-make -C $(LINUX_KERNEL_PATH) M=$(CURRENT_PATH) KCFLAGS+=-DDEBUG modules
-```
-
 - 查看已使用设备号
 ```shell
 cat /proc/devices

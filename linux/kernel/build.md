@@ -230,7 +230,13 @@ make modules - j4
 make modules_install -j4
 ```
 
-- 打包
+- 打包 rpm
 ```shell
 make rpm
+```
+
+- 交叉编译
+```shell
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- Menuconfig
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4
 ```

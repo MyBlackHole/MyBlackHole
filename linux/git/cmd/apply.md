@@ -15,11 +15,6 @@ git apply --check 0001-f-4941710542-fs-cli.patch
 git apply 0001-f-4941710542-fs-cli.patch
 ```
 
-- 应用 patch 并生成一个新的 commit。
-```shell
-git apply --commit 0001-f-4941710542-fs-cli.patch
-```
-
 - 应用 patch 但拒绝那些冲突的文件。
 ```shell
 git apply --reject ../0001-f-5045245647.patch
