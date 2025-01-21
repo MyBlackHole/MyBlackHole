@@ -30,6 +30,10 @@ crash> dis -rl ffffffff90a61bf6
 0xffffffff90a61bf3 <sysrq_handle_crash+19>:     sfence
 /usr/src/debug/kernel-3.10.0-957.el7/linux-3.10.0-957.el7.x86_64/drivers/tty/sysrq.c: 145
 0xffffffff90a61bf6 <sysrq_handle_crash+22>:     movb   $0x1,0x0
+```
 
+- 显示调用代码的行号
+```shell
+bt -l
 ```
 

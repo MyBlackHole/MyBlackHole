@@ -158,35 +158,18 @@ LOAD AVERAGE: 2.31, 0.82, 0.29  //内核崩溃时的系统负载
 ```
 
 
-
-### ps
-
-查看当前有哪些进程
-
-### log
-
-查看系统日志
-
-
-### files 
-
-查看当前进程打开的文件
-
 ### vm
 
 当前进程使用的虚拟内存，VMA 代表 vm_area_struct
 
-## mod
-
--s: 加载模块符号表
--d: 删除某个模块符号表
--S: 加载某个目录的模块符号表
-
-```shell
-# mod // 查看模块
-# mod -s module /path/to/module.ko // 加载模块
-# sym symbol // 显示符号对应的模块源码，也可以用virtual address
-```
-
 
 > https://blog.csdn.net/heshuangzong/article/details/126906923
+
+
+```shell
+log + bt + dis
+使用log查看日志，bt查看堆栈情况，dis查看异常时的代码行及反汇编代码。
+
+dev+irq+mod+mount+net+ps+runq+ipcs
+查看系统的设备列表，中断分配，模块使用情况，网络配置情况，进程状态，cpu上的运行队列信 息,ipcs共享内存使用情况
+```
