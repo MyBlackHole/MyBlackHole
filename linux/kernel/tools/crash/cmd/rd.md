@@ -10,4 +10,8 @@
 
 ```shell
 rd <address>
+
+rd [addr] [len] # 查看指定地址，长度为len的内存
+rd -S [addr][len] # 尝试将地址转换为对应的符号
+rd [addr] -e [addr] # 查看指定内存区域内容
 ```

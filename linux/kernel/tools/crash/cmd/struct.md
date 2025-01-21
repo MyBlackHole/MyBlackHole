@@ -1,5 +1,14 @@
 # struct
 
+查看数据结构
+```shell
+struct -o [struct] ： 显示结构体中成员的偏移
+struct [struct] [address] ： 显示对应地址结构体的值
+[结构][地址] ：简化形式显示对应地址结构体的值
+[结构][地址] -xo： 打印结构体定义和大小
+[struct].member[address]： 显示某个成员的值
+```
+
 - 查看结构体的定义
 ```shell
 struct file

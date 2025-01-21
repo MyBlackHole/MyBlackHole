@@ -133,6 +133,31 @@ crash vmcore /usr/lib/debug/usr/lib/modules/xxxxxxxxxxxxxxxxxxxxx/vmlinux (**ker
 | q       | 退出                              |
 
 
+```shell
+root@root-PC:/var/crash/202201120843# crash /lib/modules/5.3.18+/build/vmlinuz-5.3.18+ dump.202201120843
+
+      KERNEL: /data/linux-source-5.3.0/vmlinux  //debug 内核
+    DUMPFILE: dump.202204091433  [PARTIAL DUMP] //dump文件
+        CPUS: 8  //CPU数量
+        DATE: Sat Apr  9 14:33:07 2022  //发生dump的日期
+      UPTIME: 00:04:03  //表示内核已正常运行的时间
+LOAD AVERAGE: 2.31, 0.82, 0.29  //内核崩溃时的系统负载
+       TASKS: 343 //内核崩溃时系统运行的任务数
+    NODENAME: root-PC //主机名
+     RELEASE: 5.3.18+ //内核版本
+     VERSION: #2 SMP Sat Apr 9 14:26:36 CST 2022
+     MACHINE: x86_64  (2494 Mhz)  //CPU架构与主频信息
+      MEMORY: 16 GB  //发生内核崩溃的系统的内存大小
+       PANIC: "Kernel panic - not syncing: sysrq triggered crash"  //内核崩溃的类型
+         PID: 1341 //导致内核崩溃的进程号
+     COMMAND: "bash"  //内核崩溃的进程名称，或命令
+        TASK: ffff8ede003bdc00  [THREAD_INFO: ffff8ede003bdc00]  //内核崩溃的进程访问的内存地址
+         CPU: 6  //表示导致内核崩溃的进程占用的 CPU 
+       STATE: TASK_RUNNING (PANIC)  //表示导致内核崩溃的进程的运行状态
+       
+```
+
+
 
 ### ps
 

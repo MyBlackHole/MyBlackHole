@@ -12,3 +12,9 @@ paru -S bc qemu-full ncurses-devel
 ```shell
 ctrl+a x # exit qemu
 ```
+
+- kdump
+```shell
+ctrl+a c
+dump-guest-memory -z xxx-vmcore
+```
