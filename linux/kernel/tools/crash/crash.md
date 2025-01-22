@@ -11,6 +11,12 @@ phys_offset: RAM的起始物理地址
 vabits_actual: 实际的虚拟地址空间大小(总线位宽)
 kimage_voffset: kernel image映射的物理地址偏移
 
+- docs
+```shell
+<!--内容不错-->
+git@github.com:yifengyou/crash.git
+```
+
 - build
 ```shell
 make target=ARM64
