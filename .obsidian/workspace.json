@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "system/framework/网络模型.md",
+                "file": "linux/kernel/tools/crash/x86_64.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "网络模型"
+              "title": "x86_64"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "crash",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -196,9 +196,21 @@
   },
   "active": "5e1d9b4c5d806204",
   "lastOpenFiles": [
+    "linux/kernel/tools/crash/imgs/x86_64-1.png",
+    "linux/kernel/tools/crash/imgs/x86_64.png",
+    "linux/kernel/tools/crash/imgs",
+    "linux/kernel/tools/crash/arm64.md",
+    "linux/kernel/tools/crash/x86_64.md",
+    "linux/kernel/tools/crash/crash.md",
+    "linux/kernel/tools/crash/cmd/bt.md",
+    "language/build_system/gcc/ld.md",
+    "language/build_system/gcc/imgs/ld-2.png",
+    "language/build_system/gcc/imgs/ld-1.png",
+    "language/build_system/gcc/imgs/ld.png",
+    "language/build_system/gcc/imgs",
+    "system/framework/网络模型.md",
     "protocol/TCP/TCP.md",
     "language/asm/riscv.md",
-    "system/framework/网络模型.md",
     "linux/kernel/mm/mmu.md",
     "linux/kernel/mm/imgs/mmu-1.png",
     "linux/kernel/mm/imgs/mmu.png",
@@ -223,23 +235,12 @@
     "database/Teledb/monitor_cluster_db_states.md",
     "database/Teledb/set.md",
     "database/Teledb/teledb.md",
-    "database/Teledb/XA.md",
-    "database/Teledb/关系数据库.md",
-    "database/Teledb/分布式数据库.md",
-    "database/Teledb/RDS.md",
-    "database/Teledb/DT.md",
-    "database/Teledb/config.md",
     "database/redis/imgs/bigKey.jpeg",
-    "database/postgres/imgs/txid.png",
-    "database/mysql/imgs/master_slave.png",
-    "database/GoldenDB/imgs/GoldenDB.png",
-    "algorithm/imgs/Pasted image 20230312115728.png",
     "linux/kernel/fs/vfs/imgs",
     "未命名",
     "linux/kernel/fs/bcachefs/imgs",
     "linux/kernel/fs/bcachefs",
     "database/postgres/imgs",
-    "FPGA/TangNano20k/imgs",
-    "linux/kernel/devices/rpmsg/imgs"
+    "FPGA/TangNano20k/imgs"
   ]
 }
