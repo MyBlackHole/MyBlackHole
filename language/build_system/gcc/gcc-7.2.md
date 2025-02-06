@@ -1,7 +1,10 @@
 # build 7.2
+
+```shell
 g++：yum install gcc-c++
 lbzip2：yum -y install lbzip2 bz2
-制作信息：yum -y install texinfo
+yum -y install texinfo
+```
 
 
 ```shell

@@ -73,3 +73,9 @@ else
 gcc -E -dM - < /dev/null
 ```
 
+- 预编译
+```shell
+gcc -E macro.c
+gcc -I./ -I./include -E -P  libbcachefs/opts.c > opts_test.h
+```
+

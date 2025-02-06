@@ -1,10 +1,38 @@
 # gdb
+
 调试工具
 
+## 安装
 ```
+paru -S gdb
+
+<!--插件-->
 https://github.com/cyrus-and/gdb-dashboard
+https://github.com/pwndbg/pwndbg
+paru -S pwndbg
 ```
 
+## config
+- 普通用户启用 attach all processes 权限
+```shell
+sysctl kernel/yama/ptrace_scope
+kernel.yama.ptrace_scope = 1
+<!--修改为 0-->
+sudo sysctl -w kernel.yama.ptrace_scope=0
+
+<!--会话级修改-->
+echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+
+<!--永久修改-->
+sudo vim /etc/sysctl.conf
+kernel.yama.ptrace_scope = 0
+
+<!--selinux 拦击-->
+dmesg | grep "avc"
+journalctl -k | grep "DENIED"
+```
+
+## 基本用法
 ```
 ### 常用命令
 - file: 装入想要调试的可执行文件
@@ -45,10 +73,14 @@ https://github.com/cyrus-and/gdb-dashboard
 ```
 
 ### 例子
+
+- 附加到进程带上执行文件路径
+```shell
+gdb /xxxx/xxxx/xxxx/test -p 1234
+```
+
 - 多线程调试
 ```shell
-
-
 info threads   查看当前进程的线程。
     GDB会为每个线程分配一个ID, 后面操作线程的时候会用到这个ID.
     前面有*的是当前调试的线程.
@@ -104,12 +136,6 @@ gdb -x .gdbinit ./test/unit/core
 Source directories searched: /media/black/Data/Documents/github/C/tbox:/media/black/Data/Documents/C/C_learn/out/obj/tbox_learn/heap_test1:$cdir:$cwd
 ```
 
-- 预编译
-```shell
-gcc -E macro.c
-gcc -I./ -I./include -E -P  libbcachefs/opts.c > opts_test.h
-```
-
 - 调试 pid 进程
 ```shell
 gdb attach [pid] 
@@ -121,6 +147,3 @@ sudo gdb attach 766047
 gdb -p pid
 source Tools/gdb/libpython.py # cpython 里有
 ```
-
-
-- 制定 gdbinit
