@@ -260,3 +260,40 @@ struct file {
 ```shell
 dentry -l dentry.d_iname 0xffff80226b0b4900
 ```
+
+- 根据结构体成员变量地址获取结构体信息
+```shell
+# 0xffffffffb9b29460 是 kmem_cache 结构体的 list 成员地址
+crash> struct kmem_cache -ol kmem_cache.list 0xffffffffb9b29460
+struct kmem_cache {
+  [ffffffffb9b29400] struct kmem_cache_cpu *cpu_slab;
+  [ffffffffb9b29408] slab_flags_t flags;
+  [ffffffffb9b29410] unsigned long min_partial;
+  [ffffffffb9b29418] unsigned int size;
+  [ffffffffb9b2941c] unsigned int object_size;
+  [ffffffffb9b29420] unsigned int offset;
+  [ffffffffb9b29424] unsigned int cpu_partial;
+  [ffffffffb9b29428] struct kmem_cache_order_objects oo;
+  [ffffffffb9b2942c] struct kmem_cache_order_objects max;
+  [ffffffffb9b29430] struct kmem_cache_order_objects min;
+  [ffffffffb9b29434] gfp_t allocflags;
+  [ffffffffb9b29438] int refcount;
+  [ffffffffb9b29440] void (*ctor)(void *);
+  [ffffffffb9b29448] unsigned int inuse;
+  [ffffffffb9b2944c] unsigned int align;
+  [ffffffffb9b29450] unsigned int red_left_pad;
+  [ffffffffb9b29458] const char *name;
+  [ffffffffb9b29460] struct list_head list;
+  [ffffffffb9b29470] struct kobject kobj;
+  [ffffffffb9b294d0] struct work_struct kobj_remove_work;
+  [ffffffffb9b29510] struct memcg_cache_params memcg_params;
+  [ffffffffb9b29588] unsigned int max_attr_size;
+  [ffffffffb9b29590] struct kset *memcg_kset;
+  [ffffffffb9b29598] unsigned int remote_node_defrag_ratio;
+  [ffffffffb9b295a0] unsigned int *random_seq;
+  [ffffffffb9b295a8] unsigned int useroffset;
+  [ffffffffb9b295ac] unsigned int usersize;
+  [ffffffffb9b295b0] struct kmem_cache_node *node[1024];
+}
+SIZE: 8624
+```

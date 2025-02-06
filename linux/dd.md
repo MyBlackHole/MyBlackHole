@@ -37,3 +37,14 @@ for i in {1..1040};do
     dd if=/dev/zero of=$tmp_dir/${i}.log bs=`shuf -n 1 -i 0-16`k count=1 &>/dev/null
 done
 ```
+
+- 读取指定 501 块号的数据
+```shell
+dd if=./base/17292/17040 of=./17040-501.img count=1 bs=8192 skip=500
+```
+
+- 读取指定 501 块号的数据并写入到指定文件 502 块号
+```shell
+将test 文件写入nvme0n1， 跳过seek数值的区块，从10000开始写，单次512bytes, 一共写10000次
+dd if=./17040-501.img of=./base/17292/17040 bs=8192 seek=501 count=1 conv=notrunc
+```

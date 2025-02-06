@@ -8,6 +8,14 @@
 ```shell
 git config --global user.name "black"
 git config --global user.email "1358244533@qq.com"
+<!--git config --global http.proxy "http://127.0.0.1:1081"-->
+<!--git config --global https.proxy "http://127.0.0.1:1081"-->
+
+paru -S connect
+nvim ~/.ssh/config
+Host *.savannah.gnu.org *.github.com github.com
+ProxyCommand connect -S 127.0.0.1:1081 %h %p
+
 ssh-keygen -t rsa -C "1358244533@qq.com"
 ```
 

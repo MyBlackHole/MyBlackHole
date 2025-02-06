@@ -1,11 +1,16 @@
 # targetcli
+
 iscsi 客户端工具
+
 [细节](https://www.cnblogs.com/panther1942/p/15636533.html)
 ![[imgs/Pasted image 20230525215751.png]]
 
-## ubuntu install
+## install
 ```shell
+<!--ubuntu-->
 sudo apt-get install targetcli-fb
+
+paru -S targetcli-fb
 ```
 
 ## 使用 
