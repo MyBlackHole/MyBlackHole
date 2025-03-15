@@ -51,3 +51,10 @@ xmake config -m debug --cross=aarch64-linux-gnu- -c
 xmake config -m debug --cross=aarch64-linux-gnu- -a aarch64 -c
 ```
 
+- rpath 路径设置
+```shell
+-- paru -S patchelf
+add_rpathdirs("/home/black/Public/aio/aio-tools/huanweicloun-sdk-s3-data-backup/zfsdeamon/lib_x86/", {installonly = true})
+```
+
+

@@ -28,3 +28,16 @@ mount: mounting /dev/sdc on /xfs_test failed: Invalid argument
 <!-- 创建兼容旧版内核(3.16之前)的XFS v4 superblock -->
 mkfs.xfs -i size=512 -m crc=0,finobt=0 -f /dev/sdc
 ```
+
+- 
+[6362370.959645] XFS (loop0): Superblock has unknown read-only compatible features (0x4) enabled.
+[6362370.961015] XFS (loop0): Attempted to mount read-only compatible filesystem read-write.
+[6362370.961017] XFS (loop0): Filesystem can only be safely mounted read only.
+[6362370.961434] XFS (loop0): SB validate failed with error -22.
+
++ mount -o nouuid /testmount/test-bc-block/aiopool/10.6.66.123_492_single/1740713162633 /opt/aio/data
+mount: wrong fs type, bad option, bad superblock on /dev/loop0,
+       missing codepage or helper program, or other error
+
+       In some cases useful info is found in syslog - try
+       dmesg | tail or so.

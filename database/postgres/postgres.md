@@ -14,10 +14,9 @@ sudo -u postgres psql -p 5433
 
 ## 安装
 
-### docker (podman)
+### podman
 ```shell
-docker run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e ALLOW_IP_RANGE=0.0.0.0/0 -v /home/postgres/data:/var/lib/postgresql -p 55433:5432 -d postgres
-podman run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e ALLOW_IP_RANGE=0.0.0.0/0 -v /home/postgres/data:/var/lib/postgresql -p 5432:5432 -d postgres
+<!--docker run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e ALLOW_IP_RANGE=0.0.0.0/0 -v /home/postgres/data:/var/lib/postgresql -p 55433:5432 -d postgres-->
 <!-- –name : 自定义容器名称 -->
 <!-- -e: 添加环境变量  -->
 <!--     ALLOW_IP_RANGE=0.0.0.0/0，这个表示允许所有ip访问，如果不加，则非本机 ip 访问不了 -->
@@ -25,6 +24,10 @@ podman run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e
 <!-- -v :进行映射,本地目录：容器内路径 -->
 <!-- -p：映射端口,宿主机端口：容器端口 -->
 <!-- 最后是 镜像名称:端口号 -->
+
+podman pull postgres
+podman run -it --name postgres --restart always -e POSTGRES_PASSWORD='abc123' -e ALLOW_IP_RANGE=0.0.0.0/0 -v /home/postgres/data:/var/lib/postgresql -p 5432:5432 -d postgres
+psql -h 127.0.0.1 -p 5432 -U postgres
 ```
 
 ### ubuntu apt

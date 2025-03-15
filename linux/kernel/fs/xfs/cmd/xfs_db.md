@@ -62,3 +62,18 @@ actual 0, ideal 0, fragmentation factor 0.00% (碎片化)
 Note, this number is largely meaningless.
 Files on this filesystem average -nan extents per file
 ```
+
+- 显示文件系统信息
+```shell
+xfs_db -r -c "sb" -c p /dev/zd16
+```
+
+```
+[root@localhost ~]# xfs_db -r /dev/mapper/centos-root
+xfs_db> version
+versionnum [0xb4b5+0x18a] = V5,NLINK,DIRV2,ATTR,ALIGN,LOGV2,EXTFLG,MOREBITS,ATTR2,LAZYSBCOUNT,PROJID32BIT,CRC,FTYPE
+
+xfs_db> version
+versionnum [0xb4a5+0x18a] = V5,NLINK,DIRV2,ALIGN,LOGV2,EXTFLG,MOREBITS,ATTR2,LAZYSBCOUNT,PROJID32BIT,CRC,FTYPE,FINOBT,SPARSE_INODES,REFLINK
+```
+```

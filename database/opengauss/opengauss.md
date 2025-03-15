@@ -26,35 +26,43 @@ podman run \
     -v $MYHOME:$MYHOME \
     --rm -it dokken/centos-7 bash
 
-podman run \
-    -v $MYHOME:$MYHOME \
-    --name opengauss_dev \
-    -it localhost/opengauss:dev bash
+<!--podman run \-->
+<!--    -v $MYHOME:$MYHOME \-->
+<!--    --name opengauss_dev \-->
+<!--    -it localhost/opengauss:dev bash-->
 
 yum install bison flex readline-devel libaio-devel glibc-devel ncurses-devel patch lsb_release perl-devel gcc gcc-c++ make cmake3 git wget unzip -y
 ```
 
 ## podman
 ```shell
-podman run --name opengauss --privileged=true -d -e GS_PASSWORD=openGauss@123 -p5432:5432 opengauss/opengauss:5.0.0
+podman pull enmotech/opengauss:latest
+
+podman run --name opengauss --privileged=true -d -e GS_PASSWORD=openGauss@123 -p5432:5432 enmotech/opengauss:latest
 
 podman exec -it opengauss bash
-<!-- su - opengauss -->
 
-# 安装目录
+# 安装、数据目录
 cd /usr/local/opengauss
+cd /var/lib/opengauss
 
-# 添加 opengauss lib 位置 (默认找不到)
-sudo vim /etc/ld.so.conf.d/opengauss-x86_64.conf
-/usr/local/opengauss/lib
-# 使生效
-ldconfig
+su - omm
+
 
 # 连接测试
-./gsql -d postgres -U gaussdb -W 'openGauss@123' -h 127.0.0.1 -p 5432
+gsql -d postgres -U gaussdb -W 'openGauss@123' -h 127.0.0.1 -p 5432
 
-# docker client
-podman run --rm --link=opengauss -p 8081:8081 opengauss/opengauss-webclient:1.0.4
+[opengauss@d41ae4f5cf7b bin]$ gsql
+gsql ((openGauss 6.0.0 build aee4abd5) compiled at 2024-09-29 19:14:27 commit 0 last mr  )
+Non-SSL connection (SSL connection is recommended when requiring high-security)
+Type "help" for help.
+
+opengauss=# show data_directory;
+     data_directory
+-------------------------
+ /var/lib/opengauss/data
+(1 row)
+
 ```
 
 ## 命令

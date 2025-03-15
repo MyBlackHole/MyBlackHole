@@ -22,7 +22,7 @@ gs_probackup add-instance -B backup-path                       ## 备份路径
                           [--help]                             ## 显示帮助信
 
 # 例如
-gs_probackup add-instance -B /home/omm/backup_1 -D /var/lib/opengauss/data --instance gs_master_backup_1
+gs_probackup add-instance -B /home/opengauss/backup_1 -D /var/lib/opengauss/data --instance gs_master_backup_1
 ```
 
 - show
@@ -37,15 +37,15 @@ gs_probackup show -B backup-path
       --archive                    show WAL archive information
       --format=format              show format=PLAIN|JSON
 
-gs_probackup show -B /home/omm/backup_1/
-gs_probackup show -B /home/omm/backup_1/ --instance=gs_master_backup_1 -i RUQME4
+gs_probackup show -B /home/opengauss/backup_1/
+gs_probackup show -B /home/opengauss/backup_1/ --instance=gs_master_backup_1 -i RUQME4
 ```
 
 - backup 备份
 ```shell
 注意：建议加上 -d 指定备份时连接的数据库，否则默认会使用和当前用户同名的数据库，这样会因为这个数据库不存在而导致报错
 gs_probackup backup -B backup-path --instance=instance_name [-D pgdata-path]
-    -b backup-mode                                       ## 备份模式：FULL(全量备份)/PTRACK(增量备份)
+    -b backup-mode                                       ## 备份模式: FULL(全量备份)/PTRACK(增量备份)
     [-C]                                                 ## -C指定检查点模式为spread(周期调度)，默认为fast快速完成
     [-S slot-name] [--temp-slot]                         ## -S指定物理复制slot名称(默认pg_probackup_slot) ,--temp-slot为WAL流处理创建临时物理复制slot，确保备份过程中所需的WAL段仍然可用
     [--backup-pg-log]                                    ## 备份日志目录(默认不备份)
@@ -81,8 +81,8 @@ gs_probackup backup -B backup-path --instance=instance_name [-D pgdata-path]
     [--help]
 
 # 例如 全量备份
-gs_probackup backup -B /home/omm/backup_1 --instance gs_master_backup_1 -b full -D /var/lib/opengauss/data --progress \
-    --log-directory=/home/omm/backup_1/log  --log-rotation-size=10GB --log-rotation-age=30d  --log-level-file=info  --log-filename=full_20230516.log \
+gs_probackup backup -B /home/opengauss/backup_1 --instance gs_master_backup_1 -b full -D /var/lib/opengauss/data --progress \
+    --log-directory=/home/opengauss/backup_1/log  --log-rotation-size=10GB --log-rotation-age=30d  --log-level-file=info  --log-filename=full_20230516.log \
     --retention-redundancy=2 \
     --compress  \
     --note='full backup test 1'

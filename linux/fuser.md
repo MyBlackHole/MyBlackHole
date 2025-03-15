@@ -48,3 +48,20 @@ yum install psmisc
 ```shell
 fuser -mv /aiopool/
 ```
+
+## error
+
+- fusermount: option allow_other only allowed if 'user_allow_other' is set in /etc/fuse.conf
+```shell
+sudo nvim /etc/fuse.conf
+# add user_allow_other
+user_allow_other
+
+或
+
+sudo chmod 666 /etc/fuse.conf
+
+或
+
+addgroup <username> fuse
+```
