@@ -12,7 +12,7 @@ root xxx
 mount /dev/sda1 /mnt
 mount /dev/sda2 /mnt/boot
 
-pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr iwd neovim git dhcpd
+pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr iwd neovim git
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -26,6 +26,14 @@ passwd black
 
 <!-- 默认启用 iwd 服务 -->
 systectl enable iwd
+systectl enable systemd-resolved
+
+# iwd
+/etc/iwd/main.conf
+[General]
+EnableNetworkConfiguration=true
+
+echo black > /etc/hostname
 
 <!-- 给 black 用户添加 sudo 权限 -->
 nvim /etc/sudoers
@@ -47,6 +55,7 @@ ssh-keygen -t rsa -C '1358244533@qq.com'
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# 重启进入机器后才可处理
 timedatectl set-timezone Asia/Shanghai
 timedatectl set-ntp true
 
