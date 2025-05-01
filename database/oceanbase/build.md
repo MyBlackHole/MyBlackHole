@@ -47,6 +47,10 @@ bash build.sh debug --init --make
 ```shell
 ld.lld: error: undefined symbol: pthread_mutex_consistent_np
 
+paru -S rpmextract
+./build.sh init
+./build.sh debug --make -j4
+
 用系统的libapr 0.7.4 库替换依赖包中的libapr 0.6.5库
 ls -alh deps/3rd/usr/local/oceanbase/deps/devel/lib/libapr*
 Permissions Size User  Date Modified Name
@@ -69,6 +73,8 @@ lrwxrwxrwx     - root 26 Oct  2023   /usr/lib/libapr-1.so.0 -> libapr-1.so.0.
 lrwxrwxrwx     - root 12 Feb  2023   /usr/lib/libaprutil-1.so -> libaprutil-1.so.0.6.3
 lrwxrwxrwx     - root 12 Feb  2023   /usr/lib/libaprutil-1.so.0 -> libaprutil-1.so.0.6.3
 .rwxr-xr-x  187k root 12 Feb  2023   /usr/lib/libaprutil-1.so.0.6.3
+
+cp -rf /usr/lib/libapr* deps/3rd/usr/local/oceanbase/deps/devel/lib/
 
 # 生成 single.yaml
 ./tools/deploy/obd.sh prepare

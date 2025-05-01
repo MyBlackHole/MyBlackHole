@@ -87,15 +87,11 @@ insmod fsbackup.ko
 
 
 cat /sys/module/fsbackup/sections/.text
-0xffffffffa0000000
-
-
 cat /sys/module/fsbackup/sections/.data
-0xffffffffa000a000
-
-
 cat /sys/module/fsbackup/sections/.bss
-0xffffffffa000a580
+0xffffffffa0000000
+0xffffffffa000d000
+0xffffffffa000dbc0
 
 <!-- host gdb -->
 lvim ~/.gdbinit
@@ -104,7 +100,7 @@ target remote:1234
 
 gdb ./vmlinux
 
-add-symbol-file ./fsbackup.ko 0xffffffffa0000000 -s .data 0xffffffffa000a000 -s .bss 0xffffffffa000a580
+add-symbol-file ./fsbackup.ko 0xffffffffa0000000 -s .data 0xffffffffa000d000 -s .bss 0xffffffffa000dbc0
 
 # cat /sys/module/fsbackup/sections/.text
 0xffffffffa000d000
@@ -113,7 +109,7 @@ add-symbol-file ./fsbackup.ko 0xffffffffa0000000 -s .data 0xffffffffa000a000 -s 
 # cat /sys/module/fsbackup/sections/.bss
 0xffffffffa0015540
 
-add-symbol-file /run/media/black/Data/Documents/aio/aio-tools/fsbackup_kernel_4.x/fsbackup.ko 0xffffffffa0000000 -s .data 0xffffffffa0008000 -s .bss 0xffffffffa0008540
+add-symbol-file /home/black/Public/aio/aio-tools/fsbackup_kernel_4.x/fsbackup.ko 0xffffffffa0000000 -s .data 0xffffffffa0008000 -s .bss 0xffffffffa0008540
 
 
 # cat /sys/module/fsbackup/sections/.text

@@ -49,6 +49,8 @@ xmake -P .
 xmake config -m debug --cross=aarch64-linux-gnu- -c
 # -a aarch64 指定输出架构目录名
 xmake config -m debug --cross=aarch64-linux-gnu- -a aarch64 -c
+
+xmake config -m debug -p linux --cross=aarch64-linux-gnu- -a aarch64 -c
 ```
 
 - rpath 路径设置

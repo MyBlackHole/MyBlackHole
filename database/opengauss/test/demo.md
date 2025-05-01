@@ -77,8 +77,6 @@ insert_data.sh
 HOST="localhost"
 PORT="5432"
 DBNAME="tpcds"
-USER="your_user"
-PASSWORD="your_password"
 
 # 生成随机数据的函数
 generate_data() {
@@ -123,10 +121,10 @@ while true; do
     # 构造SQL
     SQL="INSERT INTO warehouse_t1 VALUES (
         ${data[0]},   '${data[1]}',  '${data[2]}',
-        ${data[3]},   '${data[4]}',  '${data[5]}',
+         1,   '${data[4]}',  '${data[5]}',
         '${data[6]}', '${data[7]}',  '${data[8]}',
         '${data[9]}', '${data[10]}', '${data[11]}',
-        '${data[12]}', ${data[13]}, NOW()
+        '${data[12]}', 1, NOW()
     )"
 
     echo "$SQL"
@@ -135,9 +133,6 @@ while true; do
     execute_insert "$SQL"
     echo "[INFO] 已插入记录 $count | 时间: $(date '+%T.%3N')"
 
-    # 精确时间控制
-    end_time=$(date +%s.%N)
-    sleep_time=$(echo "1.000 - ($end_time - $start_time)" | bc)
     [ $(echo "$sleep_time > 0" | bc) -eq 1 ] && sleep $sleep_time
 
     ((count++))
@@ -509,4 +504,42 @@ gs_ctl stop -D /home/omm/restore_data/ -w -t 3600
 LD_LIBRARY_PATH=/lib gdb --args /usr/local/opengauss/bin/gaussdb -D /home/omm/restore_data
 
 set environment LD_LIBRARY_PATH=/usr/local/opengauss/lib
+```
+
+```
+select * from pg_class where relname='petersimon';
+select oid,relfilenode,relname from pg_class where relname='petersimon';
+openGauss=> select oid,relfilenode,relname from pg_class where relname='petersimon';
+  oid  | relfilenode |  relname
+-------+-------------+------------
+ 16464 |       16472 | petersimon
+(1 row)
+
+gs_probackup backup -B /home/omm/backup_1 --instance gs_master_backup_1 -b full -D /var/lib/opengauss/data --progress \
+    --log-directory=/home/omm/backup_1/log  --log-rotation-size=10GB --log-rotation-age=30d  --log-level-file=info  --log-filename=full1.log \
+    --note='full1'
+
+gs_probackup backup -B /home/omm/backup_1 --instance gs_master_backup_1 -b PTRACK -D /var/lib/opengauss/data --progress \
+    --log-directory=/home/omm/backup_1/log  --log-rotation-size=10GB --log-rotation-age=30d  --log-level-file=info  --log-filename=inc1.log \
+    --note='inc1'
+
+<!-- gs_probackup archive-push -B /home/omm/backup_1 --instance local_6000 --wal-file-path=%p --wal-file-name=%f -->
+
+
+omm=# show archive_mode;
+ archive_mode
+--------------
+ off
+(1 row)
+
+archive_mode = on
+archive_command = 'cp %p /home/omm/backup_1/wal/xxxxxx/%f'
+
+gs_probackup restore -B /home/omm/backup_1/ --instance=gs_master_backup_1 -D /home/omm/restore_data_time --recovery-target-time='2025-04-18 07:56:00'
+
+gs_ctl start -D /home/omm/restore_data_time/ -w -t 3600
+gs_ctl stop -D /home/omm/restore_data_time/ -w -t 3600
+
+gs_probackup delete -B /home/omm/backup_1/ --instance=gs_master_backup_1 -i RUQME4
+
 ```

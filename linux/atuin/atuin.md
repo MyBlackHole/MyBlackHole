@@ -46,6 +46,7 @@ atuin import auto
 - 登陆
 ```shell
 atuin login -u MBlackHole -p MBlackHole -k MBlackHole
+3AAgJmnM/cydzII8zJjMq1sbZgFYzK/MmszQzOfMl1/Mo8y8K8zezO9jU3VLzJXMxW9d
 ```
 
 - 配置登录时自动同步

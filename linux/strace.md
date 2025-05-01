@@ -151,3 +151,8 @@ exit_group(1)                           = ?
 ```shell
 strace -T -p 2081148
 ```
+
+- 查看进程的所有线程
+```shell
+strace -f -p 2081148
+```
