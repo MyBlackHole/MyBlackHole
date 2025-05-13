@@ -43,21 +43,26 @@ black ALL=(ALL) ALL
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
 grub-mkconfig -o /boot/grub/grub.cfg
 
+## 以下是重启后进入系统处理
+su - root
+
+timedatectl set-timezone Asia/Shanghai
+timedatectl set-ntp true
+
 <!-- 切换到 black 用户 -->
 su - black
 
 cd /run/media/black/Data/Documents/github/shell/Hyprdots/Scripts/
 ./install.sh
 <!-- 启动服务 -->
-./install.sh s
+./install.sh -s
 
 ssh-keygen -t rsa -C '1358244533@qq.com' 
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# 重启进入机器后才可处理
-timedatectl set-timezone Asia/Shanghai
-timedatectl set-ntp true
+
+git clone git@github.com:MyBlackHole/starter.git ~/.config/nvim
 
 reboot
 ```
