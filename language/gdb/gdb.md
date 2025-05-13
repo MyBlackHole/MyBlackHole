@@ -40,7 +40,7 @@ paru -S pwndbg
 - enable breakpoints：启用断点
 - display 变量名:跟踪查看一个变量，每次停下来都显示它的值
 - undisplay：取消对先前设置的那些变量的跟踪
-- until <linenum>:脱离，跳至 linenum 行
+- until <linenum>:脱离循环或执行至 linenum 行
 - next(n)：单条执行
 - inferiors: 切换进程id(info inferiors 为 NUM)
 - directory(dir): 设置源码目录
