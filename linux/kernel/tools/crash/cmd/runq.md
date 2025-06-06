@@ -74,4 +74,10 @@ CPU 9 RUNQUEUE: ffff956b7f862700
      [no tasks queued]
   CFS RB_ROOT: ffff956b7f8627b0
      [no tasks queued]
+
+crash> runq -m
+ CPU 0: [0 00:00:00.000]  PID: 965    TASK: ffff9c5a03c2bc00  COMMAND: "irqbalance"
+ CPU 1: [0 02:30:16.843]  PID: 0      TASK: ffff9c5a01e73c00  COMMAND: "swapper/1"
+ CPU 2: [0 02:30:16.835]  PID: 0      TASK: ffff9c5a01e71e00  COMMAND: "swapper/2"
+ CPU 3: [0 02:30:16.873]  PID: 0      TASK: ffff9c5a01e70000  COMMAND: "swapper/3"
 ```

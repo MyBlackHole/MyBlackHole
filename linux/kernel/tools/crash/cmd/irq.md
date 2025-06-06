@@ -59,4 +59,57 @@ crash> irq
                         ffff958bc0aa2680  "pciehp"
  51   ffff958bc0367200      (unused)
  52   ffff958bc0364800  ffff958bc0aa3e80  "PCIe PME"
+
+
+crash> irq -s
+           CPU0       CPU1       CPU2       CPU3
+  0:         25          0          0          0  IO-APIC-edge     timer
+  1:          0         51          0         10  IO-APIC-edge     i8042
+  8:          1          0          0          0  IO-APIC-edge     rtc0
+  9:          0          0          0          0  IO-APIC-fasteoi  acpi
+ 12:        248          0        286          0  IO-APIC-edge     i8042
+ 14:          0          0          0          0  IO-APIC-edge     ata_piix
+ 15:          0          0          0          0  IO-APIC-edge     ata_piix
+ 16:          0          0          0          1  IO-APIC-fasteoi  vmwgfx
+ 24:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 25:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 26:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 27:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 28:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 29:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 30:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 31:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 32:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 33:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 34:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 35:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 36:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 37:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 38:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 39:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 40:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 41:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 42:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 43:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 44:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 45:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 46:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 47:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 48:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 49:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 50:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 51:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 52:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 53:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 54:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 55:          0          0          0          0  PCI-MSI-edge     PCIe PME,pciehp
+ 56:     541471          0          0          0  PCI-MSI-edge     ens192-rxtx-0
+ 57:          0          8          0      24233  PCI-MSI-edge     ens192-rxtx-1
+ 58:          0          0         19     357221  PCI-MSI-edge     ens192-rxtx-2
+ 59:          0     129641          0         23  PCI-MSI-edge     ens192-rxtx-3
+ 60:          0          0          0          0  PCI-MSI-edge     ens192-event-4
+ 61:      23536          0          0       6231  PCI-MSI-edge     vmw_pvscsi
+ 62:         57          0       4393          0  PCI-MSI-edge     ahci[0000:02:00.0]
+ 63:          0         19          0       1119  PCI-MSI-edge     vmw_vmci
+ 64:          0          0          0          0  PCI-MSI-edge     vmw_vmci
 ```

@@ -10,6 +10,9 @@ crash_arm64_v8> dis hang_detect_thread
 0xffffffc0109f85cc <hang_detect_thread+32>:     add     x29, sp, #0x40
 0xffffffc0109f85d0 <hang_detect_thread+36>:     adrp    x8, 0xffffffc011e83000 <vsock_dgram_ops+144>
 0xffffffc0109f85d4 <hang_detect_thread+40>:     ldr     x8, [x8, #1672]
+
+crash> dis __kmalloc_node+0x123
+0xffffffff9c49a9d3 <__kmalloc_node+291>:        mov    0x0(%rbp,%rax,1),%rbx
 ```
 
 - 反汇编指定地址
