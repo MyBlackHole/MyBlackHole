@@ -18,3 +18,4 @@ ctrl+a x # exit qemu
 ctrl+a c
 dump-guest-memory -z xxx-vmcore
 ```
+
