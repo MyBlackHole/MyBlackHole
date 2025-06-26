@@ -12,7 +12,7 @@ root xxx
 mount /dev/sda1 /mnt
 mount /dev/sda2 /mnt/boot
 
-pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr iwd neovim git
+pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr iwd
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -24,14 +24,18 @@ passwd
 useradd -m black
 passwd black
 
-<!-- 默认启用 iwd 服务 -->
+<!-- 默认启用 iwd 服务, 连接 wifi -->
 systectl enable iwd
-systectl enable systemd-resolved
+
+pacman -S neovim git
 
 # iwd
 /etc/iwd/main.conf
 [General]
 EnableNetworkConfiguration=true
+
+<!-- 配置 DNS 解析服务 -->
+systectl enable systemd-resolved
 
 echo black > /etc/hostname
 
@@ -65,6 +69,9 @@ ssh-keygen -t rsa -C '1358244533@qq.com'
 git clone git@github.com:MyBlackHole/starter.git ~/.config/nvim
 
 reboot
+
+sudo localectl set-locale LANG=zh_CN.UTF-8
+sudo locale-gen
 ```
 
 ## config

@@ -184,4 +184,6 @@ zpool export aiopool
 - 导入数据池
 ```shell
 zpool import aiopool
+
+zpool import -d /dev/sdb1 aiopool
 ```
