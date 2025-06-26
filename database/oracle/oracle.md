@@ -38,6 +38,9 @@ show parameter name; # 查看参数：service_names为orcl
 
 # 修改service_names为自己想要的名称
 alter system set service_names=mydb scope=both; # 修改service_names
+
+
+podman run --name oracle-ee -p 1521:1521 -v /opt/aio/oracle/myScripts:/opt/oracle/scripts/startup -v /opt/aio/oracle/oradata:/opt/oracle/oradata conductorboot/oracle:19.3.0-ee-slim
 ```
 
 - 装载数据库
