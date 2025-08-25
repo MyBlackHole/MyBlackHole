@@ -36,6 +36,7 @@ EnableNetworkConfiguration=true
 
 <!-- 配置 DNS 解析服务 -->
 systectl enable systemd-resolved
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 echo black > /etc/hostname
 
