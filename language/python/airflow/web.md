@@ -1,4 +1,4 @@
-# 
+# wdb
 
     """
     Trying to guess the debugger used by the user. When it doesn't find any user-installed debugger,

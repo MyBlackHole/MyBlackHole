@@ -6,6 +6,11 @@ CONFIG_DEBUG_RODATA_TEST=n
 CONFIG_DEBUG_SET_MODULE_RONX=n
 然后参照上面的方法加载调试符号即可，可以直接使用 break 来设置断点，不需要用硬件断点
 
+- 获取 vmcore 函数位置 
+```shell
+addr2line -e ./fsbackup.ko file_done_rename+0x1e/0x120
+```
+
 
 - 快速获取模块地址
 ```shell

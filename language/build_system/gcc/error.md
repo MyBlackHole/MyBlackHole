@@ -60,3 +60,41 @@ __attribute__((unused)) static char const* xxxx()
 <!--加入 -fPIC 选项, 重新编译-->
 ./configure CFLAGS='-g -O0 -fPIC' --enable-debug --prefix=/run/media/black/Data/Documents/github/c/aliyun-oss-c-sdk/build/install/apr/
 ```
+
+- Wincompatible-pointer-types
+```c
+// 场景是为了支持多种参数类型
+
+typedef struct __db_config_desc {
+	char *name;		/* The name of a simple DB_CONFIG command. */
+	__db_config_type type;	/* The enum describing its argument type(s). */
+	int (*func)();		/* The function to call with the argument(s). */
+} CFG_DESC;
+
+// func 具有以下几个可能
+typedef int (*CFG_FUNC_STRING) __P((DB_ENV *, const char *));
+typedef int (*CFG_FUNC_INT) __P((DB_ENV *, int));
+typedef int (*CFG_FUNC_LONG) __P((DB_ENV *, long));
+typedef int (*CFG_FUNC_UINT) __P((DB_ENV *, u_int32_t));
+typedef int (*CFG_FUNC_2INT) __P((DB_ENV *, int, int));
+typedef int (*CFG_FUNC_2UINT) __P((DB_ENV *, u_int32_t, u_int32_t));
+
+static const CFG_DESC config_descs[] = {
+    { "add_data_dir",		CFG_DIR,	__env_add_data_dir	},
+    { "db_data_dir",		CFG_DIR,	__env_set_data_dir	},
+    { "db_log_dir",		CFG_DIR,	__log_set_lg_dir	},
+    { "db_tmp_dir",		CFG_DIR,	__env_set_tmp_dir	},
+    ......
+};
+
+// 在代码中局部禁用
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wincompatible-pointer-types"
+// 有问题的代码
+int (*func)(void) = (int (*)(void))some_function;
+#pragma GCC diagnostic pop
+
+// 或者全局禁用（不推荐）
+-Wno-incompatible-pointer-types
+
+```

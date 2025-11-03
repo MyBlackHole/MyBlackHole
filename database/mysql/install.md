@@ -65,6 +65,8 @@ podman run -it --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=p@3Sw0rd -d mysq
 # 或
 
 mkdir -p /opt/podman/mysql/conf/conf.d
+mkdir -p /opt/podman/mysql/logs
+mkdir -p /opt/podman/mysql/data
 podman run -p 3306:3306 --name mysql \
     -v /etc/localtime:/etc/localtime:ro \
     -v /opt/podman/mysql/conf:/etc/mysql \
@@ -72,6 +74,8 @@ podman run -p 3306:3306 --name mysql \
     -v /opt/podman/mysql/data:/var/lib/mysql \
     -e MYSQL_ROOT_PASSWORD=88888888 \
     -d mysql:8
+
+mysql -h 127.0.0.1 -P 3306 -uroot --ssl-verify-server-cert -p
 ```
 
 - 物理机版

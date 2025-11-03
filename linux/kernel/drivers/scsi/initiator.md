@@ -1,8 +1,13 @@
+# initiator
+
+
 ```c
 scsi_transport_iscsi
 iscsi_tcp
 libiscsi
 libiscsi_tcp
+
+drivers/scsi/scsi_transport_iscsi.c
 
 scsi_transport_iscsi.c
   iscsi_transport_init
@@ -10,6 +15,8 @@ scsi_transport_iscsi.c
       .groups = 1,
       .input  = iscsi_if_rx,
     };
+	/* 注册内核网络链 */
+	/* 提供用户层对内核交互的接口 */
     netlink_kernel_create(&init_net, NETLINK_ISCSI, &cfg)
 
   iscsi_if_rx
@@ -167,4 +174,57 @@ libiscsi.c
 libiscsi_tcp.c
   iscsi_tcp_conn_setup(struct iscsi_cls_session *cls_session, int dd_data_size, uint32_t conn_idx)
     cls_conn = iscsi_conn_setup(cls_session, sizeof(*tcp_conn) + dd_data_size, conn_idx)
+```
+
+```c
+static const struct blk_mq_ops scsi_mq_ops = {
+	.get_budget	= scsi_mq_get_budget,
+	.put_budget	= scsi_mq_put_budget,
+	.queue_rq	= scsi_queue_rq,
+	.commit_rqs	= scsi_commit_rqs,
+	.complete	= scsi_complete,
+	.timeout	= scsi_timeout,
+#ifdef CONFIG_BLK_DEBUG_FS
+	.show_rq	= scsi_show_rq,
+#endif
+	.init_request	= scsi_mq_init_request,
+	.exit_request	= scsi_mq_exit_request,
+	.cleanup_rq	= scsi_cleanup_rq,
+	.busy		= scsi_mq_lld_busy,
+	.map_queues	= scsi_map_queues,
+	.init_hctx	= scsi_init_hctx,
+	.poll		= scsi_mq_poll,
+	.set_rq_budget_token = scsi_mq_set_rq_budget_token,
+	.get_rq_budget_token = scsi_mq_get_rq_budget_token,
+};
+
+static const struct blk_mq_ops scsi_mq_ops_no_commit = {
+	.get_budget	= scsi_mq_get_budget,
+	.put_budget	= scsi_mq_put_budget,
+	.queue_rq	= scsi_queue_rq,
+	.complete	= scsi_complete,
+	.timeout	= scsi_timeout,
+#ifdef CONFIG_BLK_DEBUG_FS
+	.show_rq	= scsi_show_rq,
+#endif
+	.init_request	= scsi_mq_init_request,
+	.exit_request	= scsi_mq_exit_request,
+	.cleanup_rq	= scsi_cleanup_rq,
+	.busy		= scsi_mq_lld_busy,
+	.map_queues	= scsi_map_queues,
+	.init_hctx	= scsi_init_hctx,
+	.poll		= scsi_mq_poll,
+	.set_rq_budget_token = scsi_mq_set_rq_budget_token,
+	.get_rq_budget_token = scsi_mq_get_rq_budget_token,
+};
+
+
+iscsi_sw_tcp_session_create
+    iscsi_host_add
+        scsi_add_host(scsi_add_host_with_dma)
+            scsi_mq_setup_tags
+            // if (shost->hostt->commit_rqs)
+            // 	tag_set->ops = &scsi_mq_ops;
+            // else
+            // 	tag_set->ops = &scsi_mq_ops_no_commit;
 ```

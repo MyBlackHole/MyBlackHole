@@ -33,12 +33,11 @@ docker run -p 9000:9000 -p 9090:9090 \
 - podman
 ```shell
 podman run -p 9000:9000 -p 9090:9090 \
-     --net=host \
      --name minio \
      -d --restart=always \
      -e "MINIO_ACCESS_KEY=minioadmin" \
      -e "MINIO_SECRET_KEY=minioadmin" \
-     minio/minio server \
+     minio server \
      /data --console-address ":9090" -address ":9000"
 ```
 

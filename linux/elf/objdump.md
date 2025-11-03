@@ -165,3 +165,8 @@ arm-linux-objdump
 ```shell
 objdump -Sd open.o |grep filp_close
 ```
+
+- 输出汇编内容
+```shell
+objdump -s -d libxxx.so  > libxxx.s
+```

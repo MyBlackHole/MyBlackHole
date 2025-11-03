@@ -21,3 +21,18 @@ ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0 salida.mp4
 ```shell
 ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default salida.mkv
 ```
+
+- m3u8
+```shell
+<!-- ffmpeg -i http://example.com/playlist.m3u8 -c copy output.mp4 -->
+ffmpeg -i http://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/playlist12.m3u8 -c copy output.mp4
+```
+
+- 视频压缩
+```shell
+ffmpeg -i input.mp4 -vcodec libx264 -crf 23 output.mp4
+
+ffmpeg -i demo.mp4 -c:v libx265 -x265-params crf=18:preset=placebo output/demo_2.mp4
+```
+
+

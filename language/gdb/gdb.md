@@ -53,3 +53,8 @@ paru -S pwndbg
 - shell: 使你能不离开gdb就执行UNIX shell命令
 ```
 
+
+### 非交互式调试
+```shell
+gdb -batch -ex "set pagination off" -ex "thread apply all bt full" -p <PID> 2>/dev/null
+```

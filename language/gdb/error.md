@@ -50,3 +50,9 @@ file /usr/lib64/libpthread-2.28.so
 ```shell
 可能是空间不够了
 ```
+
+- 'errno' has unknown type; cast it to its declared type
+```
+>>> p *(int *)__errno_location()
+$3 = 0
+```

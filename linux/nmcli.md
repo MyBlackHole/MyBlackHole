@@ -90,6 +90,10 @@ nmcli connection up wifi_name
 
 - 账号密码连接
 ```shell
+# DEVICE_NAME 为无线网卡的设备名称，可以通过 `nmcli device` 或 `ip link` 命令查看
+# SSID 为无线网络的 SSID
+# USERNAME 为用户名
+# NAME 为连接名称
 nmcli connection add type wifi con-name NAME ifname wlan0 ssid SSID -- wifo-sec.key-mgmt wpa-eap 802-1x.eap ttls 802-1x.phase2-auth mschapv2 802-1x.identity USERNAME
 
 <!-- ask: 提示输入密码 -->

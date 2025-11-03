@@ -4,3 +4,5 @@
 ```shell
 sudo chmod ugo=rwx /nix/var/nix/daemon-socket
 ```
+
+- error: creating directory '/nix/store': Permission denied

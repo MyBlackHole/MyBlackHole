@@ -1,3 +1,5 @@
+# debug
+
 ```shell
 # 
 /proc/net/rpc/auth.unix.ip/channel
@@ -16,4 +18,16 @@ echo "-test-client- /home/black/Documents  3 9252 65534 65534 0\n" > /proc/net/r
 
 # 特征
 /proc/fs/nfsd/export_features
+```
+
+- 测试导出与挂载
+```shell
+[root@191 ~]# systemctl start nfs-server
+[root@191 ~]# exportfs -v
+[root@191 ~]# exportfs *:/appDxc/
+[root@191 ~]# exportfs -v
+/appDxc         <world>(sync,wdelay,hide,no_subtree_check,sec=sys,ro,root_squash,no_all_squash)
+
+[root@192 ~]# mkdir /appDxc_mountpoint/
+[root@192 ~]# mount xxxxxxx.191:/appDxc/ /appDxc_mountpoint/
 ```

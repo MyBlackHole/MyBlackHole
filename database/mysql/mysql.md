@@ -45,7 +45,7 @@ grant all privileges on minidome.* to Black@'%' identified by '1358244533';  # �
 create USER BlackHole@'%' identified by '1358244533';  # 创建具有远程登陆的BlackHole用户 
 grant all on minidome.* to BlackHole@'%' with grant option;  # 授予BlackHole具有minidome的所有权限 
 flush privileges; # 表示刷新权限变更 
-show grants for 'heidong'; # 查看权限授予
+show grants for 'BlackHole'; # 查看权限授予
 ```
 
 - 创建账号

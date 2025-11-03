@@ -63,3 +63,21 @@ EnableNetworkConfiguration=true
 [Network]
 NameReesolvingService=systemd
 ```
+
+- 配置 PEAP 认证
+```shell
+sudo nvim /var/lib/iwd/BH.8021x
+
+[Security]
+EAP-Method=PEAP
+EAP-PEAP-Phase2-Method=MSCHAPV2
+EAP-PEAP-Phase2-Identity=dinggao.wu
+EAP-PEAP-Phase2-Password=3edc#EDC
+EAP-PEAP-Phase1-Phase2-AllowWithoutServerCert=true
+EAP-PEAP-Phase1-AcceptAnyServerCert=true
+
+
+[Settings]
+AutoConnect=true
+
+```

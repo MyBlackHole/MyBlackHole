@@ -48,19 +48,6 @@ iSCSI是由IBM发明的基于以太网的存储协议
 
 ## install
 
-### centos
-
-#### 服务端
-```shell
-yum install targetcli
-systemctl status iscsi.service
-```
-
-#### 客户端
-```shell
-yum install iscsi-initiator-utils -y
-```
-
 ### ubuntu
 
 #### 服务端安装

@@ -69,3 +69,8 @@ $1 = 0
 $2 = (uint64_t *) 0x579fc10547c8
 (gdb) watch *0x579fc10547c8 != 0
 ```
+
+- errno
+```gdb
+(gdb) watch (int *)__errno_location()
+```
