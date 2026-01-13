@@ -54,12 +54,16 @@ AddressOverride=0a:64:9b:b2:fe:b6
 
 - 开启 DHCP
 ```shell
+sudo lvim /etc/iwd/main.conf (加入)
+
 [General]
 EnableNetworkConfiguration=true
 ```
 
 - 配置 DNS 后端
 ```shell
+sudo lvim /etc/iwd/main.conf (加入)
+
 [Network]
 NameReesolvingService=systemd
 ```
@@ -71,8 +75,8 @@ sudo nvim /var/lib/iwd/BH.8021x
 [Security]
 EAP-Method=PEAP
 EAP-PEAP-Phase2-Method=MSCHAPV2
-EAP-PEAP-Phase2-Identity=dinggao.wu
-EAP-PEAP-Phase2-Password=3edc#EDC
+EAP-PEAP-Phase2-Identity=xxxxxxxx
+EAP-PEAP-Phase2-Password=xxxxxxxx
 EAP-PEAP-Phase1-Phase2-AllowWithoutServerCert=true
 EAP-PEAP-Phase1-AcceptAnyServerCert=true
 
